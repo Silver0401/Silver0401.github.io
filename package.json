@@ -1,0 +1,19 @@
+{
+  "name": "imc-web-page",
+  "version": "1.0.0",
+  "description": "Ismael Muñoz Contreras, WebPage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Silver0401/Silver0401.github.io.git"
+  },
+  "author": "Ismael Muñoz Contreras - SilverTech Inc.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Silver0401/Silver0401.github.io/issues"
+  },
+  "homepage": "https://github.com/Silver0401/Silver0401.github.io#readme"
+}
