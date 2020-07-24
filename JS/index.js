@@ -25,7 +25,7 @@ burger.onclick = () => {
 			translateX: [200]
 		})
 
-		sleep(100).then( () =>{
+		sleep(150).then( () =>{
 
 			navBar.style.display = "none"
 
