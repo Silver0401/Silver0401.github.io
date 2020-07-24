@@ -1,0 +1,68 @@
+nav {
+	position: absolute;
+	width: 20%;
+	height: 50%;
+	right: -10%;
+	display: none;
+	top: 30%;
+	border-radius: 30px;
+	border: 5px solid white;
+	box-shadow: 10px 10px black
+}
+
+.logo {
+
+	width: 50%;
+	height: 15%;
+	position: absolute;
+	top: 0%;
+	color: white;
+	right: 15%;
+}
+
+.logo h4 {
+	font-size: 50px;
+	color: white;
+	z-index: 1;
+}
+
+#burger {
+
+	position: fixed;
+	cursor: pointer;
+	color: white;
+	right: 8%;
+	top: 10%;
+	width: 40px;
+	height: 40px;
+	align-items: center;
+
+}
+
+#burger div {
+
+	cursor: pointer;
+	width: 35px;
+	position: fixed;
+	height: 5px;
+	margin: 3px;
+	transition: all 0.8s ease; 
+	background-color: white;
+
+	z-index: 2;
+
+}
+
+
+.line1 {
+	top: 10%;
+
+}
+.line2 {
+	top: 11.5%;
+
+}
+.line3 {
+	top: 12.9%;
+
+}

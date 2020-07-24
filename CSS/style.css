@@ -25,6 +25,7 @@ li{list-style:none}*/
 /* ---- base ---- */
 
 html,body{ 
+
 	width:100%;
 	height:100%;
 
@@ -39,7 +40,8 @@ html{
 }
 
 body{
-  font:normal 75% Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', sans-serif;
+
 }
 
 canvas{
@@ -71,6 +73,7 @@ canvas{
   height: auto;
   bottom: -5%;
   left: -5%;
+  
 /*  -webkit-transform: rotate(-10deg);
 */
 }
