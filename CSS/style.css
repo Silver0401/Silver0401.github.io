@@ -1,52 +1,41 @@
 
-/*	width:100%;
-	height:100%;*/
-
-/*Light blue with darkish blue*/
-
-/*  background: #2C3E50; 
-  background: linear-gradient(to right, #4CA1AF, #2C3E50); 
-*/
-/*Iron man*/
-
-/*  background: #780206; 
-  background: linear-gradient(to right, #061161, #780206); 
-*/
-
-
 html{
 
   background: linear-gradient(to right, #141e30, #243b55); 
+  background-attachment: fixed;
+  z-index: -3;
   /*background-image:linear-gradient(to right, #2C5364, #203A43, #0F2027); */
 
 }
 
 html::after {
   content: '';
-  position: absolute;
+  position: fixed;
   left: 0px;
   top: 0px;
   right: 0px;
   bottom: 0px;
   opacity: 0;
   background: linear-gradient(to right, #134e5e, #71b280);
+  background-attachment: fixed;
 
   transition: all 2.5s ease-in-out;
-  z-index: -1;
+  z-index: -3;
 }
 
 html::before {
   content: '';
-  position: absolute;
+  position: fixed;
   left: 0px;
   top: 0px;
   right: 0px;
   bottom: 0px;
   opacity: 0;
   background: linear-gradient(to right, #355c7d, #6c5b7b, #c06c84); 
+  background-attachment: fixed;
 
-  transition: all 5s ease-in-out;
-  z-index: -1;
+  transition: all 2.5s ease-in-out;
+  z-index: -3;
 }
 
 /*html:hover::after{
@@ -63,11 +52,370 @@ canvas{
   vertical-align:bottom;
 }
 
+/*Contacs apps icons animations------------------*/
+
+#contact{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+#contact #title {
+  font-size: 60px;
+  color: white;
+  text-align: center;
+  margin: 2%;
+}
+
+#contact img {
+  position: absolute;
+  height: 35%;
+  width: auto;
+  /*bottom: 5%;*/
+}
+
+#contact .original{
+  z-index: 1;
+}
+
+/*Insta animations*/
+
+#InstaInfo{
+  position: absolute;
+  left: 8%;
+  bottom: 15%;
+  font-size: 30px;
+  color: white;
+  opacity: 0;
+
+  transition: transform 1000ms, opacity 1000ms;
+}
+
+#insta1{
+  left: 1.5%;
+  bottom: 20%;
+  opacity: 0;
+  transition: opacity 500ms;
+}
+#insta2{
+  left: 1.5%;
+  bottom: 20%;
+  opacity: 0;
+  transition: transform 500ms, opacity 500ms;
+}
+#insta3{
+  left: 1.5%;
+  bottom: 20%;
+  opacity: 0;
+  transition: transform 700ms, opacity 700ms;
+}
+#insta4{
+  left: 1.5%;
+  bottom: 20%;
+  opacity: 1;
+  transition: transform 800ms, opacity 800ms;
+}
+
+#insta1:hover{
+  opacity: .2;
+  transition: transform 500ms, opacity 500ms;
+}
+
+#insta1:hover ~ #insta2{
+  opacity: .8;
+  transform: translateY(-106px);
+  transition: transform 500ms, opacity 500ms;
+}
+#insta1:hover ~ #insta3{
+  opacity: .5;
+  transform: translateY(-53px);
+  transition: transform 700ms, opacity 700ms;
+}
+#insta1:hover ~ #insta4{
+  transform: translateY(-159px);
+  transition: transform 800ms;
+}
+
+#insta1:hover ~ #InstaInfo{
+  opacity: 1;
+  transform: translateY(-380px);
+  transition: transform 1000ms, opacity 1000ms;
+}
+
+/*FaceBook animations*/
+
+#FaceInfo{
+  position: absolute;
+  left: 23%;
+  bottom: 6%;
+  font-size: 30px;
+  color: white;
+  opacity: 0;
+
+  transition: transform 1000ms, opacity 1000ms;
+}
+
+#face1{
+  left: 20%;
+  bottom: 12%;
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+#face2{
+  left: 20%;
+  bottom: 12%;
+  opacity: 0;
+  transition: transform 500ms, opacity 500ms;
+}
+#face3{
+  left: 20%;
+  bottom: 12%;
+  opacity: 0;
+  transition: transform 700ms, opacity 700ms;
+}
+#face4{
+  left: 20%;
+  bottom: 12%;
+  opacity: 1;
+  transition: transform 800ms, opacity 800ms;
+}
+
+#face1:hover{
+  opacity: .2;
+  transition: transform 500ms, opacity 500ms;
+}
+
+#face1:hover + #face2{
+  opacity: .8;
+  transform: translateY(-106px);
+  transition: transform 500ms, opacity 500ms;
+}
+#face1:hover ~ #face3{
+  opacity: .5;
+  transform: translateY(-53px);
+  transition: transform 700ms, opacity 700ms;
+}
+#face1:hover ~ #face4{
+  transform: translateY(-159px);
+  transition: transform 800ms;
+}
+
+#face1:hover ~ #FaceInfo{
+  opacity: 1;
+  transform: translateY(-380px);
+  transition: transform 1000ms, opacity 1000ms;
+}
+
+/*Mail animations*/
+
+#MailInfo{
+  position: absolute;
+  left: 36.5%;
+  bottom: 0%;
+  font-size: 30px;
+  color: white;
+  opacity: 0;
+
+  transition: transform 1000ms, opacity 1000ms;
+}
+
+#mail1{
+  left: 38%;
+  bottom: 1%;
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+#mail2{
+  left: 38%;
+  bottom: 1%;
+  opacity: 0;
+  transition: transform 500ms, opacity 500ms;
+}
+#mail3{
+  left: 38%;
+  bottom: 1%;
+  opacity: 0;
+  transition: transform 700ms, opacity 700ms;
+}
+#mail4{
+  left: 38%;
+  bottom: 1%;
+  opacity: 1;
+  transition: transform 800ms, opacity 800ms;
+}
+
+#mail1:hover{
+  opacity: .2;
+  transition: transform 500ms, opacity 500ms;
+}
+
+#mail1:hover + #mail2{
+  opacity: .8;
+  transform: translateY(-106px);
+  transition: transform 500ms, opacity 500ms;
+}
+#mail1:hover ~ #mail3{
+  opacity: .5;
+  transform: translateY(-53px);
+  transition: transform 700ms, opacity 700ms;
+}
+#mail1:hover ~ #mail4{
+  transform: translateY(-159px);
+  transition: transform 800ms;
+}
+
+#mail1:hover ~ #MailInfo{
+  opacity: 1;
+  transform: translateY(-380px);
+  transition: transform 1000ms, opacity 1000ms;
+}
+
+
+/*Twitter animations*/
+
+#TwitInfo{
+  position: absolute;
+  right: 23%;
+  bottom: 6%;
+  font-size: 30px;
+  color: white;
+  opacity: 0;
+  text-align: center;
+
+  transition: transform 1000ms, opacity 1000ms;
+}
+
+#twit1{
+  right: 20%;
+  bottom: 12%;
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+#twit2{
+  right: 20%;
+  bottom: 12%;
+  opacity: 0;
+  transition: transform 500ms, opacity 500ms;
+}
+#twit3{
+  right: 20%;
+  bottom: 12%;
+  opacity: 0;
+  transition: transform 700ms, opacity 700ms;
+}
+#twit4{
+  right: 20%;
+  bottom: 12%;
+  opacity: 1;
+  transition: transform 800ms, opacity 800ms;
+}
+
+#twit1:hover{
+  opacity: .2;
+  transition: transform 500ms, opacity 500ms;
+}
+
+#twit1:hover ~ #twit2{
+  opacity: .8;
+  transform: translateY(-106px);
+  transition: transform 500ms, opacity 500ms;
+}
+#twit1:hover ~ #twit3{
+  opacity: .5;
+  transform: translateY(-53px);
+  transition: transform 700ms, opacity 700ms;
+}
+#twit1:hover ~ #twit4{
+  transform: translateY(-159px);
+  transition: transform 800ms;
+}
+
+#twit1:hover ~ #TwitInfo{
+  opacity: 1;
+  transform: translateY(-380px);
+  transition: transform 1000ms, opacity 1000ms;
+}
+
+/*Whatsapp animations*/
+
+#WhatsInfo{
+  position: absolute;
+  right: 8%;
+  bottom: 15%;
+  font-size: 30px;
+  color: white;
+  opacity: 0;
+
+  transition: transform 1000ms, opacity 1000ms;
+}
+
+#whats1{
+  right: 1.5%;
+  bottom: 20%;
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+#whats2{
+  right: 1.5%;
+  bottom: 20%;
+  opacity: 0;
+  transition: transform 500ms, opacity 500ms;
+}
+#whats3{
+  right: 1.5%;
+  bottom: 20%;
+  opacity: 0;
+  transition: transform 700ms, opacity 700ms;
+}
+#whats4{
+  right: 1.5%;
+  bottom: 20%;
+  opacity: 1;
+  transition: transform 800ms, opacity 800ms;
+}
+
+#whats1:hover{
+  opacity: .2;
+  transition: transform 500ms, opacity 500ms;
+}
+
+#whats1:hover ~ #whats2{
+  opacity: .8;
+  transform: translateY(-106px);
+  transition: transform 500ms, opacity 500ms;
+}
+#whats1:hover ~ #whats3{
+  opacity: .5;
+  transform: translateY(-53px);
+  transition: transform 700ms, opacity 700ms;
+}
+#whats1:hover ~ #whats4{
+  transform: translateY(-159px);
+  transition: transform 800ms;
+}
+
+#whats1:hover ~ #WhatsInfo{
+  opacity: 1;
+  transform: translateY(-380px);
+  transition: transform 1000ms, opacity 1000ms;
+}
+
+
+
+
+/*Background particles animation------------------*/
+
 #particles-js{
 
   z-index: -1;
   width: 100%;
   height: 100%;
+  position: fixed;
 
   background-image: url('');
   background-size: cover;
@@ -75,12 +423,15 @@ canvas{
   background-repeat: no-repeat;
 }
 
+/*Home elements characteristics------------------*/
+
 #me {
   position: absolute; 
   width: 50%;
   height: auto;
   bottom: -5%;
   left: -5%; 
+  z-index: -2;
 }
 
 #logo {
@@ -111,3 +462,101 @@ canvas{
 }
 
 
+/*CV elements characteristics------------------*/
+
+#CV {
+  display: none;
+  width: 100%;
+  height: 200vh;
+  position: absolute;
+  /*z-index: -2;*/
+}
+
+.neurom {
+  position: absolute;
+  box-shadow: 5px 5px 18px black;
+  border-radius: 10px;
+  color: white;
+
+}
+
+#ObjetivoBox {
+  top:50px;
+  width: 51%;
+  height: 70px;
+  left: -2%;
+}
+
+#ObjetivoBox h3 {
+  position: absolute;
+  right: 12%;
+  font-size: 45px;
+  padding: 0;
+  margin: 0;
+
+}
+
+#ObjetivoText {
+  position: absolute;
+  width: 40%;
+  height: 300px;
+  left: 2%;
+  top: 90px;
+  color: white;
+  font-size: 30px;
+
+}
+
+#ObjetivoText {
+  padding: 50px;
+  text-align: justify;
+}
+
+
+#DatosBox {
+  right: 0%;
+  width: 30%;
+  height: 450px;
+  top: 100px;
+  padding: 25px;
+  margin: 0;
+
+}
+
+#DatosBox h3 {
+  font-size: 30px;
+}
+
+
+#DatosBox p {
+  display: block;
+  font-size: 22px;
+}
+
+#ProyectosBox {
+  position: absolute;
+  top: 650px;
+  left: -1%;
+  width: 105%;
+  height: 800px;
+  background-color: black;
+  color: white;
+  
+}
+
+#ProyectosBox h3 {
+  position: absolute;
+  top: 0%;
+  left: 4%;
+  font-size: 35px;
+}
+
+
+#holder {
+  position: absolute;
+  bottom: -80%;
+  width: 30%;
+  height: 30%;
+  left: 45%;
+
+}

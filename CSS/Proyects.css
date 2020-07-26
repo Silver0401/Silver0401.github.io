@@ -1,0 +1,133 @@
+/** {box-sizing:border-box}
+*/
+/* Slideshow container */
+.slideshow-container {
+  position: absolute;
+  width: 400px;
+}
+
+#one{
+  top: 20%;
+  left: 3%;
+}
+#two{
+  bottom: 8%; 
+  left: 24%;
+}
+#three{
+  top: 20%; 
+  right: 30%;
+}
+#four{
+  bottom: 8%; 
+  right: 8%;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  z-index: 1;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  z-index: 1;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+  z-index: 1;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  z-index: 1;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  z-index: 1;
+  top: 5%;
+  position: absolute;
+}
+
+#dot1 {
+  left: 43%;
+}
+#dot2 {
+  left: 48%;
+}
+#dot3 {
+
+  left: 53%;
+  
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+  z-index: 1;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+  z-index: 1;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
