@@ -1,68 +1,104 @@
-nav {
-	position: absolute;
-	width: 20%;
-	height: 50%;
-	right: -10%;
-	display: none;
-	top: 30%;
-	border-radius: 30px;
-	border: 5px solid white;
-	box-shadow: 10px 10px black
-}
+#navBar {
+	position: fixed;
+	width: 0%;
+	opacity: 0;
+	height: 8%;
+	right: 10%;
+	top: 4%;
+	border-radius: 10px;
+	border: 2px solid white;
+	box-shadow: 10px 10px black;
 
-.logo {
-
-	width: 50%;
-	height: 15%;
-	position: absolute;
-	top: 0%;
-	color: white;
-	right: 15%;
-}
-
-.logo h4 {
-	font-size: 50px;
-	color: white;
 	z-index: 1;
+	transition: opacity 1s;
 }
+
+.nav-links {
+	display: flex;
+	justify-content: space-around;
+	overflow: auto;
+	align-items: center;
+
+}
+
+.nav-links li {
+	list-style: none;
+	cursor: pointer;
+
+	height: 30%;
+
+}
+
+.nav-links svg{
+	text-decoration: none;
+	display: block;
+	padding-right: 45px;
+
+	transition: transform 500ms;
+
+
+}
+.nav-links p{
+	color: white;
+	top: 0%;
+	position: absolute;
+	opacity: 0;
+	font-size: 20px;
+	transform: translate(-20px,-5px);
+
+	transition: opacity 300ms;
+}
+
+.nav-links li:hover svg{
+	transform: translateX(-70px); 
+	transition: transform 500ms;
+}
+
+.nav-links li:hover p{
+	opacity: 1;
+
+	transition: opacity 1000ms;
+	/*transition: transform 300ms;*/
+}
+
 
 #burger {
 
 	position: fixed;
 	cursor: pointer;
 	color: white;
-	right: 8%;
-	top: 10%;
+	right: 5%;
+	top: 5%;
 	width: 40px;
 	height: 40px;
 	align-items: center;
-
-}
-
-#burger div {
-
-	cursor: pointer;
-	width: 35px;
-	position: fixed;
-	height: 5px;
-	margin: 3px;
-	transition: all 0.8s ease; 
-	background-color: white;
 
 	z-index: 2;
 
 }
 
+#burger div {
 
-.line1 {
-	top: 10%;
+	width: 35px;
+	position: relative;
+	height: 5px;
+	margin: 7px;
+	transition: all 0.8s ease; 
+	background-color: white;
 
+	z-index: 2;
 }
-.line2 {
-	top: 11.5%;
 
+.toggle .line1{
+	transform: rotate(45deg) translate(5px,12.5px);
+	
 }
-.line3 {
-	top: 12.9%;
 
+.toggle .line2{
+	opacity: 0;
 }
+
+.toggle .line3{
+	transform: rotate(-45deg) translate(5px,-12.5px);
+}
+
