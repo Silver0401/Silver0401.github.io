@@ -470,6 +470,7 @@ canvas{
   height: 200vh;
   position: absolute;
   /*z-index: -2;*/
+  
 }
 
 .neurom {
@@ -485,6 +486,8 @@ canvas{
   width: 51%;
   height: 70px;
   left: -2%;
+  background-color: white;
+
 }
 
 #ObjetivoBox h3 {
@@ -493,6 +496,7 @@ canvas{
   font-size: 45px;
   padding: 0;
   margin: 0;
+  color: black;
 
 }
 
@@ -504,6 +508,7 @@ canvas{
   top: 90px;
   color: white;
   font-size: 30px;
+
 
 }
 
@@ -525,6 +530,7 @@ canvas{
 
 #DatosBox h3 {
   font-size: 30px;
+  color: black;
 }
 
 
@@ -533,22 +539,36 @@ canvas{
   font-size: 22px;
 }
 
+#ProyectosBoxTitle {
+  position: absolute;
+  top: 670px;
+  left: -1%;
+  width: 105%;
+  height: 100px;
+  background-color: black;
+  opacity: .85;
+  box-shadow: 5px 5px 18px black;  
+}
+
+#ProyectosBoxTitle h3 {
+  position: absolute;
+  color: white;
+  top: 0%;
+  left: 4%;
+  font-size: 35px;
+  margin: 25px;
+}
+
 #ProyectosBox {
   position: absolute;
-  top: 650px;
+  top: 1000px;
   left: -1%;
   width: 105%;
   height: 800px;
   background-color: black;
+  opacity: .8;
   color: white;
-  
-}
-
-#ProyectosBox h3 {
-  position: absolute;
-  top: 0%;
-  left: 4%;
-  font-size: 35px;
+  box-shadow: 5px 5px 18px black;  
 }
 
 
