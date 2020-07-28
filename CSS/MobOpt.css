@@ -1,9 +1,54 @@
 @media all and (min-width: 1199px){
 	#ObjetivoBox h3 {
-		font-size: 10%;
+		font-size: 25px;
 	}
 
 	#ObjetivoText{
-		font-size: 30%;
+		font-size: 10px;
+	}
+
+	#DatosBox p{
+		font-size: 10px;
 	}
 }
+
+
+@media (min-width: 420px){
+	#me{
+		height: 50%;
+		width: auto;
+		bottom: 0%;
+		left: 0%;
+	}
+
+	#logo{
+		height: 50%;
+		width: auto;
+		top: 10%;
+		left: 5%;
+	}
+
+	#NavBar{
+		bottom: 8%;
+		width: 70%;
+		right: 15%;
+
+	}
+
+	#burger{
+		width: 80px;
+		height: 80px;
+	}
+
+	#burger div{
+		width: 90%;
+		height: 10px;
+	}
+
+	#NavLinks svg{
+		width: 70px;
+		height: 70px;
+	}
+}
+
+
