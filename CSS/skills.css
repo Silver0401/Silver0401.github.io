@@ -1,0 +1,484 @@
+#SkillsBox div div{
+	z-index: -1;
+/*	top: 0;
+*/
+	transition: width 500ms, border-radius 500ms; 
+}
+#SkillsBox2 div div{
+	z-index: -1;
+/*	top: 0;
+*/
+	transition: width 500ms, border-radius 500ms; 
+}
+
+#SkillsBox p{
+	position: relative;
+	display: block;
+	font-size: 23px;
+	color: white;
+	text-align: center;
+	top: 0%;
+	opacity: 0;
+
+	transition: opacity 200ms, left 200ms;
+}
+
+#SkillsBox2 p{
+	position: relative;
+	display: block;
+	font-size: 28px;
+	color: white;
+	text-align: center;
+	top: 0%;
+	opacity: 0;
+
+	transition: opacity 200ms, left 200ms;
+}
+
+#pythonIMG:hover ~ #PyInfoCircle p{
+	opacity: 1;
+	left: 13%;
+	transition: opacity 500ms, left;
+}
+#CSSIMG:hover ~ #CSSInfoCircle p{
+	right: 13%;
+	opacity: 1;
+	transition: opacity 500ms, right;
+}
+#HTMLIMG:hover ~ #HTMLInfoCircle p{
+	left: 13%;
+	opacity: 1;
+	transition: opacity 500ms, right;
+}
+#JSIMG:hover ~ #JSInfoCircle p{
+	right: 13%;
+	opacity: 1;
+	transition: opacity 500ms, right;
+}
+#JavaIMG:hover ~ #JavaInfoCircle p{
+	left: 13%;
+	opacity: 1;
+	transition: opacity 500ms, right;
+}
+#RaspIMG:hover ~ #RaspInfoCircle p{
+	right: 13%;
+	opacity: 1;
+	transition: opacity 500ms, right;
+}
+#ArduinoIMG:hover ~ #ArduinoInfoCircle p{
+	left: 13%;
+	opacity: 1;
+	transition: opacity 500ms, right;
+}
+#TypeIMG:hover ~ #TypeInfoCircle p{
+	right: 13%;
+	opacity: 1;
+	transition: opacity 500ms, right;
+}
+#GamesIMG:hover ~ #GamesInfoCircle p{
+	left: 13%;
+	opacity: 1;
+	transition: opacity 500ms, right;
+}
+
+
+
+
+#GermanIMG:hover ~ #GermanInfoCircle p{
+	left: 13%;
+	opacity: 1;
+	transition: opacity 500ms, right;
+}
+
+#EnglishIMG:hover ~ #EnglishInfoCircle p{
+	right: 13%;
+	opacity: 1;
+	transition: opacity 500ms, right;
+}
+#SpanishIMG:hover ~ #SpanishInfoCircle p{
+	left: 13%;
+	opacity: 1;
+	transition: opacity 500ms, right;
+}
+
+#GuitarIMG:hover ~ #GuitarInfoCircle p{
+	right: 13%;
+	opacity: 1;
+	transition: opacity 500ms, right;
+}
+#ViolinIMG:hover ~ #ViolinInfoCircle p{
+	left: 13%;
+	opacity: 1;
+	transition: opacity 500ms, right;
+}
+#BasketIMG:hover ~ #BasketInfoCircle p{
+	right: 13%;
+	opacity: 1;
+	transition: opacity 500ms, right;
+}
+#SwimIMG:hover ~ #SwimInfoCircle p{
+	left: 13%;
+	opacity: 1;
+	transition: opacity 500ms, right;
+}
+#PongIMG:hover ~ #PongInfoCircle p{
+	right: 13%;
+	opacity: 1;
+	transition: opacity 500ms, right;
+}
+#ChessIMG:hover ~ #ChessInfoCircle p{
+	left: 13%;
+	opacity: 1;
+	transition: opacity 500ms, right;
+}
+
+#pythonIMG:hover ~ #PyInfoCircle{
+
+	width: 420px;
+	box-shadow: 0px 0px 22px black;
+
+	border-top-right-radius: 500px;
+	border-bottom-right-radius: 500px;  
+
+	border-top-left-radius: 500px;
+	border-bottom-left-radius: 500px;
+
+	transition: width 500ms, border-radius 500ms; 
+}
+
+#CSSIMG:hover ~ #CSSInfoCircle {
+	width: 420px;
+	box-shadow: 0px 0px 22px black;
+
+	border-top-right-radius: 500px;
+	border-bottom-right-radius: 500px;  
+
+	border-top-left-radius: 500px;
+	border-bottom-left-radius: 500px;
+
+	transition: width 500ms, border-radius 500ms; 
+}
+
+#HTMLIMG:hover ~ #HTMLInfoCircle {
+	width: 420px;
+	box-shadow: 0px 0px 22px black;
+
+	border-top-right-radius: 500px;
+	border-bottom-right-radius: 500px;  
+
+	border-top-left-radius: 500px;
+	border-bottom-left-radius: 500px;
+
+	transition: width 500ms, border-radius 500ms; 
+}
+
+#JSIMG:hover ~ #JSInfoCircle {
+	width: 420px;
+	box-shadow: 0px 0px 22px black;
+
+	border-top-right-radius: 500px;
+	border-bottom-right-radius: 500px;  
+
+	border-top-left-radius: 500px;
+	border-bottom-left-radius: 500px;
+
+	transition: width 500ms, border-radius 500ms; 
+}
+
+#JavaIMG:hover ~ #JavaInfoCircle {
+	width: 420px;
+	box-shadow: 0px 0px 22px black;
+
+	border-top-right-radius: 500px;
+	border-bottom-right-radius: 500px;  
+
+	border-top-left-radius: 500px;
+	border-bottom-left-radius: 500px;
+
+	transition: width 500ms, border-radius 500ms; 
+}
+
+#RaspIMG:hover ~ #RaspInfoCircle {
+	width: 420px;
+	box-shadow: 0px 0px 22px black;
+
+	border-top-right-radius: 500px;
+	border-bottom-right-radius: 500px;  
+
+	border-top-left-radius: 500px;
+	border-bottom-left-radius: 500px;
+
+	transition: width 500ms, border-radius 500ms; 
+}
+
+#ArduinoIMG:hover ~ #ArduinoInfoCircle {
+	width: 420px;
+	box-shadow: 0px 0px 22px black;
+
+	border-top-right-radius: 500px;
+	border-bottom-right-radius: 500px;  
+
+	border-top-left-radius: 500px;
+	border-bottom-left-radius: 500px;
+
+	transition: width 500ms, border-radius 500ms; 
+}
+
+#TypeIMG:hover ~ #TypeInfoCircle {
+	width: 420px;
+	box-shadow: 0px 0px 22px black;
+
+	border-top-right-radius: 500px;
+	border-bottom-right-radius: 500px;  
+
+	border-top-left-radius: 500px;
+	border-bottom-left-radius: 500px;
+
+	transition: width 500ms, border-radius 500ms; 
+}
+
+#GamesIMG:hover ~ #GamesInfoCircle {
+	width: 420px;
+	box-shadow: 0px 0px 22px black;
+
+	border-top-right-radius: 500px;
+	border-bottom-right-radius: 500px;  
+
+	border-top-left-radius: 500px;
+	border-bottom-left-radius: 500px;
+
+	transition: width 500ms, border-radius 500ms; 
+}
+
+#GermanIMG:hover ~ #GermanInfoCircle {
+	width: 420px;
+	box-shadow: 0px 0px 22px black;
+
+	border-top-right-radius: 500px;
+	border-bottom-right-radius: 500px;  
+
+	border-top-left-radius: 500px;
+	border-bottom-left-radius: 500px;
+
+	transition: width 500ms, border-radius 500ms; 
+}
+
+#EnglishIMG:hover ~ #EnglishInfoCircle {
+	width: 420px;
+	box-shadow: 0px 0px 22px black;
+
+	border-top-right-radius: 500px;
+	border-bottom-right-radius: 500px;  
+
+	border-top-left-radius: 500px;
+	border-bottom-left-radius: 500px;
+
+	transition: width 500ms, border-radius 500ms; 
+}
+
+#SpanishIMG:hover ~ #SpanishInfoCircle {
+	width: 420px;
+	box-shadow: 0px 0px 22px black;
+
+	border-top-right-radius: 500px;
+	border-bottom-right-radius: 500px;  
+
+	border-top-left-radius: 500px;
+	border-bottom-left-radius: 500px;
+
+	transition: width 500ms, border-radius 500ms; 
+}
+
+#GuitarIMG:hover ~ #GuitarInfoCircle {
+	width: 420px;
+	box-shadow: 0px 0px 22px black;
+
+	border-top-right-radius: 500px;
+	border-bottom-right-radius: 500px;  
+
+	border-top-left-radius: 500px;
+	border-bottom-left-radius: 500px;
+
+	transition: width 500ms, border-radius 500ms; 
+}
+
+#ViolinIMG:hover ~ #ViolinInfoCircle {
+	width: 420px;
+	box-shadow: 0px 0px 22px black;
+
+	border-top-right-radius: 500px;
+	border-bottom-right-radius: 500px;  
+
+	border-top-left-radius: 500px;
+	border-bottom-left-radius: 500px;
+
+	transition: width 500ms, border-radius 500ms; 
+}
+
+#BasketIMG:hover ~ #BasketInfoCircle {
+	width: 420px;
+	box-shadow: 0px 0px 22px black;
+
+	border-top-right-radius: 500px;
+	border-bottom-right-radius: 500px;  
+
+	border-top-left-radius: 500px;
+	border-bottom-left-radius: 500px;
+
+	transition: width 500ms, border-radius 500ms; 
+}
+
+#SwimIMG:hover ~ #SwimInfoCircle {
+	width: 420px;
+	box-shadow: 0px 0px 22px black;
+
+	border-top-right-radius: 500px;
+	border-bottom-right-radius: 500px;  
+
+	border-top-left-radius: 500px;
+	border-bottom-left-radius: 500px;
+
+	transition: width 500ms, border-radius 500ms; 
+}
+
+#PongIMG:hover ~ #PongInfoCircle {
+	width: 420px;
+	box-shadow: 0px 0px 22px black;
+
+	border-top-right-radius: 500px;
+	border-bottom-right-radius: 500px;  
+
+	border-top-left-radius: 500px;
+	border-bottom-left-radius: 500px;
+
+	transition: width 500ms, border-radius 500ms; 
+}
+
+#ChessIMG:hover ~ #ChessInfoCircle {
+	width: 420px;
+	box-shadow: 0px 0px 22px black;
+
+	border-top-right-radius: 500px;
+	border-bottom-right-radius: 500px;  
+
+	border-top-left-radius: 500px;
+	border-bottom-left-radius: 500px;
+
+	transition: width 500ms, border-radius 500ms; 
+}
+
+
+
+#python, #html, #Java, #Arduino, #Games{
+	left: 11%;
+}
+#css, #JS, #Rasp, #Type {
+	left: 66%;	
+}
+
+
+#German, #Spanish, #Violin, #Swim, #Chess {
+	left: 10%;
+}
+#English, #Guitar, #Basket, #Pong {
+	left: 65%;
+}
+
+
+
+
+#PyInfoCircle{
+	left: 0;
+}
+
+#CSSInfoCircle{
+	right: 0;
+}
+
+#HTMLInfoCircle{
+	left: 0;
+}
+
+#JSInfoCircle{
+	right: 0;
+}
+
+#JavaInfoCircle{
+	left: 0;
+}
+
+#RaspInfoCircle{
+	right: 0;
+}
+
+#ArduinoInfoCircle{
+	left: 0;
+}
+
+#TypeInfoCircle{
+	right: 0;
+}
+
+#ChessInfoCircle{
+	left: 0;
+}
+
+
+
+#GermanInfoCircle{
+	left: 0;
+}
+#EnglishInfoCircle{
+	right: 0;
+}
+#SpanishInfoCircle{
+	left: 0;
+}
+
+#GuitarInfoCircle{
+	right: 0;
+}
+
+#ViolinInfoCircle{
+	left: 0;
+}
+
+#BasketInfoCircle{
+	right: 0;
+}
+
+#SwimInfoCircle{
+	left: 0;
+}
+
+#PongInfoCircle{
+	right: 0;
+}
+
+#ChessInfoCircle{
+	left: 0;
+}
+
+
+
+#ArduinoIMG{
+	height: 40%;
+	top: 15%;
+}
+
+#RaspIMG{
+	left: 1.5%;
+	top: 2.5%;
+}
+
+#TypeInfoCircle p{
+	font-size: 24px;
+}
+#GamesInfoCircle p{
+	font-size: 23px;
+}
+
+#GamesIMG{
+	bottom: 8%;
+}
+

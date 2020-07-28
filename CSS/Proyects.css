@@ -29,7 +29,7 @@
 }
 
 #ProyectInfo p{
-  opacity: 0;
+  text-align: justify;
   transition: opacity 1000ms;
 }
 
@@ -37,7 +37,9 @@
   position: absolute;
   top: 15%;
   left: 8%;
-  padding: 10px;
+  padding-top: 40px;
+  padding-left: 5px;
+  padding-right: 50px;
   font-size: 23px;
 }
 
@@ -50,7 +52,7 @@
   cursor: pointer;
   transition: 500ms;
 
-  transition: color 500ms;
+  transition: color 500ms, box-shadow 500ms;
 }
 
 #Cbrand{
@@ -61,6 +63,23 @@
 #Ibrand{
   width: 200px;
   height: auto;
+}
+
+#Wbrand{
+  position: absolute;
+  width: 400px;
+  height: auto;
+  right: 2%;
+  top: 7%;
+}
+
+#Bbrand{
+  position: absolute;
+  width: 300px;
+  height: auto;
+  right: 30%;
+  top: 7%;
+
 }
 
 #one{
@@ -110,9 +129,9 @@
 /* Slideshow container */
 .slideshow-container {
   position: absolute;
-  width: 40%;
+  width: 46%;
   height: 500px;
-  right: 7%; 
+  right: 3%; 
   bottom: 4%;
   opacity: 0;
 

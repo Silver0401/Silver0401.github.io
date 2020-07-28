@@ -444,7 +444,7 @@ canvas{
 
   stroke-dasharray: 500;
   stroke-dashoffset: 500;
-  animation: dash 10s linear forwards;
+  animation: dash 4s linear forwards;
 
 }
 
@@ -469,7 +469,7 @@ canvas{
   width: 100%;
   height: 200vh;
   position: absolute;
-  /*z-index: -2;*/
+  z-index: 0;
   
 }
 
@@ -486,17 +486,17 @@ canvas{
   width: 51%;
   height: 70px;
   left: -2%;
-  background-color: white;
+  background: linear-gradient(to right, #34e89e, #0f3443);
 
 }
 
 #ObjetivoBox h3 {
   position: absolute;
   right: 12%;
-  font-size: 45px;
+  font-size: 40px;
   padding: 0;
   margin: 0;
-  color: black;
+  color: white;
 
 }
 
@@ -507,7 +507,7 @@ canvas{
   left: 2%;
   top: 90px;
   color: white;
-  font-size: 30px;
+  font-size: 25px;
 
 
 }
@@ -519,7 +519,7 @@ canvas{
 
 
 #DatosBox {
-  right: 0%;
+  right: 5%;
   width: 30%;
   height: 450px;
   top: 100px;
@@ -543,7 +543,7 @@ canvas{
   position: absolute;
   top: 670px;
   left: -1%;
-  width: 105%;
+  width: calc(100% + 7px);
   height: 100px;
   background-color: black;
   opacity: .85;
@@ -559,11 +559,26 @@ canvas{
   margin: 25px;
 }
 
+#ProyectosRecapInfo {
+  position: absolute;
+  color: white;
+  width: 100%;
+  left: -2px;
+  height: 200px;
+  top: 800px;
+}
+
+#ProyectosRecapInfo p {
+  font-size: 25px;
+  padding: 25px;
+
+}
+
 #ProyectosBox {
   position: absolute;
   top: 1000px;
   left: -1%;
-  width: 105%;
+  width: calc(100% + 7px);
   height: 800px;
   background-color: black;
   opacity: .8;
@@ -571,12 +586,148 @@ canvas{
   box-shadow: 5px 5px 18px black;  
 }
 
+#SkillsTitle {
+  top: 1900px;
+  font-size: 25px;
+  width: 51%;
+  height: 70px;
+  right: 0px;
+  background: linear-gradient(to right, #34e89e, #0f3443);
 
-#holder {
+}
+
+#SkillsTitle h3 {
   position: absolute;
-  bottom: -80%;
-  width: 30%;
-  height: 30%;
-  left: 45%;
+  right: 15%;
+  font-size: 40px;
+  padding: 0;
+  margin: 0;
+  color: white;
+}
 
+#SkillsBox {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  top: 1980px;
+  height: 1400px;
+  width: 50%;
+  left: -5px;
+}
+
+#SkillsBox2 {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  top: 2050px;
+  height: 1400px;
+  width: 50%;
+  right: -5px;
+
+}
+
+.Bcircle {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.circle {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 22px black;
+}
+
+.Bcircle img {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  align-content: center;
+  margin: 0;
+  padding: 10%;
+  z-index: 0;
+}
+
+
+#Ed{
+  position: absolute;
+  opacity: .8;
+  top: 3600px;
+  left: -10px;
+  width: calc(100% + 5px);
+  height: 600px; 
+  align-items: center;
+
+  background-color: black;
+}
+
+#Ed h3{
+  position: relative;
+  text-align: center;
+  font-size: 35px;
+}
+
+#Ed .boxes{
+  position: relative;
+  width: 100%;
+  height: 80%;
+  bottom: 5%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.box{
+  position: relative;
+  width: 25%;
+  height: 100%;
+}
+
+.EdInfo{
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 85%;
+  display: block;
+  text-align: center;
+  font-size: 25px;
+}
+
+.EdInfo img{
+  width: 70%;
+  height: auto;
+}
+
+.box h2{
+  position: absolute;
+  text-align: center;
+  left: 8%;
+  bottom: 0px;
+  color: lightblue;
+  font-size: 30px;
+
+}
+
+
+#footer {
+  position: absolute;
+  bottom: -220%;
+  width: calc(100% + 5px);
+  height: 100px;
+  left: -5px;
+  color: black;
+  font-size: 25px;
+}
+
+#footer h3{
+  position: relative;
+  text-align: center;
 }

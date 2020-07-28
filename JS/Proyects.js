@@ -6,7 +6,8 @@ const WButton = document.getElementById("WLink")
 const Fbrand = document.getElementById("Fbrand")
 const Cbrand = document.getElementById("Cbrand")
 const Ibrand = document.getElementById("Ibrand")
-// const Wbrand = document.getElementById("WLink")
+const Wbrand = document.getElementById("Wbrand")
+const Bbrand = document.getElementById("Bbrand")
 
 const FirstImages = document.getElementById("one")
 const CarnImages = document.getElementById("two")
@@ -15,10 +16,10 @@ const WerImages = document.getElementById("four")
 
 const AboutInfo = document.getElementById("About")
 
-const FText = "This is a test #1 to see how this works"
-const CText = "This is a test #2 to see how this works"
-const IText = "This is a test #3 to see how this works"
-const WText = "This is a test #4 to see how this works"
+const FText = "FIRST, por sus siglas en inglés For Inspiration and Recognition of Science and Technology, es una competencia de robótica de talla mundial, dentro de mi prepa existía un grupo estudiantil por el nombre de Keybot, el cual era participe en la subdivisión más compleja de la misma competencia: FRC (First Robotics Competition). Durante mi tiempo en el equipo, fungí como mentor y líder del área de programación, en competencias tanto regionales como mundiales; actualmente sigo ayudando al equipo en cualquier cosa que llegaran a necesitar."
+const CText = "Carneros es un grupo estudiantil de mi prepa el cual se enfocaba en la formación de alumnos con características de liderazgo, vivencia y trabajo en equipo. Durante mi tiempo dentro del grupo fui tanto un participante como un organizador de varios eventos como: campamentos de liderazgo, foros de conferencia (Wake Up, siendo uno de los más grandes y exitosos) y actividades de humanidades y conciencia.  "
+const IText = "Ikigai al igual que Carneros fue otro grupo estudiantil del que forme parte durante algunos semestres, en este se buscaban hacer eventos de conciencia social, al formar parte de este, en algunas ocasiones ayude a la preparación de algunos eventos, trabajando más que nada habilidades como organización y trabajo coordinado de equipo."
+const WText = "WER significa en inglés: World Educational Robot, otra competencia de robótica de talla mundial, donde desde un principio fui Mentor de los Equipos inscritos a la competencia. Por otro lado BrainVue es un grupo al que me uní durante mi primer semestre en la universidad, donde programabamos un robot NAO para poder aplicarlo en el ámbito médico. (El año pasado BrainVue tuvo un \"stand\" en la reconocida feria de tecnologia INC Monterrey)"
 
 
 FButton.onclick = () =>{
@@ -28,7 +29,7 @@ FButton.onclick = () =>{
   IkiImages.style.opacity = 0;
   WerImages.style.opacity = 0;
 
-  FButton.style.transition = "color 500ms";
+  FButton.style.transition = "color 500ms, box-shadow 500ms";
   FButton.style.color = "#E15555";
   CButton.style.color = "white";
   IButton.style.color = "white";
@@ -37,6 +38,8 @@ FButton.onclick = () =>{
   Fbrand.style.opacity = 1;
   Cbrand.style.opacity = 0;
   Ibrand.style.opacity = 0;
+  Wbrand.style.opacity = 0;
+  Bbrand.style.opacity = 0;
 
   sleep(1000).then(() => {
 
@@ -54,7 +57,7 @@ CButton.onclick = () =>{
   IkiImages.style.opacity = 0;
   WerImages.style.opacity = 0;
 
-  CButton.style.transition = "color 500ms";
+  CButton.style.transition = "color 500ms, box-shadow 500ms";
   FButton.style.color = "white";
   CButton.style.color = "#497DDD";
   IButton.style.color = "white";
@@ -63,11 +66,13 @@ CButton.onclick = () =>{
   Fbrand.style.opacity = 0;
   Cbrand.style.opacity = 1;
   Ibrand.style.opacity = 0;
+  Wbrand.style.opacity = 0;
+  Bbrand.style.opacity = 0;
 
 
   sleep(1000).then(() => {
 
-    AboutInfo.innerText = IText
+    AboutInfo.innerText = CText
     AboutInfo.style.opacity = 1
     AboutInfo.style.transition = "opacity 1000ms"
 
@@ -81,7 +86,7 @@ IButton.onclick = () =>{
   IkiImages.style.opacity = 1;
   WerImages.style.opacity = 0;
 
-  IButton.style.transition = "color 500ms";
+  IButton.style.transition = "color 500ms, box-shadow 500ms";
   FButton.style.color = "white";
   CButton.style.color = "white";
   IButton.style.color = "#4DC435";
@@ -90,6 +95,8 @@ IButton.onclick = () =>{
   Fbrand.style.opacity = 0;
   Cbrand.style.opacity = 0;
   Ibrand.style.opacity = 1;
+  Wbrand.style.opacity = 0;
+  Bbrand.style.opacity = 0;
 
   sleep(1000).then(() => {
 
@@ -107,11 +114,17 @@ WButton.onclick = () =>{
   IkiImages.style.opacity = 0;
   WerImages.style.opacity = 1;
 
-  WButton.style.transition = "color 500ms";
+  WButton.style.transition = "color 500ms, box-shadow 500ms";
   FButton.style.color = "white";
   CButton.style.color = "white";
   IButton.style.color = "white";
   WButton.style.color = "#D5DE47";
+
+  Fbrand.style.opacity = 0;
+  Cbrand.style.opacity = 0;
+  Ibrand.style.opacity = 0;
+  Wbrand.style.opacity = 1;
+  Bbrand.style.opacity = 1;
 
   sleep(1000).then(() => {
 
