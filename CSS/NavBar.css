@@ -8,7 +8,7 @@
 	border-radius: 10px;
 	border: 2px solid white;
 	box-shadow: 10px 10px 10px black;
-	background: linear-gradient(to right, #9796f0, #fbc7d4);
+	background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff); 
 	display: block;
 
 	z-index: 1;
@@ -41,7 +41,7 @@
 
 }
 .nav-links p{
-	color: white;
+	color: black;
 	top: 0%;
 	position: absolute;
 	opacity: 0;
