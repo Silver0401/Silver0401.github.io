@@ -719,7 +719,7 @@ canvas{
 
 #footer {
   position: absolute;
-  bottom: -220%;
+  bottom: -180%;
   width: calc(100% + 5px);
   height: 100px;
   left: -5px;
