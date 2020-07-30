@@ -119,7 +119,7 @@ const EaseInOutHome = () => {
 	logo.style.display = "block"
 
 	anime({
-		targets:["#logo","#me"],
+		targets:["#logo","#me, #IAmA"],
 		duration: 2000,
 		translateY: 0,
 		easing: "easeOutBounce"
@@ -161,7 +161,7 @@ const EaseInOutContact = () => {
 	// Getting rid of Home and CV
 
 	anime({
-		targets:["#logo","#me"],
+		targets:["#logo","#me, #IAmA"],
 		duration: 1000,
 		translateY: 1000,
 		easing: "easeInOutSine"
@@ -213,7 +213,7 @@ const EaseInOutCV = () => {
 	// Get rid of Home and Contacts elements
 
 	anime({
-		targets:["#logo","#me"],
+		targets:["#logo","#me, #IAmA"],
 		duration: 1000,
 		translateY: 1000,
 		easing: "easeInOutSine"
