@@ -11,7 +11,7 @@ let counter = 1
 let CVPageTracker = 0
 let ContactPageTracker = 0
 let currentPage = "Home"
-let PageWidth = 700
+let PageWidth = "default"
 
 burger.classList.toggle("toggle")
 
@@ -43,12 +43,19 @@ HTMLElement.prototype.pseudoStyle = function(element,prop,value){
 }
 
 const PageChecker = () => {
-	if (currentPage === "Home"){
-		PageWidth = "85%"
-	} else if (currentPage === "CV") {
-		PageWidth = "85%"
+
+	if (window.screen.width < 400){
+		PageWidth = "75%"
 	} else {
+
 		PageWidth = "85%"
+		// if (currentPage === "Home"){
+		// 	PageWidth = "85%"
+		// } else if (currentPage === "CV") {
+		// 	PageWidth = "85%"
+		// } else {
+		// 	PageWidth = "85%"
+		// }
 	}
 }
 

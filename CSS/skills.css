@@ -1,3 +1,7 @@
+:root{
+	--ballHeight: 420px;
+}
+
 #SkillsBox div div{
 	z-index: -1;
 /*	top: 0;
@@ -87,7 +91,7 @@
 #GermanIMG:hover ~ #GermanInfoCircle p{
 	left: 13%;
 	opacity: 1;
-	transition: opacity 500ms, right;
+	transition: opacity 500ms, left;
 }
 
 #EnglishIMG:hover ~ #EnglishInfoCircle p{
@@ -98,7 +102,7 @@
 #SpanishIMG:hover ~ #SpanishInfoCircle p{
 	left: 13%;
 	opacity: 1;
-	transition: opacity 500ms, right;
+	transition: opacity 500ms, left;
 }
 
 #GuitarIMG:hover ~ #GuitarInfoCircle p{
@@ -109,7 +113,7 @@
 #ViolinIMG:hover ~ #ViolinInfoCircle p{
 	left: 13%;
 	opacity: 1;
-	transition: opacity 500ms, right;
+	transition: opacity 500ms, left;
 }
 #BasketIMG:hover ~ #BasketInfoCircle p{
 	right: 13%;
@@ -119,7 +123,7 @@
 #SwimIMG:hover ~ #SwimInfoCircle p{
 	left: 13%;
 	opacity: 1;
-	transition: opacity 500ms, right;
+	transition: opacity 500ms, left;
 }
 #PongIMG:hover ~ #PongInfoCircle p{
 	right: 13%;
@@ -129,12 +133,12 @@
 #ChessIMG:hover ~ #ChessInfoCircle p{
 	left: 13%;
 	opacity: 1;
-	transition: opacity 500ms, right;
+	transition: opacity 500ms, left;
 }
 
 #pythonIMG:hover ~ #PyInfoCircle{
 
-	width: 420px;
+	width: var(--ballHeight);
 	box-shadow: 0px 0px 22px black;
 
 	border-top-right-radius: 500px;
@@ -147,7 +151,7 @@
 }
 
 #CSSIMG:hover ~ #CSSInfoCircle {
-	width: 420px;
+	width: var(--ballHeight);
 	box-shadow: 0px 0px 22px black;
 
 	border-top-right-radius: 500px;
@@ -160,7 +164,7 @@
 }
 
 #HTMLIMG:hover ~ #HTMLInfoCircle {
-	width: 420px;
+	width: var(--ballHeight);
 	box-shadow: 0px 0px 22px black;
 
 	border-top-right-radius: 500px;
@@ -173,7 +177,7 @@
 }
 
 #JSIMG:hover ~ #JSInfoCircle {
-	width: 420px;
+	width: var(--ballHeight);
 	box-shadow: 0px 0px 22px black;
 
 	border-top-right-radius: 500px;
@@ -186,7 +190,7 @@
 }
 
 #JavaIMG:hover ~ #JavaInfoCircle {
-	width: 420px;
+	width: var(--ballHeight);
 	box-shadow: 0px 0px 22px black;
 
 	border-top-right-radius: 500px;
@@ -199,7 +203,7 @@
 }
 
 #RaspIMG:hover ~ #RaspInfoCircle {
-	width: 420px;
+	width: var(--ballHeight);
 	box-shadow: 0px 0px 22px black;
 
 	border-top-right-radius: 500px;
@@ -212,7 +216,7 @@
 }
 
 #ArduinoIMG:hover ~ #ArduinoInfoCircle {
-	width: 420px;
+	width: var(--ballHeight);
 	box-shadow: 0px 0px 22px black;
 
 	border-top-right-radius: 500px;
@@ -225,7 +229,7 @@
 }
 
 #TypeIMG:hover ~ #TypeInfoCircle {
-	width: 420px;
+	width: var(--ballHeight);
 	box-shadow: 0px 0px 22px black;
 
 	border-top-right-radius: 500px;
@@ -238,7 +242,7 @@
 }
 
 #GamesIMG:hover ~ #GamesInfoCircle {
-	width: 420px;
+	width: var(--ballHeight);
 	box-shadow: 0px 0px 22px black;
 
 	border-top-right-radius: 500px;
@@ -251,7 +255,7 @@
 }
 
 #GermanIMG:hover ~ #GermanInfoCircle {
-	width: 420px;
+	width: var(--ballHeight);
 	box-shadow: 0px 0px 22px black;
 
 	border-top-right-radius: 500px;
@@ -264,7 +268,7 @@
 }
 
 #EnglishIMG:hover ~ #EnglishInfoCircle {
-	width: 420px;
+	width: var(--ballHeight);
 	box-shadow: 0px 0px 22px black;
 
 	border-top-right-radius: 500px;
@@ -277,7 +281,7 @@
 }
 
 #SpanishIMG:hover ~ #SpanishInfoCircle {
-	width: 420px;
+	width: var(--ballHeight);
 	box-shadow: 0px 0px 22px black;
 
 	border-top-right-radius: 500px;
@@ -290,7 +294,7 @@
 }
 
 #GuitarIMG:hover ~ #GuitarInfoCircle {
-	width: 420px;
+	width: var(--ballHeight);
 	box-shadow: 0px 0px 22px black;
 
 	border-top-right-radius: 500px;
@@ -303,7 +307,7 @@
 }
 
 #ViolinIMG:hover ~ #ViolinInfoCircle {
-	width: 420px;
+	width: var(--ballHeight);
 	box-shadow: 0px 0px 22px black;
 
 	border-top-right-radius: 500px;
@@ -316,7 +320,7 @@
 }
 
 #BasketIMG:hover ~ #BasketInfoCircle {
-	width: 420px;
+	width: var(--ballHeight);
 	box-shadow: 0px 0px 22px black;
 
 	border-top-right-radius: 500px;
@@ -329,7 +333,7 @@
 }
 
 #SwimIMG:hover ~ #SwimInfoCircle {
-	width: 420px;
+	width: var(--ballHeight);
 	box-shadow: 0px 0px 22px black;
 
 	border-top-right-radius: 500px;
@@ -342,7 +346,7 @@
 }
 
 #PongIMG:hover ~ #PongInfoCircle {
-	width: 420px;
+	width: var(--ballHeight);
 	box-shadow: 0px 0px 22px black;
 
 	border-top-right-radius: 500px;
@@ -355,7 +359,7 @@
 }
 
 #ChessIMG:hover ~ #ChessInfoCircle {
-	width: 420px;
+	width: var(--ballHeight);
 	box-shadow: 0px 0px 22px black;
 
 	border-top-right-radius: 500px;
@@ -387,77 +391,24 @@
 
 
 
-#PyInfoCircle{
+#PyInfoCircle, #HTMLInfoCircle, #JavaInfoCircle, #ArduinoInfoCircle, #ChessInfoCircle{
 	left: 0;
 }
 
-#CSSInfoCircle{
+#CSSInfoCircle, #JSInfoCircle, #RaspInfoCircle, #TypeInfoCircle{
 	right: 0;
 }
 
-#HTMLInfoCircle{
+
+
+#GermanInfoCircle, #SpanishInfoCircle, #ViolinInfoCircle, #SwimInfoCircle, #ChessInfoCircle{
 	left: 0;
 }
-
-#JSInfoCircle{
+#EnglishInfoCircle, #GuitarInfoCircle, #BasketInfoCircle, #PongInfoCircle{
 	right: 0;
 }
 
-#JavaInfoCircle{
-	left: 0;
-}
 
-#RaspInfoCircle{
-	right: 0;
-}
-
-#ArduinoInfoCircle{
-	left: 0;
-}
-
-#TypeInfoCircle{
-	right: 0;
-}
-
-#ChessInfoCircle{
-	left: 0;
-}
-
-
-
-#GermanInfoCircle{
-	left: 0;
-}
-#EnglishInfoCircle{
-	right: 0;
-}
-#SpanishInfoCircle{
-	left: 0;
-}
-
-#GuitarInfoCircle{
-	right: 0;
-}
-
-#ViolinInfoCircle{
-	left: 0;
-}
-
-#BasketInfoCircle{
-	right: 0;
-}
-
-#SwimInfoCircle{
-	left: 0;
-}
-
-#PongInfoCircle{
-	right: 0;
-}
-
-#ChessInfoCircle{
-	left: 0;
-}
 
 
 

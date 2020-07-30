@@ -9,7 +9,7 @@
 	border: 2px solid white;
 	box-shadow: 10px 10px 10px black;
 	background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff); 
-	display: block;
+	display: inline;
 
 	z-index: 1;
 	transition: opacity 1s;

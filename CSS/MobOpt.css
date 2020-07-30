@@ -1,43 +1,82 @@
+
+
 @media all and (max-width: 1199px){
 	#ObjetivoBox h3 {
-		font-size: 25px;
+		font-size: 34px;
 	}
 
 	#ObjetivoText{
-		font-size: 10px;
+		font-size: 22px;
 	}
 
 	#DatosBox p{
-		font-size: 10px;
+		font-size: 20px;
+	}
+
+}
+
+@media all and (max-width: 1000px){
+	#ObjetivoBox h3 {
+		font-size: 27px;
+	}
+
+	#ObjetivoText{
+		font-size: 20px;
+	}
+
+	#DatosBox p{
+		font-size: 17px;
 	}
 }
 
 
-@media (max-width: 420px){
+@media screen and (max-width: 810px){
+
+	#ObjetivoBox h3 {
+		font-size: 22px;
+	}
+
+	#ObjetivoText{
+		font-size: 18px;
+	}
+
+	#DatosBox p{
+		font-size: 15px;
+	}
+
 	#me{
-		height: 2000px;
+		height: 120%;
 		width: auto;
-		bottom: 0%;
-		left: 0%;
+		left: -30%;
+		bottom: -10%;
 	}
 
-	#logo{
-		height: 50%;
-		width: auto;
-		top: 10%;
-		left: 5%;
+	#logo {
+		width: 80%;
+		height: auto;
+		top: 3%;
+		left: 10%;
 	}
 
-	#NavBar{
-		bottom: 8%;
-		width: 70%;
-		right: 15%;
+	#navBar{
+		top: 85%;
+		height: 10%;
+		width: 95%;
+		right: 3%;
+
+	}
+
+	.nav-links svg{
+		width: 50px;
+		height: 50px;
 
 	}
 
 	#burger{
-		width: 80px;
-		height: 80px;
+		top: 75%;
+		right: 10%;
+		width: 70px;
+		height: auto;
 	}
 
 	#burger div{
@@ -45,10 +84,252 @@
 		height: 10px;
 	}
 
-	#NavLinks svg{
-		width: 70px;
-		height: 70px;
-	}
 }
 
+@media (max-width: 400px){
+	#me{
+		height: 150%;
+		width: auto;
+		left: -70%;
+		bottom: -50%;
+	}
 
+	#logo{
+		width: 140%;
+		height: auto;
+	}
+
+	#navBar{
+		top: 87%;
+		right: 22%;
+		width: 75%;
+	}
+
+	#burger{
+		position: fixed;
+		top: 90%;
+		right: 4%;
+	}
+
+	#DatosBox h3{
+		font-size: 25px;
+	}
+
+	#DatosBox{
+		width: 45%;
+		right: -30%;
+	}
+
+	#ObjetivoBox{
+		text-align: center;
+		margin: 0;
+		width: 65%;
+		left: 0%;
+		top: 2%;
+	}
+
+	#ObjetivoText{
+		left: -7%;
+		width: 45%;
+		font-size: 14px;
+	}
+
+	#ProyectosBoxTitle, #ProyectosBox, #ProyectosRecapInfo, #Ed {
+		width: 80vh;
+		left: 2%;
+	}
+
+	#ProyectosBoxTitle h3{
+		font-size: 22px;
+	}
+
+	#ProyectosRecapInfo{
+		top: 750px;
+	}
+
+	#ProyectosRecapInfo p{
+		font-size: 18px;
+	}
+
+	#ProyectInfo {
+		top: 3%;
+		left: 52%;
+	}
+
+
+	#ProyectInfo h3{
+		font-size: 25px;
+	}
+
+	#About {
+		font-size: 15px;
+	}
+
+	.slideshow-container{
+		bottom: 2%;
+		left: 1.5%;
+		width: 96%;
+		height: auto;
+	}
+
+	.brands img{
+		top: 45%;
+		width: 100px;
+		height: auto;
+	}
+
+	#Cbrand{
+		top: 42%;
+	}
+
+	#Ibrand{
+		width: 70px;
+		height: auto;
+		top: 42.5%;
+		right: 15%;
+
+	}
+
+	#Wbrand, #Bbrand{
+		top: 44%;
+		width: 100px;
+		height: auto;
+	}
+
+	#Wbrand {
+		right: 27%;
+	}
+
+	#Bbrand {
+		right: 5%;
+	}
+
+	#ProyectsNav{
+		left: -5%;
+	}
+
+	#SkillsTitle{
+		width: 80%;
+		right: -45%;
+	}
+
+	#SkillsTitle h3{
+		left: 20%;
+		font-size: 20px;
+	}
+
+	.Bcircle, .circle{	
+		width: 80px;
+		height: 80px;
+	}
+
+	#SkillsBox2{
+		top: 2050px;
+		right: -30%;
+	}
+
+	#css, #JS, #Rasp, #Type {
+		left: 80%;	
+	}
+
+	#English, #Guitar, #Basket, #Pong {
+		left: 70%;
+	}
+
+	:root {
+		--ballHeight: 200px;
+	}
+
+
+	#SkillsBox p, #SkillsBox2 p{
+		font-size: 11px;
+	}
+
+	#footer{
+		top: 4500px;
+		width: 75vh;
+		font-size: 15px;
+		left: 5%;
+		margin: 0;
+	}
+
+	#Ed h3{
+		font-size: 25px;
+	}
+
+	.EdInfo {
+		font-size: 20px;
+	}
+
+	.box h2 {
+		font-size: 20px;
+	}
+
+	#contact img{
+		height: 30%;
+		width: auto;
+	}
+
+	#whats1, #whats2, #whats3, #whats4 {
+		right: -35%;
+	}
+
+	#face1, #face2, #face3, #face4{
+		top: 500px;
+		left: 35%;
+	}
+
+	#mail1, #mail2, #mail3, #mail4 {
+		left: 62%;
+		top: 670px;
+	}
+
+	#twit1, #twit2, #twit3, #twit4{
+		left: 2%;
+		top: 650px;
+	}
+
+	#InstaInfo{
+		left: 10%;
+		top: 500px;
+	}
+
+	#WhatsInfo{
+		left: 90%;
+		top: 400px;
+	}
+
+	#FaceInfo{
+		left: 50%;
+	}
+
+	#TwitInfo{
+		bottom: -50px;
+	}
+
+	#contact #title{
+		font-size: 35px;
+	}
+
+
+
+
+/*	#css, #JS, #Rasp, #Type {
+		left: 11%;
+	}
+
+	#German, #Spanish, #Violin, #Swim, #Chess, #English, #Guitar, #Basket, #Pong {
+		left: 75%;
+	}
+
+	#PyInfoCircle, #CSSInfoCircle, #HTMLInfoCircle, #JSInfoCircle, #JavaInfoCircle, #RaspInfoCircle, #ArduinoInfoCircle, #TypeInfoCircle, #ChessInfoCircle{
+		left: 0;
+	}
+
+	#GermanInfoCircle, #EnglishInfoCircle, #SpanishInfoCircle, #GuitarInfoCircle, #ViolinInfoCircle, #BasketInfoCircle, #SwimInfoCircle, #PongInfoCircle, #ChessInfoCircle{
+		right: 0;
+	}*/
+
+
+
+}
