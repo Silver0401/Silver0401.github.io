@@ -119,7 +119,7 @@ const EaseInOutHome = () => {
 
 	me.style.display = "block"
 	logo.style.display = "block"
-	iAm.style.opacity = 1
+	iAm.style.display = "block"
 
 	anime({
 		targets:["#logo","#me, #IAmA"],
@@ -181,7 +181,7 @@ const EaseInOutContact = () => {
 		me.style.display = "none"
 		logo.style.display = "none"
 		cv.style.display = "none"
-		iAm.style.opacity = 0
+		iAm.style.display = "none"
 	})
 
 	// Showing Contacts
@@ -237,7 +237,7 @@ const EaseInOutCV = () => {
 		me.style.display = "none"
 		logo.style.display = "none"
 		contact.style.display = "none"
-		iAm.style.opacity = 0
+		iAm.style.display = "none"
 	})
 
 	// Put on the CV elements
