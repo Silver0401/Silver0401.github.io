@@ -311,25 +311,9 @@
 		font-size: 35px;
 	}
 
-
-
-
-/*	#css, #JS, #Rasp, #Type {
-		left: 11%;
+	#IAmA{
+		font-size: 25px;
 	}
-
-	#German, #Spanish, #Violin, #Swim, #Chess, #English, #Guitar, #Basket, #Pong {
-		left: 75%;
-	}
-
-	#PyInfoCircle, #CSSInfoCircle, #HTMLInfoCircle, #JSInfoCircle, #JavaInfoCircle, #RaspInfoCircle, #ArduinoInfoCircle, #TypeInfoCircle, #ChessInfoCircle{
-		left: 0;
-	}
-
-	#GermanInfoCircle, #EnglishInfoCircle, #SpanishInfoCircle, #GuitarInfoCircle, #ViolinInfoCircle, #BasketInfoCircle, #SwimInfoCircle, #PongInfoCircle, #ChessInfoCircle{
-		right: 0;
-	}*/
-
 
 
 }
