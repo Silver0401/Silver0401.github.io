@@ -54,6 +54,32 @@ canvas{
 
 /*Contacs apps icons animations------------------*/
 
+#IAmA{
+  position: absolute;
+  right: 0%;
+  bottom: 5%;
+  width: 50%;
+  height: 20%;
+  color: white;
+  font-size: 45px;
+  font-weight: 1000;
+  letter-spacing: 5px;
+}
+
+#KeyWord{
+  position: absolute;
+  color: yellow;
+  top: 40%;
+  margin: 0;
+}
+
+#basic{
+  position: absolute;
+  margin: 0;
+  top: 0%;
+  left: 0%;
+}
+
 #contact{
   position: absolute;
   width: 100%;
@@ -431,16 +457,16 @@ canvas{
   height: auto;
   bottom: -5%;
   left: -5%; 
-  z-index: -2;
+  z-index: 0;
 }
 
 #logo {
 
   position: absolute;
-  width: 50%;
-  height: 60%;
-  top: 30%;
-  right: 5%;
+  width: 45%;
+  height: 50%;
+  top: 15%;
+  right: 10%;
 
   stroke-dasharray: 500;
   stroke-dashoffset: 500;
@@ -731,3 +757,5 @@ canvas{
   position: relative;
   text-align: center;
 }
+
+
