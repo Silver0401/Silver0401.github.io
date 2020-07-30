@@ -6,6 +6,8 @@ const logo = document.getElementById("logo")
 const html = document.querySelector("html")
 const cv = document.getElementById("CV")
 const contact = document.getElementById("contact")
+const iAm = document.getElementById("IAmA")
+
 
 let counter = 1
 let CVPageTracker = 0
@@ -117,6 +119,7 @@ const EaseInOutHome = () => {
 
 	me.style.display = "block"
 	logo.style.display = "block"
+	iAm.style.opacity = 1
 
 	anime({
 		targets:["#logo","#me, #IAmA"],
@@ -178,6 +181,7 @@ const EaseInOutContact = () => {
 		me.style.display = "none"
 		logo.style.display = "none"
 		cv.style.display = "none"
+		iAm.style.opacity = 0
 	})
 
 	// Showing Contacts
@@ -233,6 +237,7 @@ const EaseInOutCV = () => {
 		me.style.display = "none"
 		logo.style.display = "none"
 		contact.style.display = "none"
+		iAm.style.opacity = 0
 	})
 
 	// Put on the CV elements
