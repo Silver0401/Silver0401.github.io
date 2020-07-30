@@ -8,7 +8,8 @@
 	border-radius: 10px;
 	border: 2px solid white;
 	box-shadow: 10px 10px 10px black;
-	 background: linear-gradient(to right, #0f2027, #203a43, #2c5364); 
+	 background: linear-gradient(to right, #16222a, #3a6073);
+	/*background: linear-gradient(to right, #0f2027, #203a43, #2c5364); */
 	/*background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff); */
 	display: inline;
 
@@ -36,6 +37,7 @@
 	text-decoration: none;
 	display: block;
 	padding-right: 45px;
+	fill: white;
 
 	transition: transform 500ms;
 
