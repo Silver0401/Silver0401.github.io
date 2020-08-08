@@ -85,62 +85,78 @@ canvas{
   width: 100%;
   height: 100%;
   display: none;
+  bottom: 0%;
 }
 
 #contact #title {
+  position: absolute;
+  top: 5%;
   font-size: 60px;
   color: white;
   text-align: center;
   margin: 2%;
 }
 
-#contact img {
+#ContactsContainer {
+
+  width: 97%;
+  height: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   position: absolute;
-  height: 35%;
+  bottom: 0%;
+  padding: 0;
+  margin: 0;
+}
+
+#ContactsContainer img {
+  position: absolute;
+  height: 100%;
   width: auto;
   /*bottom: 5%;*/
 }
 
-#contact .original{
+#ContactsContainer .original{
   z-index: 1;
+}
+
+#InstaContainer, #FaceContainer, #MailContainer, #TwitContainer, #WhatsContainer {
+  height: 60%;
+  width: auto;
+  position: relative;
+  align-items: center;
+}
+
+#FaceContainer, #TwitContainer{
+  bottom: -30%;
+}
+#MailContainer{
+  bottom: -50%;
 }
 
 /*Insta animations*/
 
-#InstaInfo{
-  position: absolute;
-  left: 8%;
-  bottom: 15%;
+#InstaInfo, #FaceInfo, #MailInfo, #TwitInfo, #WhatsInfo {
   font-size: 30px;
   color: white;
   opacity: 0;
-
+  text-align: center;
   transition: transform 1000ms, opacity 1000ms;
 }
 
-#insta1{
-  left: 1.5%;
-  bottom: 20%;
-  opacity: 0;
-  transition: opacity 500ms;
+#InstaInfo{
+  margin-left: 50px;
 }
-#insta2{
-  left: 1.5%;
-  bottom: 20%;
+
+ #insta1,#insta2, #insta3, #face1, #face2, #face3, #mail1, #mail2, #mail3, #twit1, #twit2, #twit3, #whats1, #whats2, #whats3{
   opacity: 0;
   transition: transform 500ms, opacity 500ms;
 }
-#insta3{
-  left: 1.5%;
-  bottom: 20%;
-  opacity: 0;
-  transition: transform 700ms, opacity 700ms;
-}
-#insta4{
-  left: 1.5%;
-  bottom: 20%;
+
+#insta4, #face4, #mail4, #twit4, #whats4{
   opacity: 1;
-  transition: transform 800ms, opacity 800ms;
+  transition: transform 800ms, opacity 800ms; 
 }
 
 #insta1:hover{
@@ -165,48 +181,12 @@ canvas{
 
 #insta1:hover ~ #InstaInfo{
   opacity: 1;
-  transform: translateY(-380px);
+  transform: translateY(-250px);
   transition: transform 1000ms, opacity 1000ms;
 }
 
 /*FaceBook animations*/
 
-#FaceInfo{
-  position: absolute;
-  left: 23%;
-  bottom: 6%;
-  font-size: 30px;
-  color: white;
-  opacity: 0;
-
-  transition: transform 1000ms, opacity 1000ms;
-}
-
-#face1{
-  left: 20%;
-  bottom: 12%;
-  opacity: 0;
-  transition: opacity 500ms;
-}
-
-#face2{
-  left: 20%;
-  bottom: 12%;
-  opacity: 0;
-  transition: transform 500ms, opacity 500ms;
-}
-#face3{
-  left: 20%;
-  bottom: 12%;
-  opacity: 0;
-  transition: transform 700ms, opacity 700ms;
-}
-#face4{
-  left: 20%;
-  bottom: 12%;
-  opacity: 1;
-  transition: transform 800ms, opacity 800ms;
-}
 
 #face1:hover{
   opacity: .2;
@@ -230,47 +210,18 @@ canvas{
 
 #face1:hover ~ #FaceInfo{
   opacity: 1;
-  transform: translateY(-380px);
+  transform: translateY(-250px);
   transition: transform 1000ms, opacity 1000ms;
 }
 
 /*Mail animations*/
 
-#MailInfo{
-  position: absolute;
-  left: 36.5%;
-  bottom: 0%;
-  font-size: 30px;
-  color: white;
-  opacity: 0;
-
-  transition: transform 1000ms, opacity 1000ms;
+#mail1, #mail2, #mail3{
+  margin-left: 20%;
 }
 
-#mail1{
-  left: 38%;
-  bottom: 1%;
-  opacity: 0;
-  transition: opacity 500ms;
-}
-
-#mail2{
-  left: 38%;
-  bottom: 1%;
-  opacity: 0;
-  transition: transform 500ms, opacity 500ms;
-}
-#mail3{
-  left: 38%;
-  bottom: 1%;
-  opacity: 0;
-  transition: transform 700ms, opacity 700ms;
-}
 #mail4{
-  left: 38%;
-  bottom: 1%;
-  opacity: 1;
-  transition: transform 800ms, opacity 800ms;
+  margin-left: 20%;
 }
 
 #mail1:hover{
@@ -295,50 +246,13 @@ canvas{
 
 #mail1:hover ~ #MailInfo{
   opacity: 1;
-  transform: translateY(-380px);
+  transform: translateY(-250px);
   transition: transform 1000ms, opacity 1000ms;
 }
 
 
 /*Twitter animations*/
 
-#TwitInfo{
-  position: absolute;
-  right: 23%;
-  bottom: 6%;
-  font-size: 30px;
-  color: white;
-  opacity: 0;
-  text-align: center;
-
-  transition: transform 1000ms, opacity 1000ms;
-}
-
-#twit1{
-  right: 20%;
-  bottom: 12%;
-  opacity: 0;
-  transition: opacity 500ms;
-}
-
-#twit2{
-  right: 20%;
-  bottom: 12%;
-  opacity: 0;
-  transition: transform 500ms, opacity 500ms;
-}
-#twit3{
-  right: 20%;
-  bottom: 12%;
-  opacity: 0;
-  transition: transform 700ms, opacity 700ms;
-}
-#twit4{
-  right: 20%;
-  bottom: 12%;
-  opacity: 1;
-  transition: transform 800ms, opacity 800ms;
-}
 
 #twit1:hover{
   opacity: .2;
@@ -362,48 +276,11 @@ canvas{
 
 #twit1:hover ~ #TwitInfo{
   opacity: 1;
-  transform: translateY(-380px);
+  transform: translateY(-250px);
   transition: transform 1000ms, opacity 1000ms;
 }
 
 /*Whatsapp animations*/
-
-#WhatsInfo{
-  position: absolute;
-  right: 8%;
-  bottom: 15%;
-  font-size: 30px;
-  color: white;
-  opacity: 0;
-
-  transition: transform 1000ms, opacity 1000ms;
-}
-
-#whats1{
-  right: 1.5%;
-  bottom: 20%;
-  opacity: 0;
-  transition: opacity 500ms;
-}
-
-#whats2{
-  right: 1.5%;
-  bottom: 20%;
-  opacity: 0;
-  transition: transform 500ms, opacity 500ms;
-}
-#whats3{
-  right: 1.5%;
-  bottom: 20%;
-  opacity: 0;
-  transition: transform 700ms, opacity 700ms;
-}
-#whats4{
-  right: 1.5%;
-  bottom: 20%;
-  opacity: 1;
-  transition: transform 800ms, opacity 800ms;
-}
 
 #whats1:hover{
   opacity: .2;
@@ -427,7 +304,7 @@ canvas{
 
 #whats1:hover ~ #WhatsInfo{
   opacity: 1;
-  transform: translateY(-380px);
+  transform: translateY(-250px);
   transition: transform 1000ms, opacity 1000ms;
 }
 
@@ -638,7 +515,7 @@ canvas{
   justify-content: space-around;
 
   top: 1980px;
-  height: 1400px;
+  height: 1800px;
   width: 50%;
   left: -5px;
 }
@@ -650,7 +527,7 @@ canvas{
   justify-content: space-around;
 
   top: 2050px;
-  height: 1400px;
+  height: 1800px;
   width: 50%;
   right: -5px;
 
@@ -685,7 +562,7 @@ canvas{
 #Ed{
   position: absolute;
   opacity: .8;
-  top: 3600px;
+  top: 4000px;
   left: -10px;
   width: calc(100% + 5px);
   height: 600px; 
@@ -745,12 +622,12 @@ canvas{
 
 #footer {
   position: absolute;
-  bottom: -190%;
+  top: 4700px;
   width: calc(100% + 5px);
   height: 100px;
   left: -5px;
   color: black;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 #footer h3{

@@ -265,50 +265,27 @@
 		font-size: 20px;
 	}
 
-	#contact img{
-		height: 30%;
+	#contact #title{
+		font-size: 40px;
+	}
+
+	#contact{ 
+		width: 100%;
+  		height: 200vh;
+  		bottom: -40%;
+	}
+
+	#ContactsContainer {
+		display: block;
+	}
+
+	#InstaContainer, #FaceContainer, #MailContainer, #TwitContainer, #WhatsContainer {
+		height: 80%;
 		width: auto;
 	}
 
-	#whats1, #whats2, #whats3, #whats4 {
-		right: -35%;
-	}
-
-	#face1, #face2, #face3, #face4{
-		top: 500px;
-		left: 35%;
-	}
-
-	#mail1, #mail2, #mail3, #mail4 {
-		left: 62%;
-		top: 670px;
-	}
-
-	#twit1, #twit2, #twit3, #twit4{
-		left: 2%;
-		top: 650px;
-	}
-
-	#InstaInfo{
-		left: 10%;
-		top: 500px;
-	}
-
-	#WhatsInfo{
-		left: 90%;
-		top: 400px;
-	}
-
-	#FaceInfo{
-		left: 50%;
-	}
-
-	#TwitInfo{
-		bottom: -50px;
-	}
-
-	#contact #title{
-		font-size: 35px;
+	#InstaContainer {
+		left: 80%;
 	}
 
 	#IAmA{

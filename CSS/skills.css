@@ -30,7 +30,7 @@
 #SkillsBox2 p{
 	position: relative;
 	display: block;
-	font-size: 28px;
+	font-size: 23px;
 	color: white;
 	text-align: center;
 	top: 0%;
@@ -39,48 +39,53 @@
 	transition: opacity 200ms, left 200ms;
 }
 
-#pythonIMG:hover ~ #PyInfoCircle p{
-	opacity: 1;
+#gitIMG:hover ~ #GitInfoCircle p{
 	left: 13%;
+	opacity: 1;
 	transition: opacity 500ms, left;
 }
-#CSSIMG:hover ~ #CSSInfoCircle p{
-	right: 13%;
+#pythonIMG:hover ~ #PyInfoCircle p{
 	opacity: 1;
+	right: 13%;
 	transition: opacity 500ms, right;
 }
-#HTMLIMG:hover ~ #HTMLInfoCircle p{
+#CSSIMG:hover ~ #CSSInfoCircle p{
 	left: 13%;
+	opacity: 1;
+	transition: opacity 500ms, left;
+}
+#HTMLIMG:hover ~ #HTMLInfoCircle p{
+	right: 13%;
 	opacity: 1;
 	transition: opacity 500ms, right;
 }
 #JSIMG:hover ~ #JSInfoCircle p{
-	right: 13%;
+	left: 13%;
 	opacity: 1;
-	transition: opacity 500ms, right;
+	transition: opacity 500ms, left;
 }
 #JavaIMG:hover ~ #JavaInfoCircle p{
-	left: 13%;
+	right: 13%;
 	opacity: 1;
 	transition: opacity 500ms, right;
 }
 #RaspIMG:hover ~ #RaspInfoCircle p{
-	right: 13%;
+	left: 13%;
 	opacity: 1;
-	transition: opacity 500ms, right;
+	transition: opacity 500ms, left;
 }
 #ArduinoIMG:hover ~ #ArduinoInfoCircle p{
-	left: 13%;
+	right: 13%;
 	opacity: 1;
 	transition: opacity 500ms, right;
 }
 #TypeIMG:hover ~ #TypeInfoCircle p{
-	right: 13%;
+	left: 13%;
 	opacity: 1;
-	transition: opacity 500ms, right;
+	transition: opacity 500ms, left;
 }
 #GamesIMG:hover ~ #GamesInfoCircle p{
-	left: 13%;
+	right: 13%;
 	opacity: 1;
 	transition: opacity 500ms, right;
 }
@@ -134,6 +139,20 @@
 	left: 13%;
 	opacity: 1;
 	transition: opacity 500ms, left;
+}
+
+#gitIMG:hover ~ #GitInfoCircle{
+
+	width: var(--ballHeight);
+	box-shadow: 0px 0px 22px black;
+
+	border-top-right-radius: 500px;
+	border-bottom-right-radius: 500px;  
+
+	border-top-left-radius: 500px;
+	border-bottom-left-radius: 500px;
+
+	transition: width 500ms, border-radius 500ms; 
 }
 
 #pythonIMG:hover ~ #PyInfoCircle{
@@ -373,10 +392,10 @@
 
 
 
-#python, #html, #Java, #Arduino, #Games{
+#git, #css, #JS, #Rasp, #Type {
 	left: 11%;
 }
-#css, #JS, #Rasp, #Type {
+#python, #html, #Java, #Arduino, #Games {
 	left: 66%;	
 }
 
@@ -391,11 +410,11 @@
 
 
 
-#PyInfoCircle, #HTMLInfoCircle, #JavaInfoCircle, #ArduinoInfoCircle, #ChessInfoCircle{
+#GitInfoCircle, #CSSInfoCircle, #JSInfoCircle, #RaspInfoCircle, #TypeInfoCircle {
 	left: 0;
 }
 
-#CSSInfoCircle, #JSInfoCircle, #RaspInfoCircle, #TypeInfoCircle{
+#PyInfoCircle, #HTMLInfoCircle, #JavaInfoCircle, #ArduinoInfoCircle, #GamesInfoCircle {
 	right: 0;
 }
 
