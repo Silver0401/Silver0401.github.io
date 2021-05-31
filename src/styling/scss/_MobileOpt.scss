@@ -1,0 +1,55 @@
+
+@mixin XBurger{
+    #line1{
+        transform: translateY(13px) rotate(225deg);
+        transition: transform 450ms;
+        transition-delay: 200ms;
+    }
+
+    #line2{
+        width: 0px;
+        transition: width 100ms;
+    }
+
+    #line3{
+        transform: translateY(-14px) rotate(-225deg);
+        transition: transform 450ms;
+        transition-delay: 200ms;
+    }
+}
+
+
+@media (max-width: 1100px){
+    .NavBar{
+
+        .Burguer{
+            visibility: visible;
+        }
+
+        .BToggled{
+            border: 1px solid white;
+            transition: border 500ms;
+            @include XBurger();
+        }
+        
+
+        ul{
+            top: 60px;
+            right: 0;
+            position: absolute;
+            width: 250px;
+            background-color: black;
+            height: calc(100vh - 60px);
+            flex-direction: column;
+        }
+
+        .NavToggled{
+            transform: translateX(0px);
+            transition: transform 500ms;
+        }
+        .NavNotToggled{
+            transform: translateX(250px);
+            transition: transform 500ms;
+        }
+    }
+}
