@@ -1,86 +1,250 @@
 @import "./Functions";
 
+@mixin XBurger {
+  #line1 {
+    transform: translate(12px, 6px) rotate(225deg);
+    transition: transform 450ms;
+    transition-delay: 200ms;
+  }
 
-.NavBar{
-    position: fixed;
-    top: 0;
-    left: 0;
+  #line2 {
+    transition: width 100ms;
+  }
+
+  #line3 {
+    transform: translate(9px, -6px) rotate(-225deg);
+    transition: transform 450ms;
+    transition-delay: 200ms;
+  }
+}
+
+.NavBar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100vh;
+  @include alignCenter();
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: var(--SiteColor1);
+  align-items: flex-start;
+  z-index: 10;
+  overflow: visible;
+  transform: translateX(220px);
+  transition: transform 500ms;
+
+  .NavTitle {
+    position: relative;
     width: 100%;
-    height: 60px;
+    background-color: rgba(40, 39, 39, 0.584);
+    height: 10%;
     @include alignCenter();
     flex-direction: row;
-    justify-content: space-between;
-    background-color: var(--SiteColor2);
-    z-index: 10;
-    overflow: visible;
+    justify-content: space-around;
 
-    .LogoBox{
+    .Burguer {
+      position: relative;
+      width: 50px;
+      height: 50px;
+      @include alignCenter();
+      flex-direction: column;
+      justify-content: space-evenly;
+      visibility: visible;
+      cursor: pointer;
+      z-index: 1;
+      border-radius: 50%;
+      border: 1px solid transparent;
+      transition: border 500ms;
+
+      span {
         position: relative;
-        width: 10%;
-        height: 100%;
-        color: var(--SiteColor1);
-        @include alignCenter();
-        margin-left: #{"min(20%, 20px)"};
+        width: 70%;
+        height: 3px;
+        background-color: var(--SiteColor3);
+        box-shadow: 0px 0px 5px var(--SiteColor3);
+        transition: width 900ms, transform 700ms;
+      }
+
+      #line1 {
+        margin-right: 10%;
+        width: 45%;
+      }
+      #line3 {
+        margin-left: 5%;
+        width: 40%;
+      }
     }
 
+    .BToggled {
+      @include XBurger();
+    }
 
-    .Burguer{
-        position: absolute;
-        right: 1em;
-        width: 50px;
-        height: 50px;
-        background-color: transparent;
-        @include alignCenter();
-        flex-direction: column;
-        justify-content: space-evenly;
-        visibility: hidden;
-        cursor: pointer;
-        z-index: 1;
-        border-radius: 50%;
-        border: 1px solid transparent;
-        transition: border 500ms;
+    .NavLogo {
+      position: relative;
+      height: 100%;
+      width: 60%;
+      @include alignCenter();
 
-        span{
-            position: relative;
-            width: 70%;
-            height: 3px;
-            background-color: var(--SiteColor1);
-            box-shadow: 0px 0px 5px var(--SiteColor1);
-            transition: width 900ms, transform 700ms;
+      svg {
+        height: 40%;
+        fill: var(--SiteColor3);
+        width: auto;
+
+        path {
+          stroke: var(--SiteColor3);
         }
+      }
     }
-    
-    ul{
+  }
+
+  ul {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 85%;
+    @include alignCenter();
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 30px;
+
+    li {
+      position: relative;
+      background-color: transparent;
+      transition: background-color 500ms;
+      // left: 0px;
+      width: 100%;
+      height: 80px;
+      list-style: none;
+      cursor: pointer;
+      @include alignCenter();
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        svg {
+          height: 50%;
+          width: auto;
+        }
+      }
+
+      &:nth-child(1) {
+        margin-top: 20px;
+      }
+
+      &:nth-child(4) {
+        margin-top: 80px;
+        svg {
+          height: 50%;
+          width: auto;
+        }
+      }
+      &:nth-child(5) {
+        margin-top: 0px;
+        filter: grayscale(1);
+        transition: filter 500ms, background-color 500ms;
+
+        svg {
+          height: 50%;
+          width: auto;
+        }
+
+        &:hover {
+          transition: filter 500ms, background-color 500ms;
+          filter: grayscale(0);
+        }
+      }
+
+      &:hover {
+        transition: background-color 500ms;
+        background-color: rgba(40, 39, 39, 0.584);
+
+        &:nth-child(1) {
+          svg {
+            fill: rgb(21, 177, 225);
+            filter: drop-shadow(0px 0px 2px rgb(21, 177, 225));
+          }
+        }
+
+        &:nth-child(2) {
+          svg {
+            fill: rgb(255, 242, 102);
+            filter: drop-shadow(0px 0px 2px rgb(255, 242, 102));
+          }
+        }
+
+        &:nth-child(3) {
+          svg {
+            fill: rgb(68, 225, 113);
+            filter: drop-shadow(0px 0px 2px rgb(68, 225, 113));
+          }
+        }
+
+        svg {
+          transition: fill 500ms, filter 500ms;
+        }
+      }
+
+      button,
+      a,
+      Link {
         position: relative;
-        z-index: 0;
-        width: 60%;
-        height: 100%;
+        // visibility: hidden;
         @include alignCenter();
-        justify-content: space-around;
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
         flex-direction: row;
-        
-        li{
-            position: relative;
-            width: 150px;
-            height: 30px;
-            list-style: none;
-            cursor: pointer;
-            @include alignCenter();
-            flex-direction: row;
+        justify-content: space-around;
 
-            svg{
-                height: 100%;
-                width: auto;
-                fill: var(--SiteColor1);
-            }
-            
-            a,Link{
-                @include alignCenter();
-                color: var(--SiteColor1);
-                text-decoration: none;
-                width: 100%;
-                height: 100%;
-            }
+        svg,
+        img {
+          height: 60%;
+          width: auto;
+          fill: rgb(72, 72, 72);
+          position: relative;
+          transition: fill 500ms;
+
+          &:hover {
+            transition: fill 500ms, filter 500ms;
+          }
         }
+
+        .IconsBox {
+          position: relative;
+          height: 100%;
+          width: 15%;
+          @include alignCenter();
+
+          img,
+          svg {
+            position: absolute;
+          }
+        }
+
+        p {
+          position: relative;
+          width: 60%;
+          height: 100%;
+          @include alignCenter();
+          color: var(--SiteColor3);
+          font-size: 20px;
+          font-weight: bolder;
+          align-items: flex-start;
+          padding-left: 30px;
+        }
+      }
     }
+  }
 }
+
+.Toggled {
+  transform: translateX(0px);
+  transition: transform 500ms;
+}
+// .NotToggled {
+//     transform: translateX(150px);
+//     transition: transform 500ms;
+// }

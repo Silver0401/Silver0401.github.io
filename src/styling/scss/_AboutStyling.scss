@@ -1,8 +1,492 @@
+#AboutPage {
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 
+  section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: start;
+    overflow: hidden;
+  }
 
-#AboutPage{
-    
-    .Skills{
-        
+  #InitSection {
+    @include alignCenter();
+    .InitLogo {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      width: 80px;
+      height: 50px;
+
+      svg {
+        width: 100%;
+        height: auto;
+        fill: var(--SiteColor3);
+        filter: drop-shadow(0px 0px 3px var(--SiteColor3));
+
+        path {
+          stroke: var(--SiteColor3);
+        }
+      }
     }
+
+    .outerCircle {
+      position: relative;
+      width: 650px;
+      height: 650px;
+      border-radius: 50%;
+      @include alignCenter();
+      background-color: transparent;
+      // animation: rotate 20s linear infinite;
+
+      .innerHiddenCircle {
+        position: absolute;
+        width: 50%;
+        height: 50%;
+        background-color: transparent;
+        border-radius: 50%;
+        @include alignCenter();
+        opacity: 1;
+
+        h2 {
+          font-size: 1.7em;
+          color: var(--SiteColor3);
+          font-weight: bolder;
+          text-align: center;
+        }
+      }
+
+      .CirclesBoxBox {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        @include alignCenter();
+        z-index: 0;
+        border-radius: 50%;
+        overflow: visible;
+
+        .CirclesBox {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: transparent;
+          border-radius: 50%;
+          @include alignCenter();
+
+          span {
+            position: absolute;
+            background-color: var(--SiteColor3);
+            box-shadow: 0px 0px 10px var(--SiteColor3);
+            width: 12%;
+            height: 12%;
+            border-radius: 50%;
+            cursor: pointer;
+            @include alignCenter();
+            transition: box-shadow 500ms;
+
+            svg {
+              width: 60%;
+              height: 60%;
+              fill: var(--SiteColor1);
+              opacity: 1;
+              transition: fill 500ms;
+            }
+
+            &:hover {
+              transition: box-shadow 500ms;
+              svg {
+                transition: fill 500ms;
+              }
+            }
+          }
+
+          .tcircle {
+            top: 0;
+            &:hover {
+              box-shadow: 0px 0px 20px rgb(56, 228, 125);
+              svg {
+                fill: rgb(56, 228, 125);
+              }
+            }
+          }
+          .bcircle {
+            transform: rotateZ(180deg);
+            bottom: 0;
+            &:hover {
+              box-shadow: 0px 0px 20px rgb(244, 244, 90);
+              svg {
+                fill: rgb(244, 244, 90);
+              }
+            }
+          }
+          .lcircle {
+            transform: rotateZ(-90deg);
+            left: 0;
+            &:hover {
+              box-shadow: 0px 0px 20px rgb(247, 71, 206);
+              svg {
+                fill: rgb(247, 71, 206);
+              }
+            }
+          }
+          .rcircle {
+            transform: rotateZ(90deg);
+            right: 0;
+            &:hover {
+              box-shadow: 0px 0px 20px rgb(69, 223, 221);
+              svg {
+                fill: rgb(69, 223, 221);
+              }
+            }
+          }
+
+          .trcircle {
+            transform: rotateZ(45deg);
+            top: 13%;
+            right: 13%;
+            &:hover {
+              box-shadow: 0px 0px 20px rgb(237, 51, 51);
+              svg {
+                fill: rgb(237, 51, 51);
+              }
+            }
+          }
+          .tlcircle {
+            transform: rotateZ(-45deg);
+            top: 13%;
+            left: 13%;
+            &:hover {
+              box-shadow: 0px 0px 20px rgb(50, 78, 235);
+              svg {
+                fill: rgb(50, 78, 235);
+              }
+            }
+          }
+          .brcircle {
+            transform: rotateZ(135deg);
+            bottom: 13%;
+            right: 13%;
+            &:hover {
+              box-shadow: 0px 0px 20px rgb(193, 75, 244);
+              svg {
+                fill: rgb(193, 75, 244);
+              }
+            }
+          }
+          .blcircle {
+            transform: rotateZ(-135deg);
+            bottom: 13%;
+            left: 13%;
+            &:hover {
+              box-shadow: 0px 0px 20px rgb(242, 150, 52);
+              svg {
+                fill: rgb(242, 150, 52);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .buttonsBox {
+      position: absolute;
+      left: 50px;
+      bottom: 50px;
+      height: 100px;
+      width: 200px;
+      @include alignCenter();
+
+      button {
+        width: 100%;
+        height: 50%;
+        border: 1px solid white;
+
+        color: var(--SiteColor3);
+        font-weight: bolder;
+      }
+    }
+  }
+
+  #CodeSection {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+
+    .bigBgCircle {
+      z-index: 0;
+      right: -25em;
+      top: 5em;
+      position: absolute;
+      width: 50em;
+      height: 50em;
+      border-radius: 50%;
+      //   background-color: rgba(249, 249, 32, 0.461);
+      background: linear-gradient(
+        to right,
+        var(--SiteColor2),
+        rgba(116, 245, 73, 0.461)
+      );
+    }
+    .CodeTitle {
+      flex: 1 1 300px;
+      z-index: 1;
+      @include alignCenter();
+
+      h1 {
+        font-weight: bolder;
+        color: var(--SiteColor3);
+        font-size: 3em;
+        padding: 5%;
+        text-align: center;
+        // background-color: lightcoral;
+      }
+    }
+    .allSoftwareBox {
+      flex: 1 1 500px;
+      display: flex;
+      flex-wrap: wrap;
+      z-index: 1;
+      //   background-color: lightcoral;
+      span {
+        flex: 1 1 300px;
+        border-radius: 10px;
+        margin: 15px;
+        overflow: hidden;
+        // border: 1px solid var(--SiteColor3);
+        background-color: var(--SiteColor1);
+
+        display: grid;
+        grid-template-columns: 1fr 25%;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+          "text imgBox"
+          "pBar imgBox";
+
+        p {
+          position: relative;
+          grid-area: text;
+          @include alignCenter();
+          font-weight: bolder;
+          color: var(--SiteColor3);
+          font-size: 1.1em;
+          pointer-events: none;
+
+          &::after {
+            content: "-";
+            position: absolute;
+            top: 2px;
+            left: 5px;
+            font-weight: bolder;
+            color: var(--SiteColor2);
+          }
+        }
+
+        .progressBar {
+          position: relative;
+          grid-area: pBar;
+          @include alignCenter();
+
+          .outerBar {
+            position: relative;
+            width: 85%;
+            height: 50%;
+            border: 2px solid var(--SiteColor3);
+            border-radius: 15px;
+            @include alignCenter();
+            align-items: flex-start;
+
+            .innerBar {
+              //   width: 90%;
+              height: 50%;
+              background-color: var(--SiteColor3);
+              box-shadow: 0px 0px 3px var(--SiteColor3);
+              border-radius: 15px;
+              margin-left: 5px;
+              transition: background-color 500ms;
+            }
+          }
+        }
+
+        .imgBox {
+          position: relative;
+          grid-area: imgBox;
+          @include alignCenter();
+
+          .imgContainer {
+            position: relative;
+            @include alignCenter();
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: transparent;
+            backdrop-filter: blur(20px);
+            transition: transform 500ms, background-color 500ms;
+            background-color: var(--SiteColor2);
+          }
+
+          img {
+            position: absolute;
+            width: auto;
+            height: 55%;
+            opacity: 1;
+            transition: opacity 500ms;
+          }
+
+          p {
+            position: absolute;
+            opacity: 0;
+            color: black;
+            transition: opacity 500ms;
+            font-size: 1.2em;
+          }
+        }
+
+        &:hover {
+          .progressBar .outerBar .innerBar {
+            background-color: rgb(89, 250, 89);
+            transition: background-color 500ms;
+          }
+
+          .imgBox .imgContainer {
+            transform: rotateZ(360deg);
+            transition: transform 500ms, background-color 500ms;
+            background-color: rgb(89, 250, 89);
+
+            img {
+              opacity: 0;
+              transition: opacity 500ms;
+            }
+
+            p {
+              opacity: 1;
+              transition: opacity 500ms;
+            }
+          }
+        }
+      }
+
+      .ts,
+      .node {
+        .progressBar .outerBar .innerBar {
+          width: 80%;
+        }
+      }
+
+      .js,
+      .css,
+      .html,
+      .py,
+      .scss,
+      .react {
+        .progressBar .outerBar .innerBar {
+          width: 85%;
+        }
+      }
+
+      .java,
+      .reactNat,
+      .mySQL,
+      .figma {
+        .progressBar .outerBar .innerBar {
+          width: 75%;
+        }
+      }
+    }
+  }
+
+  #MedSection {
+    @include alignCenter();
+    flex-direction: column;
+
+    .bigBgCircle {
+      top: -10em;
+      left: -10em;
+      z-index: 0;
+      position: absolute;
+      width: 40em;
+      height: 40em;
+      border-radius: 50%;
+      background: linear-gradient(
+        to left,
+        var(--SiteColor2),
+        rgba(242, 47, 47, 0.728)
+      );
+    }
+
+    .TextSection {
+      z-index: 1;
+      width: 100%;
+      height: 30%;
+      @include alignCenter();
+      justify-content: space-evenly;
+
+      * {
+        font-weight: bolder;
+        color: var(--SiteColor3);
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 3em;
+      }
+      p {
+        font-size: 1.2em;
+        padding: 0px 10%;
+      }
+    }
+    .medSubjects {
+      z-index: 1;
+      width: 100%;
+      height: 60%;
+      display: flex;
+      flex-wrap: wrap;
+
+      span {
+        position: relative;
+        flex: 1 1 250px;
+        border: 1px solid var(--SiteColor1);
+        margin: 20px;
+        border-radius: 15px;
+        overflow: hidden;
+
+        h2 {
+          z-index: 1;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(255, 255, 255, 0.3);
+          @include alignCenter();
+          font-weight: bolder;
+          font-size: 1.3em;
+          color: black;
+          transition: background-color 500ms;
+        }
+
+        img {
+          z-index: 0;
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          filter: opacity(0.7);
+          transition: transform 500ms;
+        }
+
+        &:hover {
+          h2 {
+            background-color: rgba(255, 255, 255, 0.7);
+            transition: background-color 500ms;
+          }
+
+          img {
+            transform: scale(1.5);
+            transition: transform 500ms;
+          }
+        }
+      }
+    }
+  }
 }

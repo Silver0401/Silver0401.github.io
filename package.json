@@ -1,6 +1,6 @@
 {
   "homepage": "http://Silver0401.github.io/",
-  "name": "template",
+  "name": "personalportafolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -18,7 +18,10 @@
     "@types/react-router-dom": "^5.1.7",
     "animejs": "^3.2.1",
     "framer-motion": "^3.3.0",
+    "lottie-react": "^2.1.0",
+    "prop-types": "^15.7.2",
     "react": "^17.0.1",
+    "react-animejs-wrapper": "^1.0.35",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
@@ -26,8 +29,8 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

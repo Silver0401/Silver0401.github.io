@@ -1,50 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Bebas+Neue&family=Cinzel+Decorative&family=Dancing+Script&family=Hachi+Maru+Pop&family=Indie+Flower&family=Lobster&family=Nunito:wght@300&family=Orbitron&family=Parisienne&family=Poiret+One&family=Poppins:ital,wght@1,200&family=Press+Start+2P&family=Sorts+Mill+Goudy&family=Source+Serif+Pro:wght@200&family=Unica+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Bebas+Neue&family=Cinzel+Decorative&family=Dancing+Script&family=Hachi+Maru+Pop&family=Indie+Flower&family=Lobster&family=Nunito:wght@300&family=Orbitron&family=Parisienne&family=Poiret+One&family=Poppins:ital,wght@1,200&family=Press+Start+2P&family=Sorts+Mill+Goudy&family=Source+Serif+Pro:wght@200&family=Unica+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap");
 
 @import "./HomeStyling";
 @import "./NavStyling";
 @import "./MobileOpt";
 @import "./AboutStyling";
+@import "./ContactStyling";
 
-:root{
-    --SiteColor1: white;
-    --SiteColor2: black;
-}   
+:root {
+  --SiteColor1: black;
+  --SiteColor2: #101010;
+  --SiteColor3: white;
+}
 
-@keyframes Zrotate{
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
+@keyframes Zrotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
-@keyframes Xrotate{
-    0%{
-        transform: rotateX(0deg) rotateY(0deg);
-    }
-    100%{
-        transform: rotateX(359deg) rotateY(360deg);
-    }
+@keyframes Xrotate {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(359deg) rotateY(360deg);
+  }
 }
-@keyframes Yrotate{
-    0%{
-        transform: rotateY(0deg);
-    }
-    100%{
-        transform: rotateY(359deg);
-    }
+@keyframes Yrotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(359deg);
+  }
 }
-@keyframes Orotate{
-    0%{
-        transform: rotateX(-210deg) rotateY(-360deg);
-    }
-    50%{
-        transform: rotateX(120deg) rotateY(270deg);
-    }
-    100%{
-        transform: rotateX(-50deg) rotateY(0deg);
-    }
+@keyframes Orotate {
+  0% {
+    transform: rotateX(-210deg) rotateY(-360deg);
+  }
+  50% {
+    transform: rotateX(120deg) rotateY(270deg);
+  }
+  100% {
+    transform: rotateX(-50deg) rotateY(0deg);
+  }
+}
 
+@keyframes HandWriting {
+  from {
+    fill: transparent;
+    filter: drop-shadow(0px 0px 5px black);
+  }
+  to {
+    stroke-dashoffset: 0;
+    fill: white;
+    filter: drop-shadow(0px 0px 3px white);
+  }
 }
 
 // Font Families
@@ -66,137 +81,199 @@
 // font-family: 'Source Serif Pro', serif;
 // font-family: 'Unica One', cursive;
 
-
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-html{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: var(--SiteColor1);
+html {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--SiteColor2);
+  transition: background-color 500ms;
+  overflow: hidden;
 }
 
-.App{
+.App {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--SiteColor2);
+  transition: background-color 500ms;
+  // font-family: "Baloo Da 2", cursive;
+  // font-family: "Bebas Neue", cursive;
+  // font-family: "Cinzel Decorative", cursive;
+  // font-family: "Dancing Script", cursive;
+  // font-family: "Hachi Maru Pop", cursive;
+  // font-family: "Indie Flower", cursive;
+  // font-family: "Lobster", cursive;
+  // font-family: "Nunito", sans-serif;
+  // font-family: "Orbitron", sans-serif;
+  // font-family: "Parisienne", cursive;
+  // font-family: "Poiret One", cursive;
+  // font-family: "Poppins", sans-serif;
+  // font-family: "Press Start 2P", cursive;
+  // font-family: "Sorts Mill Goudy", serif;
+  // font-family: "Source Serif Pro", serif;
+  // font-family: "Unica One", cursive;
+  font-family: "Bungee Hairline", cursive;
+  // font-family: "Chakra Petch", sans-serif;
+
+  display: grid;
+  grid-template-columns: 1fr 80px;
+  grid-template-rows: 1fr;
+  grid-template-areas: "App" "Nav";
+
+  .Loader {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    @include alignCenter();
+    overflow: hidden;
+    z-index: 10;
+
+    .box {
+      width: #{"max(30%,200px)"};
+      height: #{"max(30%,200px)"};
+      @include alignCenter();
+      flex-direction: column;
+      margin-bottom: 50px;
+
+      h1 {
+        letter-spacing: 3px;
+        font-size: clamp(40px, 4vw, 100px);
+        text-align: center;
+        text-shadow: 0px 5px 10px var(--SiteColor1);
+        font-family: "Dancing Script", cursive;
+        font-weight: bolder;
+      }
+
+      .AnimBox {
+        position: relative;
+        width: 100%;
+        height: 70%;
+        // background-color: violet;
+        @include alignCenter();
+
+        .Logo {
+          width: 90%;
+          height: auto;
+          overflow: visible;
+
+          path:nth-child(1) {
+            stroke-dasharray: 1500;
+            stroke-dashoffset: 1500;
+            animation-delay: 0s;
+            animation: HandWriting 3s linear forwards;
+          }
+          path:nth-child(2) {
+            stroke-dasharray: 2000;
+            stroke-dashoffset: 2000;
+            animation: HandWriting 3s linear forwards;
+            animation-delay: 1s;
+          }
+          path:nth-child(3) {
+            stroke-dasharray: 800;
+            stroke-dashoffset: 800;
+            animation: HandWriting 1.5s linear forwards;
+            animation-delay: 1.5s;
+          }
+        }
+      }
+    }
+
+    .MovingBox {
+      position: absolute;
+      top: 0%;
+      right: 5%;
+      width: 90%;
+      height: 100%;
+      background-color: darkgrey;
+      transform: translateX(120%);
+    }
+  }
+
+  .NavBar {
+    grid-area: Nav;
+  }
+
+  .AppContainer {
+    grid-area: App;
     position: absolute;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-color: var(--SiteColor1);
+    scroll-behavior: smooth;
 
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 60px 1fr;
-    grid-template-areas: 
-    "Nav"
-    "App";
+    .BgBalls {
+      position: absolute;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
 
-
-    .Loader{
-        position: absolute;
-        top: 0%;
-        left: 0%;
-        width: 100vw;
-        height: 100%;
-        background-color: black;
-        @include alignCenter();
-        overflow: hidden;
-        z-index: 10;
-
-        .box{
-            width: 300px;
-            height: 400px;
-            @include alignCenter();
-            flex-direction: column;
-            margin-bottom: 50px;
-
-            h1{
-                letter-spacing: 3px;
-                font-size: clamp(40px, 4vw, 100px);
-                text-align: center;
-                text-shadow: 0px 5px 10px var(--SiteColor1);
-                font-family: 'Dancing Script', cursive;
-                font-weight: bolder;
-            }
-
-            .AnimBox{
-                position:  relative;
-                width: 100%;
-                height: 70%;
-                // background-color: violet;
-                @include alignCenter();
-
-
-                .Ball{
-                    border-radius: 50%;
-                    position: absolute;
-                    border: 4px solid white;
-                    box-shadow: 0px 0px 10px var(--SiteColor1);
-                }
-
-                .CenterBall{
-                    border-radius: 55%;
-                    width: 25%;
-                    height: 25%;
-                    @extend .Ball;
-                    border: 4px solid var(--SiteColor1);
-                    animation: Zrotate 3s linear infinite;
-                }
-                .MiddleBall{
-                    @extend .Ball;
-                    width: 40%;
-                    height: 40%;
-                    animation: Xrotate 4s linear infinite;
-                }
-                .OuterBall{
-                    @extend .Ball;
-                    width: 50%;
-                    height: 50%;
-                    animation: Yrotate 2s linear infinite;
-                }
-                .ExtraOuterBall{
-                    @extend .Ball;
-                    width: 60%;
-                    height: 60%;
-                    border: 4px solid transparent;
-                    animation: Orotate 5s linear infinite;
-                }
-            }
-        }
-
-        .MovingBox{
-            position: absolute;
-            top: 5%;
-            left: 0%;
-            width: 100%;
-            height: 90%;
-            background-color: lightblue;
-            transform: translateY(120%);
-        }
-    }
-    
-    .NavBar{
-        grid-area: Nav;
-
-    }
-    
-    .AppContainer{
-        grid-area: App;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        overflow-x: hidden;
-        overflow-y: visible;
-        scroll-behavior: smooth;
-    }
-
-    #HomePage, #AboutPage, #ContactPage{
-        position: relative;
-        width: 100%;
-        height: 100%;
+      span {
         background-color: var(--SiteColor1);
-    }
+        position: absolute;
+        opacity: 0.3;
+      }
 
+      .ball1 {
+        bottom: 0;
+        left: 0;
+        width: 200px;
+        height: 200px;
+      }
+      .ball2 {
+        bottom: 0;
+        right: 0;
+        width: 300px;
+        height: 300px;
+      }
+      .ball3 {
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 250px;
+      }
+      .ball4 {
+        top: 0;
+        right: 0;
+        width: 400px;
+        height: 400px;
+      }
+      .ball5 {
+        top: 200px;
+        left: 500px;
+        width: 150px;
+        height: 70%;
+      }
+    }
+  }
+
+  #HomePage,
+  #AboutPage,
+  #ContactPage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    transition: background-color 500ms;
+    // background-color: orange;
+  }
+}
+
+@media (max-width: 600px) {
+  .App {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 80px;
+    grid-template-areas:
+      "App"
+      "Nav";
+  }
 }

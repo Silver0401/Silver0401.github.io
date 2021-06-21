@@ -8055,6 +8055,18 @@
   dependencies:
     "js-tokens" "^3.0.0 || ^4.0.0"
 
+"lottie-react@^2.1.0":
+  "integrity" "sha512-sHDJb5aeh1letUIWqwidHoHZj07ZOZQoLuUgy0gqt9FB/XiCtAZ2+421Cn+ZkHR7anVvWljKhGgctQCtgFloUA=="
+  "resolved" "https://registry.npmjs.org/lottie-react/-/lottie-react-2.1.0.tgz"
+  "version" "2.1.0"
+  dependencies:
+    "lottie-web" "^5.7.3"
+
+"lottie-web@^5.7.3":
+  "integrity" "sha512-Jvz3PQqwrDj1rXGqfeQtipH/WNtM/Y4l8t8NIQXe1xUI0nVooH2bTYJGef0UkdBcWUx1s3miKsRhyP196g9tvQ=="
+  "resolved" "https://registry.npmjs.org/lottie-web/-/lottie-web-5.7.11.tgz"
+  "version" "5.7.11"
+
 "lower-case@^2.0.1":
   "integrity" "sha512-LiWgfDLLb1dwbFQZsSglpRj+1ctGnayXz3Uv0/WO8n558JycT5fg6zkNcnW0G68Nn0aEldTFeEfmjCfmqry/rQ=="
   "resolved" "https://registry.yarnpkg.com/lower-case/-/lower-case-2.0.1.tgz"
@@ -9943,7 +9955,7 @@
     "kleur" "^3.0.3"
     "sisteransi" "^1.0.5"
 
-"prop-types@^15.0.0", "prop-types@^15.6.2", "prop-types@^15.7.2":
+"prop-types@^15.0.0", "prop-types@^15.5.7", "prop-types@^15.6.2", "prop-types@^15.7.2":
   "integrity" "sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ=="
   "resolved" "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz"
   "version" "15.7.2"
@@ -10097,6 +10109,14 @@
     "iconv-lite" "0.4.24"
     "unpipe" "1.0.0"
 
+"react-animejs-wrapper@^1.0.35":
+  "integrity" "sha512-Fd1ZNxbLhZhrUSsXLJHrm5vwu4Bl56vze97hBbgdOc/Z/2PutyzVS6GIkrounU//3TtbA3W2IftvJVfTbfYAhA=="
+  "resolved" "https://registry.npmjs.org/react-animejs-wrapper/-/react-animejs-wrapper-1.0.35.tgz"
+  "version" "1.0.35"
+  dependencies:
+    "animejs" "^3.2.1"
+    "uuid" "^8.3.2"
+
 "react-app-polyfill@^2.0.0":
   "integrity" "sha512-0sF4ny9v/B7s6aoehwze9vJNWcmCemAUYBVasscVr92+UYiEqDXOxfKjXN685mDaMRNF3WdhHQs76oTODMocFA=="
   "resolved" "https://registry.yarnpkg.com/react-app-polyfill/-/react-app-polyfill-2.0.0.tgz"
@@ -10146,7 +10166,7 @@
     "strip-ansi" "6.0.0"
     "text-table" "0.2.0"
 
-"react-dom@*", "react-dom@^16.8.0 || 17.x", "react-dom@^17.0.1", "react-dom@>=16.8", "react-dom@>=16.8.6":
+"react-dom@*", "react-dom@^16.8.0", "react-dom@^16.8.0 || 17.x", "react-dom@^17.0.1", "react-dom@>=16.8", "react-dom@>=16.8.6":
   "integrity" "sha512-6eV150oJZ9U2t9svnsspTMrWNyHc6chX0KzDeAOXftRa8bNeOKTTfCJ7KorIwenkHd2xqVTBTCZd79yk/lx/Ug=="
   "resolved" "https://registry.yarnpkg.com/react-dom/-/react-dom-17.0.1.tgz"
   "version" "17.0.1"
@@ -12316,6 +12336,11 @@
   "integrity" "sha512-FOmRr+FmWEIG8uhZv6C2bTgEVXsHk08kE7mPlrBbEe+c3r9pjceVPgupIfNIhc4yx55H69OXANrUaSuu9eInKg=="
   "resolved" "https://registry.yarnpkg.com/uuid/-/uuid-8.3.1.tgz"
   "version" "8.3.1"
+
+"uuid@^8.3.2":
+  "integrity" "sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg=="
+  "resolved" "https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz"
+  "version" "8.3.2"
 
 "v8-compile-cache@^2.0.3":
   "integrity" "sha512-gTpR5XQNKFwOd4clxfnhaqvfqMpqEwr4tOtCyz4MtYZX2JYhfr1JvBFKdS+7K/9rfpZR3VLX+YWBbKoxCgS43Q=="
