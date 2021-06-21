@@ -201,12 +201,7 @@
       @include alignCenter();
 
       button {
-        width: 100%;
-        height: 50%;
-        border: 1px solid white;
-
-        color: var(--SiteColor3);
-        font-weight: bolder;
+        @include MainButtonStyling();
       }
     }
   }

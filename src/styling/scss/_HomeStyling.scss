@@ -115,13 +115,7 @@
       justify-content: space-around;
 
       button {
-        position: relative;
-        width: 35%;
-        height: 50%;
-        border: 1px solid var(--SiteColor3);
-        color: var(--SiteColor3);
-        font-weight: bolder;
-        border-radius: 20px;
+        @include MainButtonStyling();
       }
     }
   }

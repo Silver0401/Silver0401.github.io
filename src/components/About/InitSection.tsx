@@ -157,13 +157,13 @@ const InitSection: React.FC<props> = ({ sectionRef }) => {
 
       <div className="buttonsBox">
         <button className="play" onClick={() => rotatingAnimRef.current.play()}>
-          Rotate
+          Rotate 🔄
         </button>
         <button
           className="pause"
           onClick={() => rotatingAnimRef.current.pause()}
         >
-          Stop
+          Stop ⏸
         </button>
       </div>
     </section>
