@@ -16,6 +16,7 @@
   font-size: 1.2em;
   transition: background-color 500ms, color 500ms, box-shadow 500ms;
   box-shadow: 0px 0px 0px transparent;
+  cursor: pointer;
 
   &:hover {
     background-color: var(--SiteColor3);

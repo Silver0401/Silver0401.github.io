@@ -33,6 +33,30 @@
       }
     }
 
+    .arrowText {
+      position: absolute;
+      width: 200px;
+      height: 100px;
+      top: 80px;
+      right: 50px;
+      font-size: 1.5em;
+      color: var(--SiteColor3);
+      font-weight: bolder;
+    }
+
+    .arrowLottieBox {
+      position: absolute;
+      width: 200px;
+      height: 100px;
+      top: 200px;
+      right: 5px;
+      transform: rotateY(180deg) rotateZ(-60deg);
+
+      svg {
+        filter: drop-shadow(0px 0px 3px white);
+      }
+    }
+
     .outerCircle {
       position: relative;
       width: 650px;
@@ -202,6 +226,7 @@
 
       button {
         @include MainButtonStyling();
+        border-radius: 0px;
       }
     }
   }
@@ -245,14 +270,15 @@
       display: flex;
       flex-wrap: wrap;
       z-index: 1;
-      //   background-color: lightcoral;
+      // transform: skewX(0deg);
+
       span {
         flex: 1 1 300px;
         border-radius: 10px;
         margin: 15px;
         overflow: hidden;
-        // border: 1px solid var(--SiteColor3);
         background-color: var(--SiteColor1);
+        transition: transform 500ms;
 
         display: grid;
         grid-template-columns: 1fr 25%;
@@ -341,6 +367,8 @@
         }
 
         &:hover {
+          transition: transform 500ms;
+
           .progressBar .outerBar .innerBar {
             background-color: rgb(89, 250, 89);
             transition: background-color 500ms;
@@ -415,7 +443,7 @@
     .TextSection {
       z-index: 1;
       width: 100%;
-      height: 30%;
+      height: 25%;
       @include alignCenter();
       justify-content: space-evenly;
 
@@ -433,52 +461,225 @@
         padding: 0px 10%;
       }
     }
-    .medSubjects {
-      z-index: 1;
+
+    .medDataBox {
+      position: relative;
       width: 100%;
       height: 60%;
-      display: flex;
-      flex-wrap: wrap;
+      @include alignCenter();
+      flex-direction: row-reverse;
+      justify-content: space-evenly;
 
-      span {
-        position: relative;
-        flex: 1 1 250px;
-        border: 1px solid var(--SiteColor1);
-        margin: 20px;
-        border-radius: 15px;
+      .medSubjects {
+        width: 40%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 10px;
         overflow: hidden;
 
-        h2 {
-          z-index: 1;
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          background-color: rgba(255, 255, 255, 0.3);
-          @include alignCenter();
-          font-weight: bolder;
-          font-size: 1.3em;
-          color: black;
-          transition: background-color 500ms;
-        }
+        span {
+          position: relative;
+          flex: 1 1 250px;
+          // border: 1px solid var(--SiteColor3);
+          overflow: hidden;
 
-        img {
-          z-index: 0;
-          position: absolute;
-          height: 100%;
-          width: 100%;
-          filter: opacity(0.7);
-          transition: transform 500ms;
-        }
-
-        &:hover {
           h2 {
-            background-color: rgba(255, 255, 255, 0.7);
+            z-index: 1;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.3);
+            @include alignCenter();
+            font-weight: bolder;
+            font-size: 1.3em;
+            color: black;
             transition: background-color 500ms;
           }
 
           img {
-            transform: scale(1.5);
+            z-index: 0;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            filter: opacity(0.7);
             transition: transform 500ms;
+          }
+
+          &:hover {
+            h2 {
+              background-color: rgba(255, 255, 255, 0.7);
+              transition: background-color 500ms;
+            }
+
+            img {
+              transform: scale(1.5);
+              transition: transform 500ms;
+            }
+          }
+        }
+      }
+
+      .medLinkBox {
+        position: relative;
+        width: 40%;
+        height: 100%;
+        @include alignCenter();
+        justify-content: space-around;
+
+        .lottieNotesAnim {
+          position: relative;
+          width: 100%;
+          height: 70%;
+          @include alignCenter();
+
+          svg {
+            height: 100%;
+            width: auto;
+            // filter: drop-shadow(0px 0px 5px var(--SiteColor3));
+          }
+        }
+
+        button {
+          @include MainButtonStyling();
+          padding: 0% 5%;
+          text-align: center;
+          width: 70%;
+          height: 60px;
+        }
+      }
+    }
+  }
+
+  #LangSection {
+    @include alignCenter();
+    justify-content: space-evenly;
+
+    h1 {
+      width: 100%;
+      height: 10%;
+      font-weight: bolder;
+      color: var(--SiteColor3);
+      font-size: 3em;
+      text-align: center;
+    }
+
+    .langSelector {
+      width: 90%;
+      height: 10%;
+      @include alignCenter();
+      flex-direction: row;
+
+      span {
+        @include alignCenter();
+        @include MainButtonStyling();
+        width: 33%;
+        border-radius: 0px;
+        text-align: center;
+        font-weight: bolder;
+      }
+
+      .langBClicked {
+        background-color: var(--SiteColor3);
+        color: var(--SiteColor1);
+      }
+    }
+    .langDisplay {
+      width: 90%;
+      height: 60%;
+      @include alignCenter();
+      flex-direction: row;
+      justify-content: space-between;
+
+      .imgBox {
+        position: relative;
+        width: 65%;
+        height: 100%;
+        @include alignCenter();
+        border: 2px solid var(--SiteColor3);
+        border-radius: 10px;
+
+        .swiper-container {
+          width: 90%;
+          height: 100%;
+
+          .swiper-slide {
+            width: 100%;
+            height: 100%;
+            @include alignCenter();
+
+            img {
+              height: 95%;
+              width: auto;
+            }
+          }
+        }
+      }
+      .textBox {
+        position: relative;
+        width: 30%;
+        height: 100%;
+        @include alignCenter();
+        background-color: var(--SiteColor3);
+        border-radius: 10px;
+
+        ul {
+          position: absolute;
+          width: 90%;
+          height: 90%;
+          @include alignCenter();
+          justify-content: space-around;
+
+          li {
+            width: 90%;
+            height: 15%;
+            background-color: transparent;
+            font-size: 1.1em;
+            font-weight: bolder;
+            color: var(--SiteColor1);
+            @include alignCenter();
+
+            &:nth-child(1) {
+              text-align: center;
+              font-size: 1.6em;
+            }
+            &:nth-child(2) {
+              height: 10%;
+              background-color: transparent;
+              border: 2px solid var(--SiteColor1);
+              border-radius: 20px;
+              @include alignCenter();
+              align-items: flex-start;
+
+              .innerBar {
+                width: 100%;
+                height: 80%;
+                background-color: var(--SiteColor2);
+                box-shadow: 0px 0px 10px var(--SiteColor2);
+                border-radius: 20px;
+                margin-left: 5px;
+              }
+            }
+            &:nth-child(3) {
+              height: 50%;
+              text-align: justify;
+            }
+          }
+
+          &:nth-child(1) {
+            #outerBar .innerBar {
+              width: 85%;
+            }
+          }
+          &:nth-child(2) {
+            #outerBar .innerBar {
+              width: 95%;
+            }
+          }
+          &:nth-child(3) {
+            #outerBar .innerBar {
+              width: 60%;
+            }
           }
         }
       }

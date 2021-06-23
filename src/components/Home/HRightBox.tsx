@@ -1,4 +1,4 @@
-import React, { useRef, useContext } from "react";
+import React, { useContext } from "react";
 import useLottie from "lottie-react";
 import CubeAnimation from "./../../resources/Icons/cube.json";
 import { ChosenDataContext } from "./../ChosenData";

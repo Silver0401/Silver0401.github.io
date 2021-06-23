@@ -21,7 +21,7 @@ interface props {
 const CodeSection: React.FC<props> = ({ sectionRef }) => {
   return (
     <section ref={sectionRef} id="CodeSection">
-      <div className="bigBgCircle" />
+      {/* <div className="bigBgCircle" /> */}
 
       <div className="CodeTitle">
         <h1>Programming Langugages and Software Skills</h1>

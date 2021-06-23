@@ -1,11 +1,25 @@
 import anime from "animejs";
 import React, { useContext, useEffect, useRef } from "react";
-// import Anime from "react-animejs-wrapper";
+import useLottie from "lottie-react";
+
 import { ChosenDataContext } from "../ChosenData";
+import ArrowLottie from "./../../resources/Icons/arrowLottie.json";
 
 interface props {
   sectionRef: any;
 }
+
+const ArrowLottieAnimation = () => {
+  const options = {
+    animationData: ArrowLottie,
+    loop: false,
+    autoplay: true,
+  };
+
+  const View = useLottie(options);
+
+  return View;
+};
 
 const InitSection: React.FC<props> = ({ sectionRef }) => {
   const [transversalData, setTransversalData] = useContext(ChosenDataContext);
@@ -121,6 +135,12 @@ const InitSection: React.FC<props> = ({ sectionRef }) => {
             strokeWidth={3}
           />
         </svg>
+      </div>
+
+      <h4 className="arrowText">Click to come back Top</h4>
+
+      <div className="arrowLottieBox">
+        <ArrowLottieAnimation />
       </div>
 
       <div className="outerCircle">
