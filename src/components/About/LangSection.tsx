@@ -1,14 +1,14 @@
-import img1 from "./../../resources/Carneros/carneros1.jpg";
-import img2 from "./../../resources/Carneros/carneros2.jpg";
-import img3 from "./../../resources/Carneros/carneros3.jpg";
+import img1 from "./../../resources/lang/americana1.jpeg";
+import img2 from "./../../resources/lang/americana2.jpeg";
+import img3 from "./../../resources/lang/americana3.jpeg";
 
-import img4 from "./../../resources/IKIGAI/ikigai1.jpg";
-import img5 from "./../../resources/IKIGAI/ikigai2.jpg";
-import img6 from "./../../resources/IKIGAI/ikigai3.jpg";
+import img4 from "./../../resources/lang/español2.jpeg";
+import img5 from "./../../resources/lang/español1.jpeg";
+import img6 from "./../../resources/lang/español3.jpeg";
 
-import img7 from "./../../resources/FIRST/keybot1.jpg";
-import img8 from "./../../resources/FIRST/keybot2.jpg";
-import img9 from "./../../resources/FIRST/keybot3.jpg";
+import img7 from "./../../resources/lang/aleman1.jpeg";
+import img8 from "./../../resources/lang/aleman2.jpeg";
+import img9 from "./../../resources/lang/aleman3.jpeg";
 
 import React, { useEffect, useState } from "react";
 import SwiperCore, {
@@ -88,9 +88,8 @@ const LangSection: React.FC<props> = ({ sectionRef }) => {
             spaceBetween={50}
             slidesPerView={1}
             navigation
-            autoplay
+            loop={true}
             pagination={{ clickable: true }}
-            onSwiper={(swiper) => console.log(swiper)}
           >
             <SwiperSlide>
               <img
@@ -147,9 +146,10 @@ const LangSection: React.FC<props> = ({ sectionRef }) => {
               <div className="innerBar" />
             </li>
             <li>
-              I began learning english all the way back in primary school, since
-              then I have achieved an almost native english speaking fluidity as
-              well as writing.
+              Gracias a que desde mi educación básica tuve acceso a maestros
+              extranjeros, pude desarrollar un gran dominio del idioma,
+              alcanzando una fluidez de habla casi nativa, a la par de una
+              ortografía impecable.
             </li>
           </ul>
           <ul
@@ -165,8 +165,9 @@ const LangSection: React.FC<props> = ({ sectionRef }) => {
               <div className="innerBar" />
             </li>
             <li>
-              Al ser de méxico, el español es mi primer idioma, por lo cual mi
-              ortografía así como mi habla son excelentes.
+              Al ser originario de méxico, el español es mi primer idioma, por
+              lo cual mi ortografía, así como mi habla de este idioma son
+              excelentes.
             </li>
           </ul>
           <ul
@@ -183,8 +184,9 @@ const LangSection: React.FC<props> = ({ sectionRef }) => {
             </li>
             <li>
               Empece a aprender Alemán desde hace mi ingreso a la preparatoria y
-              aunque me considero de nivel intermedio, aun sigo aprendiendo y
-              mejorando mis conocimientos de este idioma.
+              hasta la fecha sigo estudiando el idioma. Por el momento me
+              encuentro en un nivel de habla y escritura intermedio, no obstante
+              pronto alcanzaré a un nivel profesional B1.
             </li>
           </ul>
         </div>

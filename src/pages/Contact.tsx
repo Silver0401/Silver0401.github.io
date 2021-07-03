@@ -10,21 +10,21 @@ export const Contact: React.FC = () => {
       opacity: 0,
       transform: "translateX(100%)",
       transition: {
-        duration: 1,
+        duration: 0.7,
       },
     },
     DesiredPosition: {
       opacity: 1,
       transform: "translateX(0%)",
       transition: {
-        duration: 1,
+        duration: 0.7,
       },
     },
     ExitPosition: {
       opacity: 0,
       transform: "translateY(100%)",
       transition: {
-        duration: 1,
+        duration: 0.7,
       },
     },
   };

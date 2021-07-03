@@ -1,7 +1,12 @@
 import React, { useEffect } from "react";
 import anime from "animejs";
+import { useTranslation } from "react-i18next";
+import { useHistory } from "react-router-dom";
 
 const HLeftBox: React.FC = () => {
+  const { t } = useTranslation();
+  const History = useHistory();
+
   useEffect(() => {
     const tl = anime.timeline({
       loop: true,
@@ -172,21 +177,23 @@ const HLeftBox: React.FC = () => {
   return (
     <div className="HLeftBox">
       <div className="TitlesBox">
-        <p>Greetings 🖖🏼, I'm </p>
+        <p>{t("HomeLeft.TopHeader")}</p>
         <h1>Ismael</h1>
         <h2>Muñoz Contreras</h2>
         <div className="changingText">
-          <h3 id="h31">Software Developer ⚛️</h3>
-          <h3 id="h32">UI/UX Designer 🔮</h3>
-          <h3 id="h33">Medicine Student 🫀</h3>
-          <h3 id="h34">App Constructor 📱</h3>
-          <h3 id="h35">Robot Programmer 🤖</h3>
-          <h3 id="h36">Web Engineer 💻</h3>
+          <h3 id="h31">{t("HomeLeft.PolyHeader1")}</h3>
+          <h3 id="h32">{t("HomeLeft.PolyHeader2")}</h3>
+          <h3 id="h33">{t("HomeLeft.PolyHeader3")}</h3>
+          <h3 id="h34">{t("HomeLeft.PolyHeader4")}</h3>
+          <h3 id="h35">{t("HomeLeft.PolyHeader5")}</h3>
+          <h3 id="h36">{t("HomeLeft.PolyHeader6")}</h3>
         </div>
       </div>
 
       <div className="ButtonsBox">
-        <button>Hire Me 💼</button>
+        <button onClick={() => History.push("/Contact")}>
+          {t("HomeLeft.HireButton")}
+        </button>
       </div>
     </div>
   );

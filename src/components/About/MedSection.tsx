@@ -39,8 +39,8 @@ const MedSection: React.FC<props> = ({ sectionRef }) => {
       <div className="TextSection">
         <h1>Medicine Knowledge</h1>
         <p>
-          I am currently in 4th year of med school, and so far, I have basic to
-          intermediate knoledge in the next fields
+          I am currently in med school, and so far, I have basic to intermediate
+          knoledge in the next fields
         </p>
       </div>
 
@@ -96,7 +96,17 @@ const MedSection: React.FC<props> = ({ sectionRef }) => {
           <div className="lottieNotesAnim">
             <LottieAnimation />
           </div>
-          <button className="linkNotes">Link to my Notes 📔 </button>
+          <button
+            onClick={() =>
+              window.open(
+                "https://1drv.ms/u/s!AvzR2WZ4Hf2egnG3zTGvIcbw_mIj",
+                "_newtab"
+              )
+            }
+            className="linkNotes"
+          >
+            Link to my Notes 📔{" "}
+          </button>
         </div>
       </div>
     </section>

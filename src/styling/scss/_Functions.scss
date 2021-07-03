@@ -25,3 +25,12 @@
     transition: background-color 500ms, color 500ms, box-shadow 500ms;
   }
 }
+
+@mixin hideScrollBar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

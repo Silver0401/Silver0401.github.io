@@ -1,0 +1,56 @@
+{
+  "HomeLeft.TopHeader": "Greetings 🖖🏼, I'm",
+  "HomeLeft.PolyHeader1": "Software Developer ⚛️",
+  "HomeLeft.PolyHeader2": "UI/UX Designer 🔮",
+  "HomeLeft.PolyHeader3": "Medicine Student 🫀",
+  "HomeLeft.PolyHeader4": "App Constructor 📱",
+  "HomeLeft.PolyHeader5": "Robot Programmer 🤖",
+  "HomeLeft.PolyHeader6": "Web Engineer 💻",
+  "HomeLeft.HireButton": "Hire Me 💼",
+
+  "HomeRight.KnowMeButton": "Get to know me 👀",
+  
+  "Nav.Home":"Home",
+  "Nav.About":"About",
+  "Nav.Contact":"Contact",
+  "Nav.Theme":"Theme",
+  "Nav.Lang":"Language",
+
+  "ContactLeft.Title":"Like What you see?",
+  "ContactLeft.SubTitle":"Let's get in touch",
+  "ContactLeft.Name":"Name",
+  "ContactLeft.Email":"Email",
+  "ContactLeft.Phone":"Phone",
+  "ContactLeft.Message":"Message",
+  "ContactLeft.SendButton":"Send",
+
+  "ContactRight.Title":"If you can imagine it, I can program it.",
+  "ContactRight.SubTitle":"I can literally code, design and develop anything you can think of. My lema is:",
+
+  "InitSection.CircleTitle": "Each circle contains information about my different skills, click one!",
+  "InitSection.ArrowText": "Click to come back top",
+  "InitSection.RotateButton": "Rotate",
+  "InitSection.StopButton": "Stop",
+
+  "CodeSection.Title": "Coding and Software Skills",
+  "CodeSection.LangCheckBox": "Languages",
+  "CodeSection.SoftCheckBox": "Softwares",
+
+  "MedSection.Title": "Medical Knowledge",
+  "MedSection.text": "I am currently in med school, and so far, I have basic to intermediate knoledge in the next fields",
+
+  "MedSection.Box.Cardio": "I am currently in med school, and so far, I have basic to intermediate knoledge in the next fields",
+  "MedSection.Box.BCel": "I am currently in med school, and so far, I have basic to intermediate knoledge in the next fields",
+  "MedSection.Box.Genetics": "I am currently in med school, and so far, I have basic to intermediate knoledge in the next fields",
+  "MedSection.Box.Endocrine": "I am currently in med school, and so far, I have basic to intermediate knoledge in the next fields",
+  "MedSection.Box.Imuno": "I am currently in med school, and so far, I have basic to intermediate knoledge in the next fields",
+  "MedSection.Box.Neuro": "I am currently in med school, and so far, I have basic to intermediate knoledge in the next fields",
+  "MedSection.Box.Histo": "I am currently in med school, and so far, I have basic to intermediate knoledge in the next fields",
+  "MedSection.Box.Nefro": "I am currently in med school, and so far, I have basic to intermediate knoledge in the next fields",
+  "MedSection.Box.Gastro": "I am currently in med school, and so far, I have basic to intermediate knoledge in the next fields",
+  "MedSection.Box.Micro": "I am currently in med school, and so far, I have basic to intermediate knoledge in the next fields",
+  "MedSection.Box.Embrio": "I am currently in med school, and so far, I have basic to intermediate knoledge in the next fields",
+
+  "footer": "coso"
+  
+}

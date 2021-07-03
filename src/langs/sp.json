@@ -1,0 +1,32 @@
+{
+  "HomeLeft.TopHeader": "Saludos 🖖🏼, Me llamo",
+  "HomeLeft.PolyHeader1": "Desarrollador de Software ⚛️",
+  "HomeLeft.PolyHeader2": "Diseñador UI/UX 🔮",
+  "HomeLeft.PolyHeader3": "Estudiante de Medicina 🫀",
+  "HomeLeft.PolyHeader4": "Constructor de Apps 📱",
+  "HomeLeft.PolyHeader5": "Programador de Robots 🤖",
+  "HomeLeft.PolyHeader6": "Ingeniero Web 💻",
+  "HomeLeft.HireButton": "Contrátame 💼",
+
+  "HomeRight.KnowMeButton": "Conóceme 👀",
+  
+  "Nav.Home":"Inicio",
+  "Nav.About":"Acerca de",
+  "Nav.Contact":"Contacto",
+  "Nav.Theme":"Tema",
+  "Nav.Lang":"Idioma",
+
+  "ContactLeft.Title":"Te gusta lo que ves?",
+  "ContactLeft.SubTitle":"Pongámonos en contacto",
+  "ContactLeft.Name":"Nombre",
+  "ContactLeft.Email":"Correo",
+  "ContactLeft.Phone":"Teléfono",
+  "ContactLeft.Message":"Mensaje",
+  "ContactLeft.SendButton":"Enviar",
+
+  "ContactRight.Title":"Si puedes imaginarlo, puedo progamarlo",
+  "ContactRight.SubTitle":" Puedo literalmente programar, diseñar y desarrollar cualquier idea que se te ocurra. Mi lema es:",
+  
+  "footer": "coso"
+  
+}

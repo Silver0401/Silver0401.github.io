@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 // Logos
 import tsLogo from "./../../resources/Icons/ts.png";
@@ -14,187 +14,153 @@ import sqlLogo from "./../../resources/Icons/mySQL.png";
 import nodeLogo from "./../../resources/Icons/node.png";
 import figmaLogo from "./../../resources/Icons/figma.png";
 
+import clLogo from "./../../resources/Icons/clLogo.png";
+import imLogo from "./../../resources/Icons/imLogo.png";
+import meLogo from "./../../resources/Icons/meLogo.png";
+import mwLogo from "./../../resources/Icons/mwLogo.png";
+import stLogo from "./../../resources/Icons/stLogo.png";
+import swLogo from "./../../resources/Icons/swLogo.png";
+import vsLogo from "./../../resources/Icons/vsLogo.png";
+import mpLogo from "./../../resources/Icons/mpLogo.png";
+import xcLogo from "./../../resources/Icons/xcLogo.png";
+import blendLogo from "./../../resources/Icons/blendLogo.png";
+import asLogo from "./../../resources/Icons/asLogo.png";
+import gimpLogo from "./../../resources/Icons/gimpLogo.png";
+
 interface props {
   sectionRef: any;
 }
 
 const CodeSection: React.FC<props> = ({ sectionRef }) => {
+  const [langInputSatus, setLangInputStatus] = useState<"on" | "off">("on");
+  const [softInputSatus, setSoftInputStatus] = useState<"on" | "off">("on");
+
+  const CreateLangSoftBox = (
+    type: "lang" | "soft",
+    name: string,
+    abbreviation: string,
+    image: string,
+    percentage: number
+  ) => {
+    if (type == "lang") {
+      return (
+        <span
+          style={
+            langInputSatus === "on"
+              ? { opacity: 1 }
+              : { opacity: 0, display: "none" }
+          }
+          id="lang"
+          className={abbreviation}
+        >
+          <p>{name}</p>
+          <div className="progressBar">
+            <div className="outerBar">
+              <div
+                className="innerBar"
+                style={{ width: `${percentage - 7}%` }}
+              />
+            </div>
+          </div>
+          <div className="imgBox">
+            <div className="imgContainer">
+              <img alt={`${name} svg`} src={image} />
+              <p>{`${percentage}%`}</p>
+            </div>
+          </div>
+        </span>
+      );
+    } else {
+      return (
+        <span
+          style={
+            softInputSatus === "on"
+              ? { opacity: 1 }
+              : { opacity: 0, display: "none" }
+          }
+          id="soft"
+          className={abbreviation}
+        >
+          <p>{name}</p>
+          <div className="progressBar">
+            <div className="outerBar">
+              <div
+                className="innerBar"
+                style={{ width: `${percentage - 7}%` }}
+              />
+            </div>
+          </div>
+          <div className="imgBox">
+            <div className="imgContainer">
+              <img alt={`${name} svg`} src={image} />
+              <p>{`${percentage}%`}</p>
+            </div>
+          </div>
+        </span>
+      );
+    }
+  };
+
   return (
     <section ref={sectionRef} id="CodeSection">
-      {/* <div className="bigBgCircle" /> */}
-
       <div className="CodeTitle">
         <h1>Programming Langugages and Software Skills</h1>
+        <div className="inputBox">
+          <span>
+            <label>Languages</label>
+            <input
+              onClick={() =>
+                setLangInputStatus(langInputSatus === "on" ? "off" : "on")
+              }
+              value={langInputSatus}
+              defaultChecked
+              type="checkbox"
+            />
+          </span>
+          <span>
+            <label>Softwares</label>
+            <input
+              onClick={() =>
+                setSoftInputStatus(softInputSatus === "on" ? "off" : "on")
+              }
+              value={softInputSatus}
+              defaultChecked
+              type="checkbox"
+            />
+          </span>
+        </div>
       </div>
       <div className="allSoftwareBox">
-        <span className="ts">
-          <p>Typescript</p>
-          <div className="progressBar">
-            <div className="outerBar">
-              <div className="innerBar" />
-            </div>
-          </div>
-          <div className="imgBox">
-            <div className="imgContainer">
-              <img alt="ts" src={tsLogo} />
-              <p>85%</p>
-            </div>
-          </div>
-        </span>
-        <span className="js">
-          <p>Javascript</p>
-          <div className="progressBar">
-            <div className="outerBar">
-              <div className="innerBar" />
-            </div>
-          </div>
-          <div className="imgBox">
-            <div className="imgContainer">
-              <img alt="js" src={jsLogo} />
-              <p>90%</p>
-            </div>
-          </div>
-        </span>
-        <span className="py">
-          <p>Python</p>
-          <div className="progressBar">
-            <div className="outerBar">
-              <div className="innerBar" />
-            </div>
-          </div>
-          <div className="imgBox">
-            <div className="imgContainer">
-              <img alt="py" src={pyLogo} />
-              <p>90%</p>
-            </div>
-          </div>
-        </span>
-        <span className="css">
-          <p>CSS</p>
-          <div className="progressBar">
-            <div className="outerBar">
-              <div className="innerBar" />
-            </div>
-          </div>
-          <div className="imgBox">
-            <div className="imgContainer">
-              <img alt="css" src={cssLogo} />
-              <p>90%</p>
-            </div>
-          </div>
-        </span>
-        <span className="scss">
-          <p>SCSS</p>
-          <div className="progressBar">
-            <div className="outerBar">
-              <div className="innerBar" />
-            </div>
-          </div>
-          <div className="imgBox">
-            <div className="imgContainer">
-              <img alt="scss" src={scssLogo} />
-              <p>90%</p>
-            </div>
-          </div>
-        </span>
-        <span className="html">
-          <p>HTML</p>
-          <div className="progressBar">
-            <div className="outerBar">
-              <div className="innerBar" />
-            </div>
-          </div>
-          <div className="imgBox">
-            <div className="imgContainer">
-              <img alt="html" src={htmlLogo} />
-              <p>90%</p>
-            </div>
-          </div>
-        </span>
-        <span className="java">
-          <p>Java</p>
-          <div className="progressBar">
-            <div className="outerBar">
-              <div className="innerBar" />
-            </div>
-          </div>
-          <div className="imgBox">
-            <div className="imgContainer">
-              <img alt="java" src={javaLogo} />
-              <p>75%</p>
-            </div>
-          </div>
-        </span>
-        <span className="react">
-          <p>React.js</p>
-          <div className="progressBar">
-            <div className="outerBar">
-              <div className="innerBar" />
-            </div>
-          </div>
-          <div className="imgBox">
-            <div className="imgContainer">
-              <img alt="react" src={reactLogo} />
-              <p>90%</p>
-            </div>
-          </div>
-        </span>
-        <span className="reactNat">
-          <p>React Native</p>
-          <div className="progressBar">
-            <div className="outerBar">
-              <div className="innerBar" />
-            </div>
-          </div>
-          <div className="imgBox">
-            <div className="imgContainer">
-              <img alt="reactNat" src={reactNatLogo} />
-              <p>80%</p>
-            </div>
-          </div>
-        </span>
-        <span className="mySQL">
-          <p>mySQL</p>
-          <div className="progressBar">
-            <div className="outerBar">
-              <div className="innerBar" />
-            </div>
-          </div>
-          <div className="imgBox">
-            <div className="imgContainer">
-              <img alt="mySQL" src={sqlLogo} />
-              <p>80%</p>
-            </div>
-          </div>
-        </span>
-        <span className="node">
-          <p>Node.js</p>
-          <div className="progressBar">
-            <div className="outerBar">
-              <div className="innerBar" />
-            </div>
-          </div>
-          <div className="imgBox">
-            <div className="imgContainer">
-              <img alt="node" src={nodeLogo} />
-              <p>85%</p>
-            </div>
-          </div>
-        </span>
-        <span className="figma">
-          <p>Figma</p>
-          <div className="progressBar">
-            <div className="outerBar">
-              <div className="innerBar" />
-            </div>
-          </div>
-          <div className="imgBox">
-            <div className="imgContainer">
-              <img alt="figma" src={figmaLogo} />
-              <p>80%</p>
-            </div>
-          </div>
-        </span>
+        {CreateLangSoftBox("lang", "Typescript", "ts", tsLogo, 85)}
+        {CreateLangSoftBox("lang", "Javascript", "js", jsLogo, 90)}
+        {CreateLangSoftBox("lang", "Python", "py", pyLogo, 90)}
+        {CreateLangSoftBox("lang", "CSS", "css", cssLogo, 90)}
+        {CreateLangSoftBox("lang", "Sass", "scss", scssLogo, 90)}
+        {CreateLangSoftBox("lang", "HTML", "html", htmlLogo, 90)}
+        {CreateLangSoftBox("lang", "Java", "java", javaLogo, 75)}
+        {CreateLangSoftBox("lang", "React.js", "react", reactLogo, 90)}
+        {CreateLangSoftBox(
+          "lang",
+          "React Native",
+          "reactNat",
+          reactNatLogo,
+          80
+        )}
+        {CreateLangSoftBox("lang", "mySQL", "mySQL", sqlLogo, 80)}
+        {CreateLangSoftBox("lang", "Node.js", "node", nodeLogo, 85)}
+        {CreateLangSoftBox("soft", "Figma", "figma", figmaLogo, 80)}
+        {CreateLangSoftBox("soft", "VS Code", "vs", vsLogo, 90)}
+        {CreateLangSoftBox("soft", "Sublime Text", "st", stLogo, 90)}
+        {CreateLangSoftBox("soft", "M. Excel", "st", meLogo, 75)}
+        {CreateLangSoftBox("soft", "M. Word", "st", mwLogo, 90)}
+        {CreateLangSoftBox("soft", "M. PowerPoint", "st", mpLogo, 90)}
+        {CreateLangSoftBox("soft", "Command Line", "cl", clLogo, 90)}
+        {CreateLangSoftBox("soft", "XCode", "xc", xcLogo, 85)}
+        {CreateLangSoftBox("soft", "Android Studio", "as", asLogo, 80)}
+        {CreateLangSoftBox("soft", "Blender", "blend", blendLogo, 75)}
+        {CreateLangSoftBox("soft", "Solid Works", "sw", swLogo, 75)}
+        {CreateLangSoftBox("soft", "iMovie", "im", imLogo, 90)}
+        {CreateLangSoftBox("soft", "Gimp", "gimp", gimpLogo, 75)}
       </div>
     </section>
   );

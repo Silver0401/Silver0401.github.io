@@ -3,11 +3,12 @@
   overflow-y: auto;
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
+  @include hideScrollBar();
 
   section {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     scroll-snap-align: start;
     overflow: hidden;
   }
@@ -232,9 +233,8 @@
   }
 
   #CodeSection {
-    display: flex;
+    @include alignCenter();
     flex-direction: row-reverse;
-    flex-wrap: wrap;
 
     .bigBgCircle {
       z-index: 0;
@@ -252,7 +252,9 @@
       );
     }
     .CodeTitle {
-      flex: 1 1 300px;
+      position: relative;
+      width: 40%;
+      height: 100%;
       z-index: 1;
       @include alignCenter();
 
@@ -264,13 +266,40 @@
         text-align: center;
         // background-color: lightcoral;
       }
+      .inputBox {
+        width: 90%;
+        height: 20%;
+        @include alignCenter();
+
+        span {
+          @include alignCenter();
+          justify-content: space-evenly;
+          flex-direction: row;
+          width: 70%;
+          height: 30%;
+
+          input {
+            width: 20px;
+            height: 20px;
+          }
+          label {
+            font-size: 1.5em;
+            font-weight: bolder;
+            color: var(--SiteColor3);
+          }
+        }
+      }
     }
     .allSoftwareBox {
-      flex: 1 1 500px;
+      position: relative;
+      width: 60%;
+      height: 100%;
       display: flex;
       flex-wrap: wrap;
       z-index: 1;
-      // transform: skewX(0deg);
+      overflow: auto;
+      transform: skewX(3deg);
+      @include hideScrollBar();
 
       span {
         flex: 1 1 300px;
@@ -278,7 +307,7 @@
         margin: 15px;
         overflow: hidden;
         background-color: var(--SiteColor1);
-        transition: transform 500ms;
+        min-height: 80px;
 
         display: grid;
         grid-template-columns: 1fr 25%;
@@ -344,7 +373,6 @@
             height: 60px;
             border-radius: 50%;
             background-color: transparent;
-            backdrop-filter: blur(20px);
             transition: transform 500ms, background-color 500ms;
             background-color: var(--SiteColor2);
           }
@@ -363,6 +391,7 @@
             color: black;
             transition: opacity 500ms;
             font-size: 1.2em;
+            transform: rotateZ(180deg);
           }
         }
 
@@ -375,9 +404,9 @@
           }
 
           .imgBox .imgContainer {
-            transform: rotateZ(360deg);
-            transition: transform 500ms, background-color 500ms;
+            transform: rotateZ(180deg);
             background-color: rgb(89, 250, 89);
+            transition: transform 500ms, background-color 500ms;
 
             img {
               opacity: 0;
@@ -389,33 +418,6 @@
               transition: opacity 500ms;
             }
           }
-        }
-      }
-
-      .ts,
-      .node {
-        .progressBar .outerBar .innerBar {
-          width: 80%;
-        }
-      }
-
-      .js,
-      .css,
-      .html,
-      .py,
-      .scss,
-      .react {
-        .progressBar .outerBar .innerBar {
-          width: 85%;
-        }
-      }
-
-      .java,
-      .reactNat,
-      .mySQL,
-      .figma {
-        .progressBar .outerBar .innerBar {
-          width: 75%;
         }
       }
     }
@@ -495,6 +497,7 @@
             font-size: 1.3em;
             color: black;
             transition: background-color 500ms;
+            pointer-events: none;
           }
 
           img {
@@ -634,7 +637,7 @@
             width: 90%;
             height: 15%;
             background-color: transparent;
-            font-size: 1.1em;
+            font-size: 1em;
             font-weight: bolder;
             color: var(--SiteColor1);
             @include alignCenter();
@@ -681,6 +684,788 @@
               width: 60%;
             }
           }
+        }
+      }
+    }
+  }
+
+  #MusicSection {
+    position: relative;
+    @include alignCenter();
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    h1 {
+      position: relative;
+      font-weight: bolder;
+      color: var(--SiteColor3);
+      font-size: 3em;
+      padding: 5%;
+      text-align: center;
+      @include alignCenter();
+      width: 100%;
+      height: 10%;
+    }
+
+    .MusicWrapper {
+      position: relative;
+      width: 100%;
+      height: 80%;
+      @include alignCenter();
+      flex-direction: row;
+
+      .MusicLeftBox {
+        position: relative;
+        @include alignCenter();
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+        height: 100%;
+
+        .imgBox1,
+        .imgBox2,
+        p {
+          position: relative;
+          width: 85%;
+          height: 33%;
+          @include alignCenter();
+          flex-direction: row;
+          font-size: 1.2em;
+          font-weight: bolder;
+          color: var(--SiteColor3);
+          text-align: center;
+          overflow: hidden;
+
+          img {
+            position: relative;
+            width: 50%;
+            height: 100%;
+            opacity: 1;
+            z-index: 1;
+            transition: filter 500ms;
+          }
+
+          h4 {
+            position: relative;
+            width: 35%;
+            height: 100%;
+            background: var(--SiteColor3);
+            color: var(--SiteColor1);
+            @include alignCenter();
+            font-size: 1rem;
+            text-align: center;
+            padding: 3%;
+            z-index: 0;
+          }
+
+          img:hover + h4 {
+            transition: transform 500ms;
+            transform: translateX(0%);
+          }
+          img:hover {
+            transition: filter 500ms;
+            filter: grayscale(100%);
+          }
+        }
+
+        .imgBox1 {
+          flex-direction: row;
+          width: 100%;
+
+          h4 {
+            transform: translateX(-100%);
+            transition: transform 500ms;
+          }
+        }
+        .imgBox2 {
+          flex-direction: row-reverse;
+          width: 100%;
+
+          h4 {
+            transform: translateX(100%);
+            transition: transform 500ms;
+          }
+        }
+      }
+      .MusicRightBox {
+        position: relative;
+        @include alignCenter();
+        width: 50%;
+        height: 100%;
+
+        .imgBox3 {
+          width: 80%;
+          height: 100%;
+          position: relative;
+          @include alignCenter();
+          // background: lightcoral;
+
+          img {
+            width: 90%;
+            height: 90%;
+            transition: filter 500ms;
+          }
+
+          &:hover {
+            img {
+              transition: filter 500ms;
+              filter: grayscale(100%);
+            }
+
+            h4 {
+              transition: opacity 500ms;
+              opacity: 1;
+            }
+          }
+
+          h4 {
+            position: absolute;
+            width: 90%;
+            opacity: 0;
+            height: 15%;
+            top: 5%;
+            background: rgba(0, 0, 0, 0.598);
+            color: white;
+            font-weight: bolder;
+            @include alignCenter();
+            padding: 2%;
+            transition: opacity 500ms;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  #XpSection {
+    @include alignCenter();
+    flex-direction: row;
+
+    .proyectBox {
+      position: relative;
+      width: 60%;
+      height: 100%;
+      @include alignCenter();
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      h1 {
+        position: relative;
+        font-weight: bolder;
+        color: var(--SiteColor3);
+        font-size: 3em;
+        padding: 5%;
+        text-align: center;
+        width: 100%;
+        height: 15%;
+        @include alignCenter();
+      }
+
+      .xpImgContainer {
+        position: relative;
+        width: 80%;
+        height: 60%;
+        @include alignCenter();
+        border-radius: 5px;
+        transform: translate(0%, 0%);
+
+        .imgBox {
+          position: relative;
+          width: 100%;
+          height: 80%;
+          @include alignCenter();
+
+          .logoBox {
+            position: absolute;
+            z-index: 1;
+            top: 0px;
+            right: 0px;
+            width: 50px;
+            height: 50px;
+          }
+          .swiper-container {
+            position: relative;
+            z-index: 0;
+            width: 100%;
+            height: 100%;
+            @include alignCenter();
+
+            .swiper-slide {
+              position: relative;
+              width: 100%;
+              height: 100%;
+              @include alignCenter();
+
+              img {
+                width: auto;
+                height: 90%;
+                transition: all 1s;
+              }
+            }
+          }
+        }
+        .imgDescription {
+          position: relative;
+          width: 100%;
+          height: 20%;
+          @include alignCenter();
+          text-align: center;
+          font-weight: bolder;
+          color: var(--SiteColor3);
+        }
+      }
+    }
+    .edXpBar {
+      position: relative;
+      width: 40%;
+      height: 100%;
+      @include alignCenter();
+      justify-content: space-evenly;
+
+      .bgRectangle {
+        position: absolute;
+        background-color: rgb(96, 96, 96);
+        width: 80%;
+        height: 100%;
+      }
+
+      #eduUL {
+        li {
+          &:hover {
+            transition: background-color 500ms;
+            background-color: lightgreen;
+
+            h4,
+            p {
+              transition: color 500ms;
+              color: black;
+            }
+          }
+        }
+
+        .selected {
+          border: 2px solid lightgreen;
+        }
+      }
+      #xpUL {
+        li {
+          &:hover {
+            transition: background-color 500ms;
+            background-color: lightskyblue;
+
+            h4,
+            p {
+              transition: color 500ms;
+              color: black;
+            }
+          }
+        }
+        .selected {
+          border: 2px solid lightskyblue;
+        }
+      }
+
+      ul {
+        position: relative;
+        height: 45%;
+        width: 80%;
+        overflow-x: visible;
+        @include alignCenter();
+        justify-content: flex-start;
+        gap: 1%;
+
+        li {
+          position: relative;
+          @include alignCenter();
+          z-index: 2;
+          height: 20%;
+          width: 100%;
+          cursor: pointer;
+          transition: background-color 500ms;
+          justify-content: space-evenly;
+
+          > * {
+            width: 100%;
+            padding: 0px 5%;
+            pointer-events: none;
+            transition: color 500ms;
+            color: white;
+          }
+
+          h4 {
+            font-weight: bolder;
+            font-size: 0.9em;
+            @include alignCenter();
+            align-items: flex-start;
+            height: 30%;
+            // background: lightskyblue;
+          }
+          p {
+            font-weight: bolder;
+            font-size: 0.7em;
+            @include alignCenter();
+            align-items: flex-start;
+            height: 50%;
+            // background: lightcoral;
+          }
+        }
+
+        #TitleBar {
+          background-color: var(--SiteColor3);
+          color: var(--SiteColor1);
+          font-weight: bolder;
+          text-align: center;
+          height: 60px;
+          width: 100%;
+          font-size: 1.2em;
+          cursor: auto;
+          pointer-events: none;
+
+          &::after {
+            position: absolute;
+            content: "";
+            left: -30px;
+            width: 30px;
+            height: 100%;
+            background-color: var(--SiteColor3);
+          }
+
+          &:hover {
+            background-color: var(--SiteColor3);
+          }
+        }
+
+        .Title3D {
+          position: absolute;
+          left: -26px;
+          top: -21px;
+          width: 50px;
+          height: 30px;
+          background-color: rgb(45, 44, 44);
+          transform: rotateZ(-45deg);
+          z-index: -1;
+        }
+      }
+    }
+  }
+
+  #WhySection {
+    @include alignCenter();
+    flex-direction: row;
+
+    .whyLeftBox {
+      position: relative;
+      width: 50%;
+      height: 100%;
+      @include alignCenter();
+      justify-content: space-evenly;
+      background-color: rgba(0, 0, 0, 0.714);
+      backdrop-filter: blur(3px);
+
+      h1 {
+        font-size: 3em;
+        font-weight: bolder;
+        color: white;
+        text-align: center;
+
+        strong {
+          color: #0ee9da;
+        }
+      }
+
+      p {
+        font-size: 1.5em;
+        font-weight: bolder;
+        color: white;
+        width: 80%;
+        height: 40%;
+        text-align: justify;
+
+        strong {
+          color: #0ee9da;
+        }
+      }
+
+      button {
+        @include MainButtonStyling();
+        // color: #0ee9da;
+      }
+    }
+    .whyRightBox {
+      position: relative;
+      width: 50%;
+      height: 90%;
+
+      @include alignCenter();
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      span {
+        position: relative;
+        width: 70%;
+        flex: 1;
+        @include alignCenter();
+        align-items: flex-start;
+
+        &:nth-child(2),
+        &:nth-child(4) {
+          align-items: flex-end;
+
+          .textBox {
+            align-items: flex-start;
+          }
+        }
+
+        .svgBox {
+          position: absolute;
+          width: 110px;
+          height: 110px;
+          border-radius: 50%;
+          background-color: var(--SiteColor3);
+          z-index: 1;
+          @include alignCenter();
+          transition: background-color 500ms;
+
+          svg {
+            width: 50%;
+            height: auto;
+            fill: var(--SiteColor1);
+            transition: fill 500ms;
+          }
+        }
+        .textBox {
+          z-index: 0;
+          position: absolute;
+          width: 100%;
+          height: 70%;
+          opacity: 1;
+          border-radius: 50px;
+          @include alignCenter();
+          overflow: visible;
+          align-items: flex-end;
+          transition: background-color 500ms;
+          background-color: var(--SiteColor3);
+
+          h4 {
+            position: absolute;
+            width: 100%;
+            height: 30%;
+            font-weight: bolder;
+            color: var(--SiteColor1);
+            font-size: 1.5em;
+            @include alignCenter();
+            // text-decoration: underline #0ee9da;
+            opacity: 1;
+            transition: opacity 500ms;
+            pointer-events: none;
+          }
+          p {
+            pointer-events: none;
+            width: 80%;
+            height: 70%;
+            font-weight: bolder;
+            color: var(--SiteColor3);
+            font-size: 0.9em;
+            @include alignCenter();
+            padding: 0px 5%;
+            transition: font-size 1s;
+          }
+        }
+
+        &:hover {
+          .svgBox {
+            background-color: var(--SiteColor1);
+            transition: background-color 500ms;
+
+            svg {
+              fill: var(--SiteColor3);
+              transition: fill 500ms;
+            }
+          }
+          .textBox {
+            background-color: var(--SiteColor1);
+            transition: background-color 500ms;
+
+            h4 {
+              opacity: 0;
+              transition: opacity 500ms;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #DesignSection {
+    @include alignCenter();
+    justify-content: space-evenly;
+
+    h1 {
+      width: 100%;
+      height: 15%;
+      font-weight: bolder;
+      color: var(--SiteColor3);
+      font-size: 3em;
+      @include alignCenter();
+      text-align: center;
+    }
+
+    .proyectsBox {
+      position: relative;
+      width: 95%;
+      height: 70%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5%;
+
+      .proyectBox {
+        position: relative;
+        flex: 1 1 200px;
+        border: 2px solid var(--SiteColor3);
+        @include alignCenter();
+        justify-content: space-evenly;
+        overflow: hidden;
+        background-color: var(--SiteColor2);
+
+        h2 {
+          position: relative;
+          color: var(--SiteColor3);
+          font-weight: bolder;
+          font-size: 2em;
+          padding: 0px 5%;
+          text-align: center;
+          pointer-events: none;
+        }
+        .buttonsBox {
+          position: relative;
+          width: 90%;
+          height: 10%;
+          position: relative;
+          @include alignCenter();
+          flex-direction: row;
+          justify-content: space-around;
+
+          button {
+            position: relative;
+            width: 40%;
+            height: 70%;
+            background-color: var(--SiteColor3);
+            @include alignCenter();
+            flex-direction: row;
+            justify-content: space-around;
+
+            p {
+              color: var(--SiteColor1);
+              font-weight: bolder;
+            }
+            svg {
+              height: 60%;
+              width: auto;
+              fill: var(--SiteColor1);
+            }
+          }
+        }
+        .logoContainer {
+          position: relative;
+          width: 150px;
+          height: 150px;
+          pointer-events: none;
+          background-color: var(--SiteColor3);
+          border-radius: 50%;
+          overflow: hidden;
+          @include alignCenter();
+          opacity: 1;
+          transition: opacity 500ms;
+
+          img {
+            width: 90%;
+            height: auto;
+            border-radius: 50%;
+          }
+        }
+        #BgImg {
+          position: absolute;
+          height: 100%;
+          width: 500px;
+          opacity: 0.2;
+          pointer-events: none;
+          z-index: -1;
+        }
+        .proyectDescription {
+          position: absolute;
+          width: 80%;
+          height: 35%;
+          font-size: 1em;
+          overflow: hidden;
+          pointer-events: none;
+          color: var(--SiteColor3);
+          text-align: center;
+          font-weight: bolder;
+          opacity: 0;
+          transition: opacity 500ms;
+        }
+
+        &:hover {
+          .proyectDescription {
+            opacity: 1;
+            transition: opacity 500ms;
+          }
+          .logoContainer {
+            opacity: 0;
+            transition: opacity 500ms;
+          }
+        }
+      }
+    }
+  }
+
+  #ModelingSection {
+    @include alignCenter();
+    flex-direction: row;
+
+    .modelingLeftBox {
+      position: relative;
+      width: 60%;
+      height: 100%;
+      @include alignCenter();
+      flex-direction: column;
+
+      .modelDisplay {
+        width: 100%;
+        height: 80%;
+        position: relative;
+
+        .modelsContainer {
+          position: relative;
+          // background-color: lightyellow;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          overflow: scroll;
+
+          .bmoModelContainer,
+          .carModelContainer {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+
+            Canvas {
+              position: relative;
+              background-color: transparent;
+              cursor: pointer;
+              width: 100%;
+              height: 50%;
+              transition: visibility 500ms;
+            }
+          }
+        }
+        .platformContainer {
+          position: absolute;
+          width: 100%;
+          height: 20%;
+          bottom: 0;
+          z-index: 0;
+          @include alignCenter();
+
+          .circle {
+            position: relative;
+            width: 80%;
+            height: 70px;
+            border: 2px solid var(--SiteColor3);
+            background-color: grey;
+            border-radius: 50%;
+            z-index: 1;
+            // backdrop-filter: blur(5px);
+          }
+          .border {
+            position: absolute;
+            margin-top: 50px;
+            width: 80%;
+            height: 50px;
+            border: 10px solid var(--SiteColor3);
+            background-color: var(--SiteColor3);
+            border-bottom-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+            opacity: 1;
+            z-index: 0;
+          }
+        }
+        .controlersBox {
+          position: absolute;
+          top: 50px;
+          left: 50px;
+          width: 200px;
+          height: 50px;
+          @include alignCenter();
+          flex-direction: row;
+          z-index: 2;
+
+          button {
+            @include MainButtonStyling();
+            width: 45%;
+            height: 90%;
+            border-radius: 0px;
+          }
+          .toggled {
+            background-color: var(--SiteColor3);
+            color: var(--SiteColor1);
+          }
+        }
+      }
+      .modelDescription {
+        position: relative;
+        width: 95%;
+        height: 20%;
+        @include alignCenter();
+        p {
+          position: absolute;
+          font-weight: lighter;
+          color: var(--SiteColor3);
+          text-align: center;
+          font-size: 0.7em;
+        }
+      }
+    }
+    .modelingRightBox {
+      width: 40%;
+      height: 100%;
+      @include alignCenter();
+      gap: 20px;
+
+      h1 {
+        text-align: center;
+        font-weight: bolder;
+        color: var(--SiteColor3);
+        font-size: 3em;
+        width: 100%;
+        height: 10%;
+      }
+      p {
+        font-weight: bolder;
+        color: var(--SiteColor3);
+        text-align: center;
+        width: 90%;
+        height: 10%;
+      }
+      ul {
+        width: 60%;
+        height: 20%;
+        @include alignCenter();
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        li {
+          list-style: none;
+          @include MainButtonStyling();
+          @include alignCenter();
+          width: 100%;
+          height: 30%;
+        }
+
+        .toggled {
+          // transition: background-color 0;
+          background-color: var(--SiteColor3);
+          color: var(--SiteColor1);
         }
       }
     }

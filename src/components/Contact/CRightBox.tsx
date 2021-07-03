@@ -1,14 +1,14 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const CRightBox: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="CRightBox">
       <div className="text">
-        <h2>
-          I can literally code, design and develop anything you can think of. My
-          lema is:
-        </h2>
-        <h3>If you can imagine it, I can program it.</h3>
+        <h2>{t("ContactRight.SubTitle")}</h2>
+        <h3>{t("ContactRight.Title")}</h3>
       </div>
       <div className="socialMedia">
         <span className="insta">

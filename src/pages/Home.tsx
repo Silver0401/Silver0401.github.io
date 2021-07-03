@@ -17,14 +17,14 @@ const Home: React.FC = () => {
       opacity: 0,
       transform: "translateY(-100%)",
       transition: {
-        duration: 1,
+        duration: 0.7,
       },
     },
     DesiredPosition: {
       opacity: 1,
       transform: "translateY(0%)",
       transition: {
-        duration: 1,
+        duration: 0.7,
       },
     },
     ExitPosition: {
@@ -33,7 +33,7 @@ const Home: React.FC = () => {
         ? "translateY(0%)"
         : "translateY(-100%)",
       transition: {
-        duration: transversalData.KnowMeButtonClicked ? 0.5 : 1,
+        duration: transversalData.KnowMeButtonClicked ? 0.5 : 0.7,
       },
     },
   };

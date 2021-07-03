@@ -41,19 +41,17 @@
 
     form {
       width: 90%;
-      height: 60%;
+      height: 65%;
       position: relative;
-      // background-color: lightskyblue;
       display: flex;
       flex-wrap: wrap;
       overflow: hidden;
-      gap: 5%;
+      gap: 0px;
 
       span {
         position: relative;
-        flex: 1 1 300px;
+        flex: 1 1 500px;
         @include alignCenter();
-        justify-content: space-around;
         overflow: hidden;
         align-items: flex-start;
 
@@ -107,6 +105,36 @@
               transform: translate(0px, -45px);
             }
           }
+        }
+
+        .submitButton {
+          width: 170px;
+          height: 50px;
+          font-size: 1em;
+          padding-left: 0%;
+          margin-left: 0%;
+          border: 2px solid var(--SiteColor3);
+          color: var(--SiteColor3);
+          background-color: transparent;
+          font-weight: bolder;
+          border-radius: 5px;
+          font-size: 1.2em;
+          transition: background-color 500ms, color 500ms, box-shadow 500ms;
+          box-shadow: 0px 0px 0px transparent;
+          cursor: pointer;
+
+          &:hover {
+            background-color: var(--SiteColor3);
+            color: var(--SiteColor1);
+            box-shadow: 0px 0px 10px var(--SiteColor3);
+            transition: background-color 500ms, color 500ms, box-shadow 500ms;
+          }
+        }
+
+        &:nth-child(5) {
+          align-items: center;
+          justify-content: space-evenly;
+          // max-height: 100px;
         }
       }
     }

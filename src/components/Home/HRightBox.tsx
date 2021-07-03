@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import useLottie from "lottie-react";
 import CubeAnimation from "./../../resources/Icons/cube.json";
 import { ChosenDataContext } from "./../ChosenData";
+import { useTranslation } from "react-i18next";
 
 const LottieAnimation = () => {
   const options = {
@@ -17,6 +18,7 @@ const LottieAnimation = () => {
 
 const HRightBox: React.FC = () => {
   const [transversalData, setTransversalData] = useContext(ChosenDataContext);
+  const { t } = useTranslation();
 
   const CreateCircle = (className: string, CElement: string) => {
     let SelectedSvgPath;
@@ -107,16 +109,21 @@ const HRightBox: React.FC = () => {
         <div
           className="innerCircle"
           onClick={() => {
-            setTransversalData({
-              ...transversalData,
-              KnowMeButtonClicked: true,
-            });
+            if (transversalData.KnowMeButtonClicked) {
+              console.log("alredy clicked");
+            } else {
+              console.log("animInit");
+              setTransversalData({
+                ...transversalData,
+                KnowMeButtonClicked: true,
+              });
+            }
           }}
         >
           <div className="lottieBox">
             <LottieAnimation />
           </div>
-          <h2>Get to know me 👀</h2>
+          <h2>{t("HomeRight.KnowMeButton")}</h2>
         </div>
 
         <div className="CirclesBoxBox">

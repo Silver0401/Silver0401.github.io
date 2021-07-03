@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { ChosenDataContext } from "./ChosenData";
+import { useTranslation } from "react-i18next";
 
 import mexLogo from "./../resources/Icons/mex.svg";
 import usLogo from "./../resources/Icons/us.svg";
@@ -13,6 +14,7 @@ const Nav: React.FC<props> = ({ siteStructure }) => {
   const [navState, toggleNav] = useState(false);
   const [color, toggleColor] = useState<"light" | "dark">("dark");
   const [lang, toggleLang] = useState<"en" | "sp">("sp");
+  const [t, i18n] = useTranslation();
   const [transversalData, setTransversalData] = useContext(ChosenDataContext);
 
   const Icon = (chosen: string) => {
@@ -130,6 +132,10 @@ const Nav: React.FC<props> = ({ siteStructure }) => {
     }
   });
 
+  useEffect(() => {
+    i18n.changeLanguage(lang);
+  }, [lang]);
+
   return (
     <nav className={navState ? "NavBar Toggled" : "NavBar"}>
       <div className="NavTitle">
@@ -187,7 +193,7 @@ const Nav: React.FC<props> = ({ siteStructure }) => {
               to="/"
             >
               {Icon("Home")}
-              <p>Home</p>
+              <p>{t("Nav.Home")}</p>
             </Link>
           </li>
           <li>
@@ -199,7 +205,7 @@ const Nav: React.FC<props> = ({ siteStructure }) => {
               to="/About"
             >
               {Icon("About")}
-              <p>About</p>
+              <p>{t("Nav.About")}</p>
             </Link>
           </li>
           <li>
@@ -216,7 +222,7 @@ const Nav: React.FC<props> = ({ siteStructure }) => {
                 {Icon("Sun")}
                 {Icon("Moon")}
               </div>
-              <p>Color</p>
+              <p>{t("Nav.Theme")}</p>
             </button>
           </li>
           <li>
@@ -225,7 +231,7 @@ const Nav: React.FC<props> = ({ siteStructure }) => {
                 {Icon("Mex")}
                 {Icon("Us")}
               </div>
-              <p>Language</p>
+              <p>{t("Nav.Lang")}</p>
             </button>
           </li>
         </ul>
@@ -234,19 +240,19 @@ const Nav: React.FC<props> = ({ siteStructure }) => {
           <li>
             <a onClick={() => toggleNav(false)} href="#AboutPage">
               {Icon("Home")}
-              <p>About</p>
+              <p>{t("Nav.Home")}</p>
             </a>
           </li>
           <li>
             <a onClick={() => toggleNav(false)} href="#ContactPage">
               {Icon("About")}
-              <p>Contact Us</p>
+              <p>{"Nav.About"}</p>
             </a>
           </li>
           <li>
             <a onClick={() => toggleNav(false)} href="#ContactPage">
               {Icon("Contact")}
-              <p>Coso</p>
+              <p>{"Nav.Contact"}</p>
             </a>
           </li>
           <li>
@@ -255,7 +261,7 @@ const Nav: React.FC<props> = ({ siteStructure }) => {
                 {Icon("Sun")}
                 {Icon("Moon")}
               </div>
-              <p>Colors</p>
+              <p>{"Nav.Theme"}</p>
             </a>
           </li>
           <li>
@@ -264,7 +270,7 @@ const Nav: React.FC<props> = ({ siteStructure }) => {
                 {Icon("Mex")}
                 {Icon("Us")}
               </div>
-              <p>Language</p>
+              <p>{"Nav.Lang"}</p>
             </a>
           </li>
         </ul>

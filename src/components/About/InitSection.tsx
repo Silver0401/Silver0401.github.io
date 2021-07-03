@@ -1,6 +1,7 @@
 import anime from "animejs";
 import React, { useContext, useEffect, useRef } from "react";
 import useLottie from "lottie-react";
+import { useTranslation } from "react-i18next";
 
 import { ChosenDataContext } from "../ChosenData";
 import ArrowLottie from "./../../resources/Icons/arrowLottie.json";
@@ -24,6 +25,7 @@ const ArrowLottieAnimation = () => {
 const InitSection: React.FC<props> = ({ sectionRef }) => {
   const [transversalData, setTransversalData] = useContext(ChosenDataContext);
   const rotatingAnimRef = useRef<any>();
+  const { t } = useTranslation();
 
   useEffect(() => {
     rotatingAnimRef.current = anime({
@@ -32,6 +34,7 @@ const InitSection: React.FC<props> = ({ sectionRef }) => {
       rotateZ: "360deg",
       loop: true,
       easing: "linear",
+      autoplay: false,
     });
   }, []);
 
