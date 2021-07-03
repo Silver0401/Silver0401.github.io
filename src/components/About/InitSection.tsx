@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 
 import { ChosenDataContext } from "../ChosenData";
 import ArrowLottie from "./../../resources/Icons/arrowLottie.json";
-
+//
 interface props {
   sectionRef: any;
 }
