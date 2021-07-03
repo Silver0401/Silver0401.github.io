@@ -1,0 +1,11 @@
+Model Information:
+* title:	Realistic BMO
+* source:	https://sketchfab.com/3d-models/realistic-bmo-ebe2dbbfd9074db49409d4bc0cfd8b10
+* author:	Benjamon321 (https://sketchfab.com/Benjamon321)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Realistic BMO" (https://sketchfab.com/3d-models/realistic-bmo-ebe2dbbfd9074db49409d4bc0cfd8b10) by Benjamon321 (https://sketchfab.com/Benjamon321) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

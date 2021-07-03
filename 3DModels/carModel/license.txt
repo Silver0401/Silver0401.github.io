@@ -1,0 +1,11 @@
+Model Information:
+* title:	Beck Kustoms F132
+* source:	https://sketchfab.com/3d-models/beck-kustoms-f132-027abdfa3145468c801fc07fb7b7aadd
+* author:	Vyacheslav (https://sketchfab.com/Vedunov.s)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Beck Kustoms F132" (https://sketchfab.com/3d-models/beck-kustoms-f132-027abdfa3145468c801fc07fb7b7aadd) by Vyacheslav (https://sketchfab.com/Vedunov.s) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
