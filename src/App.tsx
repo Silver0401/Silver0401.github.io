@@ -67,9 +67,9 @@ const App: React.FC = () => {
 
         {siteStructure === "vertical" ? (
           <div className="AppContainer">
-            <HomePage/>
+            <HomePage />
 
-            <AboutPage/>
+            <AboutPage />
 
             <ContactPage />
           </div>
@@ -85,12 +85,7 @@ const App: React.FC = () => {
 
             <AnimatePresence exitBeforeEnter>
               <Switch location={Location} key={Location.pathname}>
-                <Route
-                  key="HomePage"
-                  exact
-                  path="/"
-                  component={HomePage}
-                />
+                <Route key="HomePage" exact path="/" component={HomePage} />
                 <Route
                   key="AboutPage"
                   exact

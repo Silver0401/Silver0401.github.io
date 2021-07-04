@@ -83,10 +83,14 @@
           font-weight: bolder;
           padding-left: 2%;
           background-color: var(--SiteColor3);
-          color: var(--SiteColor1);
+          transition: color 500ms;
+          color: transparent;
 
           &:focus,
           &:valid {
+            transition: color 500ms;
+            color: var(--SiteColor1);
+
             & + label {
               color: var(--SiteColor3);
               transform: translate(0px, -100%);

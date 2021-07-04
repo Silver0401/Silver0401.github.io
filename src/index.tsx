@@ -12,7 +12,7 @@ ReactDOM.render(
   <React.StrictMode>
     <I18nextProvider i18n={i18n}>
       <ChakraProvider>
-        <BrowserRouter>
+        <BrowserRouter basename={"/"}>
           <App />
         </BrowserRouter>
       </ChakraProvider>
