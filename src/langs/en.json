@@ -13,8 +13,8 @@
   "Nav.Home":"Home",
   "Nav.About":"About",
   "Nav.Contact":"Contact",
-  "Nav.Theme":"Theme",
-  "Nav.Lang":"Language",
+  "Nav.Theme":"Color",
+  "Nav.Lang":"English",
 
   "ContactLeft.Title":"Like What you see?",
   "ContactLeft.SubTitle":"Let's get in touch",
@@ -34,22 +34,109 @@
 
   "CodeSection.Title": "Coding and Software Skills",
   "CodeSection.LangCheckBox": "Languages",
-  "CodeSection.SoftCheckBox": "Softwares",
+  "CodeSection.SoftCheckBox": "Applications",
 
   "MedSection.Title": "Medical Knowledge",
-  "MedSection.text": "I am currently in med school, and so far, I have basic to intermediate knoledge in the next fields",
+  "MedSection.Text": "I am currently in med school, and so far, I have basic to intermediate knoledge in the next fields",
+  "MedSection.Button": "Link to My Notes",
 
-  "MedSection.Box.Cardio": "I am currently in med school, and so far, I have basic to intermediate knoledge in the next fields",
-  "MedSection.Box.BCel": "I am currently in med school, and so far, I have basic to intermediate knoledge in the next fields",
-  "MedSection.Box.Genetics": "I am currently in med school, and so far, I have basic to intermediate knoledge in the next fields",
-  "MedSection.Box.Endocrine": "I am currently in med school, and so far, I have basic to intermediate knoledge in the next fields",
-  "MedSection.Box.Imuno": "I am currently in med school, and so far, I have basic to intermediate knoledge in the next fields",
-  "MedSection.Box.Neuro": "I am currently in med school, and so far, I have basic to intermediate knoledge in the next fields",
-  "MedSection.Box.Histo": "I am currently in med school, and so far, I have basic to intermediate knoledge in the next fields",
-  "MedSection.Box.Nefro": "I am currently in med school, and so far, I have basic to intermediate knoledge in the next fields",
-  "MedSection.Box.Gastro": "I am currently in med school, and so far, I have basic to intermediate knoledge in the next fields",
-  "MedSection.Box.Micro": "I am currently in med school, and so far, I have basic to intermediate knoledge in the next fields",
-  "MedSection.Box.Embrio": "I am currently in med school, and so far, I have basic to intermediate knoledge in the next fields",
+  "MedSection.Box.Cardio": "Cardiology",
+  "MedSection.Box.BCel": "Cellular Biology",
+  "MedSection.Box.Genetics": "Genetics",
+  "MedSection.Box.Endocrine": "Endocrinology",
+  "MedSection.Box.Imuno": "Inmunology",
+  "MedSection.Box.Neuro": "Neurology",
+  "MedSection.Box.Histo": "Histology",
+  "MedSection.Box.Nefro": "Nefrology",
+  "MedSection.Box.Gastro": "Gastroenterology",
+  "MedSection.Box.Micro": "Microorganisms",
+  "MedSection.Box.Embrio": "Embriology",
+  
+  "XpSection.Title": "Experience and Education",
+  "XpSection.Xp.Title": "Experience",
+  "XpSection.Edu.Title": "Education",
+
+  "XpSection.Carneros.Title": "Member of Carneros and Ikigai",
+  "XpSection.Carneros.Text": "I was a member of the group called 'Carneros', a group focused on leadership, as well as the creation of personal strengthening activities.",
+
+  "XpSection.First.Title": "FIRST Leader and Mentor",
+  "XpSection.First.Text": "I served as the programming leader and mentor for the team named as 'Keybot', which participated in the international robotics compition known as 'FIRST', more especifically in the 'FRC' category",
+
+  "XpSection.WER.Title": "WER Leader and Mentor",
+  "XpSection.WER.Text": "WER means 'World Educational Robot', another international robotics competition focused on junior and senior high school students, in which I participated as mentor of the programming area",
+
+  "XpSection.Brainvue.Title": "BrainVue Programmer",
+  "XpSection.Brainvue.Text": "BrainVue is a university group focused on pediatric health rehabilitation, using 'NAO Robots' as a tool. Group for which I programmed.",
+
+  "XpSection.Elemental.Title": "Elemental Education",
+  "XpSection.Elemental.Text": "All of my elemental education took place in the 'American School of Pachuca' which, as will be mentioned later made a huge difference in my overall english proficiency.",
+
+  "XpSection.High.Title": "Senior High Education",
+  "XpSection.High.Text": "It was during my senior high school education in the Technological Institute of Monterrey, that I did my mentoring activities in both FIRST and WER.",
+
+  "XpSection.Uni.Title": "University Education",
+  "XpSection.Uni.Text": "I am currently going through a medical career in Monterrey México, where I also involve myself in both medical and robotics student groups.",
+  
+  
+  "ModelingSection.Title": "3D Modeling",
+  "ModelingSection.Text": "Another skill I've developed is 3d-modeling, a design skill that allows me to create realistic models for any proyect. I especifically use solid works for real life proyect measurements, meanwhile blender is my 3d web model design tool.",
+
+
+  "DesignSection.Title": "Personal Proyects",
+
+  "DesignSection.Smort.Text": "Smort Technology is a website developed with the purpose of designing and selling personalized websites",
+
+  "DesignSection.Calc.Text": "This was a proyect made with a medical approach, it's purpose being to work as a web tool for prostate cancer risk detection",
+
+  "DesignSection.Voades.Text": "My first ever sold website, designed for a non-profitable mexican organization that focuses on mental health problems",
+
+  "DesignSection.Mery.Text": "Mery is a web based speech recognition assistant that responds to certain personalized commands in order to control the users computer",
+  
+  
+  "MusicSection.Title": "Musical Abilities",
+  "MusicSection.Text": "My favorite instrument to play is the guitar, I've been practicing it for around 5 years, however I havo also learned basic piano and violin skills.",
+  "MusicSection.GImg1.Text": "Photo of me and my 2 colegues before the public presentation in 'Pachuca's Clock Tower' where",
+  "MusicSection.GImg2.Text": "Illustration of me and my colegues during the presentation in the scenario.",
+  "MusicSection.VImg3.Text": "Image of me in my weekly violin practice, during 2019's summer.",
+
+
+  "LangSection.Title": "Languages",
+  "LangSection.Mastery": "Mastery Level: ",
+  "LangSection.Native": "Native",
+
+  "LangSection.Spanish.Title": "Spanish",
+  "LangSection.Spanish.Text": "By being born and raised in Mexico, I adopted spanish as my primary and native language, which is why both my speaking and writing are excelent.",
+
+  "LangSection.English.Title": "English",
+  "LangSection.English.Text": "Thanks to the fact I had access to foreign native english speakers throught my elementary education, I've been able to develop an super fuluid english speaking, as well as impeccable grammar.",
+
+  "LangSection.German.Title": "German",
+  "LangSection.German.Text": "I started learning german since my senior school education, and currently keep on studying the language. I am at an intermediate level in both writing and speaking, with expectations of achieving B1.",
+
+
+  "WhySection.Title": "So, why hire me?",
+  "WhySection.Text1": "Due to all the experiences and proyects i've been through, ",
+  "WhySection.Text2": "I have acquired a great amount of skills ",
+  "WhySection.Text3": "that currently allow me to perform any kind of labor, both more efficently and effectively, ",
+  "WhySection.Text4": "such skills are ",
+
+  "WhySection.Resilience.Title": "Resilience",
+  "WhySection.Resilience.Text": "No matter the problems and difficulties along the path, I always find a solution and deliver.",
+
+  "WhySection.Organization.Title": "Organization",
+  "WhySection.Organization.Text": "I always schedule and keep track of my assignments, I have not missed a due date in over a year.",
+
+  "WhySection.Teamwork.Title": "TeamWork",
+  "WhySection.Teamwork.Text": "Cooperation is an essencial part of any proyect, a skill i've mastered.",
+
+  "WhySection.Leadership.Title": "Leadership",
+  "WhySection.Leadership.Text": "Whenever needed, I can guide and support my team to achieve our objectives together.",
+
+  "WhySection.Passion.Title": "Passion",
+  "WhySection.Passion.Text": "I love what I do, which is why I can learn any tool, software or language quickly for any proyect.",
+
+  "WhySection.Button": "Let's Talk",
+  
 
   "footer": "coso"
   

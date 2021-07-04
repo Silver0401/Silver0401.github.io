@@ -1,6 +1,7 @@
 import anime from "animejs";
 import React from "react";
 import { useHistory } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 interface props {
   sectionRef: any;
@@ -8,18 +9,16 @@ interface props {
 
 const WhySection: React.FC<props> = ({ sectionRef }) => {
   const History = useHistory();
+  const { t } = useTranslation();
 
   return (
     <section ref={sectionRef} id="WhySection">
       <div className="whyLeftBox">
-        <h1>So, Why Hire Me?</h1>
+        <h1>{t("WhySection.Title")}</h1>
         <p>
-          Due to all the experiences and proyects i've been through,{" "}
-          <strong>I have acquired a great amount of skills</strong> that
-          currently allow me to perform any kind of labor, both more efficently
-          and effectively, <strong>such skills are </strong> ---{">"}
+          {t("WhySection.Text1")}<strong>{t("WhySection.Text2")}</strong>{t("WhySection.Text3")}<strong>{t("WhySection.Text4")}</strong> ---{">"}
         </p>
-        <button onClick={() => History.push("/Contact")}>Let's Talk</button>
+        <button onClick={() => History.push("/Contact")}>{t("WhySection.Button")}</button>
       </div>
       <div className="whyRightBox">
         <span>
@@ -36,10 +35,9 @@ const WhySection: React.FC<props> = ({ sectionRef }) => {
             </svg>
           </div>
           <div className="textBox">
-            <h4>Resilience</h4>
+            <h4>{t("WhySection.Resilience.Title")}</h4>
             <p>
-              No matter the problems and difficulties along the path, I always
-              find a solution and deliver.
+              {t("WhySection.Resilience.Text")}
             </p>
           </div>
         </span>
@@ -55,10 +53,9 @@ const WhySection: React.FC<props> = ({ sectionRef }) => {
             </svg>
           </div>
           <div className="textBox">
-            <h4>Organization</h4>
+            <h4>{t("WhySection.Organization.Title")}</h4>
             <p>
-              I always schedule and keep track of my assignments, I have not
-              missed a due date in over a year.
+              {t("WhySection.Organization.Text")}
             </p>
           </div>
         </span>
@@ -76,10 +73,9 @@ const WhySection: React.FC<props> = ({ sectionRef }) => {
             </svg>
           </div>
           <div className="textBox">
-            <h4>TeamWork</h4>
+            <h4>{t("WhySection.Teamwork.Title")}</h4>
             <p>
-              Cooperation is an essencial part of any proyect, a skill i've
-              mastered.
+              {t("WhySection.Resilience.Text")}
             </p>
           </div>
         </span>
@@ -97,10 +93,9 @@ const WhySection: React.FC<props> = ({ sectionRef }) => {
             </svg>
           </div>
           <div className="textBox">
-            <h4>Leadership</h4>
+            <h4>{t("WhySection.Leadership.Title")}</h4>
             <p>
-              Whenever needed I can guide and support my team to achieve our
-              objectives together.
+              {t("WhySection.Leadership.Text")}
             </p>
           </div>
         </span>
@@ -116,10 +111,9 @@ const WhySection: React.FC<props> = ({ sectionRef }) => {
             </svg>
           </div>
           <div className="textBox">
-            <h4>Passion</h4>
+            <h4>{t("WhySection.Passion.Title")}</h4>
             <p>
-              I love what I do, which is why I can learn any tool, software or
-              language quickly for any proyect.
+              {t("WhySection.Passion.Text")}
             </p>
           </div>
         </span>

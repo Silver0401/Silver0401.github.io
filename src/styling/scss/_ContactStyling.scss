@@ -1,7 +1,7 @@
 #ContactPage {
   display: flex;
   flex-wrap: wrap;
-  overflow: hidden;
+  overflow: visible;
 
   .CLeftBox,
   .CRightBox {
@@ -72,7 +72,7 @@
           @include alignCenter();
           align-items: flex-start;
           padding-left: 2%;
-          background-color: var(--SiteColor3);
+          background-color: transparent;
         }
 
         input,
@@ -89,7 +89,7 @@
           &:valid {
             & + label {
               color: var(--SiteColor3);
-              transform: translate(0px, -40px);
+              transform: translate(0px, -100%);
               transition: color 500ms, transform 500ms, background-color 500ms;
               background-color: transparent;
             }
@@ -122,6 +122,16 @@
           transition: background-color 500ms, color 500ms, box-shadow 500ms;
           box-shadow: 0px 0px 0px transparent;
           cursor: pointer;
+          @include alignCenter();
+
+          p {
+            position: absolute;
+            @include alignCenter();
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            // background: lightcoral;
+          }
 
           &:hover {
             background-color: var(--SiteColor3);
@@ -133,8 +143,6 @@
 
         &:nth-child(5) {
           align-items: center;
-          justify-content: space-evenly;
-          // max-height: 100px;
         }
       }
     }

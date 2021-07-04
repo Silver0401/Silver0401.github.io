@@ -1,4 +1,6 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
+
 import smortLogo from "./../../resources/Icons/SmortLogo.png";
 import meryLogo from "./../../resources/Icons/meryLogo.png";
 import voadesLogo from "./../../resources/Icons/voadesLogo.png";
@@ -36,7 +38,7 @@ const CreateProyectDisplay = (
           </svg>
         </button>
         <button onClick={() => window.open(sourceLink, "_newtab")}>
-          <p>Source</p>
+          <p>Repo</p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -54,13 +56,16 @@ const CreateProyectDisplay = (
 };
 
 const DesignSection: React.FC<props> = ({ sectionRef }) => {
+
+  const { t } = useTranslation();
+
   return (
     <section ref={sectionRef} id="DesignSection">
-      <h1>Personal Proyects</h1>
+      <h1>{t("DesignSection.Title")}</h1>
       <div className="proyectsBox">
         {CreateProyectDisplay(
           "Smort tech",
-          "Smort technology is a website constructed with the purpose of designing and selling personalized websites",
+          t("DesignSection.Smort.Text"),
           smortLogo,
           templateBg,
           "https://amazing-liskov-6ef20f.netlify.app",
@@ -68,7 +73,7 @@ const DesignSection: React.FC<props> = ({ sectionRef }) => {
         )}
         {CreateProyectDisplay(
           "PC-Calc",
-          "This is a proyect made with a medical approach, it's purpose is to work as a web tool for prostate cancer risk detection",
+          t("DesignSection.Calc.Text"),
           preventisLogo,
           templateBg,
           "https://sharp-bell-56ec63.netlify.app",
@@ -76,7 +81,7 @@ const DesignSection: React.FC<props> = ({ sectionRef }) => {
         )}
         {CreateProyectDisplay(
           "Voades-mx",
-          "My First ever sold website, designed for a mexican non-profitable organization that focuses on mental health problems",
+          t("DesignSection.Voades.Text"),
           voadesLogo,
           templateBg,
           "https://romantic-hodgkin-a1033b.netlify.app",
@@ -84,7 +89,7 @@ const DesignSection: React.FC<props> = ({ sectionRef }) => {
         )}
         {CreateProyectDisplay(
           "Mery AI",
-          "Mery is a web based speech recognition assistant that responds to certain personalized commands in order to control my computer",
+          t("DesignSection.Mery.Text"),
           meryLogo,
           templateBg,
           "https://quizzical-wilson-2ae07d.netlify.app",

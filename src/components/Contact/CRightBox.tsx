@@ -11,7 +11,12 @@ const CRightBox: React.FC = () => {
         <h3>{t("ContactRight.Title")}</h3>
       </div>
       <div className="socialMedia">
-        <span className="insta">
+        <span
+          onClick={() =>
+            window.open("https://www.instagram.com/isma.mzco/", "_newtab")
+          }
+          className="insta"
+        >
           <div />
           <div />
           <div />
@@ -27,7 +32,12 @@ const CRightBox: React.FC = () => {
             </svg>
           </div>
         </span>
-        <span className="github">
+        <span
+          onClick={() =>
+            window.open("https://github.com/Silver0401", "_newtab")
+          }
+          className="github"
+        >
           <div />
           <div />
           <div />
@@ -43,7 +53,10 @@ const CRightBox: React.FC = () => {
             </svg>
           </div>
         </span>
-        <span className="whats">
+        <span
+          onClick={() => window.open("https://wa.me/527714116235", "_newtab")}
+          className="whats"
+        >
           <div />
           <div />
           <div />
@@ -59,7 +72,15 @@ const CRightBox: React.FC = () => {
             </svg>
           </div>
         </span>
-        <span className="face">
+        <span
+          onClick={() =>
+            window.open(
+              "https://www.facebook.com/profile.php?id=100006280335810",
+              "_newtab"
+            )
+          }
+          className="face"
+        >
           <div />
           <div />
           <div />

@@ -1,5 +1,5 @@
 import anime from "animejs";
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import useLottie from "lottie-react";
 import { useTranslation } from "react-i18next";
 
@@ -24,6 +24,8 @@ const ArrowLottieAnimation = () => {
 
 const InitSection: React.FC<props> = ({ sectionRef }) => {
   const [transversalData, setTransversalData] = useContext(ChosenDataContext);
+  const [playPauseButtonState, setPlayPauseButtonState] =
+    useState<boolean>(true);
   const rotatingAnimRef = useRef<any>();
   const { t } = useTranslation();
 
@@ -34,7 +36,7 @@ const InitSection: React.FC<props> = ({ sectionRef }) => {
       rotateZ: "360deg",
       loop: true,
       easing: "linear",
-      autoplay: false,
+      autoplay: true,
     });
   }, []);
 
@@ -140,7 +142,7 @@ const InitSection: React.FC<props> = ({ sectionRef }) => {
         </svg>
       </div>
 
-      <h4 className="arrowText">Click to come back Top</h4>
+      <h4 className="arrowText">{t("InitSection.ArrowText")}</h4>
 
       <div className="arrowLottieBox">
         <ArrowLottieAnimation />
@@ -149,21 +151,12 @@ const InitSection: React.FC<props> = ({ sectionRef }) => {
       <div className="outerCircle">
         <div className="innerHiddenCircle">
           <h2>
-            Cada círculo tiene información sobre mis diferentes habilidades, haz
-            click en uno!
+            {t("InitSection.CircleTitle")}
           </h2>
         </div>
 
         <div
           className="CirclesBoxBox"
-          // ref={CirclesBoxRef}
-          // config={{
-          //   loop: true,
-          //   rotateZ: 360,
-          //   duration: 10000,
-          //   easing: "linear",
-          //   autoplay: true,
-          // }}
         >
           <div className="CirclesBox">
             {CreateCircle("tcircle", "Med")}
@@ -179,14 +172,35 @@ const InitSection: React.FC<props> = ({ sectionRef }) => {
       </div>
 
       <div className="buttonsBox">
-        <button className="play" onClick={() => rotatingAnimRef.current.play()}>
-          Rotate 🔄
-        </button>
         <button
-          className="pause"
-          onClick={() => rotatingAnimRef.current.pause()}
+          onClick={() => {
+            if (playPauseButtonState) {
+              setPlayPauseButtonState(false);
+              rotatingAnimRef.current.pause();
+            } else {
+              setPlayPauseButtonState(true);
+              rotatingAnimRef.current.play();
+            }
+          }}
         >
-          Stop ⏸
+          <p
+            style={
+              playPauseButtonState
+                ? { opacity: 1, transition: "opacity 500ms" }
+                : { opacity: 0, transition: "opacity 500ms" }
+            }
+          >
+            {t("InitSection.StopButton")} ⏸
+          </p>
+          <p
+            style={
+              playPauseButtonState
+                ? { opacity: 0, transition: "opacity 500ms" }
+                : { opacity: 1, transition: "opacity 500ms" }
+            }
+          >
+            {t("InitSection.RotateButton")} 🔄
+          </p>
         </button>
       </div>
     </section>

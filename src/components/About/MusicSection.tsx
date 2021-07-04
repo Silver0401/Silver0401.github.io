@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 import img1 from "./../../resources/skills/guitar1.jpg";
 import img2 from "./../../resources/skills/guitar2.jpg";
@@ -9,28 +10,27 @@ interface props {
 }
 
 const MusicSection: React.FC<props> = ({ sectionRef }) => {
+
+  const { t } = useTranslation();
+
   return (
     <section ref={sectionRef} id="MusicSection">
-      <h1>Musical Abilities</h1>
+      <h1>{t("MusicSection.Title")}</h1>
       <div className="MusicWrapper">
         <div className="MusicLeftBox">
           <div className="imgBox1">
             <img src={img1} alt="guitar #1 ilustration" />
             <h4>
-              Concierto público organizado en el reloj de Pachuca, foto de mí y
-              mis compañeros antes de la presentación
+              {t("MusicSection.GImg1.Text")}
             </h4>
           </div>
           <p>
-            Mi instrumento favorito es la guitarra, ya llevo alrededor de 5 años
-            practicando guitarra, y muy recientemente he empezado a aprender
-            piano y violín.
+            {t("MusicSection.Text")}
           </p>
           <div className="imgBox2">
             <img src={img2} alt="guitar #2 ilustration" />
             <h4>
-              Foto de mí y mis compañeros durante la presentación en el reloj de
-              Pachuca
+              {t("MusicSection.GImg2.Text")}
             </h4>
           </div>
         </div>
@@ -38,8 +38,7 @@ const MusicSection: React.FC<props> = ({ sectionRef }) => {
           <div className="imgBox3">
             <img src={img3} alt="violin ilustration" />
             <h4>
-              Imágen de mi, durante mi práctica semanal de violín, durante
-              verano
+              {t("MusicSection.VImg3.Text")}
             </h4>
           </div>
         </div>

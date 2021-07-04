@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import anime from "animejs";
+import { useTranslation } from "react-i18next";
 
 import CarnerosImg1 from "./../../resources/Carneros/carneros3.jpg";
 import CarnerosImg2 from "./../../resources/Carneros/carneros7.png";
@@ -16,6 +17,11 @@ import BrainvueImg1 from "./../../resources/WBV/bv1.jpeg";
 import BrainvueImg2 from "./../../resources/WBV/bv2.jpeg";
 import WerImg1 from "./../../resources/WBV/wer1.jpeg";
 import WerImg2 from "./../../resources/WBV/wer2.jpeg";
+
+import BasicEdImg from "./../../resources/Schools/Americana.jpeg";
+import HighEdImg from "./../../resources/Schools/Hidalgo.jpeg";
+import UniEdImg1 from "./../../resources/Schools/mont.jpeg";
+import UniEdImg2 from "./../../resources/Med/medUni.jpeg";
 
 import SwiperCore, {
   Navigation,
@@ -57,10 +63,17 @@ const Images = [
   [WerImg1, WerImg2],
 
   [BrainvueImg1, BrainvueImg2],
+
+  [BasicEdImg],
+
+  [HighEdImg],
+
+  [UniEdImg1, UniEdImg2],
 ];
 
 const XpSection: React.FC<props> = ({ sectionRef }) => {
   const [blockSelected, setBlockSelected] = useState<XpBlocks>("First");
+  const { t } = useTranslation();
 
   const SwiperSlideProvider = () => {
     let selectedImgObject: Array<any>;
@@ -77,6 +90,15 @@ const XpSection: React.FC<props> = ({ sectionRef }) => {
         break;
       case "Wer":
         selectedImgObject = Images[2];
+        break;
+      case "BasicEd":
+        selectedImgObject = Images[4];
+        break;
+      case "HighEd":
+        selectedImgObject = Images[5];
+        break;
+      case "UniEd":
+        selectedImgObject = Images[6];
         break;
       default:
         selectedImgObject = Images[1];
@@ -97,32 +119,25 @@ const XpSection: React.FC<props> = ({ sectionRef }) => {
 
     switch (blockSelected) {
       case "First":
-        selectedText =
-          'Fungí como lider y mentor de programación para el equipo Keybot, equipo inscrito en la competencia internacional de robótica "FIRST", específicamente en la categoría de "FRC"';
+        selectedText = t("XpSection.First.Text")
         break;
       case "Carneros":
-        selectedText =
-          "Fui miembro del grupo carneros, grupo enfocado al liderazgo, así como a la realización de actividades que buscaban el fortalezimiento personal";
+        selectedText = t("XpSection.Carneros.Text")
         break;
       case "Brainvue":
-        selectedText =
-          "Se trata de un equipo universitario enfocado al desarrollo de actividades de salud pediátrica a través de robots NAO, grupo para el cual programe dicho robot";
+        selectedText = t("XpSection.Brainvue.Text")
         break;
       case "Wer":
-        selectedText =
-          "WER por sus siglas, World Educational Robot, es una competencia nacional de Robotica para niños de secundaria a prepa, donde participé como mentor del área de programación";
+        selectedText = t("XpSection.WER.Text")
         break;
       case "BasicEd":
-        selectedText =
-          "Toda mi educación primaria y secundaria la lleve a acbo en la escuela americana de pachuca, la cual veremos más adelante influyo mucho en mi dominión del inglés";
+        selectedText = t("XpSection.Elemental.Text")
         break;
       case "HighEd":
-        selectedText =
-          "Fue durante mi tiempo en la preparatoria, que estuve realizando mis actividades de mentoría para FIRST, así como para WER.";
+        selectedText = t("XpSection.High.Text")
         break;
       case "UniEd":
-        selectedText =
-          "Actualmente estoy cursando la carrera universitaria de médico cirujano, además de estar involucrado en grupos estudiantiles tanto médicos como de robótica.";
+        selectedText = t("XpSection.Uni.Text")
         break;
       default:
         selectedText = "error";
@@ -167,7 +182,7 @@ const XpSection: React.FC<props> = ({ sectionRef }) => {
   return (
     <section ref={sectionRef} id="XpSection">
       <div className="proyectBox">
-        <h1>Experience and Education</h1>
+        <h1>{t("XpSection.Title")}</h1>
         <div className="xpImgContainer">
           <div className="imgBox">
             <div className="logoBox">Svg</div>
@@ -188,7 +203,7 @@ const XpSection: React.FC<props> = ({ sectionRef }) => {
       <div className="edXpBar">
         <div className="bgRectangle" />
         <ul id="xpUL">
-          <li id="TitleBar">Experience 🗂</li>
+          <li id="TitleBar">{t("XpSection.Xp.Title")} 🗂</li>
           <div className="Title3D" />
           <li
             className={
@@ -198,11 +213,8 @@ const XpSection: React.FC<props> = ({ sectionRef }) => {
               setBlockSelected("Carneros");
             }}
           >
-            <h4>integrante de Carneros e Ikigai</h4>
-            <p>
-              Mi educación primaria secundaria blab alj alsdjfl aksdflkasj
-              dflkajsd fsd asdf
-            </p>
+            <h4>{t("XpSection.Carneros.Title")}</h4>
+            <p>2014 - 2016</p>
           </li>
           <li
             className={blockSelected === "First" ? "selected" : "notSelected"}
@@ -210,11 +222,8 @@ const XpSection: React.FC<props> = ({ sectionRef }) => {
               setBlockSelected("First");
             }}
           >
-            <h4>lider y mentor FIRST</h4>
-            <p>
-              Mi educación primaria secundaria blab alj alsdjfl aksdflkasj
-              dflkajsd fsd asdf
-            </p>
+            <h4>{t("XpSection.First.Title")}</h4>
+            <p>2014 - 2018</p>
           </li>
           <li
             className={blockSelected === "Wer" ? "selected" : "notSelected"}
@@ -222,11 +231,8 @@ const XpSection: React.FC<props> = ({ sectionRef }) => {
               setBlockSelected("Wer");
             }}
           >
-            <h4>lider y mentor WER</h4>
-            <p>
-              Mi educación primaria secundaria blab alj alsdjfl aksdflkasj
-              dflkajsd fsd asdf
-            </p>
+            <h4>{t("XpSection.WER.Title")}</h4>
+            <p>2013 - 2015</p>
           </li>
           <li
             className={
@@ -236,15 +242,12 @@ const XpSection: React.FC<props> = ({ sectionRef }) => {
               setBlockSelected("Brainvue");
             }}
           >
-            <h4>programador de BrainVue</h4>
-            <p>
-              Mi educación primaria secundaria blab alj alsdjfl aksdflkasj
-              dflkajsd fsd asdf
-            </p>
+            <h4>{t("XpSection.Brainvue.Title")}</h4>
+            <p>2019 - 2020</p>
           </li>
         </ul>
         <ul id="eduUL">
-          <li id="TitleBar">Education 📚</li>
+          <li id="TitleBar">{t("XpSection.Edu.Title")} 📚</li>
           <div className="Title3D" />
           <li
             className={blockSelected === "BasicEd" ? "selected" : "notSelected"}
@@ -252,11 +255,8 @@ const XpSection: React.FC<props> = ({ sectionRef }) => {
               setBlockSelected("BasicEd");
             }}
           >
-            <h4>Educación Básica</h4>
-            <p>
-              Mi educación primaria secundaria blab alj alsdjfl aksdflkasj
-              dflkajsd fsd asdf
-            </p>
+            <h4>{t("XpSection.Elemental.Title")}</h4>
+            <p>2007 - 2016</p>
           </li>
           <li
             className={blockSelected === "HighEd" ? "selected" : "notSelected"}
@@ -264,11 +264,8 @@ const XpSection: React.FC<props> = ({ sectionRef }) => {
               setBlockSelected("HighEd");
             }}
           >
-            <h4>Educación Preparatoria</h4>
-            <p>
-              Mi educación primaria secundaria blab alj alsdjfl aksdflkasj
-              dflkajsd fsd asdf
-            </p>
+            <h4>{t("XpSection.High.Title")}</h4>
+            <p>2016 - 2019</p>
           </li>
           <li
             className={blockSelected === "UniEd" ? "selected" : "notSelected"}
@@ -276,11 +273,8 @@ const XpSection: React.FC<props> = ({ sectionRef }) => {
               setBlockSelected("UniEd");
             }}
           >
-            <h4>Educación Universitaria</h4>
-            <p>
-              Mi educación primaria secundaria blab alj alsdjfl aksdflkasj
-              dflkajsd fsd asdf
-            </p>
+            <h4>{t("XpSection.Uni.Title")}</h4>
+            <p>2019 - Presente</p>
           </li>
         </ul>
       </div>

@@ -1,6 +1,7 @@
 import React, { useState, useRef, Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { useGLTF, OrbitControls } from "@react-three/drei";
+import { useTranslation } from "react-i18next";
 
 interface props {
   sectionRef: any;
@@ -9,7 +10,6 @@ interface props {
 interface ModelProps {
   props: any;
   controllerStatus: boolean;
-  modelToDisplay: "bmo" | "car";
 }
 
 const LoadingModel = () => {
@@ -28,11 +28,7 @@ const LoadingModel = () => {
   );
 };
 
-const CarModel: React.FC<ModelProps> = ({
-  props,
-  controllerStatus,
-  modelToDisplay,
-}) => {
+const CarModel: React.FC<ModelProps> = ({ props, controllerStatus }) => {
   const group = useRef();
   const { nodes, materials } = useGLTF("/3DModels/carModel/optScene.gltf");
   // console.log(`controllerStatus: ${controllerStatus}`)
@@ -71,128 +67,197 @@ const CarModel: React.FC<ModelProps> = ({
   );
 };
 
-const BmoModel: React.FC<ModelProps> = ({
-  props,
-  controllerStatus,
-  modelToDisplay,
-}) => {
+const BmoModel: React.FC<ModelProps> = ({ props, controllerStatus }) => {
   const group = useRef();
-  const { nodes, materials } = useGLTF("/3DModels/bmoModel/optScene.gltf");
+  const { nodes, materials } = useGLTF("/3DModels/microModel/optScene.gltf");
 
   return (
     <>
-      <group ref={group} {...props} dispose={null}>
-        <group
-          rotation={[-Math.PI / 2, 0, 0]}
-          scale={0.2}
-          position={[-100, -100, 100]}
-        >
-          <group rotation={[Math.PI / 2, 0, 0]} position={[0, 0, 0]}>
+      <group ref={group} {...props} dispose={null} position={[0, -100, 0]}>
+        <group rotation={[-Math.PI / 2, 0, 0]}>
+          <group rotation={[Math.PI / 2, 0, 0]}>
             <group
-              position={[72.33, 344.66, -713.22]}
-              rotation={[-Math.PI / 2, -0.12, 0]}
-              scale={100}
-            >
-              {/* @ts-ignore */} {/* prettier-ignore */}
-              <mesh geometry={nodes.Cubo_cuerpo__0.geometry} material={materials.cuerpo} />
-            </group>
-            <group
-              position={[159.5, 528.35, -486.07]}
-              rotation={[-Math.PI / 2, -0.12, 0]}
-              scale={[95.73, 95.73, 105.63]}
-            >
-              {/* @ts-ignore */} {/* prettier-ignore */}
-              <mesh geometry={nodes.Cubo002_cuerpo_2_0.geometry} material={materials.cuerpo_2} />
-            </group>
-            <group
-              position={[174.97, 426.04, -467.31]}
-              rotation={[-Math.PI / 2, 1.45, 0]}
-              scale={[42.31, 42.31, 42.31]}
-            >
-              {/* @ts-ignore */} {/* prettier-ignore */}
-              <mesh geometry={nodes.Plano002_botones__0.geometry} material={nodes.Plano002_botones__0.material} />
-            </group>
-            <group
-              position={[176.56, 311.8, -507.26]}
-              rotation={[-Math.PI / 2, -0.12, 0]}
-              scale={[3.14, 4.17, 2.67]}
-            >
-              {/* @ts-ignore */} {/* prettier-ignore */}
-              <mesh geometry={nodes.Cubo005_cable__0.geometry} material={materials.cable} />
-            </group>
-            <group
-              position={[171.62, 458.14, -662.2]}
-              rotation={[-Math.PI / 2, 1.45, 0]}
-              scale={[32.23, 32.23, 32.23]}
-            >
-              {/* @ts-ignore */} {/* prettier-ignore */}
-              <mesh geometry={nodes.Plano005_botones__0.geometry} material={nodes.Plano005_botones__0.material} />
-            </group>
-            <group
-              position={[177.13, 411.18, -745.28]}
-              rotation={[-Math.PI / 2, 1.45, 0]}
-              scale={[20.82, 20.82, 20.82]}
-            >
-              {/* @ts-ignore */} {/* prettier-ignore */}
-              <mesh geometry={nodes['C��rculo_botones__0'].geometry} material={nodes['C��rculo_botones__0'].material} />
-            </group>
-            <group
-              position={[183.43, 353.3, -686.8]}
-              rotation={[-Math.PI / 2, 1.45, 0]}
-              scale={[26.48, 26.48, 26.48]}
-            >
-              {/* @ts-ignore */} {/* prettier-ignore */}
-              <mesh geometry={nodes['C��rculo001_botones__0'].geometry} material={nodes['C��rculo001_botones__0'].material}
-            />
-            </group>
-            <group
-              position={[157.28, 527.11, -744.68]}
-              rotation={[-Math.PI / 2, -0.12, 0]}
-              scale={[9, 14.57, 14.57]}
-            >
-              {/* @ts-ignore */} {/* prettier-ignore */}
-              <mesh geometry={nodes.Esfera_botones__0.geometry} material={nodes.Esfera_botones__0.material} />
-            </group>
-            <group
-              position={[160.11, 527.58, -744.5]}
-              rotation={[-Math.PI / 2, 1.45, 0]}
-              scale={[17.1, 17.1, 17.1]}
-            >
-              {/* @ts-ignore */} {/* prettier-ignore */}
-              <mesh geometry={nodes['C��rculo002_negro__0'].geometry} material={nodes['C��rculo002_negro__0'].material} />
-            </group>
-            <group
-              position={[-1.06, 411.74, -869.93]}
-              rotation={[-Math.PI / 2, 0, -Math.PI / 2]}
-              scale={[28.54, 28.54, 32.15]}
-            >
-              {/* @ts-ignore */} {/* prettier-ignore */}
-              <mesh geometry={nodes.Curva_NURBS_extremidades__0.geometry} material={materials.extremidades} />
-            </group>
-            <group
-              position={[238.74, 327.4, -437.43]}
-              rotation={[Math.PI, -1.48, 0]}
-              scale={[6.77, 6.77, 2.95]}
-            >
-              {/* @ts-ignore */} {/* prettier-ignore */}
-              <mesh geometry={nodes.Cilindro002_negro__0.geometry} material={nodes.Cilindro002_negro__0.material} />
-            </group>
-            <group
-              position={[70.17, 344.4, -713.22]}
-              rotation={[-Math.PI / 2, -0.12, 0]}
-              scale={100}
-            >
-              {/* @ts-ignore */} {/* prettier-ignore */}
-              <mesh geometry={nodes.Cubo001_pantalla_0.geometry} material={materials.pantalla} />
-            </group>
-            <group
-              position={[486.63, 241.48, -530.74]}
+              position={[181.92, 98.98, 188.89]}
               rotation={[-Math.PI / 2, 0, 0]}
-              scale={32.31}
             >
-              {/* @ts-ignore */} {/* prettier-ignore */}
-              <mesh geometry={nodes['C��rculo003_botones__0'].geometry} material={nodes['C��rculo003_botones__0'].material}
-            />
+              <group position={[0, 5.24, 27.61]}>
+                {/* @ts-ignore */} {/* prettier-ignore */}
+                <mesh geometry={nodes['Switch_1_Material_#184_0'].geometry} material={nodes['Switch_1_Material_#184_0'].material}
+              />
+              </group>
+            </group>
+            <group
+              position={[-214.07, 125, 159.16]}
+              rotation={[-Math.PI / 2, 0, -0.44]}
+            >
+              <group rotation={[0, 0, 0]}>
+                <group position={[216.27, 496.72, -125]}>
+                  {/* @ts-ignore */} {/* prettier-ignore */}
+                  <mesh geometry={nodes['Handle_Material_#193_0'].geometry} material={materials.Material_193} />
+                </group>
+              </group>
+              <group rotation={[0, 0, 0]}>
+                <group position={[216.27, 496.72, -125]}>
+                  {/* @ts-ignore */} {/* prettier-ignore */}
+                  <mesh geometry={nodes['Parts_Material_#203_0'].geometry} material={materials.Material_203} />
+                </group>
+              </group>
+              <group rotation={[0, 0, 0]}>
+                <group position={[216.27, 496.72, -125]}>
+                  {/* @ts-ignore */} {/* prettier-ignore */}
+                  <mesh geometry={nodes['Door_part_Material_#188_0'].geometry} material={materials.Material_188} />
+                </group>
+              </group>
+              <group rotation={[0, 0, 0]}>
+                <group position={[216.27, 496.72, -125]}>
+                  {/* @ts-ignore */} {/* prettier-ignore */}
+                  <mesh geometry={nodes['Glass_Material_#192_0'].geometry} material={materials.Material_192} />
+                </group>
+              </group>
+              <group rotation={[0, 0, 0]}>
+                <group position={[216.27, 496.72, -125]}>
+                  {/* @ts-ignore */} {/* prettier-ignore */}
+                  <mesh geometry={nodes['Door_Material_#187_0'].geometry} material={materials.Material_187} />
+                </group>
+              </group>
+              <group rotation={[0, 0, 0]}>
+                <group position={[216.27, 496.72, -125]}>
+                  {/* @ts-ignore */} {/* prettier-ignore */}
+                  <mesh geometry={nodes['Door_side_Material_#204_0'].geometry} material={materials.Material_204} />
+                </group>
+              </group>
+              <group rotation={[0, 0, 0]}>
+                <group position={[216.27, 496.72, -125]}>
+                  {/* @ts-ignore */} {/* prettier-ignore */}
+                  <mesh geometry={nodes['Door_Box_Material_#198_0'].geometry} material={materials.Material_198} />
+                </group>
+              </group>
+              <group rotation={[0, 0, 0]}>
+                <group position={[216.27, 496.72, -125]}>
+                  {/* @ts-ignore */} {/* prettier-ignore */}
+                  <mesh geometry={nodes['Lock_Material_#197_0'].geometry} material={materials.Material_197} />
+                </group>
+              </group>
+            </group>
+            <group
+              position={[181.92, 57.78, 191.39]}
+              rotation={[-Math.PI / 2, 0, 0]}
+            >
+              <group position={[0, 7.74, 68.8]}>
+                {/* @ts-ignore */} {/* prettier-ignore */}
+                <mesh geometry={nodes['Switch_2_Material_#184_0'].geometry} material={nodes['Switch_2_Material_#184_0'].material}
+              />
+              </group>
+            </group>
+            <group
+              position={[-34.04, 117.71, -23.97]}
+              rotation={[-Math.PI / 2, 0, 0]}
+            >
+              <group position={[36.25, -31.61, -117.71]}>
+                {/* @ts-ignore */} {/* prettier-ignore */}
+                <mesh geometry={nodes['Back_Material_#105_0'].geometry} material={materials.Material_105} />
+              </group>
+              <group
+                position={[235.55, 141.81, -84.43]}
+                rotation={[-Math.PI / 2, 0, -Math.PI]}
+                scale={[1, 1, 1]}
+              >
+                {/* @ts-ignore */} {/* prettier-ignore */}
+                <mesh geometry={nodes['Block_Material_#181_0'].geometry} material={materials.Material_181} />
+              </group>
+              <group position={[36.25, -31.61, -117.71]}>
+                {/* @ts-ignore */} {/* prettier-ignore */}
+                <mesh geometry={nodes['Box_Material_#182_0'].geometry} material={materials.Material_182} />
+              </group>
+              <group
+                position={[235.55, 141.81, -84.43]}
+                rotation={[-Math.PI / 2, 0, -Math.PI]}
+                scale={[1, 1, 1]}
+              >
+                {/* @ts-ignore */} {/* prettier-ignore */}
+                <mesh geometry={nodes['Cord_Material_#183_0'].geometry} material={materials.Material_183} />
+              </group>
+              <group position={[215.97, -205.11, 78.55]}>
+                <group position={[-179.72, 173, -196.26]}>
+                  {/* @ts-ignore */} {/* prettier-ignore */}
+                  <mesh geometry={nodes['Display_Material_#200_0'].geometry} material={materials.Material_200} />
+                </group>
+              </group>
+              <group position={[-211.6, -169.05, -117.71]}>
+                {/* @ts-ignore */} {/* prettier-ignore */}
+                <mesh geometry={nodes['Door_mecha_Material_#186_0'].geometry} material={materials.Material_186} />
+              </group>
+              <group position={[36.25, -31.61, -117.71]}>
+                {/* @ts-ignore */} {/* prettier-ignore */}
+                <mesh geometry={nodes['Inside_Material_#194_0'].geometry} material={materials.Material_194} />
+              </group>
+              <group position={[36.39, -16.31, -126]}>
+                <group position={[-172.21, -140.29, 8.29]}>
+                  {/* @ts-ignore */} {/* prettier-ignore */}
+                  <mesh geometry={nodes['Legs_Material_#191_0'].geometry} material={materials.Material_191} />
+                </group>
+              </group>
+              <group position={[-6.58, -31.48, 110.22]}>
+                {/* @ts-ignore */} {/* prettier-ignore */}
+                <mesh geometry={nodes['Light_Material_#190_0'].geometry} material={materials.Material_190} />
+              </group>
+              <group position={[-6.58, -31.48, 109.81]}>
+                <group position={[42.83, -0.13, -227.51]}>
+                  {/* @ts-ignore */} {/* prettier-ignore */}
+                  <mesh geometry={nodes['Light_Glass_Material_#196_0'].geometry} material={materials.Material_196} />
+                </group>
+              </group>
+              <group position={[36.25, -31.61, -117.71]}>
+                {/* @ts-ignore */} {/* prettier-ignore */}
+                <mesh geometry={nodes['Menu_Material_#199_0'].geometry} material={materials.Material_199} />
+              </group>
+              <group position={[137.86, -49.09, 6.86]}>
+                <group position={[-101.62, 17.48, -177.05]}>
+                  {/* @ts-ignore */} {/* prettier-ignore */}
+                  <mesh geometry={nodes['Plane_Material_#195_0'].geometry} material={materials.Material_195} />
+                </group>
+              </group>
+              <group position={[-6.58, -49.09, -87.35]}>
+                {/* @ts-ignore */} {/* prettier-ignore */}
+                <mesh geometry={nodes['Plate_Material_#202_0'].geometry} material={materials.Material_202} />
+              </group>
+              <group
+                position={[-6.58, -49, -88.58]}
+                rotation={[0, 0, -Math.PI / 6]}
+                scale={[1, 1, 1]}
+              >
+                <group position={[4.21, -20.01, -29.95]}>
+                  {/* @ts-ignore */} {/* prettier-ignore */}
+                  <mesh geometry={nodes['Plate_part_Material_#201_0'].geometry} material={materials.Material_201} />
+                </group>
+              </group>
+              <group
+                position={[224.11, 143.39, 126.33]}
+                rotation={[-Math.PI / 2, 0, 2.88]}
+                scale={[1, 1, 1]}
+              >
+                {/* @ts-ignore */} {/* prettier-ignore */}
+                <mesh geometry={nodes['Screws_Material_#185_0'].geometry} material={materials.Material_185} />
+              </group>
+              <group
+                position={[-6.58, -49, -88.58]}
+                rotation={[0, 0, -Math.PI / 6]}
+                scale={[1, 1, 1]}
+              >
+                <group position={[4.21, -20.01, -29.95]}>
+                  {/* @ts-ignore */} {/* prettier-ignore */}
+                  <mesh geometry={nodes['Wheels_Material_#205_0'].geometry} material={materials.Material_205} />
+                </group>
+              </group>
+            </group>
+            <group
+              position={[-34.08, 117.7, 57.41]}
+              rotation={[-Math.PI / 2, 0, 0]}
+            >
+              <group position={[443.27, 186.41, -117.7]}>
+                {/* @ts-ignore */} {/* prettier-ignore */}
+                <mesh geometry={nodes['Cell_Material_#576_0'].geometry} material={materials.Material_576} />
+              </group>
             </group>
           </group>
         </group>
@@ -203,11 +268,12 @@ const BmoModel: React.FC<ModelProps> = ({
 };
 
 useGLTF.preload("/3DModels/carModel/optScene.gltf");
-useGLTF.preload("/3DModels/bmoModel/optScene.gltf");
+useGLTF.preload("/3DModels/microModel/optScene.gltf");
 
 const ModelingSection: React.FC<props> = ({ sectionRef }) => {
   const [controllerStatus, setControllerStatus] = useState<boolean>(true);
-  const [displayedModel, setDisplayedModel] = useState<"bmo" | "car">("car");
+  const [displayedModel, setDisplayedModel] = useState<"bmo" | "car">("bmo");
+  const { t } = useTranslation();
 
   return (
     <section id="ModelingSection" ref={sectionRef}>
@@ -233,7 +299,7 @@ const ModelingSection: React.FC<props> = ({ sectionRef }) => {
               <Canvas
                 id="BmoCanvas"
                 shadows
-                camera={{ position: [30, 0, 0], fov: 100 }}
+                camera={{ position: [270, 270, 450], fov: 100 }}
               >
                 <ambientLight intensity={0.5} />
                 <pointLight position={[300, 500, 0]} intensity={2} />
@@ -243,11 +309,7 @@ const ModelingSection: React.FC<props> = ({ sectionRef }) => {
                   shadow-camera-far={50}
                 />
                 <Suspense fallback={<LoadingModel />}>
-                  <BmoModel
-                    props
-                    controllerStatus={controllerStatus}
-                    modelToDisplay={displayedModel}
-                  />
+                  <BmoModel props controllerStatus={controllerStatus} />
                 </Suspense>
               </Canvas>
             </div>
@@ -280,11 +342,7 @@ const ModelingSection: React.FC<props> = ({ sectionRef }) => {
                   shadow-camera-far={50}
                 />
                 <Suspense fallback={<LoadingModel />}>
-                  <CarModel
-                    props
-                    controllerStatus={controllerStatus}
-                    modelToDisplay={displayedModel}
-                  />
+                  <CarModel props controllerStatus={controllerStatus} />
                 </Suspense>
               </Canvas>
             </div>
@@ -295,16 +353,30 @@ const ModelingSection: React.FC<props> = ({ sectionRef }) => {
           </div>
           <div className="controlersBox">
             <button
-              className={controllerStatus ? "toggled" : "notToggled"}
-              onClick={() => setControllerStatus(true)}
+              onClick={() =>
+                controllerStatus
+                  ? setControllerStatus(false)
+                  : setControllerStatus(true)
+              }
             >
-              move
-            </button>
-            <button
-              className={controllerStatus ? "notToggled" : "toggled"}
-              onClick={() => setControllerStatus(false)}
-            >
-              stop
+              <p
+                style={
+                  controllerStatus
+                    ? { opacity: 1, transition: "opacity 500ms" }
+                    : { opacity: 0, transition: "opacity 500ms" }
+                }
+              >
+                3D 🕹: ON
+              </p>
+              <p
+                style={
+                  controllerStatus
+                    ? { opacity: 0, transition: "opacity 500ms" }
+                    : { opacity: 1, transition: "opacity 500ms" }
+                }
+              >
+                3D 🕹: OFF
+              </p>
             </button>
           </div>
         </div>
@@ -317,8 +389,8 @@ const ModelingSection: React.FC<props> = ({ sectionRef }) => {
             }
             id="blenderText"
           >
-            "Realistic BMO" (https://skfb.ly/oorTP) by Benjamon321 is licensed
-            under Creative Commons Attribution
+            "Microwave [XYZ School Homework]" (https://skfb.ly/oo8Tt) by Maria
+            Savelyeva is licensed under Creative Commons Attribution
             (http://creativecommons.org/licenses/by/4.0/).
           </p>
           <p
@@ -336,10 +408,9 @@ const ModelingSection: React.FC<props> = ({ sectionRef }) => {
         </div>
       </div>
       <div className="modelingRightBox">
-        <h1>3D Modeling</h1>
+        <h1>{t("ModelingSection.Title")}</h1>
         <p>
-          I have also recently got interested in 3D modeling, the main two
-          softwares I use (depending on the type of proyect) are:
+          {t("ModelingSection.Text")}
         </p>
         <ul>
           <li

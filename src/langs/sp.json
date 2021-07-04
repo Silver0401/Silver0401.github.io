@@ -13,8 +13,8 @@
   "Nav.Home":"Inicio",
   "Nav.About":"Acerca de",
   "Nav.Contact":"Contacto",
-  "Nav.Theme":"Tema",
-  "Nav.Lang":"Idioma",
+  "Nav.Theme":"Color",
+  "Nav.Lang":"Español",
 
   "ContactLeft.Title":"Te gusta lo que ves?",
   "ContactLeft.SubTitle":"Pongámonos en contacto",
@@ -26,6 +26,119 @@
 
   "ContactRight.Title":"Si puedes imaginarlo, puedo progamarlo",
   "ContactRight.SubTitle":" Puedo literalmente programar, diseñar y desarrollar cualquier idea que se te ocurra. Mi lema es:",
+
+
+  "InitSection.CircleTitle": "Cada círculo contiene información sobre mis diferentes habilidades, haz click en uno!",
+  "InitSection.ArrowText": "Click para regresar al inicio",
+  "InitSection.RotateButton": "Rotar",
+  "InitSection.StopButton": "Detener",
+
+  "CodeSection.Title": "Habilidades de programación y software",
+  "CodeSection.LangCheckBox": "Lenguajes",
+  "CodeSection.SoftCheckBox": "Aplicaciones",
+
+  "MedSection.Title": "Conocimiento Médico",
+  "MedSection.Text": "Actualmente estoy estudiando medicina, y hasta el momento, he adquirido conocimiento básico e intermedio en las siguientes áreas:",
+  "MedSection.Button": "Enlace a mis Notas",
+
+  "MedSection.Box.Cardio": "Cardiología",
+  "MedSection.Box.BCel": "Biología Celular",
+  "MedSection.Box.Genetics": "Genética",
+  "MedSection.Box.Endocrine": "Endocrinología",
+  "MedSection.Box.Imuno": "Inmunología",
+  "MedSection.Box.Neuro": "Neurología",
+  "MedSection.Box.Histo": "Histología",
+  "MedSection.Box.Nefro": "Nefrología",
+  "MedSection.Box.Gastro": "Gastroenterología",
+  "MedSection.Box.Micro": "Microorganismos",
+  "MedSection.Box.Embrio": "Embriología",
+  
+  "XpSection.Title": "Experiencia y Educación",
+  "XpSection.Xp.Title": "Experiencia",
+  "XpSection.Edu.Title": "Educación",
+
+  "XpSection.Carneros.Title": "Miembro de Carneros e Ikigai",
+  "XpSection.Carneros.Text": "Fui miembro del grupo carneros, grupo enfocado al liderazgo, así como a la realización de actividades que buscaban el fortalezimiento personal.",
+
+  "XpSection.First.Title": "Líder y Mentor FIRST",
+  "XpSection.First.Text": "Fungí como lider y mentor de programación para el equipo Keybot, equipo inscrito en la competencia internacional de robótica 'FIRST', específicamente en la categoría de 'FRC'",
+
+  "XpSection.WER.Title": "Líder y Mentor WER",
+  "XpSection.WER.Text": "WER por sus siglas, World Educational Robot, es otra competencia internacional de Robotica para niños de secundaria a prepa, donde participé como mentor del área de programación.",
+
+  "XpSection.Brainvue.Title": "Programador de BrainVue",
+  "XpSection.Brainvue.Text": "Se trata de un equipo universitario enfocado al desarrollo de actividades de salud pediátrica a través del uso de robots NAO, grupo para el cual programe dicho robots.",
+
+  "XpSection.Elemental.Title": "Educación Básica",
+  "XpSection.Elemental.Text": "Toda mi educación primaria y secundaria la lleve a acbo en la escuela americana de pachuca, la cual veremos más adelante influyo mucho en mi dominión del inglés.",
+
+  "XpSection.High.Title": "Educación Preparatoria",
+  "XpSection.High.Text": "Fue durante mi tiempo en la preparatoria, que estuve realizando mis actividades de mentoría para FIRST, así como para WER. Cursé la preparatoria en el Instituto de Estudios Superiores de Monterrey Campus Hidalgo.",
+
+  "XpSection.Uni.Title": "Educación Universitaria",
+  "XpSection.Uni.Text": "Actualmente estoy cursando la carrera universitaria de médico cirujano, además de estar involucrado en grupos estudiantiles tanto médicos como de robótica.",
+  
+  
+  "ModelingSection.Title": "Modelado 3D",
+  "ModelingSection.Text": "Otra habilidad que he desarrollado es el modelado 3D. Una habilidad de diseño que me permite crear modelos realistas para cualquier proyecto. Utilizo específicamente 'solid works' para proyectos con medidas exactas, mientras que blender es mi herramienta para diseño web 3D.",
+
+
+  "DesignSection.Title": "Proyectos Personales",
+
+  "DesignSection.Smort.Text": "Smort Technology es un sitio web desarrollado con el propósito de diseñar y vender sitios web personalizados",
+
+  "DesignSection.Calc.Text": "Este fue un proyecto creado con un enfoque médico, su propósito siendo el de funcionar como una herramienta web para la detección de riesgo para cáncer de próstata.",
+
+  "DesignSection.Voades.Text": "Mi primer sitio web que vendí, diseñado para una organización mexicana no gubernamental que tiene la misión de ayudar a personas con problemas de salud mental.",
+
+  "DesignSection.Mery.Text": "Mery es una asistente digital basada en reconocimiento de voz web, que responde a ciertos comandos para controlar la computadora del usuario.",
+  
+  
+  "MusicSection.Title": "Habilidades Musicales",
+  "MusicSection.Text": "Mi instrumento favorito es la guitarra, la cual llevo alrededor de 5 años practicando. Además tengo habilidades básicas en el violín y el piano.",
+  "MusicSection.GImg1.Text": "Concierto público organizado en el reloj de Pachuca, foto de mí y mis compañeros antes de la presentación",
+  "MusicSection.GImg2.Text": "Foto de mí y mis compañeros durante la presentación en el reloj de Pachuca",
+  "MusicSection.VImg3.Text": "Imágen de mi, durante mi práctica semanal de violín, durante el verano de 2019",
+
+
+  "LangSection.Title": "Idiomas",
+  "LangSection.Mastery": "Nivel de Dominio: ",
+  "LangSection.Native": "Nativo",
+
+  "LangSection.Spanish.Title": "Español",
+  "LangSection.Spanish.Text": "Al ser originario de méxico, el español es mi primer idioma, por lo cual mi ortografía, así como mi habla de este idioma son excelentes.",
+
+  "LangSection.English.Title": "Inglés",
+  "LangSection.English.Text": "Gracias a que desde mi educación básica tuve acceso a maestros extranjeros, pude desarrollar un gran dominio del idioma, alcanzando una fluidez de habla casi nativa, a la par de una ortografía impecable.",
+
+  "LangSection.German.Title": "Alemán",
+  "LangSection.German.Text": "Empecé a aprender Alemán desde hace mi ingreso a la preparatoria y hasta la fecha sigo estudiando el idioma. Por el momento me encuentro en un nivel de habla y escritura intermedio, no obstante pronto alcancaré el nivel B1.",
+
+
+  "WhySection.Title": "Así que, ¿Por qué contratarme?",
+  "WhySection.Text1": "Gracias a todas las experiencias y proyectos que he tenido, ",
+  "WhySection.Text2": "he adquirido una gran cantidad de habilidades",
+  "WhySection.Text3": "que actualmente me permiten realizar cualquier tipo de trabajo más eficiente y efectivamente, ",
+  "WhySection.Text4": "dichas habilidades son ",
+
+  "WhySection.Resilience.Title": "Resiliencia",
+  "WhySection.Resilience.Text": "Sin importar los problemas o dificultades que surgan en el camino, yo siempre encuentro una solución y termino el trabajo.",
+
+  "WhySection.Organization.Title": "Organización",
+  "WhySection.Organization.Text": "Siempre programo y rastreo todos mis pendientes, no se me ha pasado una fecha de entrega en más de un año.",
+
+  "WhySection.Teamwork.Title": "Trabajo en Equipo",
+  "WhySection.Teamwork.Text": "La cooperación es una parte esencial de cualquier proyecto, una habilidad que he dominado.",
+
+  "WhySection.Leadership.Title": "Liderazgo",
+  "WhySection.Leadership.Text": "Cuando sea necesario, puedo guiar y ayudar a mi equipo a lograr nuestros objetivos juntos.",
+
+  "WhySection.Passion.Title": "Pasión",
+  "WhySection.Passion.Text": "Me encanta lo que hago, por lo cual siempre puedo aprender cualquier software, herramienta o lenguaje necesario para cualquier proyecto.",
+
+  "WhySection.Button": "Platiquemos",
+  
+
   
   "footer": "coso"
   

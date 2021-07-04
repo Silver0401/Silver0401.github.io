@@ -1,6 +1,7 @@
 import React from "react";
 import useLottie from "lottie-react";
 import medLottieAnim from "./../../resources/Med/medLottie.json";
+import { useTranslation } from "react-i18next";
 
 // Photos
 import cardioPic from "./../../resources/Med/cardio.jpeg";
@@ -32,62 +33,64 @@ const LottieAnimation = () => {
 };
 
 const MedSection: React.FC<props> = ({ sectionRef }) => {
+
+  const { t } = useTranslation();
+
   return (
     <section ref={sectionRef} id="MedSection">
       {/* <div className="bigBgCircle" /> */}
 
       <div className="TextSection">
-        <h1>Medicine Knowledge</h1>
+        <h1>{t("MedSection.Title")}</h1>
         <p>
-          I am currently in med school, and so far, I have basic to intermediate
-          knoledge in the next fields
+          {t("MedSection.Text")}
         </p>
       </div>
 
       <div className="medDataBox">
         <div className="medSubjects">
           <span className="cardio">
-            <h2>Cardiología</h2>
+            <h2>{t("MedSection.Box.Cardio")}</h2>
             <img alt="bgSubject" src={cardioPic} />
           </span>
           <span className="biocel">
-            <h2>Biología Celular</h2>
+            <h2>{t("MedSection.Box.BCel")}</h2>
             <img alt="bgSubject" src={biocelPic} />
           </span>
           <span className="genetica">
-            <h2>Genética</h2>
+            <h2>{t("MedSection.Box.Genetics")}</h2>
             <img alt="bgSubject" src={geneticaPic} />
           </span>
           <span className="endocrino">
-            <h2>Endocrinología</h2>
+            <h2>{t("MedSection.Box.Endocrine")}</h2>
             <img alt="bgSubject" src={endocrinoPic} />
           </span>
           <span className="inmuno">
-            <h2>Inmunología</h2>
+            <h2>{t("MedSection.Box.Imuno")}</h2>
             <img alt="bgSubject" src={inmunoPic} />
           </span>
           <span className="neuro">
-            <h2>Neurología</h2>
+            <h2>{t("MedSection.Box.Neuro")}</h2>
             <img alt="bgSubject" src={neuroPic} />
           </span>
           <span className="histo">
-            <h2>Histología</h2>
+            <h2>{t("MedSection.Box.Histo")}</h2>
             <img alt="bgSubject" src={histoPic} />
           </span>
           <span className="nefro">
-            <h2>Nefrología</h2>
+            <h2>{t("MedSection.Box.Nefro")}</h2>
             <img alt="bgSubject" src={nefroPic} />
           </span>
           <span className="digestivo">
-            <h2>Gastroenterología</h2>
+            <h2>{t("MedSection.Box.Gastro")}</h2>
             <img alt="bgSubject" src={gastoPic} />
           </span>
           <span className="micro">
-            <h2>Microorganismos</h2>
+            <h2>{t("MedSection.Box.Micro")}</h2>
             <img alt="bgSubject" src={microPic} />
           </span>
           <span className="embrio">
-            <h2>Embriología</h2>
+            <h2>{t("MedSection.Box.Embrio")}</h2>
             <img alt="bgSubject" src={embrioPic} />
           </span>
         </div>
@@ -105,7 +108,7 @@ const MedSection: React.FC<props> = ({ sectionRef }) => {
             }
             className="linkNotes"
           >
-            Link to my Notes 📔{" "}
+            {t("MedSection.Button")} 📔{" "}
           </button>
         </div>
       </div>

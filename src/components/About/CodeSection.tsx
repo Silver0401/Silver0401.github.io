@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 // Logos
 import tsLogo from "./../../resources/Icons/ts.png";
@@ -34,6 +35,7 @@ interface props {
 const CodeSection: React.FC<props> = ({ sectionRef }) => {
   const [langInputSatus, setLangInputStatus] = useState<"on" | "off">("on");
   const [softInputSatus, setSoftInputStatus] = useState<"on" | "off">("on");
+  const { t } = useTranslation()
 
   const CreateLangSoftBox = (
     type: "lang" | "soft",
@@ -104,10 +106,10 @@ const CodeSection: React.FC<props> = ({ sectionRef }) => {
   return (
     <section ref={sectionRef} id="CodeSection">
       <div className="CodeTitle">
-        <h1>Programming Langugages and Software Skills</h1>
+        <h1>{t("CodeSection.Title")}</h1>
         <div className="inputBox">
           <span>
-            <label>Languages</label>
+            <label>{t("CodeSection.LangCheckBox")}</label>
             <input
               onClick={() =>
                 setLangInputStatus(langInputSatus === "on" ? "off" : "on")
@@ -118,7 +120,7 @@ const CodeSection: React.FC<props> = ({ sectionRef }) => {
             />
           </span>
           <span>
-            <label>Softwares</label>
+            <label>{t("CodeSection.SoftCheckBox")}</label>
             <input
               onClick={() =>
                 setSoftInputStatus(softInputSatus === "on" ? "off" : "on")

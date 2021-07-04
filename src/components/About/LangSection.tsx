@@ -1,15 +1,3 @@
-import img1 from "./../../resources/lang/americana1.jpeg";
-import img2 from "./../../resources/lang/americana2.jpeg";
-import img3 from "./../../resources/lang/americana3.jpeg";
-
-import img4 from "./../../resources/lang/español2.jpeg";
-import img5 from "./../../resources/lang/español1.jpeg";
-import img6 from "./../../resources/lang/español3.jpeg";
-
-import img7 from "./../../resources/lang/aleman1.jpeg";
-import img8 from "./../../resources/lang/aleman2.jpeg";
-import img9 from "./../../resources/lang/aleman3.jpeg";
-
 import React, { useEffect, useState } from "react";
 import SwiperCore, {
   Navigation,
@@ -21,6 +9,19 @@ import SwiperCore, {
 } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import anime from "animejs";
+import { useTranslation } from "react-i18next";
+
+import img1 from "./../../resources/lang/americana1.jpeg";
+import img2 from "./../../resources/lang/americana2.jpeg";
+import img3 from "./../../resources/lang/americana3.jpeg";
+
+import img4 from "./../../resources/lang/mex.jpeg";
+import img5 from "./../../resources/lang/español1.jpeg";
+import img6 from "./../../resources/lang/español3.jpeg";
+
+import img7 from "./../../resources/lang/aleman1.jpeg";
+import img8 from "./../../resources/lang/aleman2.jpeg";
+import img9 from "./../../resources/lang/aleman3.jpeg";
 
 // Scss carousel styling files
 import "swiper/swiper.scss";
@@ -37,6 +38,7 @@ interface props {
 
 const LangSection: React.FC<props> = ({ sectionRef }) => {
   const [langSelected, setLangSelected] = useState<"en" | "sp" | "ge">("sp");
+  const { t } = useTranslation();
 
   useEffect(() => {
     const tl = anime.timeline({
@@ -60,25 +62,25 @@ const LangSection: React.FC<props> = ({ sectionRef }) => {
 
   return (
     <section ref={sectionRef} id="LangSection">
-      <h1>Languages</h1>
+      <h1>{t("LangSection.Title")}</h1>
       <div className="langSelector">
         <span
           onClick={() => setLangSelected("sp")}
           className={langSelected === "sp" ? "langBClicked" : "langBNotClicked"}
         >
-          Español 🇲🇽
+          {t("LangSection.Spanish.Title")} 🇲🇽
         </span>
         <span
           onClick={() => setLangSelected("en")}
           className={langSelected === "en" ? "langBClicked" : "langBNotClicked"}
         >
-          English 🇺🇸
+          {t("LangSection.English.Title")} 🇺🇸
         </span>
         <span
           onClick={() => setLangSelected("ge")}
           className={langSelected === "ge" ? "langBClicked" : "langBNotClicked"}
         >
-          Alemán 🇩🇪
+          {t("LangSection.German.Title")} 🇩🇪
         </span>
       </div>
       <div className="langDisplay">
@@ -141,15 +143,12 @@ const LangSection: React.FC<props> = ({ sectionRef }) => {
             }
             id="en"
           >
-            <li>Nivel de Dominio: B2</li>
+            <li>{t("LangSection.Mastery")}B2</li>
             <li id="outerBar">
               <div className="innerBar" />
             </li>
             <li>
-              Gracias a que desde mi educación básica tuve acceso a maestros
-              extranjeros, pude desarrollar un gran dominio del idioma,
-              alcanzando una fluidez de habla casi nativa, a la par de una
-              ortografía impecable.
+              {t("LangSection.English.Text")}
             </li>
           </ul>
           <ul
@@ -160,14 +159,12 @@ const LangSection: React.FC<props> = ({ sectionRef }) => {
             }
             id="sp"
           >
-            <li>Nivel de Dominio: Nativo</li>
+            <li>{t("LangSection.Mastery")}{t("LangSection.Native")}</li>
             <li id="outerBar">
               <div className="innerBar" />
             </li>
             <li>
-              Al ser originario de méxico, el español es mi primer idioma, por
-              lo cual mi ortografía, así como mi habla de este idioma son
-              excelentes.
+              {t("LangSection.Spanish.Text")}
             </li>
           </ul>
           <ul
@@ -178,15 +175,12 @@ const LangSection: React.FC<props> = ({ sectionRef }) => {
             }
             id="ge"
           >
-            <li>Nivel de Dominio: A2</li>
+            <li>{t("LangSection.Mastery")}A2</li>
             <li id="outerBar">
               <div className="innerBar" />
             </li>
             <li>
-              Empece a aprender Alemán desde hace mi ingreso a la preparatoria y
-              hasta la fecha sigo estudiando el idioma. Por el momento me
-              encuentro en un nivel de habla y escritura intermedio, no obstante
-              pronto alcanzaré a un nivel profesional B1.
+              {t("LangSection.German.Text")}
             </li>
           </ul>
         </div>

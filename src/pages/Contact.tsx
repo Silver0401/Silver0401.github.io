@@ -1,5 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import CLeftBox from "./../components/Contact/CLeftBox";
 import CRightBox from "./../components/Contact/CRightBox";
@@ -39,6 +41,7 @@ export const Contact: React.FC = () => {
     >
       <CLeftBox />
       <CRightBox />
+      <ToastContainer />
     </motion.div>
   );
 };
