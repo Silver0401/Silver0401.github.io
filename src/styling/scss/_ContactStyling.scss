@@ -32,16 +32,16 @@
       }
 
       h2 {
-        font-size: clamp(1.5em, 5vw, 2.7em);
+        font-size: clamp(1.5em, 5vw, 2.5em);
       }
       h3 {
-        font-size: clamp(1em, 4vw, 2.2em);
+        font-size: clamp(1em, 4vw, 2em);
       }
     }
 
     form {
       width: 90%;
-      height: 65%;
+      height: 70%;
       position: relative;
       display: flex;
       flex-wrap: wrap;
@@ -54,6 +54,7 @@
         @include alignCenter();
         overflow: hidden;
         align-items: flex-start;
+        justify-content: flex-end;
         // border: 2px solid lightgreen;
 
         > * {
@@ -61,7 +62,7 @@
           position: absolute;
           width: 90%;
           border-radius: 10px;
-          height: 40%;
+          height: 50%;
         }
 
         label {
@@ -69,18 +70,19 @@
           color: var(--SiteColor1);
           z-index: 1;
           pointer-events: none;
-          transition: color 500ms, transform 500ms, background-color 500ms;
+          font-size: clamp(0.7em, 2vw, 1em);
           @include alignCenter();
           align-items: flex-start;
           padding-left: 2%;
           background-color: transparent;
+          transition: color 500ms, transform 500ms, background-color 500ms;
         }
 
         input,
         textarea {
           outline: none;
           z-index: 0;
-          font-size: 1em;
+          font-size: clamp(0.7em, 2vw, 1em);
           font-weight: bolder;
           padding-left: 2%;
           background-color: var(--SiteColor3);
@@ -103,18 +105,19 @@
 
         textarea {
           resize: none;
-          height: 60%;
-          &:focus,
-          &:valid {
-            & + label {
-              transform: translate(0px, -45px);
-            }
-          }
+          padding: 1.5% 2%;
+          // height: 60%;
+          // &:focus,
+          // &:valid {
+          //   & + label {
+          //     transform: translate(0px, -45px);
+          //   }
+          // }
         }
 
         .submitButton {
           width: clamp(120px, 20vw, 200px);
-          height: clamp(40px, 10vw, 70px);
+          height: clamp(35px, 10vw, 70px);
           padding-left: 0%;
           margin-left: 0%;
           border: 2px solid var(--SiteColor3);

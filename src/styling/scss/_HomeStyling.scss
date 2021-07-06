@@ -127,8 +127,8 @@
 
     .outerCircle {
       position: relative;
-      width: clamp(300px, 50vw, 650px);
-      height: clamp(300px, 50vw, 650px);
+      width: clamp(250px, 50vw, 650px);
+      height: clamp(250px, 50vw, 650px);
       border-radius: 50%;
       @include alignCenter();
       background-color: transparent;
