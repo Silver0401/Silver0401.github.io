@@ -113,6 +113,8 @@ const Home: React.FC = () => {
 
       <HLeftBox />
       <HRightBox />
+
+      <meta name="apple-mobile-web-app-capable" content="yes" />
     </motion.div>
   );
 };
