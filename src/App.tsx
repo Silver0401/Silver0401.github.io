@@ -53,11 +53,11 @@ const App: React.FC = () => {
       );
     }
 
-    window.onload = () => {
-      setTimeout(() => {
-        MoveLoader();
-      }, 3000);
-    };
+    // window.onload = () => {
+    setTimeout(() => {
+      MoveLoader();
+    }, 3000);
+    // };
   }, []);
 
   return (

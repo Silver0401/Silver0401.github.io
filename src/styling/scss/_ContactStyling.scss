@@ -76,7 +76,8 @@
           align-items: flex-start;
           padding-left: 2%;
           background-color: transparent;
-          transition: color 500ms, transform 500ms, background-color 500ms;
+          transition: color 500ms, transform 500ms, background-color 500ms,
+            -webkit-text-stroke 500ms;
         }
 
         input,
@@ -87,12 +88,12 @@
           font-weight: bolder;
           padding-left: 2%;
           background-color: var(--SiteColor3);
-          transition: color 500ms;
+          transition: color 500ms, -webkit-text-stroke 500ms;
           color: transparent;
 
           &:focus,
           &:valid {
-            transition: color 500ms;
+            transition: color 500ms, -webkit-text-stroke 500ms;
             color: var(--SiteColor1);
             -webkit-text-stroke: 0.5px var(--SiteColor1);
 
@@ -100,7 +101,8 @@
               color: var(--SiteColor3);
               -webkit-text-stroke: 0.5px var(--SiteColor3);
               transform: translate(0px, -100%);
-              transition: color 500ms, transform 500ms, background-color 500ms;
+              transition: color 500ms, transform 500ms, background-color 500ms,
+                -webkit-text-stroke 500ms;
               background-color: transparent;
             }
           }
