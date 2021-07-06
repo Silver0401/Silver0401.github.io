@@ -61,7 +61,7 @@ const App: React.FC = () => {
     setTimeout(() => {
       console.log("Positioning page");
       window.scrollTo(0, 0);
-    });
+    }, 4000);
     // };
   }, []);
 
