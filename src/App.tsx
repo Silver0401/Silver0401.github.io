@@ -57,6 +57,11 @@ const App: React.FC = () => {
     setTimeout(() => {
       MoveLoader();
     }, 3000);
+
+    setTimeout(() => {
+      console.log("Positioning page");
+      window.scrollTo(0, 0);
+    });
     // };
   }, []);
 
