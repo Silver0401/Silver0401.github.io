@@ -229,7 +229,7 @@ const Nav: React.FC<props> = ({ siteStructure }) => {
             <button
               onClick={() => {
                 toggleColor(color === "dark" ? "light" : "dark");
-                toggleNav(true);
+                toggleNav(false);
               }}
             >
               <div className="IconsBox">

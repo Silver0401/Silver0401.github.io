@@ -316,6 +316,7 @@
         overflow: hidden;
         background-color: var(--SiteColor1);
         min-height: 80px;
+        max-height: 200px;
 
         display: grid;
         grid-template-columns: 1fr 25%;
@@ -596,6 +597,7 @@
       .langBClicked {
         background-color: var(--SiteColor3);
         color: var(--SiteColor1);
+        -webkit-text-stroke: 0.5px var(--SiteColor1);
       }
     }
     .langDisplay {
@@ -651,6 +653,7 @@
             font-size: 1em;
             font-weight: bolder;
             color: var(--SiteColor1);
+            -webkit-text-stroke: 0.5px var(--SiteColor1);
             @include alignCenter();
 
             &:nth-child(1) {
@@ -745,6 +748,7 @@
           font-size: clamp(0.8em, 2vw, 1.2em);
           font-weight: bolder;
           color: var(--SiteColor3);
+          -webkit-text-stroke: 0.5px var(--SiteColor3);
           text-align: center;
           overflow: hidden;
 
@@ -763,6 +767,7 @@
             height: 100%;
             background: var(--SiteColor3);
             color: var(--SiteColor1);
+            -webkit-text-stroke: 0.5px var(--SiteColor1);
             @include alignCenter();
             font-size: clamp(0.9rem, 2vw, 1rem);
             text-align: center;
@@ -895,6 +900,7 @@
             right: 0px;
             width: 50px;
             height: 50px;
+            display: none;
           }
           .swiper-container {
             position: relative;
@@ -949,6 +955,7 @@
           &:hover {
             transition: background-color 500ms;
             background-color: #262424;
+            -webkit-text-stroke: 0.5px white;
           }
         }
 
@@ -965,6 +972,7 @@
           &:hover {
             transition: background-color 500ms;
             background-color: #262424;
+            -webkit-text-stroke: 0.5px white;
           }
         }
         .selected {
@@ -1024,6 +1032,7 @@
         #TitleBar {
           background-color: var(--SiteColor3);
           color: var(--SiteColor1);
+          -webkit-text-stroke: 0.5px var(--SiteColor1);
           font-weight: bolder;
           text-align: center;
           height: 60px;
@@ -1164,6 +1173,7 @@
             height: 30%;
             font-weight: bolder;
             color: var(--SiteColor1);
+            -webkit-text-stroke: 0.5px var(--SiteColor1);
             font-size: clamp(0.9em, 2vw, 1.5em);
             @include alignCenter();
             // text-decoration: underline #0ee9da;
@@ -1262,6 +1272,7 @@
             width: 40%;
             height: 70%;
             background-color: var(--SiteColor3);
+            -webkit-text-stroke: 0.5px var(--SiteColor1);
             @include alignCenter();
             flex-direction: row;
             justify-content: space-around;
@@ -1482,6 +1493,7 @@
           // transition: background-color 0;
           background-color: var(--SiteColor3);
           color: var(--SiteColor1);
+          -webkit-text-stroke: 0.5px var(--SiteColor1);
         }
       }
     }
