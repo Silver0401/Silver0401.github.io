@@ -227,7 +227,10 @@ const Nav: React.FC<props> = ({ siteStructure }) => {
           </li>
           <li>
             <button
-              onClick={() => toggleColor(color === "dark" ? "light" : "dark")}
+              onClick={() => {
+                toggleColor(color === "dark" ? "light" : "dark");
+                toggleNav(true);
+              }}
             >
               <div className="IconsBox">
                 {Icon("Sun")}
@@ -237,7 +240,12 @@ const Nav: React.FC<props> = ({ siteStructure }) => {
             </button>
           </li>
           <li>
-            <button onClick={() => toggleLang(lang === "en" ? "sp" : "en")}>
+            <button
+              onClick={() => {
+                toggleLang(lang === "en" ? "sp" : "en");
+                toggleNav(true);
+              }}
+            >
               <div className="IconsBox">{Icon("Lang")}</div>
               <div className="langPBox">
                 <p>{t("Nav.Lang")}</p>

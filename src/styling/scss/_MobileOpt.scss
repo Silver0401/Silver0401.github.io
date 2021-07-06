@@ -18,53 +18,82 @@
 }
 
 @media (max-width: 600px) {
-  .NavBar {
-    top: calc(100% - 80px);
-    left: 0;
-    width: 100%;
-    height: 80px;
-    transform: translateX(0px);
-    flex-direction: row;
+  .App {
+    #AboutPage {
+      #InitSection {
+        .arrowText {
+          left: 60%;
+          top: 80%;
+        }
 
-    .NavTitle {
-      width: 20%;
-      height: 100%;
-      display: none;
+        .arrowLottieBox {
+          right: 45%;
+          top: 85%;
+          transform: rotateY(180deg) rotateZ(-160deg);
+        }
 
-      .Burguer {
-        display: none;
-      }
-
-      .NavLogo {
-        display: none;
+        .buttonsBox {
+          inset: 0;
+          top: 50px;
+          left: 50%;
+        }
       }
     }
 
-    ul {
-      position: absolute;
-      height: 100%;
+    .NavBar {
+      top: calc(100% - 80px);
+      left: 0;
       width: 100%;
+      height: 80px;
+      transform: translateX(0px);
       flex-direction: row;
-      justify-content: space-evenly;
-      margin: 0px 0px;
-      gap: 1px;
 
-      li {
+      .NavTitle {
         width: 20%;
-        // margin: 0% 0px;
+        height: 100%;
+        display: none;
 
-        &:nth-child(1) {
-          margin-top: 0px;
-        }
-        &:nth-child(4) {
-          margin-top: 0px;
+        .Burguer {
+          display: none;
         }
 
-        a,
-        Link,
-        button {
-          p {
-            display: none;
+        .NavLogo {
+          display: none;
+        }
+      }
+
+      ul {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 0px 0px;
+        gap: 1px;
+
+        li {
+          width: 20%;
+          // margin: 0% 0px;
+
+          &:nth-child(1) {
+            margin-top: 0px;
+          }
+          &:nth-child(4) {
+            margin-top: 0px;
+          }
+          &:nth-child(5) {
+            margin-right: 0px;
+          }
+
+          a,
+          Link,
+          button {
+            p {
+              display: none;
+            }
+            .langPBox {
+              display: none;
+            }
           }
         }
       }
@@ -72,36 +101,233 @@
   }
 }
 
-// @media (max-width: 1100px){
-//     .NavBar{
+@media (max-width: 1200px) {
+  .App {
+    #HomePage {
+      flex-direction: column;
 
-//         .Burguer{
-//             visibility: visible;
-//         }
+      .HLeftBox {
+        width: 100%;
+        height: 55%;
+      }
+      .HRightBox {
+        width: 100%;
+        height: 45%;
+      }
+    }
+  }
+}
 
-//         .BToggled{
-//             border: 1px solid white;
-//             transition: border 500ms;
-//             @include XBurger();
-//         }
+@media (max-width: 950px) {
+  .App {
+    #AboutPage {
+      #CodeSection {
+        flex-direction: column;
 
-//         ul{
-//             top: 60px;
-//             right: 0;
-//             position: absolute;
-//             width: 250px;
-//             background-color: black;
-//             height: calc(100vh - 60px);
-//             flex-direction: column;
-//         }
+        .CodeTitle {
+          width: 100%;
+          height: 40%;
 
-//         .NavToggled{
-//             transform: translateX(0px);
-//             transition: transform 500ms;
-//         }
-//         .NavNotToggled{
-//             transform: translateX(250px);
-//             transition: transform 500ms;
-//         }
-//     }
-// }
+          .inputBox {
+            height: 40%;
+          }
+        }
+
+        .allSoftwareBox {
+          width: 90%;
+          height: 50%;
+        }
+      }
+
+      #MedSection {
+        .medDataBox {
+          flex-direction: column;
+
+          .medSubjects {
+            width: 80%;
+            height: 50%;
+          }
+          .medLinkBox {
+            width: 100%;
+            height: 40%;
+            flex-direction: row;
+            justify-content: center;
+            // background-color: lightcoral;
+
+            .lottieNotesAnim {
+              height: 100%;
+              width: 50%;
+              align-items: flex-start;
+              // background-color: lightgreen;
+            }
+
+            button {
+              width: 30%;
+              height: 60%;
+              margin-right: 10%;
+            }
+          }
+        }
+      }
+
+      #XpSection {
+        flex-direction: column;
+
+        .proyectBox {
+          width: 100%;
+          height: 60%;
+
+          .xpImgContainer {
+            width: 95%;
+            height: 70%;
+          }
+        }
+
+        .edXpBar {
+          width: 100%;
+          height: 40%;
+
+          .bgRectangle {
+            width: 85%;
+            height: 100%;
+          }
+
+          ul {
+            width: 85%;
+            li {
+              flex-direction: row;
+
+              h4 {
+                width: 70%;
+                height: 100%;
+              }
+              p {
+                width: 30%;
+                height: 100%;
+              }
+            }
+          }
+        }
+      }
+
+      #ModelingSection {
+        flex-direction: column-reverse;
+
+        .modelingLeftBox {
+          width: 100%;
+          height: 50%;
+        }
+        .modelingRightBox {
+          width: 100%;
+          height: 50%;
+
+          ul {
+            height: 30%;
+          }
+        }
+      }
+
+      #DesignSection {
+        .proyectsBox {
+          .proyectBox {
+            flex-direction: row;
+
+            .buttonsBox {
+              flex-direction: column;
+              width: 30%;
+              height: 100%;
+
+              button {
+                width: 80%;
+                height: 30%;
+              }
+            }
+
+            &:hover {
+              .proyectDescription {
+                opacity: 0;
+                transition: opacity 500ms;
+              }
+              .logoContainer {
+                opacity: 1;
+                transition: opacity 500ms;
+              }
+            }
+          }
+        }
+      }
+
+      #MusicSection {
+        .MusicRightBox {
+          display: none;
+        }
+        .MusicLeftBox {
+          width: 100%;
+
+          .imgBox1,
+          .imgBox2 {
+            justify-content: center;
+            align-items: center;
+
+            img,
+            h4 {
+              width: auto;
+              height: 100%;
+              position: absolute;
+            }
+
+            img {
+              transition: opacity 500ms;
+            }
+
+            &:hover {
+              img {
+                transition: opacity 500ms;
+                opacity: 0;
+              }
+            }
+          }
+        }
+      }
+
+      #LangSection {
+        .langDisplay {
+          flex-direction: column;
+
+          .imgBox,
+          .textBox {
+            width: 100%;
+            height: 48%;
+          }
+        }
+      }
+
+      #WhySection {
+        flex-direction: column;
+
+        .whyLeftBox,
+        .whyRightBox {
+          width: 100%;
+          height: 48%;
+        }
+
+        .whyRightBox {
+          overflow: scroll;
+          justify-content: flex-start;
+
+          span {
+            min-height: 150px;
+
+            .textBox {
+              height: 100px;
+
+              p {
+                padding: 0px 12%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

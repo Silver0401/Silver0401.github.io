@@ -1,9 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
+import { ChosenDataContext } from "./../ChosenData";
 import anime from "animejs";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 
 const HLeftBox: React.FC = () => {
+  const [transversalData, setTransversalData] = useContext(ChosenDataContext);
   const { t } = useTranslation();
   const History = useHistory();
 
@@ -193,6 +195,20 @@ const HLeftBox: React.FC = () => {
       <div className="ButtonsBox">
         <button onClick={() => History.push("/Contact")}>
           {t("HomeLeft.HireButton")}
+        </button>
+        <button
+          onClick={() => {
+            if (transversalData.KnowMeButtonClicked) {
+            } else {
+              console.log("animInit");
+              setTransversalData({
+                ...transversalData,
+                KnowMeButtonClicked: true,
+              });
+            }
+          }}
+        >
+          {t("HomeRight.KnowMeButton")}
         </button>
       </div>
     </div>

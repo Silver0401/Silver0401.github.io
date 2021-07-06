@@ -125,7 +125,7 @@
       &:nth-child(1),
       &:nth-child(2) {
         svg {
-          height: 50%;
+          height: clamp(35%, 4vw, 50%);
           width: auto;
         }
       }
@@ -137,25 +137,10 @@
       &:nth-child(4) {
         margin-top: 80px;
         svg {
-          height: 50%;
+          height: clamp(35%, 4vw, 50%);
           width: auto;
         }
       }
-      // &:nth-child(5) {
-      //   margin-top: 0px;
-      //   filter: grayscale(1);
-      //   transition: filter 500ms, background-color 500ms;
-
-      //   svg {
-      //     height: 50%;
-      //     width: auto;
-      //   }
-
-      //   &:hover {
-      //     transition: filter 500ms, background-color 500ms;
-      //     filter: grayscale(0);
-      //   }
-      // }
 
       &:hover {
         transition: background-color 500ms;
@@ -205,7 +190,6 @@
       a,
       Link {
         position: relative;
-        // visibility: hidden;
         @include alignCenter();
         text-decoration: none;
         width: 100%;
@@ -215,7 +199,7 @@
 
         svg,
         img {
-          height: 60%;
+          height: clamp(40%, 4vw, 60%);
           width: auto;
           fill: rgb(72, 72, 72);
           position: relative;

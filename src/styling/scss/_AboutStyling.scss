@@ -11,16 +11,20 @@
     height: 100%;
     scroll-snap-align: start;
     overflow: hidden;
+
+    h1 {
+      font-size: clamp(1.5em, 4vw, 3em);
+    }
   }
 
   #InitSection {
     @include alignCenter();
     .InitLogo {
       position: absolute;
-      top: 30px;
-      left: 30px;
-      width: 80px;
-      height: 50px;
+      top: clamp(20px, 2vw, 30px);
+      left: clamp(20px, 2vw, 30px);
+      width: clamp(50px, 5vw, 80px);
+      height: clamp(35px, 5vw, 50px);
 
       svg {
         width: 100%;
@@ -36,19 +40,20 @@
 
     .arrowText {
       position: absolute;
-      width: 200px;
-      height: 100px;
+      width: clamp(110px, 15vw, 200px);
+      height: clamp(70px, 15vw, 100px);
       top: 80px;
       right: 50px;
-      font-size: 1.5em;
+      font-size: clamp(0.8em, 2vw, 1.5em);
+      // background-color: lightgreen;
       color: var(--SiteColor3);
       font-weight: bolder;
     }
 
     .arrowLottieBox {
       position: absolute;
-      width: 200px;
-      height: 100px;
+      width: clamp(130px, 2vw, 200px);
+      height: clamp(70px, 2vw, 100px);
       top: 200px;
       right: 5px;
       transform: rotateY(180deg) rotateZ(-60deg);
@@ -60,8 +65,8 @@
 
     .outerCircle {
       position: relative;
-      width: 650px;
-      height: 650px;
+      width: clamp(300px, 50vw, 650px);
+      height: clamp(300px, 50vw, 650px);
       border-radius: 50%;
       @include alignCenter();
       background-color: transparent;
@@ -77,7 +82,7 @@
         opacity: 1;
 
         h2 {
-          font-size: 1.7em;
+          font-size: clamp(0.8em, 2vw, 1.7em);
           color: var(--SiteColor3);
           font-weight: bolder;
           text-align: center;
@@ -265,10 +270,9 @@
       h1 {
         font-weight: bolder;
         color: var(--SiteColor3);
-        font-size: 3em;
+        // font-size: clamp(1.5em, 4vw, 3em);
         padding: 5%;
         text-align: center;
-        // background-color: lightcoral;
       }
       .inputBox {
         width: 90%;
@@ -287,7 +291,7 @@
             height: 20px;
           }
           label {
-            font-size: 1.5em;
+            font-size: clamp(1em, 2vw, 1.5em);
             font-weight: bolder;
             color: var(--SiteColor3);
           }
@@ -459,11 +463,11 @@
         text-align: center;
       }
 
-      h1 {
-        font-size: 3em;
-      }
+      // h1 {
+      //   font-size: 3em;
+      // }
       p {
-        font-size: 1.2em;
+        font-size: clamp(0.9em, 2vw, 1.2em);
         padding: 0px 10%;
       }
     }
@@ -477,17 +481,18 @@
       justify-content: space-evenly;
 
       .medSubjects {
+        position: relative;
         width: 40%;
         height: 100%;
         display: flex;
         flex-wrap: wrap;
         border-radius: 10px;
-        overflow: hidden;
+        overflow: scroll;
 
         span {
           position: relative;
           flex: 1 1 250px;
-          // border: 1px solid var(--SiteColor3);
+          min-height: 80px;
           overflow: hidden;
 
           h2 {
@@ -533,12 +538,14 @@
         height: 100%;
         @include alignCenter();
         justify-content: space-around;
+        // background-color: lightcoral;
 
         .lottieNotesAnim {
           position: relative;
           width: 100%;
           height: 70%;
           @include alignCenter();
+          // background-color: lightskyblue;
 
           svg,
           img {
@@ -552,7 +559,7 @@
           padding: 0% 5%;
           text-align: center;
           width: 70%;
-          height: 60px;
+          // height: 60px;
         }
       }
     }
@@ -567,7 +574,7 @@
       height: 10%;
       font-weight: bolder;
       color: var(--SiteColor3);
-      font-size: 3em;
+      // font-size: 3em;
       text-align: center;
     }
 
@@ -648,7 +655,7 @@
 
             &:nth-child(1) {
               text-align: center;
-              font-size: 1.6em;
+              font-size: clamp(0.9em, 2vw, 1.6em);
             }
             &:nth-child(2) {
               height: 10%;
@@ -670,6 +677,7 @@
             &:nth-child(3) {
               height: 50%;
               text-align: justify;
+              font-size: clamp(0.7em, 2vw, 1em);
             }
           }
 
@@ -703,7 +711,7 @@
       position: relative;
       font-weight: bolder;
       color: var(--SiteColor3);
-      font-size: 3em;
+      // font-size: 3em;
       padding: 5%;
       text-align: center;
       @include alignCenter();
@@ -734,7 +742,7 @@
           height: 33%;
           @include alignCenter();
           flex-direction: row;
-          font-size: 1.2em;
+          font-size: clamp(0.8em, 2vw, 1.2em);
           font-weight: bolder;
           color: var(--SiteColor3);
           text-align: center;
@@ -756,7 +764,7 @@
             background: var(--SiteColor3);
             color: var(--SiteColor1);
             @include alignCenter();
-            font-size: 1rem;
+            font-size: clamp(0.9rem, 2vw, 1rem);
             text-align: center;
             padding: 3%;
             z-index: 0;
@@ -857,7 +865,7 @@
         position: relative;
         font-weight: bolder;
         color: var(--SiteColor3);
-        font-size: 3em;
+        // font-size: 3em;
         padding: 5%;
         text-align: center;
         width: 100%;
@@ -872,6 +880,7 @@
         @include alignCenter();
         border-radius: 5px;
         transform: translate(0%, 0%);
+        // background-color: lightyellow;
 
         .imgBox {
           position: relative;
@@ -916,6 +925,7 @@
           text-align: center;
           font-weight: bolder;
           color: var(--SiteColor3);
+          font-size: clamp(0.6rem, 2vw, 1rem);
         }
       }
     }
@@ -925,6 +935,7 @@
       height: 100%;
       @include alignCenter();
       justify-content: space-evenly;
+      overflow: hidden;
 
       .bgRectangle {
         position: absolute;
@@ -994,7 +1005,7 @@
 
           h4 {
             font-weight: bolder;
-            font-size: 1em;
+            font-size: clamp(0.7em, 2vw, 1em);
             @include alignCenter();
             align-items: flex-start;
             height: 60%;
@@ -1002,7 +1013,7 @@
           }
           p {
             font-weight: bolder;
-            font-size: 0.8em;
+            font-size: clamp(0.6em, 2vw, 0.8em);
             @include alignCenter();
             align-items: flex-start;
             height: 40%;
@@ -1017,7 +1028,7 @@
           text-align: center;
           height: 60px;
           width: 100%;
-          font-size: 1.2em;
+          font-size: clamp(0.9em, 2vw, 1.2em);
           cursor: auto;
           pointer-events: none;
 
@@ -1063,7 +1074,7 @@
       backdrop-filter: blur(3px);
 
       h1 {
-        font-size: 3em;
+        // font-size: 3em;
         font-weight: bolder;
         color: white;
         text-align: center;
@@ -1074,7 +1085,7 @@
       }
 
       p {
-        font-size: 1.5em;
+        font-size: clamp(0.8em, 2vw, 1.5em);
         font-weight: bolder;
         color: white;
         width: 80%;
@@ -1102,8 +1113,9 @@
 
       span {
         position: relative;
-        width: 70%;
+        width: 90%;
         flex: 1;
+        // min-height: 150px;
         @include alignCenter();
         align-items: flex-start;
 
@@ -1152,7 +1164,7 @@
             height: 30%;
             font-weight: bolder;
             color: var(--SiteColor1);
-            font-size: 1.5em;
+            font-size: clamp(0.9em, 2vw, 1.5em);
             @include alignCenter();
             // text-decoration: underline #0ee9da;
             opacity: 1;
@@ -1165,7 +1177,7 @@
             height: 70%;
             font-weight: bolder;
             color: var(--SiteColor3);
-            font-size: 0.9em;
+            font-size: clamp(0.6em, 2vw, 0.9em);
             @include alignCenter();
             padding: 0px 5%;
             transition: font-size 1s;
@@ -1205,7 +1217,7 @@
       height: 15%;
       font-weight: bolder;
       color: var(--SiteColor3);
-      font-size: 3em;
+      // font-size: 3em;
       @include alignCenter();
       text-align: center;
     }
@@ -1231,7 +1243,7 @@
           position: relative;
           color: var(--SiteColor3);
           font-weight: bolder;
-          font-size: 2em;
+          font-size: clamp(1em, 2vw, 2em);
           padding: 0px 5%;
           text-align: center;
           pointer-events: none;
@@ -1267,8 +1279,8 @@
         }
         .logoContainer {
           position: relative;
-          width: 150px;
-          height: 150px;
+          width: clamp(90px, 15vw, 150px);
+          height: clamp(90px, 15vw, 150px);
           pointer-events: none;
           background-color: var(--SiteColor3);
           border-radius: 50%;
@@ -1329,6 +1341,7 @@
       height: 100%;
       @include alignCenter();
       flex-direction: column;
+      // background-color: lightcoral;
 
       .modelDisplay {
         width: 100%;
@@ -1392,20 +1405,18 @@
         }
         .controlersBox {
           position: absolute;
-          top: 50px;
-          left: 50px;
-          width: 200px;
-          height: 50px;
+          top: clamp(20px, 5vw, 50px);
+          left: clamp(20px, 5vw, 50px);
+          width: clamp(100px, 10vw, 200px);
+          height: clamp(40px, 2vw, 50px);
           @include alignCenter();
           flex-direction: row;
           z-index: 2;
 
           button {
             @include MainButtonStyling();
-            width: 100%;
-            height: 100%;
-            border-radius: 0px;
             @include alignCenter();
+            border-radius: 0px;
 
             p {
               position: absolute;
@@ -1423,11 +1434,12 @@
           font-weight: lighter;
           color: var(--SiteColor3);
           text-align: center;
-          font-size: 0.7em;
+          font-size: clamp(0.5em, 2vw, 0.7em);
         }
       }
     }
     .modelingRightBox {
+      // background-color: lightgreen;
       width: 40%;
       height: 100%;
       @include alignCenter();
@@ -1437,7 +1449,7 @@
         text-align: center;
         font-weight: bolder;
         color: var(--SiteColor3);
-        font-size: 3em;
+        // font-size: 3em;
         width: 100%;
         height: 10%;
       }
@@ -1449,6 +1461,7 @@
         height: 25%;
         @include alignCenter();
         padding: 0px 5%;
+        font-size: clamp(0.6em, 2vw, 1em);
       }
       ul {
         width: 60%;

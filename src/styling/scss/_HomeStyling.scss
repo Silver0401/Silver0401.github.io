@@ -21,13 +21,14 @@
 #HomePage {
   overflow: hidden;
   @include alignCenter();
+  flex-direction: row;
 
   .HomeLogo {
     position: absolute;
-    top: 30px;
-    left: 30px;
-    width: 80px;
-    height: 50px;
+    top: clamp(20px, 2vw, 30px);
+    left: clamp(20px, 2vw, 30px);
+    width: clamp(50px, 5vw, 80px);
+    height: clamp(35px, 5vw, 50px);
 
     svg {
       width: 100%;
@@ -42,10 +43,7 @@
   }
 
   .HLeftBox {
-    position: absolute;
-    left: 0;
-    top: 0;
-    grid-area: LeftBox;
+    position: relative;
     width: 45%;
     height: 100%;
     @include alignCenter();
@@ -56,7 +54,7 @@
     .TitlesBox {
       position: relative;
       width: 90%;
-      height: 40%;
+      height: 55%;
       @include alignCenter();
       flex-direction: column;
       justify-content: space-around;
@@ -69,14 +67,14 @@
       }
 
       h1 {
-        font-size: 5em;
+        font-size: clamp(3em, 10vw, 5em);
       }
       h2 {
-        font-size: 1.5em;
+        font-size: clamp(0.9em, 2vw, 1.5em);
         // background-color: lightskyblue;
       }
       p {
-        font-size: 1.5em;
+        font-size: clamp(0.9em, 2vw, 1.5em);
       }
 
       .changingText {
@@ -86,13 +84,13 @@
         @include alignCenter();
         align-items: center;
         border: 2px solid var(--SiteColor3);
-        border-top: 2px solid transparent;
-        border-left: 0px solid transparent;
-        border-right: 0px solid transparent;
-        border-radius: 20px;
+        border-top: 2px solid var(--SiteColor3);
+        border-left: 2px solid transparent;
+        border-right: 2px solid transparent;
+        border-radius: 10px;
 
         h3 {
-          font-size: 1.4em;
+          font-size: clamp(0.9em, 2vw, 1.4em);
           position: absolute;
 
           &:nth-child(2),
@@ -121,18 +119,16 @@
   }
 
   .HRightBox {
-    position: absolute;
-    right: 0;
-    top: 0;
-    grid-area: RightBox;
+    position: relative;
     width: 55%;
     height: 100%;
     @include alignCenter();
+    // background-color: lightgreen;
 
     .outerCircle {
       position: relative;
-      width: 650px;
-      height: 650px;
+      width: clamp(300px, 50vw, 650px);
+      height: clamp(300px, 50vw, 650px);
       border-radius: 50%;
       @include alignCenter();
       background-color: transparent;
@@ -146,7 +142,6 @@
         border: 1px solid var(--SiteColor3);
         border-radius: 50%;
         background-color: transparent;
-        cursor: pointer;
 
         .lottieBox {
           position: absolute;
@@ -170,17 +165,17 @@
           transition: opacity 500ms;
         }
 
-        &:hover {
-          h2 {
-            opacity: 1;
-            transition: opacity 500ms;
-          }
+        // &:hover {
+        //   h2 {
+        //     opacity: 1;
+        //     transition: opacity 500ms;
+        //   }
 
-          .lottieBox {
-            opacity: 0;
-            transition: opacity 500ms;
-          }
-        }
+        //   .lottieBox {
+        //     opacity: 0;
+        //     transition: opacity 500ms;
+        //   }
+        // }
       }
 
       .innerHiddenCircle {
@@ -226,7 +221,6 @@
             width: 12%;
             height: 12%;
             border-radius: 50%;
-            cursor: none;
             @include alignCenter();
 
             svg {

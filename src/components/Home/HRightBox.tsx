@@ -17,7 +17,6 @@ const LottieAnimation = () => {
 };
 
 const HRightBox: React.FC = () => {
-  const [transversalData, setTransversalData] = useContext(ChosenDataContext);
   const { t } = useTranslation();
 
   const CreateCircle = (className: string, CElement: string) => {
@@ -106,24 +105,11 @@ const HRightBox: React.FC = () => {
           </h2>
         </div>
 
-        <div
-          className="innerCircle"
-          onClick={() => {
-            if (transversalData.KnowMeButtonClicked) {
-              console.log("alredy clicked");
-            } else {
-              console.log("animInit");
-              setTransversalData({
-                ...transversalData,
-                KnowMeButtonClicked: true,
-              });
-            }
-          }}
-        >
+        <div className="innerCircle">
           <div className="lottieBox">
             <LottieAnimation />
           </div>
-          <h2>{t("HomeRight.KnowMeButton")}</h2>
+          {/* <h2>{t("HomeRight.KnowMeButton")}</h2> */}
         </div>
 
         <div className="CirclesBoxBox">

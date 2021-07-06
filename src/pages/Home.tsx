@@ -41,7 +41,7 @@ const Home: React.FC = () => {
   if (transversalData.KnowMeButtonClicked) {
     setTimeout(() => {
       History.push("/About");
-    }, 3500);
+    }, 2250);
 
     const tl = anime.timeline({
       easing: "easeOutQuad",
@@ -58,20 +58,21 @@ const Home: React.FC = () => {
         targets: ".HLeftBox",
         duration: 500,
         width: "0%",
-        translateX: "-300px",
+        height: "0px",
+        translateX: "-500px",
         easing: "linear",
       },
       "+=100"
     );
-    tl.add({
-      targets: ".HRightBox",
-      duration: 1000,
-      width: "100%",
-    });
+    // tl.add({
+    //   targets: ".HRightBox",
+    //   duration: 1000,
+    //   width: "100%",
+    // });
     tl.add({
       targets: ".innerCircle",
       scale: [1, 0.1],
-      opacity: [1, 0],
+      opacity: 0,
       rotate: "-460deg",
       duration: 1000,
     });
