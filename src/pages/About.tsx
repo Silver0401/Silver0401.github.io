@@ -91,6 +91,13 @@ export const About: React.FC = () => {
     });
   }, [transversalData.section]);
 
+  useEffect(() => {
+    // window.onload = () => {
+    window.scrollTo(0, 1);
+    console.log("about positioning");
+    // };
+  }, []);
+
   return (
     <motion.div
       id="AboutPage"
