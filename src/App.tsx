@@ -58,11 +58,12 @@ const App: React.FC = () => {
       MoveLoader();
     }, 3000);
 
-    setTimeout(() => {
-      console.log("Positioning page");
-      window.scrollTo(0, 0);
-    }, 4000);
-    // };
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        console.log("Positioning page");
+        window.scrollTo(0, 1);
+      }, 4000);
+    });
   }, []);
 
   return (
