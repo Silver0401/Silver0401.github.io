@@ -22,20 +22,19 @@
     #AboutPage {
       #InitSection {
         .arrowText {
-          left: 60%;
+          left: 65%;
           top: 80%;
         }
 
         .arrowLottieBox {
-          right: 45%;
+          right: 40%;
           top: 85%;
           transform: rotateY(180deg) rotateZ(-160deg);
         }
 
         .buttonsBox {
-          inset: 0;
-          top: 50px;
-          left: 50%;
+          top: 0px;
+          left: 40%;
         }
       }
     }
@@ -186,6 +185,7 @@
         .edXpBar {
           width: 100%;
           height: 40%;
+          align-items: flex-end;
 
           .bgRectangle {
             width: 85%;
@@ -216,6 +216,10 @@
         .modelingLeftBox {
           width: 100%;
           height: 50%;
+
+          .modelDescription {
+            display: none;
+          }
         }
         .modelingRightBox {
           width: 100%;
@@ -322,11 +326,28 @@
               height: 60%;
 
               p {
-                padding: 0px 12%;
+                width: 56%;
               }
             }
           }
         }
+      }
+    }
+
+    #ContactPage {
+      .CLeftBox {
+        form {
+          span {
+            .submitButton {
+              margin-right: auto;
+              margin-left: 5%;
+            }
+          }
+        }
+      }
+
+      .CRightBox {
+        justify-content: space-between;
       }
     }
   }

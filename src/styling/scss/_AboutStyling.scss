@@ -13,7 +13,8 @@
     overflow: hidden;
 
     h1 {
-      font-size: clamp(1.5em, 4vw, 3em);
+      font-size: clamp(1.2em, 4vw, 3em);
+      padding: 5%;
     }
   }
 
@@ -52,8 +53,8 @@
 
     .arrowLottieBox {
       position: absolute;
-      width: clamp(130px, 2vw, 200px);
-      height: clamp(70px, 2vw, 100px);
+      width: clamp(110px, 2vw, 200px);
+      height: clamp(65px, 2vw, 100px);
       top: 200px;
       right: 5px;
       transform: rotateY(180deg) rotateZ(-60deg);
@@ -65,8 +66,8 @@
 
     .outerCircle {
       position: relative;
-      width: clamp(300px, 50vw, 650px);
-      height: clamp(300px, 50vw, 650px);
+      width: clamp(270px, 50vw, 650px);
+      height: clamp(270px, 50vw, 650px);
       border-radius: 50%;
       @include alignCenter();
       background-color: transparent;
@@ -291,7 +292,7 @@
             height: 20px;
           }
           label {
-            font-size: clamp(1em, 2vw, 1.5em);
+            font-size: clamp(0.7em, 2vw, 1.5em);
             font-weight: bolder;
             color: var(--SiteColor3);
           }
@@ -468,7 +469,7 @@
       //   font-size: 3em;
       // }
       p {
-        font-size: clamp(0.9em, 2vw, 1.2em);
+        font-size: clamp(0.57em, 2vw, 1.2em);
         padding: 0px 10%;
       }
     }
@@ -658,7 +659,7 @@
 
             &:nth-child(1) {
               text-align: center;
-              font-size: clamp(0.9em, 2vw, 1.6em);
+              font-size: clamp(0.8em, 2vw, 1.6em);
             }
             &:nth-child(2) {
               height: 10%;
@@ -680,7 +681,7 @@
             &:nth-child(3) {
               height: 50%;
               text-align: justify;
-              font-size: clamp(0.7em, 2vw, 1em);
+              font-size: clamp(0.5em, 2vw, 1em);
             }
           }
 
@@ -931,7 +932,7 @@
           text-align: center;
           font-weight: bolder;
           color: var(--SiteColor3);
-          font-size: clamp(0.6rem, 2vw, 1rem);
+          font-size: clamp(0.5rem, 2vw, 1rem);
         }
       }
     }
@@ -1013,7 +1014,7 @@
 
           h4 {
             font-weight: bolder;
-            font-size: clamp(0.7em, 2vw, 1em);
+            font-size: clamp(0.5em, 2vw, 1em);
             @include alignCenter();
             align-items: flex-start;
             height: 60%;
@@ -1021,7 +1022,7 @@
           }
           p {
             font-weight: bolder;
-            font-size: clamp(0.6em, 2vw, 0.8em);
+            font-size: clamp(0.4em, 2vw, 0.8em);
             @include alignCenter();
             align-items: flex-start;
             height: 40%;
@@ -1094,7 +1095,7 @@
       }
 
       p {
-        font-size: clamp(0.7em, 2vw, 1.3em);
+        font-size: clamp(0.5em, 2vw, 1.3em);
         font-weight: bolder;
         color: white;
         width: 80%;
@@ -1169,13 +1170,14 @@
 
           h4 {
             position: absolute;
-            width: 100%;
+            width: 70%;
             height: 30%;
             font-weight: bolder;
             color: var(--SiteColor1);
             -webkit-text-stroke: 0.5px var(--SiteColor1);
-            font-size: clamp(0.9em, 2vw, 1.5em);
+            font-size: clamp(0.7em, 2vw, 1.5em);
             @include alignCenter();
+            // background: lightcoral;
             // text-decoration: underline #0ee9da;
             opacity: 1;
             transition: opacity 500ms;
@@ -1183,13 +1185,14 @@
           }
           p {
             pointer-events: none;
-            width: 80%;
-            height: 70%;
+            width: 75%;
+            height: 80%;
+            margin: 0px 5%;
             font-weight: bolder;
             color: var(--SiteColor3);
-            font-size: clamp(0.5em, 2vw, 0.9em);
+            font-size: clamp(0.45em, 2vw, 0.9em);
             @include alignCenter();
-            padding: 0px 5%;
+            // background: lightcoral;
             transition: font-size 1s;
           }
         }
@@ -1290,8 +1293,8 @@
         }
         .logoContainer {
           position: relative;
-          width: clamp(90px, 15vw, 150px);
-          height: clamp(90px, 15vw, 150px);
+          width: clamp(70px, 15vw, 150px);
+          height: clamp(70px, 15vw, 150px);
           pointer-events: none;
           background-color: var(--SiteColor3);
           border-radius: 50%;
@@ -1445,7 +1448,8 @@
           font-weight: lighter;
           color: var(--SiteColor3);
           text-align: center;
-          font-size: clamp(0.5em, 2vw, 0.7em);
+          font-size: clamp(0.2em, 2vw, 0.7em);
+          opacity: 0;
         }
       }
     }
@@ -1472,7 +1476,7 @@
         height: 25%;
         @include alignCenter();
         padding: 0px 5%;
-        font-size: clamp(0.6em, 2vw, 1em);
+        font-size: clamp(0.47em, 2vw, 1em);
       }
       ul {
         width: 60%;

@@ -7,13 +7,13 @@
 
 @mixin MainButtonStyling {
   position: relative;
-  width: clamp(150px, 20vw, 200px);
-  height: clamp(50px, 10vw, 70px);
+  width: clamp(125px, 20vw, 200px);
+  height: clamp(45px, 10vw, 70px);
   border: 2px solid var(--SiteColor3);
   color: var(--SiteColor3);
   font-weight: bolder;
   border-radius: 5px;
-  font-size: clamp(0.8em, 2vw, 1.2em);
+  font-size: clamp(0.7em, 2vw, 1.2em);
   transition: -webkit-text-stroke 500ms, background-color 500ms, color 500ms,
     box-shadow 500ms;
   box-shadow: 0px 0px 0px transparent;

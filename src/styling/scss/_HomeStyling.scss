@@ -67,14 +67,14 @@
       }
 
       h1 {
-        font-size: clamp(3em, 10vw, 5em);
+        font-size: clamp(2.5em, 10vw, 5em);
       }
       h2 {
-        font-size: clamp(0.9em, 2vw, 1.5em);
+        font-size: clamp(0.7em, 2vw, 1.5em);
         // background-color: lightskyblue;
       }
       p {
-        font-size: clamp(0.9em, 2vw, 1.5em);
+        font-size: clamp(0.7em, 2vw, 1.5em);
       }
 
       .changingText {
@@ -90,7 +90,7 @@
         border-radius: 10px;
 
         h3 {
-          font-size: clamp(0.9em, 2vw, 1.4em);
+          font-size: clamp(0.7em, 2vw, 1.4em);
           position: absolute;
 
           &:nth-child(2),
@@ -127,8 +127,8 @@
 
     .outerCircle {
       position: relative;
-      width: clamp(250px, 50vw, 650px);
-      height: clamp(250px, 50vw, 650px);
+      width: clamp(200px, 50vw, 650px);
+      height: clamp(200px, 50vw, 650px);
       border-radius: 50%;
       @include alignCenter();
       background-color: transparent;

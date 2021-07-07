@@ -83,7 +83,6 @@ const CLeftBox: React.FC = () => {
 
           <Button
             className="submitButton"
-            size="lg"
             isLoading={isButtonLoading}
             type="submit"
           >
