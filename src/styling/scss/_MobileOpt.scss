@@ -120,6 +120,12 @@
 @media (max-width: 950px) {
   .App {
     #AboutPage {
+      scroll-snap-type: none;
+
+      section {
+        scroll-snap-align: start;
+      }
+
       #CodeSection {
         flex-direction: column;
 
