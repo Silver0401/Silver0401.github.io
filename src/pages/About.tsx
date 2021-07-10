@@ -99,16 +99,16 @@ export const About: React.FC = () => {
       animate={"DesiredPosition"}
       exit={"ExitPosition"}
     >
-      <div className="TopArrowCircle">
-        <div
-          onClick={() => {
-            setTransversalData({
-              ...transversalData,
-              section: "InitSection",
-            });
-          }}
-          className="arrow"
-        ></div>
+      <div
+        onClick={() => {
+          setTransversalData({
+            ...transversalData,
+            section: "InitSection",
+          });
+        }}
+        className="TopArrowCircle"
+      >
+        <div className="arrow"></div>
       </div>
 
       <InitSection sectionRef={InitRef} />
