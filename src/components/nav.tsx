@@ -135,11 +135,13 @@ const Nav: React.FC<props> = ({ siteStructure }) => {
       root.style.setProperty("--SiteColor2", "#101010");
       root.style.setProperty("--SiteColor3", "#ffffff");
       root.style.setProperty("--DarkLightColor", "#aa5af9");
+      root.style.setProperty("--SwitchBlue", "#2cedd0");
     } else {
       root.style.setProperty("--SiteColor1", "#ffffff");
       root.style.setProperty("--SiteColor2", "#e1dbdb");
       root.style.setProperty("--SiteColor3", "#000000");
       root.style.setProperty("--DarkLightColor", "#f2f264");
+      root.style.setProperty("--SwitchBlue", "#0d8771");
     }
   });
 
@@ -222,7 +224,7 @@ const Nav: React.FC<props> = ({ siteStructure }) => {
           <li>
             <Link onClick={() => toggleNav(false)} to="/Contact">
               {Icon("Contact")}
-              <p>Contact</p>
+              <p>{t("Nav.Contact")}</p>
             </Link>
           </li>
           <li>

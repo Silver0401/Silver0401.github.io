@@ -9,172 +9,172 @@ const HLeftBox: React.FC = () => {
   const { t } = useTranslation();
   const History = useHistory();
 
-  useEffect(() => {
-    const tl = anime.timeline({
-      loop: true,
-      easing: "linear",
-    });
+  // useEffect(() => {
+  //   const tl = anime.timeline({
+  //     loop: true,
+  //     easing: "linear",
+  //   });
 
-    tl.add({
-      delay: 1000,
-      targets: ".changingText",
-      duration: 1000,
-      rotateX: ["0deg", "360deg"],
-      opacity: [1, 0, 1],
-    });
-    tl.add(
-      {
-        targets: ["#h31", "#h33", "#h34", "#h35", "#h36"],
-        duration: 500,
-        opacity: 0,
-      },
-      "-=500"
-    );
-    tl.add(
-      {
-        targets: "#h32",
-        duration: 500,
-        opacity: 1,
-      },
-      "-=500"
-    );
-    // ---------------------------------------------------
-    tl.add(
-      {
-        targets: ".changingText",
-        duration: 1000,
-        rotateX: ["0deg", "360deg"],
-        opacity: [1, 0, 1],
-      },
-      "+=1000"
-    );
+  //   tl.add({
+  //     delay: 1000,
+  //     targets: ".changingText",
+  //     duration: 1000,
+  //     rotateX: ["0deg", "360deg"],
+  //     opacity: [1, 0, 1],
+  //   });
+  //   tl.add(
+  //     {
+  //       targets: ["#h31", "#h33", "#h34", "#h35", "#h36"],
+  //       duration: 500,
+  //       opacity: 0,
+  //     },
+  //     "-=500"
+  //   );
+  //   tl.add(
+  //     {
+  //       targets: "#h32",
+  //       duration: 500,
+  //       opacity: 1,
+  //     },
+  //     "-=500"
+  //   );
+  //   // ---------------------------------------------------
+  //   tl.add(
+  //     {
+  //       targets: ".changingText",
+  //       duration: 1000,
+  //       rotateX: ["0deg", "360deg"],
+  //       opacity: [1, 0, 1],
+  //     },
+  //     "+=1000"
+  //   );
 
-    tl.add(
-      {
-        targets: ["#h31", "#h32", "#h34", "#h35"],
-        duration: 500,
-        opacity: 0,
-      },
-      "-=500"
-    );
-    tl.add(
-      {
-        targets: "#h33",
-        duration: 500,
-        opacity: 1,
-      },
-      "-=500"
-    );
-    // ---------------------------------------------------
-    tl.add(
-      {
-        targets: ".changingText",
-        duration: 1000,
-        rotateX: ["0deg", "360deg"],
-        opacity: [1, 0, 1],
-      },
-      "+=1000"
-    );
+  //   tl.add(
+  //     {
+  //       targets: ["#h31", "#h32", "#h34", "#h35"],
+  //       duration: 500,
+  //       opacity: 0,
+  //     },
+  //     "-=500"
+  //   );
+  //   tl.add(
+  //     {
+  //       targets: "#h33",
+  //       duration: 500,
+  //       opacity: 1,
+  //     },
+  //     "-=500"
+  //   );
+  //   // ---------------------------------------------------
+  //   tl.add(
+  //     {
+  //       targets: ".changingText",
+  //       duration: 1000,
+  //       rotateX: ["0deg", "360deg"],
+  //       opacity: [1, 0, 1],
+  //     },
+  //     "+=1000"
+  //   );
 
-    tl.add(
-      {
-        targets: ["#h31", "#h32", "#h33", "#h35"],
-        duration: 500,
-        opacity: 0,
-      },
-      "-=500"
-    );
-    tl.add(
-      {
-        targets: "#h34",
-        duration: 500,
-        opacity: 1,
-      },
-      "-=500"
-    );
-    // ---------------------------------------------------
-    tl.add(
-      {
-        targets: ".changingText",
-        duration: 1000,
-        rotateX: ["0deg", "360deg"],
-        opacity: [1, 0, 1],
-      },
-      "+=1000"
-    );
+  //   tl.add(
+  //     {
+  //       targets: ["#h31", "#h32", "#h33", "#h35"],
+  //       duration: 500,
+  //       opacity: 0,
+  //     },
+  //     "-=500"
+  //   );
+  //   tl.add(
+  //     {
+  //       targets: "#h34",
+  //       duration: 500,
+  //       opacity: 1,
+  //     },
+  //     "-=500"
+  //   );
+  //   // ---------------------------------------------------
+  //   tl.add(
+  //     {
+  //       targets: ".changingText",
+  //       duration: 1000,
+  //       rotateX: ["0deg", "360deg"],
+  //       opacity: [1, 0, 1],
+  //     },
+  //     "+=1000"
+  //   );
 
-    tl.add(
-      {
-        targets: ["#h31", "#h32", "#h33", "#h34"],
-        duration: 500,
-        opacity: 0,
-      },
-      "-=500"
-    );
-    tl.add(
-      {
-        targets: "#h35",
-        duration: 500,
-        opacity: 1,
-      },
-      "-=500"
-    );
-    // ---------------------------------------------------
-    tl.add(
-      {
-        targets: ".changingText",
-        duration: 1000,
-        rotateX: ["0deg", "360deg"],
-        opacity: [1, 0, 1],
-      },
-      "+=1000"
-    );
+  //   tl.add(
+  //     {
+  //       targets: ["#h31", "#h32", "#h33", "#h34"],
+  //       duration: 500,
+  //       opacity: 0,
+  //     },
+  //     "-=500"
+  //   );
+  //   tl.add(
+  //     {
+  //       targets: "#h35",
+  //       duration: 500,
+  //       opacity: 1,
+  //     },
+  //     "-=500"
+  //   );
+  //   // ---------------------------------------------------
+  //   tl.add(
+  //     {
+  //       targets: ".changingText",
+  //       duration: 1000,
+  //       rotateX: ["0deg", "360deg"],
+  //       opacity: [1, 0, 1],
+  //     },
+  //     "+=1000"
+  //   );
 
-    tl.add(
-      {
-        targets: ["#h31", "#h32", "#h33", "#h34", "#h35"],
-        duration: 500,
-        opacity: 0,
-      },
-      "-=500"
-    );
-    tl.add(
-      {
-        targets: "#h36",
-        duration: 500,
-        opacity: 1,
-      },
-      "-=500"
-    );
-    // ---------------------------------------------------
-    tl.add(
-      {
-        targets: ".changingText",
-        duration: 1000,
-        rotateX: ["0deg", "360deg"],
-        opacity: [1, 0, 1],
-      },
-      "+=1000"
-    );
+  //   tl.add(
+  //     {
+  //       targets: ["#h31", "#h32", "#h33", "#h34", "#h35"],
+  //       duration: 500,
+  //       opacity: 0,
+  //     },
+  //     "-=500"
+  //   );
+  //   tl.add(
+  //     {
+  //       targets: "#h36",
+  //       duration: 500,
+  //       opacity: 1,
+  //     },
+  //     "-=500"
+  //   );
+  //   // ---------------------------------------------------
+  //   tl.add(
+  //     {
+  //       targets: ".changingText",
+  //       duration: 1000,
+  //       rotateX: ["0deg", "360deg"],
+  //       opacity: [1, 0, 1],
+  //     },
+  //     "+=1000"
+  //   );
 
-    tl.add(
-      {
-        targets: ["#h35", "#h32", "#h33", "#h34", "#h36"],
-        duration: 500,
-        opacity: 0,
-      },
-      "-=500"
-    );
-    tl.add(
-      {
-        targets: "#h31",
-        duration: 500,
-        opacity: 1,
-      },
-      "-=500"
-    );
-    // ---------------------------------------------------
-  }, []);
+  //   tl.add(
+  //     {
+  //       targets: ["#h35", "#h32", "#h33", "#h34", "#h36"],
+  //       duration: 500,
+  //       opacity: 0,
+  //     },
+  //     "-=500"
+  //   );
+  //   tl.add(
+  //     {
+  //       targets: "#h31",
+  //       duration: 500,
+  //       opacity: 1,
+  //     },
+  //     "-=500"
+  //   );
+  //   // ---------------------------------------------------
+  // }, []);
 
   return (
     <div className="HLeftBox">
@@ -189,6 +189,9 @@ const HLeftBox: React.FC = () => {
           <h3 id="h34">{t("HomeLeft.PolyHeader4")}</h3>
           <h3 id="h35">{t("HomeLeft.PolyHeader5")}</h3>
           <h3 id="h36">{t("HomeLeft.PolyHeader6")}</h3>
+
+          <span id="blinker" />
+          <span id="space" />
         </div>
       </div>
 
