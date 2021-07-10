@@ -32,7 +32,7 @@ const InitSection: React.FC<props> = ({ sectionRef }) => {
   useEffect(() => {
     rotatingAnimRef.current = anime({
       targets: ".CirclesBox",
-      duration: 10000,
+      duration: 20000,
       rotateZ: "360deg",
       loop: true,
       easing: "linear",
@@ -141,23 +141,19 @@ const InitSection: React.FC<props> = ({ sectionRef }) => {
           />
         </svg>
       </div>
-
+      {/* 
       <h4 className="arrowText">{t("InitSection.ArrowText")}</h4>
 
       <div className="arrowLottieBox">
         <ArrowLottieAnimation />
-      </div>
+      </div> */}
 
       <div className="outerCircle">
         <div className="innerHiddenCircle">
-          <h2>
-            {t("InitSection.CircleTitle")}
-          </h2>
+          <h2>{t("InitSection.CircleTitle")}</h2>
         </div>
 
-        <div
-          className="CirclesBoxBox"
-        >
+        <div className="CirclesBoxBox">
           <div className="CirclesBox">
             {CreateCircle("tcircle", "Med")}
             {CreateCircle("bcircle", "Modeling")}

@@ -20,23 +20,23 @@
 @media (max-width: 600px) {
   .App {
     #AboutPage {
-      #InitSection {
-        .arrowText {
-          left: 65%;
-          top: 80%;
-        }
+      // #InitSection {
+      //   .arrowText {
+      //     left: 65%;
+      //     top: 80%;
+      //   }
 
-        .arrowLottieBox {
-          right: 40%;
-          top: 85%;
-          transform: rotateY(180deg) rotateZ(-160deg);
-        }
+      //   .arrowLottieBox {
+      //     right: 40%;
+      //     top: 85%;
+      //     transform: rotateY(180deg) rotateZ(-160deg);
+      //   }
 
-        .buttonsBox {
-          top: 0px;
-          left: 40%;
-        }
-      }
+      //   .buttonsBox {
+      //     top: 0px;
+      //     left: 40%;
+      //   }
+      // }
     }
 
     .NavBar {

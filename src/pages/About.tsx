@@ -28,23 +28,23 @@ export const About: React.FC = () => {
   const MotionTransitionVariants = {
     initPosition: {
       opacity: 0,
-      transform: transversalData.KnowMeButtonClicked
-        ? "translateX(0%)"
-        : "translateX(-100%)",
+      // transform: transversalData.KnowMeButtonClicked
+      //   ? "translateX(0%)"
+      //   : "translateX(-100%)",
       transition: {
         duration: transversalData.KnowMeButtonClicked ? 0.5 : 0.7,
       },
     },
     DesiredPosition: {
       opacity: 1,
-      transform: "translateX(0%)",
+      // transform: "translateX(0%)",
       transition: {
         duration: 0.7,
       },
     },
     ExitPosition: {
       opacity: 0,
-      transform: "translateY(100%)",
+      // transform: "translateY(100%)",
       transition: {
         duration: 0.7,
       },
@@ -91,13 +91,6 @@ export const About: React.FC = () => {
     });
   }, [transversalData.section]);
 
-  useEffect(() => {
-    // window.onload = () => {
-    window.scrollTo(0, 1);
-    console.log("about positioning");
-    // };
-  }, []);
-
   return (
     <motion.div
       id="AboutPage"
@@ -106,6 +99,18 @@ export const About: React.FC = () => {
       animate={"DesiredPosition"}
       exit={"ExitPosition"}
     >
+      <div className="TopArrowCircle">
+        <div
+          onClick={() => {
+            setTransversalData({
+              ...transversalData,
+              section: "InitSection",
+            });
+          }}
+          className="arrow"
+        ></div>
+      </div>
+
       <InitSection sectionRef={InitRef} />
       <CodeSection sectionRef={CodeRef} />
       <MedSection sectionRef={MedRef} />

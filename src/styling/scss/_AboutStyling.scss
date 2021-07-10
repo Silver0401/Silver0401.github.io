@@ -1,4 +1,5 @@
 #AboutPage {
+  position: relative;
   overflow-x: hidden;
   overflow-y: auto;
   scroll-behavior: smooth;
@@ -10,7 +11,8 @@
     width: 100%;
     height: 100%;
     scroll-snap-align: start;
-    overflow: scroll;
+    overflow: hidden;
+    z-index: 0;
 
     h1 {
       font-size: clamp(1.2em, 4vw, 3em);
@@ -225,9 +227,9 @@
 
     .buttonsBox {
       position: absolute;
-      left: 50px;
-      bottom: 50px;
-      height: 100px;
+      left: 5%;
+      bottom: 5%;
+      height: clamp(50px, 5vw, 100px);
       width: 200px;
       @include alignCenter();
 
@@ -886,7 +888,7 @@
         height: 60%;
         @include alignCenter();
         border-radius: 5px;
-        transform: translate(0%, 0%);
+        // transform: translate(0%, 0%);
         // background-color: lightyellow;
 
         .imgBox {
@@ -1503,6 +1505,44 @@
           color: var(--SiteColor1);
           -webkit-text-stroke: 0.5px var(--SiteColor1);
         }
+      }
+    }
+  }
+
+  .TopArrowCircle {
+    position: fixed;
+    top: 8%;
+    right: 10%;
+    width: clamp(40px, 4vw, 60px);
+    height: clamp(40px, 4vw, 60px);
+    border-radius: 50%;
+    background-color: var(--SiteColor3);
+    @include alignCenter();
+    z-index: 1;
+    cursor: pointer;
+    border: 2px solid var(--SwitchBlue);
+    transition: background-color 500ms;
+
+    .arrow {
+      margin-top: 10%;
+      position: absolute;
+      border: 1px solid var(--SiteColor1);
+      border-width: 0 7px 7px 0;
+      display: inline-block;
+      padding: 7px;
+      transform: rotateZ(-135deg);
+      transition: border 500ms;
+    }
+
+    &:hover {
+      background-color: var(--SiteColor1);
+      transition: background-color 500ms;
+      .arrow {
+        border: 1px solid var(--SiteColor3);
+        border-width: 0 7px 7px 0;
+        display: inline-block;
+        padding: 7px;
+        transition: border 500ms;
       }
     }
   }

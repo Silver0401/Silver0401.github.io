@@ -2,9 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap");
 
+@import "./Functions";
 @import "./HomeStyling";
-@import "./NavStyling";
 @import "./AboutStyling";
+@import "./NavStyling";
 @import "./ContactStyling";
 @import "./MobileOpt";
 
@@ -100,7 +101,7 @@ html {
 
 body {
   background-color: var(--SiteColor2);
-  position: fixed;
+  position: relative;
   width: 100%;
   height: 100%;
   // overflow-y: scroll;
@@ -271,11 +272,9 @@ body {
   #HomePage,
   #AboutPage,
   #ContactPage {
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
-    background-color: transparent;
-    transition: background-color 500ms;
   }
 }
 
