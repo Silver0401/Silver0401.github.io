@@ -1,29 +1,15 @@
 import anime from "animejs";
 import React, { useContext, useEffect, useRef, useState } from "react";
-import useLottie from "lottie-react";
 import { useTranslation } from "react-i18next";
 
 import { ChosenDataContext } from "../ChosenData";
-import ArrowLottie from "./../../resources/Icons/arrowLottie.json";
-//
+
 interface props {
   sectionRef: any;
 }
 
-const ArrowLottieAnimation = () => {
-  const options = {
-    animationData: ArrowLottie,
-    loop: false,
-    autoplay: true,
-  };
-
-  const View = useLottie(options);
-
-  return View;
-};
-
 const InitSection: React.FC<props> = ({ sectionRef }) => {
-  const [transversalData, setTransversalData] = useContext(ChosenDataContext);
+  const { transversalData, setTransversalData } = useContext(ChosenDataContext);
   const [playPauseButtonState, setPlayPauseButtonState] =
     useState<boolean>(true);
   const rotatingAnimRef = useRef<any>();
@@ -98,6 +84,7 @@ const InitSection: React.FC<props> = ({ sectionRef }) => {
           setTransversalData({
             ...transversalData,
             section: `${CElement}Section`,
+            scrollTo: true,
           });
         }}
       >
@@ -141,12 +128,6 @@ const InitSection: React.FC<props> = ({ sectionRef }) => {
           />
         </svg>
       </div>
-      {/* 
-      <h4 className="arrowText">{t("InitSection.ArrowText")}</h4>
-
-      <div className="arrowLottieBox">
-        <ArrowLottieAnimation />
-      </div> */}
 
       <div className="outerCircle">
         <div className="innerHiddenCircle">

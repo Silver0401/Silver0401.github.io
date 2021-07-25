@@ -13,83 +13,227 @@ import LangSection from "./../components/About/LangSection";
 import WhySection from "./../components/About/WhySection";
 
 export const About: React.FC = () => {
-  const [transversalData, setTransversalData] = useContext(ChosenDataContext);
+  const { transversalData, setTransversalData } = useContext(ChosenDataContext);
 
-  const InitRef = useRef(null);
-  const CodeRef = useRef(null);
-  const MedRef = useRef(null);
-  const XpRef = useRef(null);
-  const LangRef = useRef(null);
-  const MusicRef = useRef(null);
-  const WhyRef = useRef(null);
-  const ModelingRef = useRef(null);
-  const DesignRef = useRef(null);
+  const InitRef = useRef<HTMLTableSectionElement>(null);
+  const CodeRef = useRef<HTMLTableSectionElement>(null);
+  const MedRef = useRef<HTMLTableSectionElement>(null);
+  const XpRef = useRef<HTMLTableSectionElement>(null);
+  const LangRef = useRef<HTMLTableSectionElement>(null);
+  const MusicRef = useRef<HTMLTableSectionElement>(null);
+  const WhyRef = useRef<HTMLTableSectionElement>(null);
+  const ModelingRef = useRef<HTMLTableSectionElement>(null);
+  const DesignRef = useRef<HTMLTableSectionElement>(null);
 
   const MotionTransitionVariants = {
     initPosition: {
       opacity: 0,
-      // transform: transversalData.KnowMeButtonClicked
-      //   ? "translateX(0%)"
-      //   : "translateX(-100%)",
+      // overflow: "hidden",
       transition: {
-        duration: transversalData.KnowMeButtonClicked ? 0.5 : 0.7,
+        duration: transversalData.knowMeButtonClicked ? 1 : 0.7,
       },
     },
     DesiredPosition: {
       opacity: 1,
-      // transform: "translateX(0%)",
+      // overflow: "scroll",
       transition: {
         duration: 0.7,
       },
     },
     ExitPosition: {
       opacity: 0,
-      // transform: "translateY(100%)",
+      // overflow: "hidden",
       transition: {
         duration: 0.7,
       },
     },
   };
 
-  useEffect(() => {
-    let chosenVariable: any;
+  const ScrollTracker = (data: any) => {
+    const userPosition = data.target.scrollTop;
+    const CodeSectionPosition = CodeRef.current?.offsetTop;
+    const MedSectionPosition = MedRef.current?.offsetTop;
+    const XpSectionPosition = XpRef.current?.offsetTop;
+    const LangSectionPosition = LangRef.current?.offsetTop;
+    const MusicSectionPosition = MusicRef.current?.offsetTop;
+    const WhySectionPosition = WhyRef.current?.offsetTop;
+    const ModelingSectionPosition = ModelingRef.current?.offsetTop;
+    const DesignSectionPosition = DesignRef.current?.offsetTop;
 
-    switch (transversalData.section) {
-      case "MedSection":
-        chosenVariable = MedRef;
-        break;
-      case "CodeSection":
-        chosenVariable = CodeRef;
-        break;
-      case "XpSection":
-        chosenVariable = XpRef;
-        break;
-      case "ModelingSection":
-        chosenVariable = ModelingRef;
-        break;
-      case "DesignSection":
-        chosenVariable = DesignRef;
-        break;
-      case "WhySection":
-        chosenVariable = WhyRef;
-        break;
-      case "MusicSection":
-        chosenVariable = MusicRef;
-        break;
-      case "LangSection":
-        chosenVariable = LangRef;
-        break;
-      default:
-        chosenVariable = InitRef;
-        break;
+    if (userPosition === 0) {
+      setTransversalData({
+        ...transversalData,
+        scrollTo: false,
+      });
     }
 
-    // console.log(`scrolling into ${transversalData.section}`);
-    chosenVariable.current?.scrollIntoView({
-      behavior: "auto",
-      block: "nearest",
-    });
-  }, [transversalData.section]);
+    if (CodeSectionPosition && MedSectionPosition) {
+      if (
+        userPosition > CodeSectionPosition - 1 &&
+        userPosition < MedSectionPosition
+      ) {
+        if (transversalData.section === "CodeSection") {
+        } else {
+          console.log("in Code Section".toUpperCase());
+          setTransversalData({
+            ...transversalData,
+            section: "CodeSection",
+            scrollTo: false,
+          });
+        }
+      }
+    }
+    if (MedSectionPosition && XpSectionPosition) {
+      if (
+        userPosition > MedSectionPosition - 1 &&
+        userPosition < XpSectionPosition
+      ) {
+        if (transversalData.section === "MedSection") {
+        } else {
+          console.log("in Med Section".toUpperCase());
+          setTransversalData({
+            ...transversalData,
+            section: "MedSection",
+            scrollTo: false,
+          });
+        }
+      }
+    }
+    if (XpSectionPosition && ModelingSectionPosition) {
+      if (
+        userPosition > XpSectionPosition - 1 &&
+        userPosition < ModelingSectionPosition
+      ) {
+        if (transversalData.section === "XpSection") {
+        } else {
+          console.log("in Xp Section".toUpperCase());
+          setTransversalData({
+            ...transversalData,
+            section: "XpSection",
+            scrollTo: false,
+          });
+        }
+      }
+    }
+    if (ModelingSectionPosition && DesignSectionPosition) {
+      if (
+        userPosition > ModelingSectionPosition - 1 &&
+        userPosition < DesignSectionPosition
+      ) {
+        if (transversalData.section === "ModelingSection") {
+        } else {
+          console.log("in Modeling Section".toUpperCase());
+          setTransversalData({
+            ...transversalData,
+            section: "ModelingSection",
+            scrollTo: false,
+          });
+        }
+      }
+    }
+    if (DesignSectionPosition && MusicSectionPosition) {
+      if (
+        userPosition > DesignSectionPosition - 1 &&
+        userPosition < MusicSectionPosition
+      ) {
+        if (transversalData.section === "DesignSection") {
+        } else {
+          console.log("in Design Section".toUpperCase());
+          setTransversalData({
+            ...transversalData,
+            section: "DesignSection",
+            scrollTo: false,
+          });
+        }
+      }
+    }
+    if (MusicSectionPosition && LangSectionPosition) {
+      if (
+        userPosition > MusicSectionPosition - 1 &&
+        userPosition < LangSectionPosition
+      ) {
+        if (transversalData.section === "MusicSection") {
+        } else {
+          console.log("in Music Section".toUpperCase());
+          setTransversalData({
+            ...transversalData,
+            section: "MusicSection",
+            scrollTo: false,
+          });
+        }
+      }
+    }
+    if (LangSectionPosition && WhySectionPosition) {
+      if (
+        userPosition > LangSectionPosition - 1 &&
+        userPosition < WhySectionPosition
+      ) {
+        if (transversalData.section === "LangSection") {
+        } else {
+          console.log("in Lang Section".toUpperCase());
+          setTransversalData({
+            ...transversalData,
+            section: "LangSection",
+            scrollTo: false,
+          });
+        }
+      }
+    }
+    if (WhySectionPosition) {
+      if (userPosition > WhySectionPosition - 1) {
+        if (transversalData.section === "WhySection") {
+        } else {
+          console.log("in Why Section".toUpperCase());
+          setTransversalData({
+            ...transversalData,
+            section: "WhySection",
+            scrollTo: false,
+          });
+        }
+      }
+    }
+  };
+
+  useEffect(() => {
+    if (transversalData.scrollTo) {
+      let chosenVariable: any;
+
+      switch (transversalData.section) {
+        case "MedSection":
+          chosenVariable = MedRef;
+          break;
+        case "InitSection":
+          chosenVariable = InitRef;
+          break;
+        case "CodeSection":
+          chosenVariable = CodeRef;
+          break;
+        case "XpSection":
+          chosenVariable = XpRef;
+          break;
+        case "ModelingSection":
+          chosenVariable = ModelingRef;
+          break;
+        case "DesignSection":
+          chosenVariable = DesignRef;
+          break;
+        case "WhySection":
+          chosenVariable = WhyRef;
+          break;
+        case "MusicSection":
+          chosenVariable = MusicRef;
+          break;
+        case "LangSection":
+          chosenVariable = LangRef;
+          break;
+      }
+
+      chosenVariable.current?.scrollIntoView({
+        behavior: "auto",
+        block: "nearest",
+      });
+    }
+  }, [transversalData.scrollTo]);
 
   return (
     <motion.div
@@ -98,12 +242,14 @@ export const About: React.FC = () => {
       initial={"initPosition"}
       animate={"DesiredPosition"}
       exit={"ExitPosition"}
+      onScroll={(e) => ScrollTracker(e)}
     >
       <div
         onClick={() => {
           setTransversalData({
             ...transversalData,
             section: "InitSection",
+            scrollTo: true,
           });
         }}
         className="TopArrowCircle"

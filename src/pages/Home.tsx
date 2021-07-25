@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { motion } from "framer-motion";
 import anime from "animejs";
 import { ChosenDataContext } from "./../components/ChosenData";
@@ -9,7 +9,7 @@ import HRightBox from "./../components/Home/HRightBox";
 import HLeftBox from "./../components/Home/HLeftBox";
 
 const Home: React.FC = () => {
-  const [transversalData, setTransversalData] = useContext(ChosenDataContext);
+  const { transversalData } = useContext(ChosenDataContext);
   const History = useHistory();
 
   const MotionTransitionVariants = {
@@ -29,54 +29,51 @@ const Home: React.FC = () => {
     },
     ExitPosition: {
       opacity: 0,
-      transform: transversalData.KnowMeButtonClicked
+      transform: transversalData.knowMeButtonClicked
         ? "translateY(0%)"
         : "translateY(-100%)",
       transition: {
-        duration: transversalData.KnowMeButtonClicked ? 0.5 : 0.7,
+        duration: transversalData.knowMeButtonClicked ? 0.5 : 0.7,
       },
     },
   };
 
-  if (transversalData.KnowMeButtonClicked) {
-    setTimeout(() => {
-      History.push("/About");
-    }, 2250);
+  useEffect(() => {
+    if (transversalData.knowMeButtonClicked) {
+      setTimeout(() => {
+        History.push("/About");
+      }, 2250);
 
-    const tl = anime.timeline({
-      easing: "easeOutQuad",
-    });
+      const tl = anime.timeline({
+        easing: "easeOutQuad",
+      });
 
-    tl.add({
-      targets: ".HLeftBox",
-      opacity: [1, 0],
-      duration: 1000,
-      easing: "linear",
-    });
-    tl.add(
-      {
+      tl.add({
         targets: ".HLeftBox",
-        duration: 500,
-        width: "0%",
-        height: "0px",
-        translateX: "-500px",
+        opacity: [1, 0],
+        duration: 1000,
         easing: "linear",
-      },
-      "+=100"
-    );
-    // tl.add({
-    //   targets: ".HRightBox",
-    //   duration: 1000,
-    //   width: "100%",
-    // });
-    tl.add({
-      targets: ".innerCircle",
-      scale: [1, 0.1],
-      opacity: 0,
-      rotate: "-460deg",
-      duration: 1000,
-    });
-  }
+      });
+      tl.add(
+        {
+          targets: ".HLeftBox",
+          duration: 500,
+          width: "0%",
+          height: "0px",
+          translateX: "-500px",
+          easing: "linear",
+        },
+        "+=100"
+      );
+      tl.add({
+        targets: ".innerCircle",
+        scale: [1, 0.1],
+        opacity: 0,
+        rotate: "-460deg",
+        duration: 1000,
+      });
+    }
+  }, [transversalData]);
 
   return (
     <motion.div

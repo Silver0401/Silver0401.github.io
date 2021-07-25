@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState } from "react";
 import { Route, Switch, useLocation } from "react-router-dom";
 import anime from "animejs";
 import { AnimatePresence } from "framer-motion";
@@ -58,31 +58,31 @@ const App: React.FC = () => {
       MoveLoader();
     }, 3000);
 
-    window.addEventListener("load", () => {
-      setTimeout(() => {
-        console.log("Positioning page");
-        window.scrollTo(0, 1);
+    // window.addEventListener("load", () => {
+    //   setTimeout(() => {
+    //     console.log("Positioning page");
+    //     window.scrollTo(0, 1);
 
-        function hideAddressBar() {
-          if (!window.location.hash) {
-            if (document.body.clientHeight < window.outerHeight) {
-              document.body.style.height = window.outerHeight + 50 + "px";
-            }
+    //     function hideAddressBar() {
+    //       if (!window.location.hash) {
+    //         if (document.body.clientHeight < window.outerHeight) {
+    //           document.body.style.height = window.outerHeight + 50 + "px";
+    //         }
 
-            setTimeout(function () {
-              window.scrollTo(0, 1);
-            }, 50);
-          }
-        }
+    //         setTimeout(function () {
+    //           window.scrollTo(0, 1);
+    //         }, 50);
+    //       }
+    //     }
 
-        window.addEventListener("load", function () {
-          if (!window.pageYOffset) {
-            hideAddressBar();
-          }
-        });
-        window.addEventListener("orientationchange", hideAddressBar);
-      }, 4000);
-    });
+    //     window.addEventListener("load", function () {
+    //       if (!window.pageYOffset) {
+    //         hideAddressBar();
+    //       }
+    //     });
+    //     window.addEventListener("orientationchange", hideAddressBar);
+    //   }, 4000);
+    // });
   }, []);
 
   return (
@@ -110,18 +110,26 @@ const App: React.FC = () => {
 
             <AnimatePresence exitBeforeEnter>
               <Switch location={Location} key={Location.pathname}>
-                <Route key="HomePage" exact path="/" component={HomePage} />
+                <Route
+                  key="HomePage"
+                  exact
+                  path="/"
+                  component={HomePage}
+                  replace
+                />
                 <Route
                   key="AboutPage"
                   exact
                   path="/About"
                   component={AboutPage}
+                  replace
                 />
                 <Route
                   key="ContactPage"
                   exact
                   path="/Contact"
                   component={ContactPage}
+                  replace
                 />
               </Switch>
             </AnimatePresence>

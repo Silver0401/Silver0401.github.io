@@ -1,4 +1,3 @@
-import anime from "animejs";
 import React from "react";
 import { useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -16,9 +15,14 @@ const WhySection: React.FC<props> = ({ sectionRef }) => {
       <div className="whyLeftBox">
         <h1>{t("WhySection.Title")}</h1>
         <p>
-          {t("WhySection.Text1")}<strong>{t("WhySection.Text2")}</strong>{t("WhySection.Text3")}<strong>{t("WhySection.Text4")}</strong> ---{">"}
+          {t("WhySection.Text1")}
+          <strong>{t("WhySection.Text2")}</strong>
+          {t("WhySection.Text3")}
+          <strong>{t("WhySection.Text4")}</strong> ---{">"}
         </p>
-        <button onClick={() => History.push("/Contact")}>{t("WhySection.Button")}</button>
+        <button onClick={() => History.push("/Contact")}>
+          {t("WhySection.Button")}
+        </button>
       </div>
       <div className="whyRightBox">
         <span>
@@ -36,9 +40,7 @@ const WhySection: React.FC<props> = ({ sectionRef }) => {
           </div>
           <div className="textBox">
             <h4>{t("WhySection.Resilience.Title")}</h4>
-            <p>
-              {t("WhySection.Resilience.Text")}
-            </p>
+            <p>{t("WhySection.Resilience.Text")}</p>
           </div>
         </span>
         <span>
@@ -54,9 +56,7 @@ const WhySection: React.FC<props> = ({ sectionRef }) => {
           </div>
           <div className="textBox">
             <h4>{t("WhySection.Organization.Title")}</h4>
-            <p>
-              {t("WhySection.Organization.Text")}
-            </p>
+            <p>{t("WhySection.Organization.Text")}</p>
           </div>
         </span>
         <span>
@@ -74,9 +74,7 @@ const WhySection: React.FC<props> = ({ sectionRef }) => {
           </div>
           <div className="textBox">
             <h4>{t("WhySection.Teamwork.Title")}</h4>
-            <p>
-              {t("WhySection.Resilience.Text")}
-            </p>
+            <p>{t("WhySection.Resilience.Text")}</p>
           </div>
         </span>
         <span>
@@ -94,9 +92,7 @@ const WhySection: React.FC<props> = ({ sectionRef }) => {
           </div>
           <div className="textBox">
             <h4>{t("WhySection.Leadership.Title")}</h4>
-            <p>
-              {t("WhySection.Leadership.Text")}
-            </p>
+            <p>{t("WhySection.Leadership.Text")}</p>
           </div>
         </span>
         <span>
@@ -112,9 +108,7 @@ const WhySection: React.FC<props> = ({ sectionRef }) => {
           </div>
           <div className="textBox">
             <h4>{t("WhySection.Passion.Title")}</h4>
-            <p>
-              {t("WhySection.Passion.Text")}
-            </p>
+            <p>{t("WhySection.Passion.Text")}</p>
           </div>
         </span>
       </div>

@@ -239,6 +239,12 @@
 
       button {
         @include MainButtonStyling();
+
+        &:nth-child(2) {
+          background-color: var(--SiteColor3);
+          color: var(--SiteColor1);
+          -webkit-text-stroke: 0.5px var(--SiteColor1);
+        }
       }
     }
   }

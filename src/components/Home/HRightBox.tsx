@@ -1,8 +1,6 @@
-import React, { useContext } from "react";
+import React from "react";
 import useLottie from "lottie-react";
 import CubeAnimation from "./../../resources/Icons/cube.json";
-import { ChosenDataContext } from "./../ChosenData";
-import { useTranslation } from "react-i18next";
 
 const LottieAnimation = () => {
   const options = {
@@ -17,8 +15,6 @@ const LottieAnimation = () => {
 };
 
 const HRightBox: React.FC = () => {
-  const { t } = useTranslation();
-
   const CreateCircle = (className: string, CElement: string) => {
     let SelectedSvgPath;
 

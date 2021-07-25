@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 // Logos
@@ -35,7 +35,7 @@ interface props {
 const CodeSection: React.FC<props> = ({ sectionRef }) => {
   const [langInputSatus, setLangInputStatus] = useState<"on" | "off">("on");
   const [softInputSatus, setSoftInputStatus] = useState<"on" | "off">("on");
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   const CreateLangSoftBox = (
     type: "lang" | "soft",
@@ -44,7 +44,7 @@ const CodeSection: React.FC<props> = ({ sectionRef }) => {
     image: string,
     percentage: number
   ) => {
-    if (type == "lang") {
+    if (type === "lang") {
       return (
         <span
           style={
