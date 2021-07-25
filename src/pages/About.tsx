@@ -1,6 +1,7 @@
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { ChosenDataContext } from "../components/ChosenData";
+import smoothScrollIntoView from "smooth-scroll-into-view-if-needed";
 
 import InitSection from "./../components/About/InitSection";
 import CodeSection from "./../components/About/CodeSection";
@@ -14,6 +15,7 @@ import WhySection from "./../components/About/WhySection";
 
 export const About: React.FC = () => {
   const { transversalData, setTransversalData } = useContext(ChosenDataContext);
+  const [currentBrowser, setCurrentBrowser] = useState<string>();
 
   const InitRef = useRef<HTMLTableSectionElement>(null);
   const CodeRef = useRef<HTMLTableSectionElement>(null);
@@ -195,43 +197,76 @@ export const About: React.FC = () => {
   };
 
   useEffect(() => {
+    function detectBrowser() {
+      if (
+        (navigator.userAgent.indexOf("Opera") ||
+          navigator.userAgent.indexOf("OPR")) != -1
+      ) {
+        return "Opera";
+      } else if (navigator.userAgent.indexOf("Chrome") != -1) {
+        return "Chrome";
+      } else if (navigator.userAgent.indexOf("Safari") != -1) {
+        return "Safari";
+      } else if (navigator.userAgent.indexOf("Firefox") != -1) {
+        return "Firefox";
+      } else if (
+        navigator.userAgent.indexOf("MSIE") != -1 ||
+        !!document.DOCUMENT_NODE == true
+      ) {
+        return "IE"; //crap
+      } else {
+        return "Unknown";
+      }
+    }
+
+    setCurrentBrowser(detectBrowser());
+  }, []);
+
+  useEffect(() => {
     if (transversalData.scrollTo) {
       let chosenVariable: any;
+      console.log(currentBrowser);
 
       switch (transversalData.section) {
         case "MedSection":
-          chosenVariable = MedRef;
+          chosenVariable = MedRef.current;
           break;
         case "InitSection":
-          chosenVariable = InitRef;
+          chosenVariable = InitRef.current;
           break;
         case "CodeSection":
-          chosenVariable = CodeRef;
+          chosenVariable = CodeRef.current;
           break;
         case "XpSection":
-          chosenVariable = XpRef;
+          chosenVariable = XpRef.current;
           break;
         case "ModelingSection":
-          chosenVariable = ModelingRef;
+          chosenVariable = ModelingRef.current;
           break;
         case "DesignSection":
-          chosenVariable = DesignRef;
+          chosenVariable = DesignRef.current;
           break;
         case "WhySection":
-          chosenVariable = WhyRef;
+          chosenVariable = WhyRef.current;
           break;
         case "MusicSection":
-          chosenVariable = MusicRef;
+          chosenVariable = MusicRef.current;
           break;
         case "LangSection":
-          chosenVariable = LangRef;
+          chosenVariable = LangRef.current;
           break;
       }
 
-      chosenVariable.current?.scrollIntoView({
-        behavior: "auto",
-        block: "nearest",
-      });
+      if (currentBrowser === "Safari") {
+        console.log("scrolling in safari");
+        smoothScrollIntoView(chosenVariable, { behavior: "smooth" });
+      } else {
+        console.log("scrolling in chrome");
+        chosenVariable.scrollIntoView({
+          behavior: "auto",
+          block: "nearest",
+        });
+      }
     }
   }, [transversalData.scrollTo]);
 

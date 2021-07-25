@@ -206,6 +206,14 @@
           .modelDescription {
             display: none;
           }
+
+          .modelDisplay {
+            .platformContainer {
+              .border {
+                display: none;
+              }
+            }
+          }
         }
         .modelingRightBox {
           width: 100%;

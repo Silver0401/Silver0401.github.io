@@ -1401,7 +1401,7 @@
           @include alignCenter();
 
           .circle {
-            position: relative;
+            position: absolute;
             width: 80%;
             height: 70px;
             border: 2px solid var(--SiteColor3);
@@ -1412,7 +1412,7 @@
           }
           .border {
             position: absolute;
-            margin-top: 50px;
+            top: 60px;
             width: 80%;
             height: 50px;
             border: 10px solid var(--SiteColor3);
