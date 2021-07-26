@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.467bbad2.chunk.css",
-    "main.js": "/static/js/main.c4f5325d.chunk.js",
-    "main.js.map": "/static/js/main.c4f5325d.chunk.js.map",
+    "main.css": "/static/css/main.e4accad5.chunk.css",
+    "main.js": "/static/js/main.1661a756.chunk.js",
+    "main.js.map": "/static/js/main.1661a756.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c0b66507.js",
     "runtime-main.js.map": "/static/js/runtime-main.c0b66507.js.map",
     "static/css/2.e7ef43d6.chunk.css": "/static/css/2.e7ef43d6.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.6da077da.chunk.js.map": "/static/js/3.6da077da.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.e7ef43d6.chunk.css.map": "/static/css/2.e7ef43d6.chunk.css.map",
-    "static/css/main.467bbad2.chunk.css.map": "/static/css/main.467bbad2.chunk.css.map",
+    "static/css/main.e4accad5.chunk.css.map": "/static/css/main.e4accad5.chunk.css.map",
     "static/js/2.a629062a.chunk.js.LICENSE.txt": "/static/js/2.a629062a.chunk.js.LICENSE.txt",
     "static/media/Americana.c6fc47f9.jpeg": "/static/media/Americana.c6fc47f9.jpeg",
     "static/media/Hidalgo.a06b8d5b.jpeg": "/static/media/Hidalgo.a06b8d5b.jpeg",
@@ -81,7 +81,7 @@
     "static/js/runtime-main.c0b66507.js",
     "static/css/2.e7ef43d6.chunk.css",
     "static/js/2.a629062a.chunk.js",
-    "static/css/main.467bbad2.chunk.css",
-    "static/js/main.c4f5325d.chunk.js"
+    "static/css/main.e4accad5.chunk.css",
+    "static/js/main.1661a756.chunk.js"
   ]
 }
