@@ -10,9 +10,35 @@ import AboutPage from "./pages/About";
 import ContactPage from "./pages/Contact";
 import NavBar from "./components/nav";
 
+function useQuery() {
+  return new URLSearchParams(useLocation().search);
+}
+
+// interface props{
+//   name: string | null
+// }
+
+// const Child:React.FC<props>  = ({name}) => {
+
+//   console.log()
+//   return (
+//     <div>
+//       {name ? (
+//         <h3>
+//           The <code>name</code> in the query string is &quot;{name}
+//           &quot;
+//         </h3>
+//       ) : (
+//         <h3>There is no name in the query string</h3>
+//       )}
+//     </div>
+//   );
+// }
+
 const App: React.FC = () => {
   const [siteStructure] = useState<"vertical" | "horizontal">("horizontal");
   const Location = useLocation();
+  let query = useQuery();
 
   useEffect(() => {
     function MoveLoader() {
@@ -53,36 +79,9 @@ const App: React.FC = () => {
       );
     }
 
-    // window.onload = () => {
     setTimeout(() => {
       MoveLoader();
     }, 3000);
-
-    // window.addEventListener("load", () => {
-    //   setTimeout(() => {
-    //     console.log("Positioning page");
-    //     window.scrollTo(0, 1);
-
-    //     function hideAddressBar() {
-    //       if (!window.location.hash) {
-    //         if (document.body.clientHeight < window.outerHeight) {
-    //           document.body.style.height = window.outerHeight + 50 + "px";
-    //         }
-
-    //         setTimeout(function () {
-    //           window.scrollTo(0, 1);
-    //         }, 50);
-    //       }
-    //     }
-
-    //     window.addEventListener("load", function () {
-    //       if (!window.pageYOffset) {
-    //         hideAddressBar();
-    //       }
-    //     });
-    //     window.addEventListener("orientationchange", hideAddressBar);
-    //   }, 4000);
-    // });
   }, []);
 
   return (
@@ -94,7 +93,7 @@ const App: React.FC = () => {
           <div className="AppContainer">
             <HomePage />
 
-            <AboutPage />
+            <AboutPage selected={query.get("selected")} />
 
             <ContactPage />
           </div>
@@ -121,7 +120,9 @@ const App: React.FC = () => {
                   key="AboutPage"
                   exact
                   path="/About"
-                  component={AboutPage}
+                  component={() => (
+                    <AboutPage selected={query.get("selected")} />
+                  )}
                   replace
                 />
                 <Route
@@ -131,6 +132,8 @@ const App: React.FC = () => {
                   component={ContactPage}
                   replace
                 />
+
+                {/* <Child name={query.get("selected")} /> */}
               </Switch>
             </AnimatePresence>
           </div>

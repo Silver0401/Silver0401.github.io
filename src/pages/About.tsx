@@ -13,7 +13,11 @@ import MusicSection from "./../components/About/MusicSection";
 import LangSection from "./../components/About/LangSection";
 import WhySection from "./../components/About/WhySection";
 
-export const About: React.FC = () => {
+interface props {
+  selected: string | null;
+}
+
+export const About: React.FC<props> = ({ selected }) => {
   const { transversalData, setTransversalData } = useContext(ChosenDataContext);
   const [currentBrowser, setCurrentBrowser] = useState<string>();
 
@@ -76,7 +80,6 @@ export const About: React.FC = () => {
       ) {
         if (transversalData.section === "CodeSection") {
         } else {
-          console.log("in Code Section".toUpperCase());
           setTransversalData({
             ...transversalData,
             section: "CodeSection",
@@ -92,7 +95,6 @@ export const About: React.FC = () => {
       ) {
         if (transversalData.section === "MedSection") {
         } else {
-          console.log("in Med Section".toUpperCase());
           setTransversalData({
             ...transversalData,
             section: "MedSection",
@@ -108,7 +110,6 @@ export const About: React.FC = () => {
       ) {
         if (transversalData.section === "XpSection") {
         } else {
-          console.log("in Xp Section".toUpperCase());
           setTransversalData({
             ...transversalData,
             section: "XpSection",
@@ -124,7 +125,6 @@ export const About: React.FC = () => {
       ) {
         if (transversalData.section === "ModelingSection") {
         } else {
-          console.log("in Modeling Section".toUpperCase());
           setTransversalData({
             ...transversalData,
             section: "ModelingSection",
@@ -140,7 +140,6 @@ export const About: React.FC = () => {
       ) {
         if (transversalData.section === "DesignSection") {
         } else {
-          console.log("in Design Section".toUpperCase());
           setTransversalData({
             ...transversalData,
             section: "DesignSection",
@@ -156,7 +155,6 @@ export const About: React.FC = () => {
       ) {
         if (transversalData.section === "MusicSection") {
         } else {
-          console.log("in Music Section".toUpperCase());
           setTransversalData({
             ...transversalData,
             section: "MusicSection",
@@ -172,7 +170,6 @@ export const About: React.FC = () => {
       ) {
         if (transversalData.section === "LangSection") {
         } else {
-          console.log("in Lang Section".toUpperCase());
           setTransversalData({
             ...transversalData,
             section: "LangSection",
@@ -185,7 +182,6 @@ export const About: React.FC = () => {
       if (userPosition > WhySectionPosition - 1) {
         if (transversalData.section === "WhySection") {
         } else {
-          console.log("in Why Section".toUpperCase());
           setTransversalData({
             ...transversalData,
             section: "WhySection",
@@ -200,17 +196,17 @@ export const About: React.FC = () => {
     function detectBrowser() {
       if (
         (navigator.userAgent.indexOf("Opera") ||
-          navigator.userAgent.indexOf("OPR")) != -1
+          navigator.userAgent.indexOf("OPR")) !== -1
       ) {
         return "Opera";
-      } else if (navigator.userAgent.indexOf("Chrome") != -1) {
+      } else if (navigator.userAgent.indexOf("Chrome") !== -1) {
         return "Chrome";
-      } else if (navigator.userAgent.indexOf("Safari") != -1) {
+      } else if (navigator.userAgent.indexOf("Safari") !== -1) {
         return "Safari";
-      } else if (navigator.userAgent.indexOf("Firefox") != -1) {
+      } else if (navigator.userAgent.indexOf("Firefox") !== -1) {
         return "Firefox";
       } else if (
-        navigator.userAgent.indexOf("MSIE") != -1 ||
+        navigator.userAgent.indexOf("MSIE") !== -1 ||
         !!document.DOCUMENT_NODE == true
       ) {
         return "IE"; //crap
@@ -218,14 +214,23 @@ export const About: React.FC = () => {
         return "Unknown";
       }
     }
-
     setCurrentBrowser(detectBrowser());
+
+    if (selected) {
+      setTimeout(() => {
+        console.log(`scrolling to ${selected}`);
+        setTransversalData({
+          ...transversalData,
+          scrollTo: true,
+          section: selected,
+        });
+      }, 5000);
+    }
   }, []);
 
   useEffect(() => {
     if (transversalData.scrollTo) {
       let chosenVariable: any;
-      console.log(currentBrowser);
 
       switch (transversalData.section) {
         case "MedSection":
@@ -258,10 +263,8 @@ export const About: React.FC = () => {
       }
 
       if (currentBrowser === "Safari") {
-        console.log("scrolling in safari");
         smoothScrollIntoView(chosenVariable, { behavior: "smooth" });
       } else {
-        console.log("scrolling in chrome");
         chosenVariable.scrollIntoView({
           behavior: "auto",
           block: "nearest",

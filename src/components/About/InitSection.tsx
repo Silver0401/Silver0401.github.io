@@ -1,6 +1,7 @@
 import anime from "animejs";
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+// import { Link } from "react-router-dom";
 
 import { ChosenDataContext } from "../ChosenData";
 
@@ -78,7 +79,7 @@ const InitSection: React.FC<props> = ({ sectionRef }) => {
     }
 
     return (
-      <span
+      <a
         className={className}
         onClick={() => {
           setTransversalData({
@@ -98,7 +99,7 @@ const InitSection: React.FC<props> = ({ sectionRef }) => {
         >
           {SelectedSvgPath}
         </svg>
-      </span>
+      </a>
     );
   };
 
