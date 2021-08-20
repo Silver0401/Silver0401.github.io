@@ -88,6 +88,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Bungee Hairline", cursive;
 }
 
 html {
@@ -192,7 +193,7 @@ body {
     overflow: hidden;
     background-color: var(--SiteColor2);
     transition: background-color 500ms;
-    font-family: "Bungee Hairline", cursive;
+    // font-family: "Bungee Hairline", cursive;
     -webkit-text-stroke: 0.5px var(--SiteColor3);
 
     .BgBalls {
