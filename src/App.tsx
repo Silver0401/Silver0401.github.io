@@ -14,27 +14,6 @@ function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
 
-// interface props{
-//   name: string | null
-// }
-
-// const Child:React.FC<props>  = ({name}) => {
-
-//   console.log()
-//   return (
-//     <div>
-//       {name ? (
-//         <h3>
-//           The <code>name</code> in the query string is &quot;{name}
-//           &quot;
-//         </h3>
-//       ) : (
-//         <h3>There is no name in the query string</h3>
-//       )}
-//     </div>
-//   );
-// }
-
 const App: React.FC = () => {
   const [siteStructure] = useState<"vertical" | "horizontal">("horizontal");
   const Location = useLocation();

@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { ChosenDataContext } from "./ChosenData";
 
 import mexLogo from "./../resources/Icons/mex.svg";
 import usLogo from "./../resources/Icons/us.svg";
@@ -14,6 +15,7 @@ const Nav: React.FC<props> = ({ siteStructure }) => {
   const [color, toggleColor] = useState<"light" | "dark">("dark");
   const [lang, toggleLang] = useState<"en" | "sp">("sp");
   const [t, i18n] = useTranslation();
+  const { transversalData, setTransversalData } = useContext(ChosenDataContext);
 
   const Icon = (chosen: string) => {
     switch (chosen) {
@@ -190,6 +192,10 @@ const Nav: React.FC<props> = ({ siteStructure }) => {
             <Link
               onClick={() => {
                 toggleNav(false);
+                setTransversalData({
+                  ...transversalData,
+                  knowMeButtonClicked: false,
+                });
                 if (
                   window.location.href === "https://silver0401.github.io/" ||
                   window.location.href === "http://localhost:3000/"
