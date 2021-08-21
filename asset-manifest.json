@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.e4accad5.chunk.css",
-    "main.js": "/static/js/main.1661a756.chunk.js",
-    "main.js.map": "/static/js/main.1661a756.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.c0b66507.js",
-    "runtime-main.js.map": "/static/js/runtime-main.c0b66507.js.map",
+    "main.css": "/static/css/main.431467e2.chunk.css",
+    "main.js": "/static/js/main.eeda2ed3.chunk.js",
+    "main.js.map": "/static/js/main.eeda2ed3.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.d67d1d0b.js",
+    "runtime-main.js.map": "/static/js/runtime-main.d67d1d0b.js.map",
     "static/css/2.e7ef43d6.chunk.css": "/static/css/2.e7ef43d6.chunk.css",
-    "static/js/2.a629062a.chunk.js": "/static/js/2.a629062a.chunk.js",
-    "static/js/2.a629062a.chunk.js.map": "/static/js/2.a629062a.chunk.js.map",
-    "static/js/3.6da077da.chunk.js": "/static/js/3.6da077da.chunk.js",
-    "static/js/3.6da077da.chunk.js.map": "/static/js/3.6da077da.chunk.js.map",
+    "static/js/2.fb98644d.chunk.js": "/static/js/2.fb98644d.chunk.js",
+    "static/js/2.fb98644d.chunk.js.map": "/static/js/2.fb98644d.chunk.js.map",
+    "static/js/3.85d61867.chunk.js": "/static/js/3.85d61867.chunk.js",
+    "static/js/3.85d61867.chunk.js.map": "/static/js/3.85d61867.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.e7ef43d6.chunk.css.map": "/static/css/2.e7ef43d6.chunk.css.map",
-    "static/css/main.e4accad5.chunk.css.map": "/static/css/main.e4accad5.chunk.css.map",
-    "static/js/2.a629062a.chunk.js.LICENSE.txt": "/static/js/2.a629062a.chunk.js.LICENSE.txt",
+    "static/css/main.431467e2.chunk.css.map": "/static/css/main.431467e2.chunk.css.map",
+    "static/js/2.fb98644d.chunk.js.LICENSE.txt": "/static/js/2.fb98644d.chunk.js.LICENSE.txt",
     "static/media/Americana.c6fc47f9.jpeg": "/static/media/Americana.c6fc47f9.jpeg",
     "static/media/Hidalgo.a06b8d5b.jpeg": "/static/media/Hidalgo.a06b8d5b.jpeg",
     "static/media/SmortLogo.ad226757.png": "/static/media/SmortLogo.ad226757.png",
@@ -78,10 +78,10 @@
     "static/media/xcLogo.2261ad7d.png": "/static/media/xcLogo.2261ad7d.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.c0b66507.js",
+    "static/js/runtime-main.d67d1d0b.js",
     "static/css/2.e7ef43d6.chunk.css",
-    "static/js/2.a629062a.chunk.js",
-    "static/css/main.e4accad5.chunk.css",
-    "static/js/main.1661a756.chunk.js"
+    "static/js/2.fb98644d.chunk.js",
+    "static/css/main.431467e2.chunk.css",
+    "static/js/main.eeda2ed3.chunk.js"
   ]
 }
