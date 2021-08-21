@@ -33,6 +33,15 @@
   "InitSection.RotateButton": "Rotar",
   "InitSection.StopButton": "Detener",
 
+	"InitSection.Code.BallTitle": "Programación",
+  "InitSection.Lang.BallTitle": "Idiomas",
+  "InitSection.Modeling.BallTitle": "Modelado-3D",
+  "InitSection.Why.BallTitle": "Porqué yo?",
+  "InitSection.Med.BallTitle": "Medicina",
+  "InitSection.Design.BallTitle": "Proyectos",
+  "InitSection.Music.BallTitle": "Música",
+  "InitSection.Xp.BallTitle": "Experiencia",
+
   "CodeSection.Title": "Habilidades de programación y software",
   "CodeSection.LangCheckBox": "Lenguajes",
   "CodeSection.SoftCheckBox": "Aplicaciones",

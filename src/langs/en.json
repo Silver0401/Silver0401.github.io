@@ -32,6 +32,15 @@
   "InitSection.RotateButton": "Rotate",
   "InitSection.StopButton": "Stop",
 
+  "InitSection.Code.BallTitle": "Programming",
+  "InitSection.Lang.BallTitle": "Languages",
+  "InitSection.Modeling.BallTitle": "3D-Modeling",
+  "InitSection.Why.BallTitle": "Why Hire Me?",
+  "InitSection.Med.BallTitle": "Medicine",
+  "InitSection.Design.BallTitle": "Projects",
+  "InitSection.Music.BallTitle": "Music",
+  "InitSection.Xp.BallTitle": "Experience",
+
   "CodeSection.Title": "Coding and Software Skills",
   "CodeSection.LangCheckBox": "Languages",
   "CodeSection.SoftCheckBox": "Applications",
