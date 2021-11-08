@@ -7,7 +7,6 @@
 @import "./AboutStyling";
 @import "./NavStyling";
 @import "./ContactStyling";
-@import "./MobileOpt";
 
 :root {
   --SiteColor1: black;
@@ -188,7 +187,7 @@ body {
   .AppContainer {
     grid-area: App;
     position: absolute;
-    width: 100%;
+    width: calc(100% - 80px);
     height: 100%;
     overflow: hidden;
     background-color: var(--SiteColor2);
@@ -286,12 +285,4 @@ body {
 // grid-template-areas: "App" "Nav";
 // }
 
-@media (max-width: 600px) {
-  body {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 80px;
-    grid-template-areas:
-      "App"
-      "Nav";
-  }
-}
+@import "./MobileOpt";

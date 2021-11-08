@@ -240,6 +240,15 @@
       button {
         @include MainButtonStyling();
 
+        &:nth-child(1) {
+          &:hover {
+            background-color: var(--SiteColor1);
+            color: var(--SiteColor3);
+            -webkit-text-stroke: 0.5px var(--SiteColor3);
+            box-shadow: 0px 0px 5px var(--SiteColor1);
+          }
+        }
+
         &:nth-child(2) {
           background-color: var(--SiteColor3);
           color: var(--SiteColor1);
