@@ -248,6 +248,11 @@
   --c2: var(--hermes-2);
 }
 
+.product--mnemos {
+  --c1: var(--hermes);
+  --c2: var(--hermes-2);
+}
+
 .product .badge {
   background: color-mix(in srgb, var(--c1) 14%, transparent);
   color: var(--c1);
@@ -386,6 +391,18 @@
 
 .stage li.done small {
   color: var(--text-2);
+}
+
+.product-link {
+  align-self: flex-start;
+  color: var(--c1);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.product-link:hover {
+  text-decoration: underline;
 }
 
 .cronos-visual {

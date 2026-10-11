@@ -8,7 +8,7 @@ const STACK = ["TypeScript", "Next.js", "React", "Node.js", "FeathersJS", "Mongo
 function ProductMark({ id }: { id: string }) {
   if (id === "cronos") return <img src={`${BASE}brand/cronos-icono-gradiente.svg`} alt="" width={44} height={44} />;
   if (id === "temis") return <img src={`${BASE}brand/temis-icono-naranja.svg`} alt="" width={44} height={44} />;
-  // HermesMD aún no tiene logo: monograma con flechas de traslado.
+  // HermesMD y Mnemos aún no tienen logo: monograma provisional.
   return (
     <svg viewBox="0 0 44 44" width={44} height={44} aria-hidden="true">
       <defs>
@@ -154,6 +154,11 @@ export default function Home() {
                   </div>
                 </dl>
                 <StageMeter stage={cronos.stage} labels={t.products.stages} />
+                {cronos.site && (
+                  <a className="product-link" href={cronos.site} target="_blank" rel="noopener">
+                    {t.products.visitSite} →
+                  </a>
+                )}
               </div>
               <div className="product-visual">
                 <CronosVisual />
@@ -188,6 +193,11 @@ export default function Home() {
                     </div>
                   </dl>
                   <StageMeter stage={p.stage} labels={t.products.stages} />
+                  {p.site && (
+                    <a className="product-link" href={p.site} target="_blank" rel="noopener">
+                      {t.products.visitSite} →
+                    </a>
+                  )}
                 </article>
               ))}
             </div>
@@ -247,8 +257,8 @@ export default function Home() {
             <p className="kicker reveal">{t.progress.kicker}</p>
             <h2 className="h2 reveal">{t.progress.title}</h2>
             <ol className="timeline">
-              {t.progress.items.map((it, i) => (
-                <li key={it.title} className={`reveal ${i === t.progress.items.length - 1 ? "timeline-next" : ""}`}>
+              {t.progress.items.map((it) => (
+                <li key={it.title} className="reveal">
                   <span className="timeline-year">{it.year}</span>
                   <div>
                     <h3>{it.title}</h3>

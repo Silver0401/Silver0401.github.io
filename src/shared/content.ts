@@ -13,7 +13,7 @@ export const LEGAL_NAME = "IMC2 MEDICAL TECHNOLOGIES S.A.P.I. DE C.V.";
 
 const es = {
   meta: {
-    homeTitle: "IMC² Medical Technologies — Software clínico hecho por médicos",
+    homeTitle: "IMC² Medical Technologies — Tecnología desarrollada por médicos",
     founderTitle: "Ismael Muñoz Contreras — Fundador de IMC²",
   },
   nav: {
@@ -31,16 +31,16 @@ const es = {
   },
   hero: {
     eyebrow: "IMC2 Medical Technologies",
-    title1: "Software clínico",
-    title2: "hecho por médicos,",
-    title3: "para médicos.",
+    title1: "Tecnología",
+    title2: "desarrollada por médicos",
+    title3: "para médicos",
     lead:
-      "Construimos expedientes clínicos que trabajan para el médico: documentas una sola vez y la información llega a donde tiene que llegar.",
+      "Creamos tecnología desde la experiencia médica. Hoy empezamos con software que reduce fricción en el trabajo clínico y construimos la base para expandirnos a nuevas áreas.",
     ctaProducts: "Ver productos",
     ctaTalk: "Hablemos",
     stats: [
-      { value: "3", label: "productos clínicos" },
-      { value: "1", label: "núcleo compartido" },
+      { value: "4", label: "productos de tecnología" },
+      { value: "1", label: "núcleo clínico" },
       { value: "0", label: "dobles capturas" },
     ],
   },
@@ -56,18 +56,20 @@ const es = {
   },
   products: {
     kicker: "Productos",
-    title: "Un expediente para cada realidad clínica",
+    title: "Tecnología para cada realidad de trabajo",
     lead:
-      "La consulta privada, el centro de salud público y el hospital con sistema obligatorio tienen problemas distintos. Cada producto resuelve uno, sobre el mismo núcleo clínico.",
+      "Empezamos por el software clínico para la consulta privada, la salud pública y los hospitales. También construimos herramientas propias para organizar el trabajo de las organizaciones.",
     sectorLabel: "Sector",
     solvesLabel: "Resuelve",
+    visitSite: "Ver página",
     list: [
       {
         id: "cronos",
         name: "CronosMD",
         tagline: "El expediente clínico de nueva generación",
-        status: "En uso clínico · Lanzamiento próximo",
-        stage: 3,
+        status: "Disponible",
+        stage: 4,
+        site: "https://www.cronosmd.com",
         sector: "Privado · especialistas y clínicas",
         solves: "Información dispersa y documentación pesada",
         text:
@@ -84,8 +86,9 @@ const es = {
         id: "temis",
         name: "TemisMD",
         tagline: "Expediente austero para la salud pública",
-        status: "En desarrollo",
-        stage: 2,
+        status: "Disponible",
+        stage: 4,
+        site: "https://www.temismd.com",
         sector: "Público · centros de salud",
         solves: "Doble captura SIMA → SINBA",
         text:
@@ -103,6 +106,7 @@ const es = {
         tagline: "Documenta una vez, cumple en todos lados",
         status: "Descubrimiento",
         stage: 1,
+        site: undefined,
         sector: "Privado · hospitales con sistema obligatorio",
         solves: "Recaptura diaria en el sistema del hospital",
         text:
@@ -112,6 +116,24 @@ const es = {
           "Configuración inicial hecha por nosotros",
           "Nota en el formato que pide el hospital",
           "El médico ve y controla todo lo que se envía",
+        ],
+      },
+      {
+        id: "mnemos",
+        name: "Mnemos",
+        tagline: "El espacio de trabajo propio para cada organización",
+        status: "Etapa temprana",
+        stage: 1,
+        site: undefined,
+        sector: "Organizaciones y equipos",
+        solves: "Archivos e información de trabajo dispersos",
+        text:
+          "Plataforma web propia para organizar archivos, fotos, videos, páginas y bases de datos por organización. Empieza por las necesidades esenciales de Drive y Notion; después incorporará proyectos y tareas.",
+        features: [
+          "Archivos, fotos y videos",
+          "Páginas y bases de datos",
+          "Organizaciones separadas",
+          "Proyectos y tareas, después",
         ],
       },
     ],
@@ -147,7 +169,8 @@ const es = {
       { year: "2026", title: "TemisMD", text: "La versión austera para el sector salud público." },
       { year: "2026", title: "Se constituye IMC²", text: "IMC2 Medical Technologies S.A.P.I. de C.V. e identidad de marca." },
       { year: "2026", title: "HermesMD", text: "Tercer producto: fin de la doble captura hospitalaria." },
-      { year: "Próximo", title: "Lanzamiento de CronosMD", text: "Apertura a médicos externos." },
+      { year: "2026", title: "Mnemos", text: "Plataforma propia para organizar la información de las organizaciones." },
+      { year: "2026", title: "CronosMD y TemisMD disponibles", text: "Los dos productos ya están disponibles." },
     ],
   },
   lab: {
@@ -259,7 +282,7 @@ export type Content = typeof es;
 
 const en: Content = {
   meta: {
-    homeTitle: "IMC² Medical Technologies — Clinical software built by physicians",
+    homeTitle: "IMC² Medical Technologies — Technology built by doctors",
     founderTitle: "Ismael Muñoz Contreras — Founder of IMC²",
   },
   nav: {
@@ -277,16 +300,16 @@ const en: Content = {
   },
   hero: {
     eyebrow: "IMC2 Medical Technologies",
-    title1: "Clinical software",
-    title2: "built by physicians,",
-    title3: "for physicians.",
+    title1: "Technology",
+    title2: "built by doctors,",
+    title3: "for doctors",
     lead:
-      "We build health records that work for the physician: document once, and the information goes wherever it needs to go.",
+      "We create technology from medical experience. Today we start with software that reduces friction in clinical work while building a foundation to expand into new areas.",
     ctaProducts: "See products",
     ctaTalk: "Let's talk",
     stats: [
-      { value: "3", label: "clinical products" },
-      { value: "1", label: "shared core" },
+      { value: "4", label: "technology products" },
+      { value: "1", label: "clinical core" },
       { value: "0", label: "double data entry" },
     ],
   },
@@ -302,18 +325,20 @@ const en: Content = {
   },
   products: {
     kicker: "Products",
-    title: "A health record for every clinical reality",
+    title: "Technology for every way of working",
     lead:
-      "Private practice, public health centers and hospitals with a mandatory system face different problems. Each product solves one, on the same clinical core.",
+      "We start with clinical software for private practice, public health and hospitals. We also build our own tools to organize how organizations work.",
     sectorLabel: "Sector",
     solvesLabel: "Solves",
+    visitSite: "Visit site",
     list: [
       {
         id: "cronos",
         name: "CronosMD",
         tagline: "The next-generation electronic health record",
-        status: "In clinical use · Launching soon",
-        stage: 3,
+        status: "Available",
+        stage: 4,
+        site: "https://www.cronosmd.com",
         sector: "Private · specialists and clinics",
         solves: "Scattered information and heavy paperwork",
         text:
@@ -330,8 +355,9 @@ const en: Content = {
         id: "temis",
         name: "TemisMD",
         tagline: "A lean health record for public healthcare",
-        status: "In development",
-        stage: 2,
+        status: "Available",
+        stage: 4,
+        site: "https://www.temismd.com",
         sector: "Public · health centers",
         solves: "Double entry SIMA → SINBA",
         text:
@@ -349,6 +375,7 @@ const en: Content = {
         tagline: "Document once, comply everywhere",
         status: "Discovery",
         stage: 1,
+        site: undefined,
         sector: "Private · hospitals with a mandatory system",
         solves: "Daily re-entry into the hospital system",
         text:
@@ -358,6 +385,24 @@ const en: Content = {
           "Initial setup done by us",
           "Notes in the format the hospital requires",
           "The physician sees and controls everything sent",
+        ],
+      },
+      {
+        id: "mnemos",
+        name: "Mnemos",
+        tagline: "The owned workspace for every organization",
+        status: "Early stage",
+        stage: 1,
+        site: undefined,
+        sector: "Organizations and teams",
+        solves: "Scattered files and work information",
+        text:
+          "An owned web platform to organize files, photos, videos, pages and databases by organization. It starts with the essential needs covered by Drive and Notion; projects and tasks come later.",
+        features: [
+          "Files, photos and videos",
+          "Pages and databases",
+          "Separate organizations",
+          "Projects and tasks, later",
         ],
       },
     ],
@@ -393,7 +438,8 @@ const en: Content = {
       { year: "2026", title: "TemisMD", text: "The lean version for public healthcare." },
       { year: "2026", title: "IMC² is incorporated", text: "IMC2 Medical Technologies S.A.P.I. de C.V. and brand identity." },
       { year: "2026", title: "HermesMD", text: "Third product: the end of hospital double entry." },
-      { year: "Next", title: "CronosMD launch", text: "Opening to external physicians." },
+      { year: "2026", title: "Mnemos", text: "An owned platform to organize organizations' information." },
+      { year: "2026", title: "CronosMD and TemisMD available", text: "Both products are now available." },
     ],
   },
   lab: {
