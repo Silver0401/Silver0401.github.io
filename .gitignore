@@ -3,3 +3,6 @@
 /build
 
 /.eslintcache
+.DS_Store
+.eslintcache
+dist

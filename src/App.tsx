@@ -93,7 +93,7 @@ const App: React.FC = () => {
                   exact
                   path="/"
                   component={HomePage}
-                  replace
+                  // replace
                 />
                 <Route
                   key="AboutPage"
@@ -102,14 +102,14 @@ const App: React.FC = () => {
                   component={() => (
                     <AboutPage selected={query.get("selected")} />
                   )}
-                  replace
+                  // replace
                 />
                 <Route
                   key="ContactPage"
                   exact
                   path="/Contact"
                   component={ContactPage}
-                  replace
+                  // replace
                 />
 
                 {/* <Child name={query.get("selected")} /> */}

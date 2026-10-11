@@ -81,13 +81,13 @@ const CLeftBox: React.FC = () => {
             type="submit"
           /> */}
 
-          <Button
+          {/* <Button
             className="submitButton"
             isLoading={isButtonLoading}
             type="submit"
           >
             <p>{`${t("ContactLeft.SendButton")} 📤`}</p>
-          </Button>
+          </Button> */}
         </span>
       </form>
     </div>
