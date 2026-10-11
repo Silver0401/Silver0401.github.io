@@ -1,0 +1,505 @@
+// Todos los textos del sitio, en español e inglés.
+// `en` se tipa contra `es`: si falta una clave en inglés, TypeScript lo marca.
+
+export const CONTACT = {
+  whatsapp: "https://wa.me/527714116235",
+  github: "https://github.com/Silver0401",
+  instagram: "https://www.instagram.com/isma.mzco/",
+  facebook: "https://www.facebook.com/profile.php?id=100006280335810",
+  medNotes: "https://1drv.ms/u/s!AvzR2WZ4Hf2egnG3zTGvIcbw_mIj",
+};
+
+export const LEGAL_NAME = "IMC2 MEDICAL TECHNOLOGIES S.A.P.I. DE C.V.";
+
+const es = {
+  meta: {
+    homeTitle: "IMC² Medical Technologies — Software clínico hecho por médicos",
+    founderTitle: "Ismael Muñoz Contreras — Fundador de IMC²",
+  },
+  nav: {
+    products: "Productos",
+    platform: "Plataforma",
+    progress: "Avance",
+    lab: "Laboratorio",
+    founder: "Fundador",
+    contact: "Contacto",
+    company: "IMC²",
+    langSwitch: "EN",
+    langLabel: "Switch to English",
+    themeLabel: "Cambiar tema claro / oscuro",
+    menu: "Menú",
+  },
+  hero: {
+    eyebrow: "IMC2 Medical Technologies",
+    title1: "Software clínico",
+    title2: "hecho por médicos,",
+    title3: "para médicos.",
+    lead:
+      "Construimos expedientes clínicos que trabajan para el médico: documentas una sola vez y la información llega a donde tiene que llegar.",
+    ctaProducts: "Ver productos",
+    ctaTalk: "Hablemos",
+    stats: [
+      { value: "3", label: "productos clínicos" },
+      { value: "1", label: "núcleo compartido" },
+      { value: "0", label: "dobles capturas" },
+    ],
+  },
+  name: {
+    kicker: "El nombre",
+    title: "Una ecuación con tres lecturas",
+    items: [
+      { sym: "E = mc²", title: "Einstein", text: "La ecuación que convirtió una idea simple en una fuerza enorme." },
+      { sym: "I · M · C", title: "Ismael Muñoz Contreras", text: "Las iniciales del fundador: la empresa nace de una persona y un oficio." },
+      { sym: "MC", title: "Médico Cirujano", text: "El título detrás del código. Por eso la C va al cuadrado: MC significa dos cosas a la vez." },
+    ],
+    bonus: "Y sí: IMC también es el Índice de Masa Corporal, una medida que cualquier médico usa a diario.",
+  },
+  products: {
+    kicker: "Productos",
+    title: "Un expediente para cada realidad clínica",
+    lead:
+      "La consulta privada, el centro de salud público y el hospital con sistema obligatorio tienen problemas distintos. Cada producto resuelve uno, sobre el mismo núcleo clínico.",
+    sectorLabel: "Sector",
+    solvesLabel: "Resuelve",
+    list: [
+      {
+        id: "cronos",
+        name: "CronosMD",
+        tagline: "El expediente clínico de nueva generación",
+        status: "En uso clínico · Lanzamiento próximo",
+        stage: 3,
+        sector: "Privado · especialistas y clínicas",
+        solves: "Información dispersa y documentación pesada",
+        text:
+          "Una réplica 3D interactiva del paciente concentra antecedentes, hallazgos y condiciones activas en una sola vista. Alrededor de ella, la plataforma automatiza historias clínicas, notas de evolución, recetas, órdenes de laboratorio y reportes.",
+        features: [
+          "Modelo anatómico 3D del paciente",
+          "Transcripción de consulta por audio",
+          "OCR de estudios y documentos",
+          "Agenda, equipo médico y finanzas",
+          "Catálogos clínicos de la NOM-024",
+        ],
+      },
+      {
+        id: "temis",
+        name: "TemisMD",
+        tagline: "Expediente austero para la salud pública",
+        status: "En desarrollo",
+        stage: 2,
+        sector: "Público · centros de salud",
+        solves: "Doble captura SIMA → SINBA",
+        text:
+          "El médico documenta la consulta una vez. La IA convierte la nota clínica en datos estructurados y genera los archivos de intercambio para la carga masiva de SINBA. Ligero a propósito: corre fluido en equipos antiguos.",
+        features: [
+          "Captura única desde la nota clínica",
+          "Formularios que se detectan solos por tipo de paciente",
+          "Archivos de intercambio para SINBA",
+          "Trazabilidad nota → dato → archivo",
+        ],
+      },
+      {
+        id: "hermes",
+        name: "HermesMD",
+        tagline: "Documenta una vez, cumple en todos lados",
+        status: "Descubrimiento",
+        stage: 1,
+        sector: "Privado · hospitales con sistema obligatorio",
+        solves: "Recaptura diaria en el sistema del hospital",
+        text:
+          "Para médicos de práctica privada a quienes su hospital obliga a capturar cada consulta en otro sistema. Expediente simple y familiar, con pacientes precargados: se documenta una vez y el registro sale listo para el sistema del hospital.",
+        features: [
+          "Interfaz simple, pensada para no estorbar",
+          "Configuración inicial hecha por nosotros",
+          "Nota en el formato que pide el hospital",
+          "El médico ve y controla todo lo que se envía",
+        ],
+      },
+    ],
+    stages: ["Descubrimiento", "Desarrollo", "Uso clínico", "Lanzamiento"],
+  },
+  platform: {
+    kicker: "Plataforma",
+    title: "Un núcleo clínico, tres productos",
+    lead:
+      "Los tres expedientes comparten la misma base de documentación clínica. Lo que cambia es a dónde viaja la información después.",
+    flow: {
+      input: "Nota clínica",
+      inputSub: "lo que el médico ya escribe",
+      core: "Núcleo IMC²",
+      coreSub: "la IA estructura, el médico decide",
+      outputs: ["Expediente CronosMD", "Archivos SINBA", "Sistema del hospital"],
+    },
+    pillars: [
+      { title: "Captura única", text: "La nota clínica es la fuente primaria. Nada se vuelve a teclear." },
+      { title: "IA que estructura, no que decide", text: "Convierte texto clínico en datos. El criterio siempre es del médico." },
+      { title: "Regulación local", text: "Diseñado conforme a la NOM-024-SSA3 y a los catálogos de la Secretaría de Salud." },
+      { title: "Privacidad por diseño", text: "Acceso por roles y trazabilidad de cada registro clínico." },
+    ],
+    stackTitle: "Con qué construimos",
+  },
+  progress: {
+    kicker: "Avance",
+    title: "De un portafolio de prepa a una empresa de tecnología médica",
+    items: [
+      { year: "2020", title: "Primer código público", text: "Este mismo sitio y los primeros proyectos web: Voades, Smort, PC-Calc y la primera Mery." },
+      { year: "2024", title: "Nace CronosMD", text: "Arranca el expediente clínico con modelo 3D del paciente." },
+      { year: "2026", title: "Mery AI y The HUB", text: "Herramientas internas de voz y agentes de IA para construir más rápido." },
+      { year: "2026", title: "TemisMD", text: "La versión austera para el sector salud público." },
+      { year: "2026", title: "Se constituye IMC²", text: "IMC2 Medical Technologies S.A.P.I. de C.V. e identidad de marca." },
+      { year: "2026", title: "HermesMD", text: "Tercer producto: fin de la doble captura hospitalaria." },
+      { year: "Próximo", title: "Lanzamiento de CronosMD", text: "Apertura a médicos externos." },
+    ],
+  },
+  lab: {
+    kicker: "Laboratorio",
+    title: "Herramientas internas",
+    lead: "Lo que construimos para construir. Proyectos de I+D que aceleran el desarrollo de los productos.",
+    list: [
+      { name: "The HUB", text: "Centro de operaciones por voz que coordina varios agentes de IA programando en paralelo.", tag: "Electron · Whisper · agentes" },
+      { name: "Mery AI", text: "Asistente de voz con capacidades de agente: archivos, terminal, web e impresión 3D.", tag: "Next.js · Express · LLMs" },
+      { name: "Flasher", text: "Genera flashcards a partir de un PDF y las repasa con repetición espaciada.", tag: "Next.js · OpenAI" },
+    ],
+  },
+  founderTeaser: {
+    kicker: "Fundador",
+    title: "Ismael Muñoz Contreras",
+    role: "Médico cirujano y desarrollador full-stack",
+    text:
+      "Empezó a programar en la preparatoria, entre robots de competencia y sitios web. Estudió medicina y juntó los dos oficios en IMC²: software clínico diseñado desde adentro del consultorio.",
+    cta: "Conoce al fundador",
+  },
+  contact: {
+    kicker: "Contacto",
+    title: "¿Tienes una clínica o un problema de captura?",
+    text: "Platiquemos. Respondemos personalmente.",
+    whatsapp: "Escríbenos por WhatsApp",
+    github: "GitHub",
+    instagram: "Instagram",
+    facebook: "Facebook",
+  },
+  footer: {
+    rights: "Todos los derechos reservados.",
+    place: "Hecho en México",
+  },
+  founder: {
+    back: "Volver a IMC²",
+    hello: "Hola, soy",
+    name: "Ismael Muñoz Contreras",
+    roles: ["Médico cirujano 🩺", "Fundador de IMC² 🧬", "Desarrollador full-stack ⚛️", "Diseñador UI/UX 🔮", "Programador de robots 🤖", "Modelado 3D 🧊"],
+    lead:
+      "Médico de formación y programador desde la preparatoria. Hoy dirijo IMC², donde construyo el software clínico que me hubiera gustado tener en consulta.",
+    motto: "Si puedes imaginarlo, puedo programarlo.",
+    ctaTalk: "Platiquemos 🙌🏽",
+    sections: {
+      path: "Trayectoria",
+      projects: "Primeros proyectos",
+      skills: "Programación y software",
+      med: "Medicina",
+      langs: "Idiomas",
+      modeling: "Modelado 3D",
+      music: "Música",
+      how: "Cómo trabajo",
+    },
+    pathTabs: { xp: "Experiencia", edu: "Educación" },
+    xp: [
+      { title: "Fundador de IMC2 Medical Technologies", text: "Diseño, programación y dirección de CronosMD, TemisMD y HermesMD.", imgs: [] as string[] },
+      { title: "Programador de BrainVue", text: "Equipo universitario de salud pediátrica con robots NAO, para el que programé dichos robots.", imgs: ["bv1", "bv2"] },
+      { title: "Líder y mentor FIRST", text: "Líder y mentor de programación del equipo Keybot en la competencia internacional de robótica FIRST, categoría FRC.", imgs: ["keybot1", "keybot2", "keybot3", "keybot4", "keybot5"] },
+      { title: "Líder y mentor WER", text: "World Educational Robot: competencia internacional de robótica para secundaria y prepa, donde fui mentor de programación.", imgs: ["wer1", "wer2"] },
+      { title: "Carneros e Ikigai", text: "Grupo enfocado en liderazgo y en actividades de fortalecimiento personal.", imgs: ["carneros3", "carneros7", "ikigai1", "ikigai2"] },
+    ],
+    edu: [
+      { title: "Médico cirujano", text: "Carrera de medicina, con participación en grupos estudiantiles médicos y de robótica.", imgs: ["mont", "medUni"] },
+      { title: "Preparatoria — Tec de Monterrey, Campus Hidalgo", text: "Donde empecé a programar en serio y a ser mentor en FIRST y WER.", imgs: ["Hidalgo"] },
+      { title: "Primaria y secundaria — Escuela Americana de Pachuca", text: "Maestros extranjeros desde la infancia: de ahí mi dominio del inglés.", imgs: ["Americana"] },
+    ],
+    projectsLead: "Los proyectos con los que empezó todo, antes de IMC².",
+    projects: [
+      { name: "Smort Tech", text: "Sitio para diseñar y vender sitios web personalizados.", logo: "smort", live: "https://amazing-liskov-6ef20f.netlify.app", repo: "https://github.com/Silver0401/smort-ws" },
+      { name: "PC-Calc", text: "Herramienta web médica para estimar el riesgo de cáncer de próstata.", logo: "preventis", live: "https://sharp-bell-56ec63.netlify.app", repo: "https://github.com/Silver0401/pc-calc" },
+      { name: "Voades MX", text: "Mi primer sitio vendido: una ONG mexicana que ayuda a personas con problemas de salud mental.", logo: "voades", live: "https://romantic-hodgkin-a1033b.netlify.app", repo: "https://github.com/Silver0401/voades" },
+      { name: "Mery AI (v1)", text: "La primera Mery: asistente por reconocimiento de voz web que controlaba la computadora con comandos.", logo: "mery", live: "https://quizzical-wilson-2ae07d.netlify.app", repo: "https://github.com/Silver0401/JS-MeryAI" },
+    ],
+    skillsLead: "Del HTML de la prepa al stack con el que hoy corre IMC².",
+    skillGroups: { now: "Stack actual", langs: "Lenguajes y frameworks", soft: "Aplicaciones" },
+    medLead: "Médico cirujano. Estas son algunas de las áreas que más he estudiado:",
+    medAreas: ["Cardiología", "Biología celular", "Genética", "Endocrinología", "Inmunología", "Neurología", "Histología", "Nefrología", "Gastroenterología", "Microorganismos", "Embriología"],
+    medButton: "Ver mis notas de medicina",
+    langs: [
+      { name: "Español", flag: "🇲🇽", level: "Nativo", pct: 100, text: "Mi idioma materno: ortografía y expresión excelentes." },
+      { name: "Inglés", flag: "🇺🇸", level: "B2+", pct: 88, text: "Maestros extranjeros desde la educación básica: fluidez casi nativa y ortografía impecable." },
+      { name: "Alemán", flag: "🇩🇪", level: "A2", pct: 40, text: "Lo estudio desde la preparatoria y sigo avanzando." },
+    ],
+    modelingText:
+      "El modelado 3D es otra herramienta de diseño que uso: SolidWorks para piezas con medidas exactas y Blender para 3D en web. Es la misma habilidad que hoy da vida al modelo anatómico de CronosMD.",
+    modelingLoad: "Cargar visor 3D",
+    modelingHint: "Arrastra para rotar · rueda para acercar",
+    modelingModels: { car: "Auto", micro: "Microondas" },
+    modelingCredit: "Modelos de demostración con licencia CC BY 4.0:",
+    musicText: "La guitarra es mi instrumento favorito; también tengo bases de violín y piano.",
+    musicCaptions: [
+      "Concierto público en el Reloj de Pachuca, antes de la presentación.",
+      "Durante la presentación en el Reloj de Pachuca.",
+      "Práctica semanal de violín, verano de 2019.",
+    ],
+    how: [
+      { title: "Resiliencia", text: "Sin importar los problemas que surjan, encuentro una solución y termino el trabajo." },
+      { title: "Organización", text: "Programo y rastreo todos mis pendientes; las fechas de entrega no se me pasan." },
+      { title: "Trabajo en equipo", text: "La cooperación es parte esencial de cualquier proyecto." },
+      { title: "Liderazgo", text: "Cuando hace falta, guío al equipo para lograr juntos el objetivo." },
+      { title: "Pasión", text: "Me encanta lo que hago, así que aprendo la herramienta o el lenguaje que el proyecto pida." },
+    ],
+    close: "¿Construimos algo juntos?",
+    closeCompany: "Ver productos de IMC²",
+    lightboxClose: "Cerrar",
+  },
+};
+
+export type Content = typeof es;
+
+const en: Content = {
+  meta: {
+    homeTitle: "IMC² Medical Technologies — Clinical software built by physicians",
+    founderTitle: "Ismael Muñoz Contreras — Founder of IMC²",
+  },
+  nav: {
+    products: "Products",
+    platform: "Platform",
+    progress: "Progress",
+    lab: "Lab",
+    founder: "Founder",
+    contact: "Contact",
+    company: "IMC²",
+    langSwitch: "ES",
+    langLabel: "Cambiar a español",
+    themeLabel: "Toggle light / dark theme",
+    menu: "Menu",
+  },
+  hero: {
+    eyebrow: "IMC2 Medical Technologies",
+    title1: "Clinical software",
+    title2: "built by physicians,",
+    title3: "for physicians.",
+    lead:
+      "We build health records that work for the physician: document once, and the information goes wherever it needs to go.",
+    ctaProducts: "See products",
+    ctaTalk: "Let's talk",
+    stats: [
+      { value: "3", label: "clinical products" },
+      { value: "1", label: "shared core" },
+      { value: "0", label: "double data entry" },
+    ],
+  },
+  name: {
+    kicker: "The name",
+    title: "One equation, three readings",
+    items: [
+      { sym: "E = mc²", title: "Einstein", text: "The equation that turned a simple idea into enormous power." },
+      { sym: "I · M · C", title: "Ismael Muñoz Contreras", text: "The founder's initials: the company comes from a person and a craft." },
+      { sym: "MC", title: "Médico Cirujano", text: "The medical degree behind the code. That's why the C is squared: MC means two things at once." },
+    ],
+    bonus: "And yes: in Spanish, IMC is also BMI, a measure every physician uses daily.",
+  },
+  products: {
+    kicker: "Products",
+    title: "A health record for every clinical reality",
+    lead:
+      "Private practice, public health centers and hospitals with a mandatory system face different problems. Each product solves one, on the same clinical core.",
+    sectorLabel: "Sector",
+    solvesLabel: "Solves",
+    list: [
+      {
+        id: "cronos",
+        name: "CronosMD",
+        tagline: "The next-generation electronic health record",
+        status: "In clinical use · Launching soon",
+        stage: 3,
+        sector: "Private · specialists and clinics",
+        solves: "Scattered information and heavy paperwork",
+        text:
+          "An interactive 3D replica of the patient brings history, findings and active conditions into a single view. Around it, the platform automates clinical histories, progress notes, prescriptions, lab orders and reports.",
+        features: [
+          "3D anatomical patient model",
+          "Audio transcription of the visit",
+          "OCR for studies and documents",
+          "Scheduling, care team and finances",
+          "NOM-024 clinical catalogs",
+        ],
+      },
+      {
+        id: "temis",
+        name: "TemisMD",
+        tagline: "A lean health record for public healthcare",
+        status: "In development",
+        stage: 2,
+        sector: "Public · health centers",
+        solves: "Double entry SIMA → SINBA",
+        text:
+          "The physician documents the visit once. AI turns the clinical note into structured data and generates the exchange files for SINBA's bulk upload. Lightweight on purpose: it runs smoothly on old computers.",
+        features: [
+          "Single entry from the clinical note",
+          "Forms auto-detected by patient type",
+          "SINBA exchange files",
+          "Traceability note → data → file",
+        ],
+      },
+      {
+        id: "hermes",
+        name: "HermesMD",
+        tagline: "Document once, comply everywhere",
+        status: "Discovery",
+        stage: 1,
+        sector: "Private · hospitals with a mandatory system",
+        solves: "Daily re-entry into the hospital system",
+        text:
+          "For private-practice physicians whose hospital requires every visit to be entered into another system. A simple, familiar record with preloaded patients: document once and the entry comes out ready for the hospital system.",
+        features: [
+          "Simple interface that stays out of the way",
+          "Initial setup done by us",
+          "Notes in the format the hospital requires",
+          "The physician sees and controls everything sent",
+        ],
+      },
+    ],
+    stages: ["Discovery", "Development", "Clinical use", "Launch"],
+  },
+  platform: {
+    kicker: "Platform",
+    title: "One clinical core, three products",
+    lead:
+      "All three records share the same clinical documentation base. What changes is where the information travels next.",
+    flow: {
+      input: "Clinical note",
+      inputSub: "what the physician already writes",
+      core: "IMC² core",
+      coreSub: "AI structures, the physician decides",
+      outputs: ["CronosMD record", "SINBA files", "Hospital system"],
+    },
+    pillars: [
+      { title: "Single entry", text: "The clinical note is the primary source. Nothing gets typed twice." },
+      { title: "AI that structures, not decides", text: "It turns clinical text into data. Judgment always stays with the physician." },
+      { title: "Local regulation", text: "Designed around Mexico's NOM-024-SSA3 and the Ministry of Health catalogs." },
+      { title: "Privacy by design", text: "Role-based access and traceability for every clinical record." },
+    ],
+    stackTitle: "What we build with",
+  },
+  progress: {
+    kicker: "Progress",
+    title: "From a high-school portfolio to a medical technology company",
+    items: [
+      { year: "2020", title: "First public code", text: "This very site and the first web projects: Voades, Smort, PC-Calc and the first Mery." },
+      { year: "2024", title: "CronosMD is born", text: "Work starts on the health record with a 3D patient model." },
+      { year: "2026", title: "Mery AI and The HUB", text: "Internal voice and AI-agent tools to build faster." },
+      { year: "2026", title: "TemisMD", text: "The lean version for public healthcare." },
+      { year: "2026", title: "IMC² is incorporated", text: "IMC2 Medical Technologies S.A.P.I. de C.V. and brand identity." },
+      { year: "2026", title: "HermesMD", text: "Third product: the end of hospital double entry." },
+      { year: "Next", title: "CronosMD launch", text: "Opening to external physicians." },
+    ],
+  },
+  lab: {
+    kicker: "Lab",
+    title: "Internal tools",
+    lead: "What we build in order to build. R&D projects that speed up product development.",
+    list: [
+      { name: "The HUB", text: "Voice-driven operations center that coordinates several AI agents coding in parallel.", tag: "Electron · Whisper · agents" },
+      { name: "Mery AI", text: "Voice assistant with agent skills: files, terminal, web and 3D printing.", tag: "Next.js · Express · LLMs" },
+      { name: "Flasher", text: "Generates flashcards from a PDF and reviews them with spaced repetition.", tag: "Next.js · OpenAI" },
+    ],
+  },
+  founderTeaser: {
+    kicker: "Founder",
+    title: "Ismael Muñoz Contreras",
+    role: "Physician and full-stack developer",
+    text:
+      "He started coding in high school, between competition robots and websites. He studied medicine and joined both crafts in IMC²: clinical software designed from inside the exam room.",
+    cta: "Meet the founder",
+  },
+  contact: {
+    kicker: "Contact",
+    title: "Running a clinic, or stuck with double data entry?",
+    text: "Let's talk. We answer personally.",
+    whatsapp: "Message us on WhatsApp",
+    github: "GitHub",
+    instagram: "Instagram",
+    facebook: "Facebook",
+  },
+  footer: {
+    rights: "All rights reserved.",
+    place: "Made in Mexico",
+  },
+  founder: {
+    back: "Back to IMC²",
+    hello: "Hi, I'm",
+    name: "Ismael Muñoz Contreras",
+    roles: ["Physician 🩺", "Founder of IMC² 🧬", "Full-stack developer ⚛️", "UI/UX designer 🔮", "Robot programmer 🤖", "3D modeling 🧊"],
+    lead:
+      "A physician by training and a programmer since high school. Today I lead IMC², where I build the clinical software I wish I'd had in the exam room.",
+    motto: "If you can imagine it, I can code it.",
+    ctaTalk: "Let's talk 🙌🏽",
+    sections: {
+      path: "Journey",
+      projects: "Early projects",
+      skills: "Code and software",
+      med: "Medicine",
+      langs: "Languages",
+      modeling: "3D modeling",
+      music: "Music",
+      how: "How I work",
+    },
+    pathTabs: { xp: "Experience", edu: "Education" },
+    xp: [
+      { title: "Founder of IMC2 Medical Technologies", text: "Design, engineering and leadership of CronosMD, TemisMD and HermesMD.", imgs: [] as string[] },
+      { title: "BrainVue programmer", text: "University team for pediatric health activities with NAO robots, which I programmed.", imgs: ["bv1", "bv2"] },
+      { title: "FIRST leader and mentor", text: "Programming lead and mentor for team Keybot in the FIRST international robotics competition, FRC category.", imgs: ["keybot1", "keybot2", "keybot3", "keybot4", "keybot5"] },
+      { title: "WER leader and mentor", text: "World Educational Robot: an international robotics competition for middle and high school, where I mentored programming.", imgs: ["wer1", "wer2"] },
+      { title: "Carneros and Ikigai", text: "A group focused on leadership and personal growth activities.", imgs: ["carneros3", "carneros7", "ikigai1", "ikigai2"] },
+    ],
+    edu: [
+      { title: "Physician (Médico Cirujano)", text: "Medical school, while taking part in medical and robotics student groups.", imgs: ["mont", "medUni"] },
+      { title: "High school — Tec de Monterrey, Hidalgo Campus", text: "Where I started coding seriously and mentoring for FIRST and WER.", imgs: ["Hidalgo"] },
+      { title: "Elementary and middle school — American School of Pachuca", text: "Foreign teachers from childhood: the root of my English.", imgs: ["Americana"] },
+    ],
+    projectsLead: "The projects where it all started, before IMC².",
+    projects: [
+      { name: "Smort Tech", text: "A site to design and sell custom websites.", logo: "smort", live: "https://amazing-liskov-6ef20f.netlify.app", repo: "https://github.com/Silver0401/smort-ws" },
+      { name: "PC-Calc", text: "A medical web tool to estimate prostate cancer risk.", logo: "preventis", live: "https://sharp-bell-56ec63.netlify.app", repo: "https://github.com/Silver0401/pc-calc" },
+      { name: "Voades MX", text: "My first sold website: a Mexican NGO helping people with mental health problems.", logo: "voades", live: "https://romantic-hodgkin-a1033b.netlify.app", repo: "https://github.com/Silver0401/voades" },
+      { name: "Mery AI (v1)", text: "The first Mery: a web speech-recognition assistant that controlled the computer with commands.", logo: "mery", live: "https://quizzical-wilson-2ae07d.netlify.app", repo: "https://github.com/Silver0401/JS-MeryAI" },
+    ],
+    skillsLead: "From high-school HTML to the stack IMC² runs on today.",
+    skillGroups: { now: "Current stack", langs: "Languages and frameworks", soft: "Applications" },
+    medLead: "Physician. These are some of the areas I've studied most:",
+    medAreas: ["Cardiology", "Cell biology", "Genetics", "Endocrinology", "Immunology", "Neurology", "Histology", "Nephrology", "Gastroenterology", "Microorganisms", "Embryology"],
+    medButton: "See my medical notes",
+    langs: [
+      { name: "Spanish", flag: "🇲🇽", level: "Native", pct: 100, text: "My mother tongue: excellent spelling and expression." },
+      { name: "English", flag: "🇺🇸", level: "B2+", pct: 88, text: "Foreign teachers since elementary school: near-native fluency and flawless spelling." },
+      { name: "German", flag: "🇩🇪", level: "A2", pct: 40, text: "I've studied it since high school and keep improving." },
+    ],
+    modelingText:
+      "3D modeling is another design tool I use: SolidWorks for precisely dimensioned parts and Blender for 3D on the web. It's the same skill behind CronosMD's anatomical model.",
+    modelingLoad: "Load 3D viewer",
+    modelingHint: "Drag to rotate · scroll to zoom",
+    modelingModels: { car: "Car", micro: "Microwave" },
+    modelingCredit: "Demo models licensed under CC BY 4.0:",
+    musicText: "Guitar is my favorite instrument; I also have basic violin and piano skills.",
+    musicCaptions: [
+      "Public concert at the Pachuca Clock, before the show.",
+      "During the show at the Pachuca Clock.",
+      "Weekly violin practice, summer 2019.",
+    ],
+    how: [
+      { title: "Resilience", text: "Whatever problems come up, I find a solution and finish the job." },
+      { title: "Organization", text: "I schedule and track every task; deadlines don't slip past me." },
+      { title: "Teamwork", text: "Cooperation is an essential part of any project." },
+      { title: "Leadership", text: "When needed, I guide the team to reach the goal together." },
+      { title: "Passion", text: "I love what I do, so I learn whatever tool or language a project needs." },
+    ],
+    close: "Shall we build something together?",
+    closeCompany: "See IMC² products",
+    lightboxClose: "Close",
+  },
+};
+
+export const CONTENT = { es, en };
+export type Lang = keyof typeof CONTENT;
