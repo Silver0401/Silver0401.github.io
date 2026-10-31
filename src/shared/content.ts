@@ -139,6 +139,18 @@ const es = {
     ],
     stages: ["Descubrimiento", "Desarrollo", "Uso clínico", "Lanzamiento"],
   },
+  precision: {
+    kicker: "Precisión",
+    title: "Detectamos hasta el detalle más pequeño.",
+    lead: "En medicina, un dato fuera de lugar cambia una decisión. Por eso construimos cada pantalla, cada campo y cada flujo al nivel del pixel.",
+    hint: "Pasa el cursor por las tarjetas",
+    items: [
+      { tag: "DATO", title: "Datos clínicos exactos", text: "Cada valor se captura, se valida y se guarda donde corresponde." },
+      { tag: "FLUJO", title: "Flujos sin fricción", text: "Medimos cada clic para que el médico escriba menos y atienda más." },
+      { tag: "INTERFAZ", title: "Interfaces al pixel", text: "Diseño revisado elemento por elemento, en escritorio y en móvil." },
+      { tag: "SEGURIDAD", title: "Seguridad por diseño", text: "Permisos, auditoría y privacidad desde la primera línea de código." },
+    ],
+  },
   platform: {
     kicker: "Plataforma",
     title: "Un núcleo clínico, tres productos",
@@ -407,6 +419,18 @@ const en: Content = {
       },
     ],
     stages: ["Discovery", "Development", "Clinical use", "Launch"],
+  },
+  precision: {
+    kicker: "Precision",
+    title: "We catch even the smallest detail.",
+    lead: "In medicine, one misplaced data point changes a decision. That's why we build every screen, field and flow down to the pixel.",
+    hint: "Hover over the cards",
+    items: [
+      { tag: "DATA", title: "Exact clinical data", text: "Every value is captured, validated and stored where it belongs." },
+      { tag: "FLOW", title: "Frictionless flows", text: "We measure every click so doctors type less and care more." },
+      { tag: "INTERFACE", title: "Pixel-level interfaces", text: "Design reviewed element by element, on desktop and mobile." },
+      { tag: "SECURITY", title: "Secure by design", text: "Permissions, auditing and privacy from the first line of code." },
+    ],
   },
   platform: {
     kicker: "Platform",

@@ -40,13 +40,13 @@
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1fr 1fr;
   gap: 48px;
   align-items: center;
 }
 
 .hero-title {
-  font-size: clamp(2.6rem, 1.4rem + 5vw, 5rem);
+  font-size: clamp(2.2rem, 1.2rem + 3.4vw, 3.8rem);
   line-height: 1.02;
   letter-spacing: -0.035em;
   font-weight: 700;
@@ -93,22 +93,54 @@
   color: var(--jade);
 }
 
-.hero-iso {
-  width: min(360px, 70vw);
+.hero-logo {
+  position: relative;
+  width: min(580px, 90vw);
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-logo-icon {
+  position: relative;
+  width: 74%;
+  aspect-ratio: 1;
+  margin-top: -6%;
+  overflow: visible;
+  background: transparent;
+  filter: drop-shadow(0 0 40px rgba(22, 182, 142, 0.3));
+}
+
+.hero-logo-static {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
   height: auto;
-  filter: drop-shadow(0 0 40px rgba(22, 182, 142, 0.35));
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.hero-logo-static--hidden {
+  display: none;
+}
+
+.hero-metallic-paint {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
 }
 
 .hero-orbit {
   position: absolute;
-  width: 115%;
-  aspect-ratio: 1;
-  top: 50%;
-  left: 50%;
-  translate: -50% -58%;
+  inset: 0;
   border-radius: 50%;
   border: 1px dashed var(--line-strong);
   animation: spin 60s linear infinite;
+  z-index: 0;
 }
 
 .hero-orbit::before {
@@ -123,6 +155,27 @@
   box-shadow: 0 0 18px var(--jade);
 }
 
+.hero-logo-icon > .electric-logo {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.name-section {
+  overflow: hidden;
+}
+
+.name-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.name-grid-effect {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
 @keyframes spin {
   to {
     rotate: 360deg;
@@ -130,7 +183,9 @@
 }
 
 .hero-eq {
-  margin: 34px 0 4px;
+  position: relative;
+  z-index: 3;
+  margin: -13% 0 2px;
   font-size: clamp(1.8rem, 1rem + 2.4vw, 2.6rem);
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -142,6 +197,8 @@
 }
 
 .hero-desc {
+  position: relative;
+  z-index: 3;
   margin: 0;
   font-size: 0.8rem;
   letter-spacing: 0.42em;
@@ -155,11 +212,8 @@
   .hero-mark {
     order: -1;
   }
-  .hero-iso {
-    width: min(200px, 50vw);
-  }
-  .hero-eq {
-    margin-top: 18px;
+  .hero-logo {
+    width: min(420px, 88vw);
   }
 }
 
@@ -743,6 +797,23 @@
   background: var(--bg);
 }
 
+.lab-spotlight {
+  height: 100%;
+  padding: 0;
+  border-radius: 20px;
+  background: transparent;
+  box-shadow: none;
+}
+
+.lab-spotlight .lab-card {
+  height: 100%;
+}
+
+.lab-spotlight .lab-card:hover {
+  transform: none;
+  box-shadow: none;
+}
+
 .lab-tag {
   margin-top: auto;
   padding-top: 18px;
@@ -816,4 +887,66 @@
 
 .contact .h2 {
   max-width: 24ch;
+}
+
+/* --- Precisión (Crosshair) --------------------------------------------- */
+
+.precision-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.precision-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 34px;
+}
+
+.precision-card {
+  position: relative;
+  padding: 26px 22px;
+}
+
+.precision-card h3 {
+  margin: 12px 0 8px;
+  font-size: 1.1rem;
+}
+
+.precision-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.precision-tag {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  color: var(--jade);
+}
+
+.precision-hint {
+  margin: 22px 0 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+@media (hover: none) {
+  .precision-hint {
+    display: none;
+  }
+}
+
+@media (max-width: 880px) {
+  .precision-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .precision-grid {
+    grid-template-columns: 1fr;
+  }
 }

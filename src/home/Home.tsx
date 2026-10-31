@@ -1,9 +1,16 @@
-import { CONTACT } from "../shared/content";
+import { lazy, Suspense, useEffect, useRef, useState } from "react";
+import Crosshair from "../shared/Crosshair/Crosshair";
+import ElectricLogo from "../shared/ElectricLogo/ElectricLogo";
+import MetallicPaint from "../shared/MetallicPaint/MetallicPaint";
+import SpotlightCard from "../shared/SpotlightCard/SpotlightCard";
+import { CONTACT, CONTENT } from "../shared/content";
+import { EFFECTS } from "../shared/effects";
 import { Footer, Intro, Isotipo, Nav, SocialLinks, usePrefs, useReveal, WhatsAppIcon } from "../shared/ui";
 
 const BASE = import.meta.env.BASE_URL;
 
 const STACK = ["TypeScript", "Next.js", "React", "Node.js", "FeathersJS", "MongoDB", "Three.js", "LLMs", "Whisper", "Stripe", "Electron"];
+const ShapeGrid = lazy(() => import("../shared/ShapeGrid/ShapeGrid"));
 
 function ProductMark({ id }: { id: string }) {
   if (id === "cronos") return <img src={`${BASE}brand/cronos-icono-gradiente.svg`} alt="" width={44} height={44} />;
@@ -26,6 +33,106 @@ function ProductMark({ id }: { id: string }) {
   );
 }
 
+function PrecisionSection({ t }: { t: (typeof CONTENT)["es"]["precision"] }) {
+  const ref = useRef<HTMLElement>(null);
+  return (
+    <section className="section precision-section" id="precision" ref={ref}>
+      {EFFECTS.precisionCrosshair && (
+        <Crosshair containerRef={ref} color="#16B68E" opacity={0.9} smoothing={0.3} targetSelector="[data-crosshair-target]" />
+      )}
+      <div className="container">
+        <p className="kicker reveal">{t.kicker}</p>
+        <h2 className="h2 reveal">{t.title}</h2>
+        <p className="lead reveal">{t.lead}</p>
+        <div className="precision-grid">
+          {t.items.map((item) => (
+            <article key={item.tag} className="card precision-card reveal" data-crosshair-target>
+              <span className="precision-tag">{item.tag}</span>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
+        <p className="precision-hint reveal">{t.hint} ⌖</p>
+      </div>
+    </section>
+  );
+}
+
+function HeroLogo() {
+  const [canUseWebGL, setCanUseWebGL] = useState(false);
+  const { theme } = usePrefs();
+  const imageSrc = `${BASE}brand/isotipo-jade.svg`;
+  const variant = new URLSearchParams(window.location.search).get("logo") === "metallic" ? "metallic" : "electric";
+
+  useEffect(() => {
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const updateCapability = () => {
+      const canvas = document.createElement("canvas");
+      setCanUseWebGL(!reducedMotion.matches && Boolean(canvas.getContext("webgl2")));
+    };
+
+    updateCapability();
+    reducedMotion.addEventListener("change", updateCapability);
+    return () => reducedMotion.removeEventListener("change", updateCapability);
+  }, []);
+
+  return (
+    <div className="hero-logo">
+      <div className="hero-orbit" />
+      <div className="hero-logo-icon">
+        <img className={`hero-logo-static ${canUseWebGL && variant === "electric" ? "hero-logo-static--hidden" : ""}`} src={imageSrc} alt="" />
+        {EFFECTS.heroLogo && canUseWebGL && variant === "metallic" && (
+          <MetallicPaint
+            className="hero-metallic-paint"
+            imageSrc={imageSrc}
+            color="#ffffff"
+            backgroundColor="transparent"
+            density={2}
+            softness={0.1}
+            dispersion={0.3}
+            distortion={0.07}
+            edgeBend={0.6}
+            angle={70}
+            speed={1}
+            scale={0.6}
+            rotation={0}
+            mouseTilt={0.5}
+            lightMode={theme === "light"}
+            intro
+          />
+        )}
+        {EFFECTS.heroLogo && canUseWebGL && variant === "electric" && (
+          <ElectricLogo
+            src={imageSrc}
+            color="#16B68E"
+            glowColor="#16B68E"
+            scale={0.7}
+            intensity={1}
+            glow={1}
+            thickness={1.5}
+            strands={4}
+            bend={theme === "light" ? 0.5 : 0.6}
+            crackle={1.5}
+            arcs={1}
+            flicker={0.6}
+            fill={0}
+            speed={2.5}
+            interactive
+            cursorIntensity={0.75}
+            cursorRadius={100}
+            theme={theme}
+          />
+        )}
+      </div>
+      <p className="hero-eq">
+        I = MC<sup>2</sup>
+      </p>
+      <p className="hero-desc">MEDICAL TECHNOLOGIES</p>
+    </div>
+  );
+}
+
 function StageMeter({ stage, labels }: { stage: number; labels: string[] }) {
   return (
     <ol className="stage" aria-label={labels[stage - 1]}>
@@ -40,7 +147,7 @@ function StageMeter({ stage, labels }: { stage: number; labels: string[] }) {
 }
 
 export default function Home() {
-  const { t, lang } = usePrefs();
+  const { t, lang, theme } = usePrefs();
   useReveal([lang]);
 
   const links = [
@@ -92,18 +199,34 @@ export default function Home() {
               </dl>
             </div>
             <div className="hero-mark reveal" aria-hidden="true">
-              <div className="hero-orbit" />
-              <Isotipo size={360} draw className="hero-iso" />
-              <p className="hero-eq">
-                I = MC<sup>2</sup>
-              </p>
-              <p className="hero-desc">MEDICAL TECHNOLOGIES</p>
+              <HeroLogo />
             </div>
           </div>
         </section>
 
         {/* EL NOMBRE */}
-        <section className="section section--tight">
+        <section className="section section--tight name-section">
+          {EFFECTS.homeNameGrid && (
+            <div className="name-grid-effect" aria-hidden="true">
+              <Suspense fallback={null}>
+                <ShapeGrid
+                  shape="cross"
+                  cellSize={52}
+                  lineColor="rgba(22, 182, 142, 0.16)"
+                  hoverColor="#16B68E"
+                  direction="none"
+                  speed={0}
+                  radius={1.25}
+                  trail={0.45}
+                  glow={0.2}
+                  clickCascade={false}
+                  fade={0.65}
+                  opacity={0.5}
+                  dpr={1}
+                />
+              </Suspense>
+            </div>
+          )}
           <div className="container">
             <p className="kicker reveal">{t.name.kicker}</p>
             <h2 className="h2 reveal">{t.name.title}</h2>
@@ -204,6 +327,9 @@ export default function Home() {
           </div>
         </section>
 
+        {/* PRECISIÓN */}
+        <PrecisionSection t={t.precision} />
+
         {/* PLATAFORMA */}
         <section className="section section--alt" id="plataforma">
           <div className="container">
@@ -277,13 +403,33 @@ export default function Home() {
             <h2 className="h2 reveal">{t.lab.title}</h2>
             <p className="lead reveal">{t.lab.lead}</p>
             <div className="lab-grid">
-              {t.lab.list.map((l) => (
-                <article key={l.name} className="card lab-card reveal">
-                  <h3>{l.name}</h3>
-                  <p>{l.text}</p>
-                  <span className="lab-tag">{l.tag}</span>
-                </article>
-              ))}
+              {t.lab.list.map((l) => {
+                const card = (
+                  <article className="card lab-card reveal">
+                    <h3>{l.name}</h3>
+                    <p>{l.text}</p>
+                    <span className="lab-tag">{l.tag}</span>
+                  </article>
+                );
+                return EFFECTS.homeLabSpotlight ? (
+                  <SpotlightCard
+                    key={l.name}
+                    className="lab-spotlight"
+                    spotlightColor="#16B68E"
+                    intensity={0.09}
+                    spotlightSize={220}
+                    softness={0.85}
+                    borderGlow={0.28}
+                    smoothing={0.2}
+                    flare={false}
+                    theme={theme}
+                  >
+                    {card}
+                  </SpotlightCard>
+                ) : (
+                  <div key={l.name}>{card}</div>
+                );
+              })}
             </div>
           </div>
         </section>

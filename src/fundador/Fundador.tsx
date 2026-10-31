@@ -1,5 +1,7 @@
 import { lazy, Suspense, useEffect, useState } from "react";
 import { CONTACT } from "../shared/content";
+import { EFFECTS } from "../shared/effects";
+import SpotlightCard from "../shared/SpotlightCard/SpotlightCard";
 import { Footer, Nav, SocialLinks, usePrefs, useReveal } from "../shared/ui";
 import Signature from "./Signature";
 
@@ -93,7 +95,7 @@ function Roles({ roles }: { roles: string[] }) {
 }
 
 export default function Fundador() {
-  const { t, lang } = usePrefs();
+  const { t, lang, theme } = usePrefs();
   const f = t.founder;
   const [tab, setTab] = useState<"xp" | "edu">("xp");
   const [shot, setShot] = useState<Shot | null>(null);
@@ -185,23 +187,43 @@ export default function Fundador() {
             <h2 className="h2 reveal">{f.sections.projects}</h2>
             <p className="lead reveal">{f.projectsLead}</p>
             <div className="project-grid">
-              {f.projects.map((p) => (
-                <article key={p.name} className="card project reveal">
-                  <div className="project-logo">
-                    <img src={IMG[PROJECT_LOGOS[p.logo]]} alt={p.name} loading="lazy" />
-                  </div>
-                  <h3>{p.name}</h3>
-                  <p>{p.text}</p>
-                  <div className="project-links">
-                    <a href={p.live} target="_blank" rel="noreferrer">
-                      Live ↗
-                    </a>
-                    <a href={p.repo} target="_blank" rel="noreferrer">
-                      Repo ↗
-                    </a>
-                  </div>
-                </article>
-              ))}
+              {f.projects.map((p) => {
+                const card = (
+                  <article className="card project reveal">
+                    <div className="project-logo">
+                      <img src={IMG[PROJECT_LOGOS[p.logo]]} alt={p.name} loading="lazy" />
+                    </div>
+                    <h3>{p.name}</h3>
+                    <p>{p.text}</p>
+                    <div className="project-links">
+                      <a href={p.live} target="_blank" rel="noreferrer">
+                        Live ↗
+                      </a>
+                      <a href={p.repo} target="_blank" rel="noreferrer">
+                        Repo ↗
+                      </a>
+                    </div>
+                  </article>
+                );
+                return EFFECTS.founderProjectsSpotlight ? (
+                  <SpotlightCard
+                    key={p.name}
+                    className="project-spotlight"
+                    spotlightColor="#16B68E"
+                    intensity={0.08}
+                    spotlightSize={200}
+                    softness={0.85}
+                    borderGlow={0.24}
+                    smoothing={0.2}
+                    flare={false}
+                    theme={theme}
+                  >
+                    {card}
+                  </SpotlightCard>
+                ) : (
+                  <div key={p.name}>{card}</div>
+                );
+              })}
             </div>
           </div>
         </section>

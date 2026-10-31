@@ -184,6 +184,23 @@
   background: var(--bg);
 }
 
+.project-spotlight {
+  height: 100%;
+  padding: 0;
+  border-radius: 20px;
+  background: transparent;
+  box-shadow: none;
+}
+
+.project-spotlight .project {
+  height: 100%;
+}
+
+.project-spotlight .project:hover {
+  transform: none;
+  box-shadow: none;
+}
+
 .project-logo {
   height: 84px;
   display: grid;
