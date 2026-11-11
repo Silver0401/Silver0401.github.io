@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="119.25 71.5 497.5 417"
+     width="497.5" height="417" role="img" aria-label="IMC2 Medical Technologies">
+  <title>Isotipo IMC2</title>
+  <g fill="none" stroke="#16B68E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter">
+    <g id="mitad">
+      <path d="M230 131.5 H184.5
+               A57.25 57.25 0 0 0 184.5 246
+               H310.5 V137
+               A57.5 57.5 0 0 1 425.5 137
+               V254"/>
+    </g>
+    <use href="#mitad" transform="rotate(180 368 280)"/>
+  </g>
+  <circle cx="230" cy="131.5" r="24" fill="#16B68E"/>
+  <circle cx="506" cy="428.5" r="24" fill="#16B68E"/>
+</svg>

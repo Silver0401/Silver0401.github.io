@@ -1,25 +1,12 @@
 {
-  "short_name": "Isma's Web Portafolio",
-  "name": "Ismael M.C Personal Web Portaflio",
+  "short_name": "IMC²",
+  "name": "IMC2 Medical Technologies",
   "icons": [
-    {
-      "src": "IMC-Logo.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "IMC-Logo.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "IMC-Logo.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
+    { "src": "/brand/favicon-180.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "/brand/favicon-512.png", "sizes": "512x512", "type": "image/png" }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#15181B",
+  "background_color": "#15181B"
 }
